@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    <entry>
+      <title><![CDATA[Highlight Test]]></title>
+      <url>/test/guide/2013/12/25/highlight-test/</url>
+      <content type="text"><![CDATA[This is a highlight test.Normal blockalert('Hello World!');print 'helloworld'Highlight blockalert( 'Hello, world!' );print 'helloworld'def foo  puts 'foo'enddef foo  puts 'foo'end123def foo  puts 'foo'end#include &lt;iostream&gt;using namespace std;void foo(int arg1, int arg2){}int main(){  string str;  foo(1, 2);  cout &lt;&lt; "Hello World" &lt;&lt; endl;  return 0;}]]></content>
+      <categories>
+        
+          <category> Test </category>
+        
+          <category> Guide </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Test </tag>
+        
+          <tag> Guide </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+</search>
