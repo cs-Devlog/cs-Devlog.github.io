@@ -66,3 +66,6 @@ int main()
   return 0;
 }
 ```
+
+Image Test
+![asdfasdf](/assets/images/searchicon.png)

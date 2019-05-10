@@ -412,7 +412,7 @@ pre .k, pre .kd, pre .kn, pre .kp, pre .kr, pre .kt, pre .javascript .function {
 
 .post-body img.emoji { border: 0 !important; display: inline; vertical-align: sub; }
 
-.post-body .image-caption, .post-body .figure .caption { margin: 10px auto 15px; text-align: center; font-size: 14px; color: #999; font-weight: bold; line-height: 1; }
+.post-body .image-caption, .post-body .figure .caption { margin: 10px auto 15px; text-align: left; font-size: 14px; color: #999; font-weight: bold; line-height: 1; }
 
 .post-sticky-flag { display: inline-block; font-size: 16px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); -moz-transform: rotate(30deg); -ms-transform: rotate(30deg); -o-transform: rotate(30deg); transform: rotate(30deg); }
 
@@ -512,7 +512,7 @@ pre .k, pre .kd, pre .kn, pre .kp, pre .kr, pre .kt, pre .javascript .function {
 
 .post-gallery-row { display: table-row; }
 
-.post-gallery .post-gallery-img { display: table-cell; text-align: center; vertical-align: middle; border: none; }
+.post-gallery .post-gallery-img { display: table-cell; text-align: left; vertical-align: middle; border: none; }
 
 .post-gallery .post-gallery-img img { max-width: 100%; max-height: 100%; border: none; }
 
