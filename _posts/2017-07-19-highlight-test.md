@@ -68,4 +68,7 @@ int main()
 ```
 
 Image Test
-![asdfasdf](/assets/images/searchicon.png)
+![Image](/assets/images/searchicon.png){: width="auto"}
+
+Local
+bundle exec jekyll server
