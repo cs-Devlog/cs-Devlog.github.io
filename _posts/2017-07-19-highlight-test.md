@@ -71,4 +71,5 @@ Image Test
 ![Image](/assets/images/searchicon.png){: width="auto"}
 
 Local
+cd /Users/sophia/Desktop/Github/cs-Devlog
 bundle exec jekyll server
