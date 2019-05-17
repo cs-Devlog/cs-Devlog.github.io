@@ -2,14 +2,13 @@
 title: Tistory to Github
 date: 2013-12-24 23:29:08
 categories:
- - Test
  - Guide
 description: Code Guide
 tags: 
 - Test
 - Guide
 ---
-기존 Tistory<https://sophia2730.tistory.com/>에서 Github 이전 작업 중입니다.
+기존 Tistory <https://sophia2730.tistory.com/> 에서 Github 이전 작업 중입니다.
 
 # Normal block
 
