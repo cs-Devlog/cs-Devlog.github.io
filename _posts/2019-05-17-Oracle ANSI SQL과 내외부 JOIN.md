@@ -1,7 +1,7 @@
 ---
 title: Oracle ANSI SQL과 INNER/OUTER JOIN 차이
 date: 2019-05-17- 23:00:00
-# description: 
+description: Oracle ANSI SQL과 INNER/OUTER JOIN 차이에 대해 알아보자.
 categories:
 - Database
 tags: 
@@ -74,6 +74,8 @@ FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.a = t2.b;
 t1.a = t2.b 인 경우, t1의 값이 10행 이라면, 해당 쿼리의 결과도 10행이 유지되고, ON 조건에 해당하는 Row가 있다면 오른쪽에 데이터가 매칭된다.
 
 단, 1개의 t1 행에 ON 조건을 만족하는 t2의 값이 여러개라면, Row가 증가할 수도 있다.
+
+***
 
 # < 결론 >
 ANSI SQL 에 맞춰서 Query를 짜는 습관을 가지자.
