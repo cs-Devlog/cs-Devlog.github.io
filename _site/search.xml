@@ -2,6 +2,88 @@
 <search>
   
     <entry>
+      <title><![CDATA[]]></title>
+      <url>/2019/05/17/2019-05-16-%EB%B0%B1%EC%A4%80-11399-ATM/</url>
+      <content type="text"><![CDATA[&lt; 문제 분석 및 풀이 방법 &gt;백준 ATM 문제는 오름차순 정렬 후 값을 더해가면 된다.오름차순이 필요한 이유는 대기시간이 짧은 사람부터 해결하는 것이 뒤에 사람들이 기다리는 시간이 최소가 되기 때문이다.Java의 경우 Arrays.sort로 정렬해도 되지만, MergeSort 구현 연습도 할 겸해서 합병정렬로 정렬했다.  입력받은 배열을 Arrays.sort 또는 MergeSort로 오름차순 정렬한다.  각 idx 마다 기다리는 시간을 더해주면서 값을 구한다.&lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static StringTokenizer stk;    public static StringBuilder sb = new StringBuilder();    public static int[] sort;    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        int n = Integer.parseInt(br.readLine());        int[] arr = new int[n];        sort = new int[n];        stk = new StringTokenizer(br.readLine());        for (int i = 0; i &lt; n; i++) {            arr[i] = Integer.parseInt(stk.nextToken());        }        merge(arr, 0, n - 1);   //1. 정렬        int ans = 0, sum = 0;   //2. 각 idx 마다 기다리는 시간을 더해준다.        for (int i = 0; i &lt; n; i++) {            sum += arr[i];            ans += sum;        }        System.out.println(ans);    }    public static void merge(int[] arr, int start, int end) {        if (start &lt; end) {            int mid = (start + end) / 2;            merge(arr, start, mid);            merge(arr, mid + 1, end);            mergeSort(arr, start, mid, end);        }    }    public static void mergeSort(int[] arr, int start, int mid, int end) {        int left = start;        int right = mid + 1;        int idx = start;        while (left &lt;= mid &amp;&amp; right &lt;= end) {            if (arr[left] &lt; arr[right]) {                sort[idx++] = arr[left++];            } else {                sort[idx++] = arr[right++];            }        }        while (left &lt;= mid) sort[idx++] = arr[left++];        while (right &lt;= end) sort[idx++] = arr[right++];        for (int i = start; i &lt;= end; i++) {            arr[i] = sort[i];        }    }}]]></content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Database Sharding(샤딩)이란?]]></title>
+      <url>/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/</url>
+      <content type="text"><![CDATA[&lt; Sharding(샤딩) &gt;샤딩은 수평 분할(Horizontal Partitioning)과 동일하며, 인덱스의 크기를 줄이고, 작업 동시성을 늘리기 위한 것이다.수평 분할(Horizontal Partitioning)이란 스키마(schema)가 같은 데이터를 두 개 이상의 테이블에 나누어 저장하는 디자인을 말한다.가령 같은 주민 데이터를 처리하기 위해 스키마가 같은 ‘서현동주민 테이블’과 ‘정자동주민 테이블’을 사용하는 것을 말한다.데이터베이스를 샤딩하게 되면 기존에 하나로 구성될 스키마를 다수의 복제본으로 구성하고 각각의 샤드에 어떤 데이터가 저장될지를 샤드키를 기준으로 분리한다.&lt; Sharding(샤딩)의 단점 &gt;프로그래밍적, 운영적인 복잡도가 높아진다.즉, 샤딩을 시작하기 전에 샤딩을 피하거나 지연시킬 수 있는 방법을 찾는게 우선이다.  좀더 고스펙의 컴퓨터를 사용한다.  Read(Select) 명령이 많다면 Cache나 Database Replication을 적용한다.  Table의 일부 Column만 사용한다면 수직 분할(Vertically Partitioning)을 사용한다 / Cold &amp; Hot data를 사용한다.참고) Database Replication이란?2개 이상의 DBMS를 Master와 Slave로 나누어 동일한 데이터를 저장한다.Master DB는 Insert, Update, Delete의 기능을 수행하고, Slave DB에 실제 데이터를 복사한다.Slave DB 시간이 오래걸리는 Select문의 기능을 수행하여 전체적인 Select문 성능을 향상시킨다.참고) Cold / Hot Data 란?    Naver D2 :: Cold Storage 소개Hot data : 자주 사용되는 데이터Cold data : 드물게 사용되거나 아예 사용되지 않는 데이터Cold Storage : 에너지 절감을 위해 연산 능력에서 손해를 보더라도 낮은 가격과 저전력으로 자주 사용되지 않는 데이터를 처리하는 데이터 저장 장치 및 시스템&lt; Sharding(샤딩)의 주요 관점 &gt;분산된 DB에서 어떻게 Data를 읽어올 것인지?분산된 DB에 Data를 어떻게 잘 분산시킬지? » Shard Key를 어떻게 정의하는지에 따라 달라진다.&lt; Case 1. Algorithm Sharding &gt;Database id를 단순하게 나누어 샤딩하는 방식Sharding Key는 hash(key) % NUM_DB 같은 방식장점같은 값을 가지는 key-value 데이터베이스에 적합하다.단점Cluster를 포함하는 Node 갯수가 변하게 되면 Resharding이 필요하다.Hash Key로 분산되기 때문에 공간에 대한 효율이 부족하다.&lt; Case 2. Dynamic Sharding &gt;클라이언트는 Locator Service에 접근하여 Shard Key를 얻는다.장점Cluster가 포함하는 Node 갯수가 변하면 Shard Key를 추가하기만 하면 된다.확장에 유연하게 대처가능하다.단점Data Relocation시에는 Locator Service의 Shard key Table도 일치시켜야 한다.Locator에 의존할 수 밖에 없는 구조이다.&lt; Case 3. Entity Group &gt;RDBMS의 Join, Index, Transaction을 사용하여 복잡도를 줄이는 방식과 유사동일한 파티션의 관련 엔티티를 저장하여 단일 파티션 안에서 추가 기능을 제공하는 방식장점하나의 물리적인 Shard에 쿼리를 진행하면 효율적이된다.사용자의 증가에 따른 확장성이 좋은 파티셔닝이다.단점특정 파티션간 쿼리가 자주 요구되는 경우가 있다.&lt; 참고 자료 &gt;Database의 샤딩(Sharding)이란?How Sharding Works]]></content>
+      <categories>
+        
+          <category> Database </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Database </tag>
+        
+          <tag> Sharding </tag>
+        
+          <tag> 샤딩 </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Oracle ANSI SQL과 INNER/OUTER JOIN 차이]]></title>
+      <url>/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/</url>
+      <content type="text"><![CDATA[&lt; ANSI SQL &gt;ANSI SQL에 대해 알아보자.  표준 SQL문이기 때문에 DBMS의 종류에 제약을 받지 않는다. (MySQL, OracleDB..)  테이블간의 Join 관계가 FROM 에서 명시되기 때문에 WHERE 문에서 조건만 확인하면 된다.즉, 가독성이 일반 Query문보다 좋다.대표적인 예시로 ANSI SQL의 두번째 장점인 가독성에 대해서알아보자.일반 SQL Query는 다음과 같다.-- 일반적인 SQL QuerySELECT * FROM table1 as t1, table2 as t2 WHERE t1.a = t2.b즉, WHERE문에서 Table을 JOIN하는 방식이다.단순한 Query라면 가독성에 전혀 문제가 없지만, Query가 길어지게되면 가독성이 떨어질 수 밖에 없다.이와 다르게 ANSI SQL Query 는 FROM 절에서 JOIN을 이용하여 묶고, WHERE에는 검색 조건만 넣어 가독성이 좋다.-- ANSI SQL Query SELECT * FROM table1 as t1 LEFT OUTER JOIN table as t2 ON t1.a = t2.b위의 ANSI SQL에서는 LEFT OUTER JOIN을 사용하여 FROM절에 Table JOIN 하였다.ANSI SQL에서 사용하는 INNER/OUERT JOIN 의 개념을 명확히 아는 것 또한 중요하다.&lt; INNER JOIN &gt;두 테이블간 ON 조건을 만족하는 ROW만 출력된다.-- INNER JOIN SELECT * FROM table1 as t1 INNER JOIN table2 as t2 ON t1.a = t2.b;Query가 위와 같을 때, ON 조건인 t1.a = t2.b 를 만족하는 Row 만 출력된다.&lt; OUTER JOIN &gt;대표적으로 자주 사용하는 LEFT OUTER JOIN 에 대해서 알아보자.OUTER 명령어는 생략이 가능하다. 즉, LEFT OUTER JOIN = LEFT JOIN과 같다.LEFT TABLE 을 기준으로 오른쪽에 덧붙이는 느낌으로 생각하면 된다.즉, LEFT TABLE의 결과값을 가져오고 ON 조건에 해당하는 경우 오른쪽에 매칭, 데이터가 없는 경우 NULL로 출력된다.-- OUTER JOIN SELECT * FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.a = t2.b;t1.a = t2.b 인 경우, t1의 값이 10행 이라면, 해당 쿼리의 결과도 10행이 유지되고, ON 조건에 해당하는 Row가 있다면 오른쪽에 데이터가 매칭된다.단, 1개의 t1 행에 ON 조건을 만족하는 t2의 값이 여러개라면, Row가 증가할 수도 있다.&lt; 결론 &gt;ANSI SQL 에 맞춰서 Query를 짜는 습관을 가지자.즉, WHERE 문에서는 검색조건만 넣도록, Table JOIN 은 FROM절에 묶어서 처리하자.]]></content>
+      <categories>
+        
+          <category> Database </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Database </tag>
+        
+          <tag> ANSI SQL </tag>
+        
+          <tag> INNER JOIN </tag>
+        
+          <tag> OUTER JOIN </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[백준/9935 문자열 폭발]]></title>
+      <url>/%EB%B0%B1%EC%A4%80/%EC%8A%A4%ED%83%9D/2019/05/16/%EB%B0%B1%EC%A4%80-9935-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C/</url>
+      <content type="text"><![CDATA[&lt; 문제 분석 및 풀이 방법 &gt;문자열 폭발 문제는 스택을 활용하는 문제다.Stack 클래스를 사용할 필요 없이 배열을 스택처럼 사용하면 된다.입력받는 문자열을 전부 char 배열로 변환해 체크했다.입력받는 문자열 : target찾아야 하는 문자열 : find옮기는 char 배열 : stack  현재 stack 배열 idx가 find 길이보다 작다면 stack 배열에 target[idx] 문자를 추가한다.  1번에 해당되지 않고 find 마지막 문자와 다르면 stack 배열에 target[idx] 문자를 추가한다.  1,2번에 해당하지 않고 find 마지막 문자와 target[idx]의 문자가 같으면 find 배열 길이만큼 for문을 돌면서 일치 여부를 확인한다.          만약 일치한다면 idx를 현재 위치로 옮긴다.(덮어 씌우니까 따로 지울 필요는 없다)      만약 일치하지 않는다면 stack 배열에 target[idx] 문자를 추가한다.      &lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static StringTokenizer stk;    public static StringBuilder sb = new StringBuilder();    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        char[] target = br.readLine().toCharArray();        char[] find = br.readLine().toCharArray();        char[] stack = new char[target.length];        int idx = 0;        for (int i = 0; i &lt; target.length; i++) {            stack[idx++] = target[i];            if (idx &lt; find.length) continue;            //찾아야 하는 문자열 길이보다 작으면 계속 옮긴다            if (target[i] == find[find.length - 1]) {   //찾아야 하는 문자열 끝과 옮긴 문자가 같다면                boolean flag = false;                for (int j = 0; j &lt;= find.length - 1; j++) {        //일치여부 확인                    if (stack[idx - find.length + j] != find[j]) flag = true;                }                if (!flag) {        //일치하면 idx 앞으로 이동                    idx = idx - find.length;                }            }        }        if (idx == 0) System.out.println("FRULA");        else {            for (int i = 0; i &lt; idx; i++) {                sb.append(stack[i]);            }            System.out.println(sb);        }    }}]]></content>
+      <categories>
+        
+          <category> 백준 </category>
+        
+          <category> 스택 </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> 백준 </tag>
+        
+          <tag> 백준 9935 </tag>
+        
+          <tag> 백준 문자열 폭발 </tag>
+        
+          <tag> 스텍 </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title><![CDATA[2019 CJ올리브네트웍스 1차 면접 후기]]></title>
       <url>/%EB%A9%B4%EC%A0%91/2019/05/14/2019-CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%8A%A4-%EB%A9%B4%EC%A0%91-%ED%9B%84%EA%B8%B0/</url>
       <content type="text"><![CDATA[&lt; CJ 1차 면접 후기 &gt;CJ 면접은 특이하게 호텔 한층을 빌려서 방을 면접장처럼 개조해서 진행한다.8시 도착해서 출석체크에 서명하는데 어떤 면접을 먼저 보는지 나와있다.CJ 관련 복지 이야기 듣고 면접 대기실 이동&lt; 보고합시다 &gt;면접관 2명, 지원자 4~6명 이서 진행하는 방식이다.휴식시간 없이 거의 2시간 30분정도 계속 진행되기 때문에 화장실은 미리 다녀와야한다.인적성부터 변화가 있길래 심층 면접도 어느정도 변화가 있을 줄 알았지만 소문대로 똑같았다.주제 : 디지털 트랜스포메이션 시대에 IT 소외계층(어르신, 장애인)이 디지털 소외감을 해결하는 방안정말 주제잘못생각해서 뭐 온라인으로 TV 활용한다, 오프라인 교육한다 이런식으로 적었다가 잘못된걸 깨달았다.중간 보고 이후에 팀원 각자에게 개인 질문을 하신다.이후 다시 팀원과 회의해서 최종 발표를 하고 끝날 때 각자에게 개인 질문 + 설문 조사(자신의 역할과 팀원중 잘한사람 2명과 이유)팀원중에 시간이 부족한데 말을 계속 이어가시는 분도 있어서 힘들었던 부분도 있었던 만큼 팀원운도 어느정도 중요하다.&lt; 직무 면접 &gt;보고합시다 이후 약 한 시간정도의 공백이 있었다.운이 좋은(?) 분은 보고합시다 면접 끝나자마자 바로 직무면접 가시는 분도 계셨다.면접관 2명, 지원자 2명보통 3명씩 진행하는 반면, 토론 면접때 같이 했던 사람과 같이 면접에 들어갔다.면접관들도 최대한 편하게 해주시려고 하시고, 이야기도 되도록 들어주시려고 하신다.옆 지원자분이 말이 엄청 길었는데 다 들어주시는 모습 보면서 대단하다고 생각..자소서 기반으로 면접이 진행된다.  1분자기소개  어디서 인턴 했는지와 무슨 일을 했는지  4차 산업혁명중 최근에 공부하는게 있는지?          최근 공부하는 4차 산업혁명 기술은 없어서 난항..      AWS EC2를 최근 했다고 말씀드렸더니 그거 없어졌는데 하셔서 당황..        직무를 위해서 최근 하는 노력은?          개인 공부를 하고 있다고 말씀드림        이력서에 프로젝트가 적은데 그 이유는?          이력서에 다 적지는 않았지만 그동안 했던 프로젝트를 말씀드림        자소서에 ENM 계열사를 작성한 이유는?  ENM 계열사가 아니면 안되는지?  (농담식으로) 개발이 재미있어요?          어떻게 답변해야할지 몰라서 재미있다고 단답으로 마무리했는데 음..        자소서에 팀원간 어려움이 있었다는데 어떤 어려움인지?          R&amp;R로 해결        회사에 물어보고 싶은 것  마지막 자기 자랑이나 하고싶은 말2명이서 30분정도 걸렸는데 실질적으로 질문 받은건 몇개 안된다.면접 결과가 나와봐야 알 것 같다.]]></content>
@@ -69,7 +151,7 @@
     <entry>
       <title><![CDATA[백준/1104 리모콘]]></title>
       <url>/%EB%B0%B1%EC%A4%80/%EB%B8%8C%EB%A3%A8%ED%8A%B8%20%ED%8F%AC%EC%8A%A4/2019/05/11/%EB%B0%B1%EC%A4%80-1104-%EB%A6%AC%EB%AA%A8%EC%BD%98/</url>
-      <content type="text"><![CDATA[&lt; 문제 &gt;리모콘 문제는 브루트 포스를 활용하는 문제다.모든 경우의 수를 다 해보고 최소값을 찾으면 된다.2가지로 나눠서 생각하면 쉽게 접근할 수 있다.  초기값 100에서 +, - 만을 활용해 이동할 때 필요한 cnt  새로운 값을 입력받아서 해당 값에서부터 +, -로 이동할 때 필요한 cnt특히 2번의 경우에는 새로운 값이 1자리 숫자 ~ 6자리 숫자까지 가능하는 점을 인지해야 한다.&lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static StringTokenizer stk;    public static StringBuilder sb = new StringBuilder();    public static boolean[] button = new boolean[12];    public static int ans = Integer.MAX_VALUE;    public static int n;    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        n = Integer.parseInt(br.readLine());        int m = Integer.parseInt(br.readLine());        if (m != 0) stk = new StringTokenizer(br.readLine());        for (int i = 0; i &lt; m; i++) {            String s = stk.nextToken();            if (s.equals("+")) s = "10";            if (s.equals("-")) s = "11";            button[Integer.parseInt(s)] = true;        }        //초기값 100에서 갈 수 있는 최단경로값 계산        if (!button[10] &amp;&amp; (100 - n) &gt;= 0) ans = Math.min(ans, 100 - n);        if (!button[11] &amp;&amp; (n - 100) &gt;= 0) ans = Math.min(ans, n - 100);        //0~9까지 모든 경우의 수 탐색        for (int i = 0; i &lt; 10; i++) {            if (!button[i]) dfs(i, 1, 1);        }        System.out.println(ans);    }    public static int dfs(int num, int len, int cnt) {        if (len &gt; ans) return Integer.MAX_VALUE;    //현재 답보다 커지면 가지치기        if (cnt == 6) {     //6개의 숫자를 골랏을 때            return ans = Math.min(ans, getRes(num, len));        }        for (int i = 0; i &lt; 10; i++) {            if (i == 0) {   //6자리가 아닌 수                dfs(num, len, cnt + 1);            }            if (!button[i]) {   //6자리를 만드는 경우                dfs(num * 10 + i, len + 1, cnt + 1);            }        }        return Integer.MAX_VALUE;    }    public static int getRes(int num, int cnt) {        if (n == num) return cnt;        if (!button[10] &amp;&amp; n &gt; num) return cnt + n - num;        if (!button[11] &amp;&amp; n &lt; num) return cnt + num - n;        return Integer.MAX_VALUE;    }}]]></content>
+      <content type="text"><![CDATA[&lt; 문제 분석 및 풀이 방법 &gt;리모콘 문제는 브루트 포스를 활용하는 문제다.모든 경우의 수를 다 해보고 최소값을 찾으면 된다.2가지로 나눠서 생각하면 쉽게 접근할 수 있다.  초기값 100에서 +, - 만을 활용해 이동할 때 필요한 cnt  새로운 값을 입력받아서 해당 값에서부터 +, -로 이동할 때 필요한 cnt특히 2번의 경우에는 새로운 값이 1자리 숫자 ~ 6자리 숫자까지 가능하는 점을 인지해야 한다.&lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static StringTokenizer stk;    public static StringBuilder sb = new StringBuilder();    public static boolean[] button = new boolean[12];    public static int ans = Integer.MAX_VALUE;    public static int n;    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        n = Integer.parseInt(br.readLine());        int m = Integer.parseInt(br.readLine());        if (m != 0) stk = new StringTokenizer(br.readLine());        for (int i = 0; i &lt; m; i++) {            String s = stk.nextToken();            if (s.equals("+")) s = "10";            if (s.equals("-")) s = "11";            button[Integer.parseInt(s)] = true;        }        //초기값 100에서 갈 수 있는 최단경로값 계산        if (!button[10] &amp;&amp; (100 - n) &gt;= 0) ans = Math.min(ans, 100 - n);        if (!button[11] &amp;&amp; (n - 100) &gt;= 0) ans = Math.min(ans, n - 100);        //0~9까지 모든 경우의 수 탐색        for (int i = 0; i &lt; 10; i++) {            if (!button[i]) dfs(i, 1, 1);        }        System.out.println(ans);    }    public static int dfs(int num, int len, int cnt) {        if (len &gt; ans) return Integer.MAX_VALUE;    //현재 답보다 커지면 가지치기        if (cnt == 6) {     //6개의 숫자를 골랏을 때            return ans = Math.min(ans, getRes(num, len));        }        for (int i = 0; i &lt; 10; i++) {            if (i == 0) {   //6자리가 아닌 수                dfs(num, len, cnt + 1);            }            if (!button[i]) {   //6자리를 만드는 경우                dfs(num * 10 + i, len + 1, cnt + 1);            }        }        return Integer.MAX_VALUE;    }    public static int getRes(int num, int cnt) {        if (n == num) return cnt;        if (!button[10] &amp;&amp; n &gt; num) return cnt + n - num;        if (!button[11] &amp;&amp; n &lt; num) return cnt + num - n;        return Integer.MAX_VALUE;    }}]]></content>
       <categories>
         
           <category> 백준 </category>
@@ -117,9 +199,9 @@
     </entry>
   
     <entry>
-      <title><![CDATA[Highlight Test]]></title>
-      <url>/test/guide/2013/12/25/highlight-test/</url>
-      <content type="text"><![CDATA[This is a highlight test.Normal blockalert('Hello World!');print 'helloworld'Highlight blockalert( 'Hello, world!' );print 'helloworld'def foo  puts 'foo'enddef foo  puts 'foo'end123def foo  puts 'foo'end#include &lt;iostream&gt;using namespace std;void foo(int arg1, int arg2){}int main(){  string str;  foo(1, 2);  cout &lt;&lt; "Hello World" &lt;&lt; endl;  return 0;}Image TestLocalcd /Users/sophia/Desktop/Github/cs-Devlogbundle exec jekyll server]]></content>
+      <title><![CDATA[Tistory to Github]]></title>
+      <url>/test/guide/2013/12/25/Tistory-to-Github/</url>
+      <content type="text"><![CDATA[기존 Tistoryhttps://sophia2730.tistory.com/에서 Github 이전 작업 중입니다.Normal blockalert('Hello World!');print 'helloworld'Highlight blockalert( 'Hello, world!' );print 'helloworld'def foo  puts 'foo'enddef foo  puts 'foo'end123def foo  puts 'foo'end#include &lt;iostream&gt;using namespace std;void foo(int arg1, int arg2){}int main(){  string str;  foo(1, 2);  cout &lt;&lt; "Hello World" &lt;&lt; endl;  return 0;}Image TestLocalcd /Users/sophia/Desktop/Github/cs-Devlogbundle exec jekyll server]]></content>
       <categories>
         
           <category> Test </category>

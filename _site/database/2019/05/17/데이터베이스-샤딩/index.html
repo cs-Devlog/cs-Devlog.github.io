@@ -83,7 +83,7 @@
 <link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="11번가,코딩테스트,인적성," />
+  <meta name="keywords" content="Database,Sharding,샤딩," />
 
 
 
@@ -111,20 +111,22 @@
 
 
 
-<meta name="description" content="11st SKCT 및 코딩테스트 후기">
-<meta name="keywords" content="11번가, 코딩테스트, 인적성">
+<meta name="description" content="샤딩의 정의와 주요 관점">
+<meta name="keywords" content="Database, Sharding, 샤딩">
 <meta property="og:type" content="article">
-<meta property="og:title" content="11번가 SKCT 및 코딩테스트 후기">
-<meta property="og:url" content="http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/2019/05/11/11%EB%B2%88%EA%B0%80-SKCT-%EB%B0%8F-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%9B%84%EA%B8%B0/">
+<meta property="og:title" content="Database Sharding(샤딩)이란?">
+<meta property="og:url" content="http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/">
 <meta property="og:site_name" content="Devlog">
-<meta property="og:description" content="11st SKCT 및 코딩테스트 후기">
+<meta property="og:description" content="샤딩의 정의와 주요 관점">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="/assets/images/11st.png">
-<meta property="og:image" content="/assets/images/11st_result.png">
+<meta property="og:image" content="/assets/images/Sharding.png">
+<meta property="og:image" content="/assets/images/AlgorithmSharding.png">
+<meta property="og:image" content="/assets/images/DynamicSharding.png">
+<meta property="og:image" content="/assets/images/EntityGroup.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="11번가 SKCT 및 코딩테스트 후기">
-<meta name="twitter:description" content="11st SKCT 및 코딩테스트 후기">
-<meta name="twitter:image" content="/assets/images/11st.png">
+<meta name="twitter:title" content="Database Sharding(샤딩)이란?">
+<meta name="twitter:description" content="샤딩의 정의와 주요 관점">
+<meta name="twitter:image" content="/assets/images/Sharding.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -157,7 +159,7 @@
 
 
 
-  <title>11번가 SKCT 및 코딩테스트 후기 | Devlog</title>
+  <title>Database Sharding(샤딩)이란? | Devlog</title>
   
 
 
@@ -283,7 +285,7 @@
   
 
   <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/2019/05/11/11%EB%B2%88%EA%B0%80-SKCT-%EB%B0%8F-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%9B%84%EA%B8%B0/">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChanSu Kim">
@@ -303,7 +305,7 @@
           <h1 class="post-title" itemprop="name headline">
           
           
-            11번가 SKCT 및 코딩테스트 후기
+            Database Sharding(샤딩)이란?
           
         </h1>
         
@@ -317,8 +319,8 @@
               
                 <span class="post-meta-item-text">작성일</span>
               
-              <time title="" itemprop="dateCreated datePublished" datetime="2019-05-11T00:00:08+09:00">
-                2019-05-11
+              <time title="" itemprop="dateCreated datePublished" datetime="2019-05-17T23:00:00+09:00">
+                2019-05-17
               </time>
             
 
@@ -341,20 +343,8 @@
               
                 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/%EC%9D%B8%EC%A0%81%EC%84%B1" itemprop="url" rel="index">
-                    <span itemprop="name">인적성</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8" itemprop="url" rel="index">
-                    <span itemprop="name">코딩테스트</span>
+                  <a href="/category/#/Database" itemprop="url" rel="index">
+                    <span itemprop="name">Database</span>
                   </a>
                 </span>
 
@@ -404,80 +394,107 @@
 
 
 
-  <h2 id="-11번가-인턴-skct-및-코딩테스트-후기-">&lt; 11번가 인턴 SKCT 및 코딩테스트 후기 &gt;</h2>
-<p>다른 서류는 잘안붙는데 체험형 인턴이라 그런가 붙었다.</p>
+  <h1 id="-sharding샤딩-">&lt; Sharding(샤딩) &gt;</h1>
+<p>샤딩은 수평 분할(Horizontal Partitioning)과 동일하며, 인덱스의 크기를 줄이고, 작업 동시성을 늘리기 위한 것이다.</p>
 
-<p>제출란에 포트폴리오가 선택이였는데 몇개 추가해서 제출한 덕인거같은 느낌..?</p>
+<p>수평 분할(Horizontal Partitioning)이란 스키마(schema)가 같은 데이터를 두 개 이상의 테이블에 나누어 저장하는 디자인을 말한다.</p>
 
-<p><img src="/assets/images/11st.png" alt="11st" /></p>
+<p>가령 같은 주민 데이터를 처리하기 위해 스키마가 같은 ‘서현동주민 테이블’과 ‘정자동주민 테이블’을 사용하는 것을 말한다.</p>
 
-<h2 id="-skct-후기-">&lt; SKCT 후기 &gt;</h2>
-<p>처음 보는 SKCT였다.</p>
+<p>데이터베이스를 샤딩하게 되면 기존에 하나로 구성될 스키마를 다수의 복제본으로 구성하고 각각의 샤드에 어떤 데이터가 저장될지를 샤드키를 기준으로 분리한다.</p>
 
-<p>듣기로는 2019 상반기 공채랑 문제가 똑같다고 하던데 본인은 처음이라 잘 모르겠다.</p>
+<p><img src="/assets/images/Sharding.png" alt="Imeage" /></p>
 
-<p>총 인원 : 71명</p>
+<hr />
 
-<p>응시 : 40명</p>
+<h1 id="-sharding샤딩의-단점-">&lt; Sharding(샤딩)의 단점 &gt;</h1>
+<p>프로그래밍적, 운영적인 복잡도가 높아진다.</p>
 
-<p>불참 : 31명</p>
-
-<p>개발 직군만 불참이 거의 절반가까이 된다.</p>
-
-<p>아마도 체험형이고, 다른 기업 시험이 있기 때문에 겹쳐서 대부분 포기한 것이라 생각한다.</p>
-
-<p>교재는 위포트를 사용했는데, 실제 시험장에서는 위포트보다 쉬웠다.</p>
-
-<h3 id="실행-역량">실행 역량</h3>
-
-<p>유튜브 보면서 공부(히로와 면접술사)했다.</p>
-
-<p>SKCT 실행역량에서 중요한 점은</p>
+<p>즉, 샤딩을 시작하기 전에 샤딩을 피하거나 지연시킬 수 있는 방법을 찾는게 우선이다.</p>
 
 <ol>
-  <li>역할에 맞게 행동한다.</li>
-  <li>주도적으로 당사자와 되도록 해결한다.</li>
-  <li>업무상 문제라면 보고해서 조치를 받는다.</li>
+  <li>좀더 고스펙의 컴퓨터를 사용한다.</li>
+  <li>Read(Select) 명령이 많다면 Cache나 Database Replication을 적용한다.</li>
+  <li>Table의 일부 Column만 사용한다면 수직 분할(Vertically Partitioning)을 사용한다 / Cold &amp; Hot data를 사용한다.</li>
 </ol>
 
-<p>위 방식대로 풀면 어느정도 감이 잡힌다.</p>
+<p><strong>참고) Database Replication이란?</strong></p>
 
-<p>실행역량은 겨우 다풀었는데 뒤에 인적성은 10문제 넘게 못푼것 같다.</p>
+<p>2개 이상의 DBMS를 Master와 Slave로 나누어 동일한 데이터를 저장한다.</p>
 
-<p>결과가 나와봐야 알 것 같다.</p>
+<p>Master DB는 Insert, Update, Delete의 기능을 수행하고, Slave DB에 실제 데이터를 복사한다.</p>
 
-<h2 id="-코딩-테스트-">&lt; 코딩 테스트 &gt;</h2>
-<p>진행 방식 : 3문제 / 2시간</p>
+<p>Slave DB 시간이 오래걸리는 Select문의 기능을 수행하여 전체적인 Select문 성능을 향상시킨다.</p>
 
-<p>코딩테스트 보는 기업중 복붙을 못하게하는 기업이 있는데, 정말 이해할수가 없다.</p>
+<p><strong>참고) Cold / Hot Data 란?</strong>    <a href="https://d2.naver.com/helloworld/526125">Naver D2 :: Cold Storage 소개</a></p>
 
-<p>자바같은경우 오버라이드하면 다적어야하는데..</p>
+<p>Hot data : 자주 사용되는 데이터</p>
 
-<p>어느 줄에서 오류가 발생한지 알아내는 디버깅마저 힘들었다.</p>
+<p>Cold data : 드물게 사용되거나 아예 사용되지 않는 데이터</p>
 
-<p>1번 문제는 단순 구현문제였는데 별로 어렵지 않았다.</p>
+<p>Cold Storage : 에너지 절감을 위해 연산 능력에서 손해를 보더라도 낮은 가격과 저전력으로 자주 사용되지 않는 데이터를 처리하는 데이터 저장 장치 및 시스템</p>
 
-<p>2번 문제는 <a href="https://www.acmicpc.net/problem/2504">괄호의 값</a> 문제와 유사하다.</p>
+<hr />
 
-<p>입력으로 압축된 문자를 주어주고 이를 풀어내는 문제였다. ex) 4(3(h)g) =&gt; hhghhghhghhg</p>
+<h1 id="-sharding샤딩의-주요-관점-">&lt; Sharding(샤딩)의 주요 관점 &gt;</h1>
+<p>분산된 DB에서 어떻게 Data를 읽어올 것인지?</p>
 
-<p>여기서 계속 인덱스오류가 나서 못찾고 결국 제출했다.</p>
+<p>분산된 DB에 Data를 어떻게 잘 분산시킬지? » Shard Key를 어떻게 정의하는지에 따라 달라진다.</p>
 
-<p>다시 생각해보니 Stack으로 풀면되는 문제였는데.. 아쉬움이 남는다.</p>
+<h2 id="-case-1-algorithm-sharding-">&lt; Case 1. Algorithm Sharding &gt;</h2>
+<p><img src="/assets/images/AlgorithmSharding.png" alt="Imeage" />
+Database id를 단순하게 나누어 샤딩하는 방식</p>
 
-<p>3번 문제도 네트워크 연결 문제와 상당히 비슷했다.</p>
+<p>Sharding Key는 hash(key) % NUM_DB 같은 방식</p>
 
-<p>시험 당시에는 Union-Find가 아닌 Dijkstra로 풀었는데, 어디서 꼬였는지 절반만 맞고, 시간초과가 난 상태로 제출했다.</p>
+<p><strong>장점</strong></p>
 
-<p>한마디로 절반만 맞은셈이니까 틀린문제다.</p>
+<p>같은 값을 가지는 key-value 데이터베이스에 적합하다.</p>
 
-<p>여러 유형을 더 접해봐야 할것 같다.</p>
+<p><strong>단점</strong></p>
 
-<p>2번문제를 Stack으로 해결한다고 좀더 빨리 생각해야했는데 하는 아쉬움이 남는다.</p>
+<p>Cluster를 포함하는 Node 갯수가 변하게 되면 Resharding이 필요하다.</p>
 
-<h2 id="-결과-">&lt; 결과 &gt;</h2>
+<p>Hash Key로 분산되기 때문에 공간에 대한 효율이 부족하다.</p>
 
-<p><img src="/assets/images/11st_result.png" alt="11st_result" width="500" /></p>
+<h2 id="-case-2-dynamic-sharding-">&lt; Case 2. Dynamic Sharding &gt;</h2>
+<p><img src="/assets/images/DynamicSharding.png" alt="Imeage" />
+클라이언트는 Locator Service에 접근하여 Shard Key를 얻는다.</p>
+
+<p><strong>장점</strong></p>
+
+<p>Cluster가 포함하는 Node 갯수가 변하면 Shard Key를 추가하기만 하면 된다.</p>
+
+<p>확장에 유연하게 대처가능하다.</p>
+
+<p><strong>단점</strong></p>
+
+<p>Data Relocation시에는 Locator Service의 Shard key Table도 일치시켜야 한다.</p>
+
+<p>Locator에 의존할 수 밖에 없는 구조이다.</p>
+
+<h1 id="-case-3-entity-group-">&lt; Case 3. Entity Group &gt;</h1>
+<p><img src="/assets/images/EntityGroup.png" alt="Imeage" />
+RDBMS의 Join, Index, Transaction을 사용하여 복잡도를 줄이는 방식과 유사</p>
+
+<p>동일한 파티션의 관련 엔티티를 저장하여 단일 파티션 안에서 추가 기능을 제공하는 방식</p>
+
+<p><strong>장점</strong></p>
+
+<p>하나의 물리적인 Shard에 쿼리를 진행하면 효율적이된다.</p>
+
+<p>사용자의 증가에 따른 확장성이 좋은 파티셔닝이다.</p>
+
+<p><strong>단점</strong></p>
+
+<p>특정 파티션간 쿼리가 자주 요구되는 경우가 있다.</p>
+
+<hr />
+
+<h1 id="-참고-자료-">&lt; 참고 자료 &gt;</h1>
+<p><a href="https://nesoy.github.io/articles/2018-05/Database-Shard">Database의 샤딩(Sharding)이란?</a></p>
+
+<p><a href="https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6">How Sharding Works</a></p>
 
 
       
@@ -509,13 +526,13 @@
         <div class="post-tags">
           
             
-            <a href="/tag/#/11%EB%B2%88%EA%B0%80" rel="tag"># 11번가</a>
+            <a href="/tag/#/Database" rel="tag"># Database</a>
           
             
-            <a href="/tag/#/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8" rel="tag"># 코딩테스트</a>
+            <a href="/tag/#/Sharding" rel="tag"># Sharding</a>
           
             
-            <a href="/tag/#/%EC%9D%B8%EC%A0%81%EC%84%B1" rel="tag"># 인적성</a>
+            <a href="/tag/#/%EC%83%A4%EB%94%A9" rel="tag"># 샤딩</a>
           
         </div>
       
@@ -531,8 +548,8 @@
         <div class="post-nav" id="post-nav-id">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/%EB%B0%B1%EC%A4%80/%EB%B8%8C%EB%A3%A8%ED%8A%B8%20%ED%8F%AC%EC%8A%A4/2019/05/11/%EB%B0%B1%EC%A4%80-1104-%EB%A6%AC%EB%AA%A8%EC%BD%98/" rel="next" title="백준/1104 리모콘">
-                <i class="fa fa-chevron-left"></i> 백준/1104 리모콘
+              <a href="/2019/05/17/2019-05-16-%EB%B0%B1%EC%A4%80-11399-ATM/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -541,8 +558,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/test/guide/2013/12/25/Tistory-to-Github/" rel="prev" title="Tistory to Github">
-                Tistory to Github <i class="fa fa-chevron-right"></i>
+              <a href="/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/" rel="prev" title="Oracle ANSI SQL과 INNER/OUTER JOIN 차이">
+                Oracle ANSI SQL과 INNER/OUTER JOIN 차이 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -700,7 +717,7 @@
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-2"> <a class="nav-link" href="#-11번가-인턴-skct-및-코딩테스트-후기-"> <span class="nav-number">1</span> <span class="nav-text">&lt; 11번가 인턴 SKCT 및 코딩테스트 후기 &gt;</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#-skct-후기-"> <span class="nav-number">2</span> <span class="nav-text">&lt; SKCT 후기 &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#실행-역량"> <span class="nav-number">2.1</span> <span class="nav-text">실행 역량</span> </a> </li> </ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#-코딩-테스트-"> <span class="nav-number">3</span> <span class="nav-text">&lt; 코딩 테스트 &gt;</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#-결과-"> <span class="nav-number">4</span> <span class="nav-text">&lt; 결과 &gt;</span> </a> </li>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#-sharding샤딩-"> <span class="nav-number">1</span> <span class="nav-text">&lt; Sharding(샤딩) &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-sharding샤딩의-단점-"> <span class="nav-number">2</span> <span class="nav-text">&lt; Sharding(샤딩)의 단점 &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-sharding샤딩의-주요-관점-"> <span class="nav-number">3</span> <span class="nav-text">&lt; Sharding(샤딩)의 주요 관점 &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#-case-1-algorithm-sharding-"> <span class="nav-number">3.1</span> <span class="nav-text">&lt; Case 1. Algorithm Sharding &gt;</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#-case-2-dynamic-sharding-"> <span class="nav-number">3.2</span> <span class="nav-text">&lt; Case 2. Dynamic Sharding &gt;</span> </a> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-case-3-entity-group-"> <span class="nav-number">4</span> <span class="nav-text">&lt; Case 3. Entity Group &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-참고-자료-"> <span class="nav-number">5</span> <span class="nav-text">&lt; 참고 자료 &gt;</span> </a> </li>
     </ol>
   </div>
             

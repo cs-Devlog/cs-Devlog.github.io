@@ -83,7 +83,7 @@
 <link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Test,Guide," />
+  <meta name="keywords" content="Database,ANSI SQL,INNER JOIN,OUTER JOIN," />
 
 
 
@@ -111,19 +111,17 @@
 
 
 
-<meta name="description" content="Code Guide">
-<meta name="keywords" content="Test, Guide">
+<meta name="description" content="Oracle ANSI SQL과 INNER/OUTER JOIN 차이에 대해 알아보자.">
+<meta name="keywords" content="Database, ANSI SQL, INNER JOIN, OUTER JOIN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Highlight Test">
-<meta property="og:url" content="http://localhost:4000/test/guide/2013/12/25/highlight-test/">
+<meta property="og:title" content="Oracle ANSI SQL과 INNER/OUTER JOIN 차이">
+<meta property="og:url" content="http://localhost:4000/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/">
 <meta property="og:site_name" content="Devlog">
-<meta property="og:description" content="Code Guide">
+<meta property="og:description" content="Oracle ANSI SQL과 INNER/OUTER JOIN 차이에 대해 알아보자.">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="/assets/images/searchicon.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Highlight Test">
-<meta name="twitter:description" content="Code Guide">
-<meta name="twitter:image" content="/assets/images/searchicon.png">
+<meta name="twitter:title" content="Oracle ANSI SQL과 INNER/OUTER JOIN 차이">
+<meta name="twitter:description" content="Oracle ANSI SQL과 INNER/OUTER JOIN 차이에 대해 알아보자.">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -156,7 +154,7 @@
 
 
 
-  <title>Highlight Test | Devlog</title>
+  <title>Oracle ANSI SQL과 INNER/OUTER JOIN 차이 | Devlog</title>
   
 
 
@@ -282,7 +280,7 @@
   
 
   <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/test/guide/2013/12/25/highlight-test/">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChanSu Kim">
@@ -302,7 +300,7 @@
           <h1 class="post-title" itemprop="name headline">
           
           
-            Highlight Test
+            Oracle ANSI SQL과 INNER/OUTER JOIN 차이
           
         </h1>
         
@@ -316,8 +314,8 @@
               
                 <span class="post-meta-item-text">작성일</span>
               
-              <time title="" itemprop="dateCreated datePublished" datetime="2013-12-25T08:29:08+09:00">
-                2013-12-25
+              <time title="" itemprop="dateCreated datePublished" datetime="2019-05-17T23:00:00+09:00">
+                2019-05-17
               </time>
             
 
@@ -340,20 +338,8 @@
               
                 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/Test" itemprop="url" rel="index">
-                    <span itemprop="name">Test</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/Guide" itemprop="url" rel="index">
-                    <span itemprop="name">Guide</span>
+                  <a href="/category/#/Database" itemprop="url" rel="index">
+                    <span itemprop="name">Database</span>
                   </a>
                 </span>
 
@@ -403,64 +389,73 @@
 
 
 
-  <p>This is a highlight test.</p>
+  <h1 id="-ansi-sql-">&lt; ANSI SQL &gt;</h1>
+<p>ANSI SQL에 대해 알아보자.</p>
+<ol>
+  <li>표준 SQL문이기 때문에 DBMS의 종류에 제약을 받지 않는다. (MySQL, OracleDB..)</li>
+  <li>테이블간의 Join 관계가 FROM 에서 명시되기 때문에 WHERE 문에서 조건만 확인하면 된다.</li>
+</ol>
 
-<h1 id="normal-block">Normal block</h1>
+<p>즉, 가독성이 일반 Query문보다 좋다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>alert('Hello World!');
-</code></pre></td></tr></tbody></table></div></div>
+<p>대표적인 예시로 ANSI SQL의 두번째 장점인 가독성에 대해서알아보자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>print 'helloworld'
-</code></pre></td></tr></tbody></table></div></div>
+<p>일반 SQL Query는 다음과 같다.</p>
 
-<h1 id="highlight-block">Highlight block</h1>
+<pre><code class="language-SQL">-- 일반적인 SQL Query
+SELECT * 
+FROM table1 as t1, table2 as t2 WHERE t1.a = t2.b
+</code></pre>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span> <span class="s1">'Hello, world!'</span> <span class="p">);</span>
-</code></pre></td></tr></tbody></table></div></div>
+<p>즉, WHERE문에서 Table을 JOIN하는 방식이다.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code><span class="k">print</span> <span class="s">'helloworld'</span>
-</code></pre></td></tr></tbody></table></div></div>
+<p>단순한 Query라면 가독성에 전혀 문제가 없지만, Query가 길어지게되면 가독성이 떨어질 수 밖에 없다.</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span>
-</code></pre></td></tr></tbody></table></div></div>
+<p>이와 다르게 ANSI SQL Query 는 FROM 절에서 JOIN을 이용하여 묶고, WHERE에는 검색 조건만 넣어 가독성이 좋다.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span></code></pre></figure>
+<pre><code class="language-SQL">-- ANSI SQL Query 
+SELECT * 
+FROM table1 as t1 LEFT OUTER JOIN table as t2 ON t1.a = t2.b
+</code></pre>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span></pre></td></tr></tbody></table></code></pre></figure>
+<p>위의 ANSI SQL에서는 LEFT OUTER JOIN을 사용하여 FROM절에 Table JOIN 하였다.</p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16</pre></td><td class="code"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<p>ANSI SQL에서 사용하는 INNER/OUERT JOIN 의 개념을 명확히 아는 것 또한 중요하다.</p>
 
-<span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">arg1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arg2</span><span class="p">)</span>
-<span class="p">{</span>
+<hr />
 
-<span class="p">}</span>
+<h1 id="-inner-join-">&lt; INNER JOIN &gt;</h1>
+<p>두 테이블간 ON 조건을 만족하는 ROW만 출력된다.</p>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="n">string</span> <span class="n">str</span><span class="p">;</span>
-  <span class="n">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello World"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></tbody></table></div></div>
+<pre><code class="language-SQL">-- INNER JOIN 
+SELECT * 
+FROM table1 as t1 INNER JOIN table2 as t2 ON t1.a = t2.b;
+</code></pre>
 
-<p>Image Test
-<img src="/assets/images/searchicon.png" alt="Image" width="auto" /></p>
+<p>Query가 위와 같을 때, ON 조건인 t1.a = t2.b 를 만족하는 Row 만 출력된다.</p>
 
-<p>Local
-cd /Users/sophia/Desktop/Github/cs-Devlog
-bundle exec jekyll server</p>
+<h1 id="-outer-join-">&lt; OUTER JOIN &gt;</h1>
+<p>대표적으로 자주 사용하는 LEFT OUTER JOIN 에 대해서 알아보자.</p>
+
+<p>OUTER 명령어는 생략이 가능하다. 즉, LEFT OUTER JOIN = LEFT JOIN과 같다.</p>
+
+<p>LEFT TABLE 을 기준으로 오른쪽에 덧붙이는 느낌으로 생각하면 된다.</p>
+
+<p>즉, LEFT TABLE의 결과값을 가져오고 ON 조건에 해당하는 경우 오른쪽에 매칭, 데이터가 없는 경우 NULL로 출력된다.</p>
+
+<pre><code class="language-SQL">-- OUTER JOIN 
+SELECT * 
+FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.a = t2.b;
+</code></pre>
+
+<p>t1.a = t2.b 인 경우, t1의 값이 10행 이라면, 해당 쿼리의 결과도 10행이 유지되고, ON 조건에 해당하는 Row가 있다면 오른쪽에 데이터가 매칭된다.</p>
+
+<p>단, 1개의 t1 행에 ON 조건을 만족하는 t2의 값이 여러개라면, Row가 증가할 수도 있다.</p>
+
+<h1 id="-결론-">&lt; 결론 &gt;</h1>
+<p>ANSI SQL 에 맞춰서 Query를 짜는 습관을 가지자.</p>
+
+<p>즉, WHERE 문에서는 검색조건만 넣도록, Table JOIN 은 FROM절에 묶어서 처리하자.</p>
 
 
       
@@ -492,10 +487,16 @@ bundle exec jekyll server</p>
         <div class="post-tags">
           
             
-            <a href="/tag/#/Test" rel="tag"># Test</a>
+            <a href="/tag/#/Database" rel="tag"># Database</a>
           
             
-            <a href="/tag/#/Guide" rel="tag"># Guide</a>
+            <a href="/tag/#/ANSI%20SQL" rel="tag"># ANSI SQL</a>
+          
+            
+            <a href="/tag/#/INNER%20JOIN" rel="tag"># INNER JOIN</a>
+          
+            
+            <a href="/tag/#/OUTER%20JOIN" rel="tag"># OUTER JOIN</a>
           
         </div>
       
@@ -511,8 +512,8 @@ bundle exec jekyll server</p>
         <div class="post-nav" id="post-nav-id">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/%EC%9D%B8%EC%A0%81%EC%84%B1/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/2019/05/11/11%EB%B2%88%EA%B0%80-SKCT-%EB%B0%8F-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%9B%84%EA%B8%B0/" rel="next" title="11번가 SKCT 및 코딩테스트 후기">
-                <i class="fa fa-chevron-left"></i> 11번가 SKCT 및 코딩테스트 후기
+              <a href="/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/" rel="next" title="Database Sharding(샤딩)이란?">
+                <i class="fa fa-chevron-left"></i> Database Sharding(샤딩)이란?
               </a>
             
           </div>
@@ -520,6 +521,10 @@ bundle exec jekyll server</p>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%EB%B0%B1%EC%A4%80/%EC%8A%A4%ED%83%9D/2019/05/16/%EB%B0%B1%EC%A4%80-9935-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C/" rel="prev" title="백준/9935 문자열 폭발">
+                백준/9935 문자열 폭발 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -600,7 +605,7 @@ bundle exec jekyll server</p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">포스트</span>
               </a>
             </div>
@@ -611,7 +616,7 @@ bundle exec jekyll server</p>
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">카테고리</span>
               </a>
             </div>
@@ -622,7 +627,7 @@ bundle exec jekyll server</p>
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">태그</span>
               </a>
             </div>
@@ -676,7 +681,7 @@ bundle exec jekyll server</p>
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-1"> <a class="nav-link" href="#normal-block"> <span class="nav-number">1</span> <span class="nav-text">Normal block</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#highlight-block"> <span class="nav-number">2</span> <span class="nav-text">Highlight block</span> </a> </li>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#-ansi-sql-"> <span class="nav-number">1</span> <span class="nav-text">&lt; ANSI SQL &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-inner-join-"> <span class="nav-number">2</span> <span class="nav-text">&lt; INNER JOIN &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-outer-join-"> <span class="nav-number">3</span> <span class="nav-text">&lt; OUTER JOIN &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-결론-"> <span class="nav-number">4</span> <span class="nav-text">&lt; 결론 &gt;</span> </a> </li>
     </ol>
   </div>
             
