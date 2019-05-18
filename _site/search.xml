@@ -214,11 +214,9 @@
   
     <entry>
       <title><![CDATA[Tistory to Github]]></title>
-      <url>/test/guide/2013/12/25/Tistory-to-Github/</url>
-      <content type="text"><![CDATA[기존 Tistoryhttps://sophia2730.tistory.com/에서 Github 이전 작업 중입니다.Normal blockalert('Hello World!');print 'helloworld'Highlight blockalert( 'Hello, world!' );print 'helloworld'def foo  puts 'foo'enddef foo  puts 'foo'end123def foo  puts 'foo'end#include &lt;iostream&gt;using namespace std;void foo(int arg1, int arg2){}int main(){  string str;  foo(1, 2);  cout &lt;&lt; "Hello World" &lt;&lt; endl;  return 0;}Image TestLocalcd /Users/sophia/Desktop/Github/cs-Devlogbundle exec jekyll server]]></content>
+      <url>/guide/2013/12/25/Tistory-to-Github/</url>
+      <content type="text"><![CDATA[기존 Tistory https://sophia2730.tistory.com/ 에서 Github 이전 작업 중입니다.Normal blockalert('Hello World!');print 'helloworld'Highlight blockalert( 'Hello, world!' );print 'helloworld'def foo  puts 'foo'enddef foo  puts 'foo'end123def foo  puts 'foo'end#include &lt;iostream&gt;using namespace std;void foo(int arg1, int arg2){}int main(){  string str;  foo(1, 2);  cout &lt;&lt; "Hello World" &lt;&lt; endl;  return 0;}Image TestLocalcd /Users/sophia/Desktop/Github/cs-Devlogbundle exec jekyll server]]></content>
       <categories>
-        
-          <category> Test </category>
         
           <category> Guide </category>
         
