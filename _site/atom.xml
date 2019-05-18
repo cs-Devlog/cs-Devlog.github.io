@@ -1,72 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-18T14:35:58+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">Oracle ANSI SQL과 INNER/OUTER JOIN 차이</title><link href="http://localhost:4000/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/" rel="alternate" type="text/html" title="Oracle ANSI SQL과 INNER/OUTER JOIN 차이" /><published>2019-05-17T23:00:00+09:00</published><updated>2019-05-17T23:00:00+09:00</updated><id>http://localhost:4000/database/2019/05/17/Oracle%20ANSI%20SQL%EA%B3%BC%20%EB%82%B4%EC%99%B8%EB%B6%80%20JOIN</id><content type="html" xml:base="http://localhost:4000/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/">&lt;h1 id=&quot;-ansi-sql-&quot;&gt;&amp;lt; ANSI SQL &amp;gt;&lt;/h1&gt;
-&lt;p&gt;ANSI SQL에 대해 알아보자.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-18T17:27:12+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">OOP(객체지향 프로그래밍) 특징과 꼬리질문</title><link href="http://localhost:4000/java/2019/05/18/OOP(%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)-%ED%8A%B9%EC%A7%95%EA%B3%BC-%EA%BC%AC%EB%A6%AC%EC%A7%88%EB%AC%B8/" rel="alternate" type="text/html" title="OOP(객체지향 프로그래밍) 특징과 꼬리질문" /><published>2019-05-18T17:00:00+09:00</published><updated>2019-05-18T17:00:00+09:00</updated><id>http://localhost:4000/java/2019/05/18/OOP(%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)%20%ED%8A%B9%EC%A7%95%EA%B3%BC%20%EA%BC%AC%EB%A6%AC%EC%A7%88%EB%AC%B8</id><content type="html" xml:base="http://localhost:4000/java/2019/05/18/OOP(%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)-%ED%8A%B9%EC%A7%95%EA%B3%BC-%EA%BC%AC%EB%A6%AC%EC%A7%88%EB%AC%B8/">&lt;h1 id=&quot;-oop객체지향-프로그래밍-&quot;&gt;&amp;lt; OOP(객체지향 프로그래밍) &amp;gt;&lt;/h1&gt;
+&lt;p&gt;프로그래밍에서 필요한 데이터를 추상화시켜 상태와 행위를 가진 객체를 만들고 그 객체들 간의 유기적인 상호작용을 통해 로직을 구성하는 프로그래밍 방법&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;장점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드 재사용이 용이하다.&lt;/li&gt;
+  &lt;li&gt;유지보수가 쉽다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;단점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;처리속도가 상대적으로 느리다.&lt;/li&gt;
+  &lt;li&gt;설계시에 많은 시간과 노력이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;-클래스와-인스턴스객체-&quot;&gt;&amp;lt; 클래스와 인스턴스(객체) &amp;gt;&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;클래스 : 객체의 속성(Attribute)과 행위(Behavior)를 변수와 메소드로 정의한 것&lt;/li&gt;
+  &lt;li&gt;객체 : 클래스에 정의된 내용을 바탕으로 실제 메모리에 할당된 데이터&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;-oop객체지향-프로그래밍-4가지-특징캡상추다-&quot;&gt;&amp;lt; OOP(객체지향 프로그래밍) 4가지 특징(캡상추다) &amp;gt;&lt;/h1&gt;
+&lt;h2 id=&quot;1-캡슐화&quot;&gt;1. 캡슐화&lt;/h2&gt;
+&lt;p&gt;객체의 멤버변수는 private로 설정하여 외부에서 접근을 거부하고, Getter/Setter를 public으로 선언하여 객체의 속성에 접근하도록 사용한다.&lt;/p&gt;
+
+&lt;p&gt;그 이유는 객체의 무결성을 보장하기 위함인데, 객체 필드에 직접적인 접근을 거부하고 잘못된 입력에 대해 Getter/Setter는 사전에 처리 및 제한할 수 있기 때문이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;-접근자-&quot;&gt;&amp;lt; 접근자 &amp;gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;public    : 모든 클래스, 패키지에 접근이 가능한 접근 제어자&lt;/li&gt;
+  &lt;li&gt;private   : 같은 패키지에서만 접근 허용, 상속받은 자식 클래스에서는 서로 다른 패키지다 하더라도 접근 가능&lt;/li&gt;
+  &lt;li&gt;default   : 같은 패키지에서만 접근 허용&lt;/li&gt;
+  &lt;li&gt;protected : 같은 클래스에서만 접근 허용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-상속&quot;&gt;2. 상속&lt;/h2&gt;
+&lt;p&gt;클래스의 멤버와 함수를 다른 클래스에 물려주거나, 물려 받는 것을 말하며 이를 통해 재사용성이 높아진다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-추상화&quot;&gt;3. 추상화&lt;/h2&gt;
+&lt;p&gt;중요한 정보만을 표현함으로써 공통의 속성이나 기능을 묶어 이를 하나의 클래스로 다루는 것&lt;/p&gt;
+
+&lt;h2 id=&quot;4-다형성&quot;&gt;4. 다형성&lt;/h2&gt;
+&lt;p&gt;오버로딩과 오버라이딩을 통해 다른 클래스의 객체가 같은 메시지를 받았을 때 각자의 방식으로 동작하는 능력&lt;/p&gt;
+
+&lt;p&gt;오버로딩(Overloadding)    : 상위 클래스의 이름과 return값이 같지만, 매개변수를 다른 메소드를 만들어 가독성을 높이는 방법&lt;/p&gt;
+
+&lt;p&gt;오버라이딩(Overriding)     : 상위 클래스에 존재하는 메소드를 하위 클래스에서 용도에 맞게 재정의 하여 재사용성을 높이는 방법&lt;/p&gt;
+
+&lt;h1 id=&quot;-정적-함수-&quot;&gt;&amp;lt; 정적 함수 &amp;gt;&lt;/h1&gt;
+&lt;p&gt;메모리에 호출되는데 static 으로 함수 또는 클래스를 선언했을 경우에 컴파일 동시에 메모리에 호출된다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 호출된 static은 프로그램이 종료되는 시점까지 유지된다.&lt;/p&gt;
+
+&lt;p&gt;Main 함수의 경우 Java에서의 프로그램의 시작과 끝이기 때문에 Static으로 선언되어야 한다.&lt;/p&gt;
+
+&lt;p&gt;참고) Singletone 패턴&lt;/p&gt;
+
+&lt;h1 id=&quot;-call-by-value-vs-call-by-reference-&quot;&gt;&amp;lt; Call by Value vs Call by Reference &amp;gt;&lt;/h1&gt;
+&lt;h2 id=&quot;call-by-value-값에-의한-호출--------java&quot;&gt;Call by Value (값에 의한 호출)        « Java&lt;/h2&gt;
+&lt;p&gt;함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다.&lt;/p&gt;
+
+&lt;p&gt;함수 호출시 인자로 전달되는 변수의 값을 복사하여 함수의 인자로 전달한다.&lt;/p&gt;
+
+&lt;p&gt;복사된 인자는 함수 안에서 지역적으로 사용되는 local value의 특성을 가진다.&lt;/p&gt;
+
+&lt;p&gt;따라서 함수 안에서 인자의 값이 변경되어도, 외부의 변수의 값은 변경되지 않는다.&lt;/p&gt;
+
+&lt;h2 id=&quot;call-by-reference-참조에-의한-호출&quot;&gt;Call by Reference (참조에 의한 호출)&lt;/h2&gt;
+&lt;p&gt;함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다.&lt;/p&gt;
+
+&lt;p&gt;함수 호출시 인자로 전달되는 변수의 레퍼런스를 전달한다. (해당 변수를 가리킨다.)&lt;/p&gt;
+
+&lt;p&gt;따라서 함수 안에서 인자의 값이 변경되면, 인자로 전달된 변수의 값도 함께 변경된다.&lt;/p&gt;
+
+&lt;p&gt;cf) Java는 자료형은(Integer, Long, String, …) Call by Value이다. 하지만 배열, 클래스는 Call by Reference로 생각하는 것이 편하다.&lt;/p&gt;
+
+&lt;h1 id=&quot;-stringbuffer-vs-stringbuilder-&quot;&gt;&amp;lt; StringBuffer vs StringBuilder &amp;gt;&lt;/h1&gt;
+&lt;p&gt;StringBuffer    : Multi-Thread 환경에서 동기화가 가능하기 때문에 Thread-Safe하다.&lt;/p&gt;
+
+&lt;p&gt;StringBuilder   : 동기화를 지원하지 않기 때문에 멀티쓰레드환경에서는 적합하지 않지만 Single-Thread 환경에서 빠르다.&lt;/p&gt;
+
+&lt;h1 id=&quot;-annotation-&quot;&gt;&amp;lt; Annotation &amp;gt;&lt;/h1&gt;
+&lt;p&gt;어노테이션이란 본래 주석이란 뜻으로, 인터페이스를 기반으로 한 문법으로 주석처럼 코드에 달아 클래스에 특별한 의미를 부여하거나 기능을 주입할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;컴파일러에게 코드 문법 에러를 체크하도록 정보를 제공 및 실행 시(런타임 시) 특정 기능을 실행하도록 정보를 제공한다.&lt;/p&gt;
+
+&lt;p&gt;어노테이션은 컴파일러에게 이 소스코드를 어떻게 처리해야 되는 것인지 표시를 해준다.&lt;/p&gt;
+
+&lt;p&gt;예를들어 내장 어노테이션인 @Override 경우 해당 메소드가 부모클래스를 오버라이딩 한 메소드라고 컴파일러에게 미리 일러주는 것이다.&lt;/p&gt;
+
+&lt;p&gt;따라서 컴파일러는 런타임 이전에 이 메소드가 문제없이 오버라이딩 되었는지 검사한다.&lt;/p&gt;
+
+&lt;h1 id=&quot;-generic-&quot;&gt;&amp;lt; Generic &amp;gt;&lt;/h1&gt;
+&lt;p&gt;제네릭 타입을 이용해서 컴파일 과정에서 타입 체크를 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;제네릭은 클래스와 인터페이스, 메소드를 정의할 때 타입 파라미터로 사용한다.&lt;/p&gt;
+
 &lt;ol&gt;
-  &lt;li&gt;표준 SQL문이기 때문에 DBMS의 종류에 제약을 받지 않는다. (MySQL, OracleDB..)&lt;/li&gt;
-  &lt;li&gt;테이블간의 Join 관계가 FROM 에서 명시되기 때문에 WHERE 문에서 조건만 확인하면 된다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;컴파일할 때 타입을 체크해서 에러를 사전에 잡을 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;컴파일러가 타입캐스팅을 해주기 때문에 개발자가 편리하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;타입만 다르고 코드의 내용이 대부분 일치할 때, 코드의 재사용성이 좋아진다.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;즉, 가독성이 일반 Query문보다 좋다.&lt;/p&gt;
-
-&lt;p&gt;대표적인 예시로 ANSI SQL의 두번째 장점인 가독성에 대해서알아보자.&lt;/p&gt;
-
-&lt;p&gt;일반 SQL Query는 다음과 같다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- 일반적인 SQL Query
-SELECT * 
-FROM table1 as t1, table2 as t2 WHERE t1.a = t2.b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;즉, WHERE문에서 Table을 JOIN하는 방식이다.&lt;/p&gt;
-
-&lt;p&gt;단순한 Query라면 가독성에 전혀 문제가 없지만, Query가 길어지게되면 가독성이 떨어질 수 밖에 없다.&lt;/p&gt;
-
-&lt;p&gt;이와 다르게 ANSI SQL Query 는 FROM 절에서 JOIN을 이용하여 묶고, WHERE에는 검색 조건만 넣어 가독성이 좋다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- ANSI SQL Query 
-SELECT * 
-FROM table1 as t1 LEFT OUTER JOIN table as t2 ON t1.a = t2.b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;위의 ANSI SQL에서는 LEFT OUTER JOIN을 사용하여 FROM절에 Table JOIN 하였다.&lt;/p&gt;
-
-&lt;p&gt;ANSI SQL에서 사용하는 INNER/OUERT JOIN 의 개념을 명확히 아는 것 또한 중요하다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;-inner-join-&quot;&gt;&amp;lt; INNER JOIN &amp;gt;&lt;/h1&gt;
-&lt;p&gt;두 테이블간 ON 조건을 만족하는 ROW만 출력된다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- INNER JOIN 
-SELECT * 
-FROM table1 as t1 INNER JOIN table2 as t2 ON t1.a = t2.b;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Query가 위와 같을 때, ON 조건인 t1.a = t2.b 를 만족하는 Row 만 출력된다.&lt;/p&gt;
-
-&lt;h1 id=&quot;-outer-join-&quot;&gt;&amp;lt; OUTER JOIN &amp;gt;&lt;/h1&gt;
-&lt;p&gt;대표적으로 자주 사용하는 LEFT OUTER JOIN 에 대해서 알아보자.&lt;/p&gt;
-
-&lt;p&gt;OUTER 명령어는 생략이 가능하다. 즉, LEFT OUTER JOIN = LEFT JOIN과 같다.&lt;/p&gt;
-
-&lt;p&gt;LEFT TABLE 을 기준으로 오른쪽에 덧붙이는 느낌으로 생각하면 된다.&lt;/p&gt;
-
-&lt;p&gt;즉, LEFT TABLE의 결과값을 가져오고 ON 조건에 해당하는 경우 오른쪽에 매칭, 데이터가 없는 경우 NULL로 출력된다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- OUTER JOIN 
-SELECT * 
-FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.a = t2.b;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;t1.a = t2.b 인 경우, t1의 값이 10행 이라면, 해당 쿼리의 결과도 10행이 유지되고, ON 조건에 해당하는 Row가 있다면 오른쪽에 데이터가 매칭된다.&lt;/p&gt;
-
-&lt;p&gt;단, 1개의 t1 행에 ON 조건을 만족하는 t2의 값이 여러개라면, Row가 증가할 수도 있다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;-결론-&quot;&gt;&amp;lt; 결론 &amp;gt;&lt;/h1&gt;
-&lt;p&gt;ANSI SQL 에 맞춰서 Query를 짜는 습관을 가지자.&lt;/p&gt;
-
-&lt;p&gt;즉, WHERE 문에서는 검색조건만 넣도록, Table JOIN 은 FROM절에 묶어서 처리하자.&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="ANSI SQL" /><category term="INNER JOIN" /><category term="OUTER JOIN" /><summary type="html">&amp;lt; ANSI SQL &amp;gt; ANSI SQL에 대해 알아보자. 표준 SQL문이기 때문에 DBMS의 종류에 제약을 받지 않는다. (MySQL, OracleDB..) 테이블간의 Join 관계가 FROM 에서 명시되기 때문에 WHERE 문에서 조건만 확인하면 된다. 즉, 가독성이 일반 Query문보다 좋다. 대표적인 예시로 ANSI SQL의 두번째 장점인 가독성에 대해서알아보자. 일반 SQL Query는 다음과 같다. -- 일반적인 SQL Query SELECT * FROM table1 as t1, table2 as t2 WHERE t1.a = t2.b 즉, WHERE문에서 Table을 JOIN하는 방식이다. 단순한 Query라면 가독성에 전혀 문제가 없지만, Query가 길어지게되면 가독성이 떨어질 수 밖에 없다. 이와 다르게 ANSI SQL Query 는 FROM 절에서 JOIN을 이용하여 묶고, WHERE에는 검색 조건만 넣어 가독성이 좋다. -- ANSI SQL Query SELECT * FROM table1 as t1 LEFT OUTER JOIN table as t2 ON t1.a = t2.b 위의 ANSI SQL에서는 LEFT OUTER JOIN을 사용하여 FROM절에 Table JOIN 하였다. ANSI SQL에서 사용하는 INNER/OUERT JOIN 의 개념을 명확히 아는 것 또한 중요하다. &amp;lt; INNER JOIN &amp;gt; 두 테이블간 ON 조건을 만족하는 ROW만 출력된다. -- INNER JOIN SELECT * FROM table1 as t1 INNER JOIN table2 as t2 ON t1.a = t2.b; Query가 위와 같을 때, ON 조건인 t1.a = t2.b 를 만족하는 Row 만 출력된다. &amp;lt; OUTER JOIN &amp;gt; 대표적으로 자주 사용하는 LEFT OUTER JOIN 에 대해서 알아보자. OUTER 명령어는 생략이 가능하다. 즉, LEFT OUTER JOIN = LEFT JOIN과 같다. LEFT TABLE 을 기준으로 오른쪽에 덧붙이는 느낌으로 생각하면 된다. 즉, LEFT TABLE의 결과값을 가져오고 ON 조건에 해당하는 경우 오른쪽에 매칭, 데이터가 없는 경우 NULL로 출력된다. -- OUTER JOIN SELECT * FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.a = t2.b; t1.a = t2.b 인 경우, t1의 값이 10행 이라면, 해당 쿼리의 결과도 10행이 유지되고, ON 조건에 해당하는 Row가 있다면 오른쪽에 데이터가 매칭된다. 단, 1개의 t1 행에 ON 조건을 만족하는 t2의 값이 여러개라면, Row가 증가할 수도 있다. &amp;lt; 결론 &amp;gt; ANSI SQL 에 맞춰서 Query를 짜는 습관을 가지자. 즉, WHERE 문에서는 검색조건만 넣도록, Table JOIN 은 FROM절에 묶어서 처리하자.</summary></entry><entry><title type="html">Database Sharding(샤딩)이란?</title><link href="http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/" rel="alternate" type="text/html" title="Database Sharding(샤딩)이란?" /><published>2019-05-17T23:00:00+09:00</published><updated>2019-05-17T23:00:00+09:00</updated><id>http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%A4%EB%94%A9</id><content type="html" xml:base="http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/">&lt;h1 id=&quot;-sharding샤딩-&quot;&gt;&amp;lt; Sharding(샤딩) &amp;gt;&lt;/h1&gt;
+&lt;h1 id=&quot;-정리-&quot;&gt;&amp;lt; 정리 &amp;gt;&lt;/h1&gt;
+&lt;p&gt;모든 클래스들이 접근 가능하여야 하고, 시작되기 전 메모리에 올려져 있어야 하며, return 값에는 의미가 없기 때문에 public static void main를 사용한다.&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Java" /><category term="접근자" /><category term="static" /><category term="void" /><summary type="html">&amp;lt; OOP(객체지향 프로그래밍) &amp;gt; 프로그래밍에서 필요한 데이터를 추상화시켜 상태와 행위를 가진 객체를 만들고 그 객체들 간의 유기적인 상호작용을 통해 로직을 구성하는 프로그래밍 방법 장점 코드 재사용이 용이하다. 유지보수가 쉽다. 단점 처리속도가 상대적으로 느리다. 설계시에 많은 시간과 노력이 필요하다. &amp;lt; 클래스와 인스턴스(객체) &amp;gt; 클래스 : 객체의 속성(Attribute)과 행위(Behavior)를 변수와 메소드로 정의한 것 객체 : 클래스에 정의된 내용을 바탕으로 실제 메모리에 할당된 데이터 &amp;lt; OOP(객체지향 프로그래밍) 4가지 특징(캡상추다) &amp;gt; 1. 캡슐화 객체의 멤버변수는 private로 설정하여 외부에서 접근을 거부하고, Getter/Setter를 public으로 선언하여 객체의 속성에 접근하도록 사용한다. 그 이유는 객체의 무결성을 보장하기 위함인데, 객체 필드에 직접적인 접근을 거부하고 잘못된 입력에 대해 Getter/Setter는 사전에 처리 및 제한할 수 있기 때문이다. &amp;lt; 접근자 &amp;gt; public : 모든 클래스, 패키지에 접근이 가능한 접근 제어자 private : 같은 패키지에서만 접근 허용, 상속받은 자식 클래스에서는 서로 다른 패키지다 하더라도 접근 가능 default : 같은 패키지에서만 접근 허용 protected : 같은 클래스에서만 접근 허용 2. 상속 클래스의 멤버와 함수를 다른 클래스에 물려주거나, 물려 받는 것을 말하며 이를 통해 재사용성이 높아진다. 3. 추상화 중요한 정보만을 표현함으로써 공통의 속성이나 기능을 묶어 이를 하나의 클래스로 다루는 것 4. 다형성 오버로딩과 오버라이딩을 통해 다른 클래스의 객체가 같은 메시지를 받았을 때 각자의 방식으로 동작하는 능력 오버로딩(Overloadding) : 상위 클래스의 이름과 return값이 같지만, 매개변수를 다른 메소드를 만들어 가독성을 높이는 방법 오버라이딩(Overriding) : 상위 클래스에 존재하는 메소드를 하위 클래스에서 용도에 맞게 재정의 하여 재사용성을 높이는 방법 &amp;lt; 정적 함수 &amp;gt; 메모리에 호출되는데 static 으로 함수 또는 클래스를 선언했을 경우에 컴파일 동시에 메모리에 호출된다. 이렇게 호출된 static은 프로그램이 종료되는 시점까지 유지된다. Main 함수의 경우 Java에서의 프로그램의 시작과 끝이기 때문에 Static으로 선언되어야 한다. 참고) Singletone 패턴 &amp;lt; Call by Value vs Call by Reference &amp;gt; Call by Value (값에 의한 호출) « Java 함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다. 함수 호출시 인자로 전달되는 변수의 값을 복사하여 함수의 인자로 전달한다. 복사된 인자는 함수 안에서 지역적으로 사용되는 local value의 특성을 가진다. 따라서 함수 안에서 인자의 값이 변경되어도, 외부의 변수의 값은 변경되지 않는다. Call by Reference (참조에 의한 호출) 함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다. 함수 호출시 인자로 전달되는 변수의 레퍼런스를 전달한다. (해당 변수를 가리킨다.) 따라서 함수 안에서 인자의 값이 변경되면, 인자로 전달된 변수의 값도 함께 변경된다. cf) Java는 자료형은(Integer, Long, String, …) Call by Value이다. 하지만 배열, 클래스는 Call by Reference로 생각하는 것이 편하다. &amp;lt; StringBuffer vs StringBuilder &amp;gt; StringBuffer : Multi-Thread 환경에서 동기화가 가능하기 때문에 Thread-Safe하다. StringBuilder : 동기화를 지원하지 않기 때문에 멀티쓰레드환경에서는 적합하지 않지만 Single-Thread 환경에서 빠르다. &amp;lt; Annotation &amp;gt; 어노테이션이란 본래 주석이란 뜻으로, 인터페이스를 기반으로 한 문법으로 주석처럼 코드에 달아 클래스에 특별한 의미를 부여하거나 기능을 주입할 수 있다. 컴파일러에게 코드 문법 에러를 체크하도록 정보를 제공 및 실행 시(런타임 시) 특정 기능을 실행하도록 정보를 제공한다. 어노테이션은 컴파일러에게 이 소스코드를 어떻게 처리해야 되는 것인지 표시를 해준다. 예를들어 내장 어노테이션인 @Override 경우 해당 메소드가 부모클래스를 오버라이딩 한 메소드라고 컴파일러에게 미리 일러주는 것이다. 따라서 컴파일러는 런타임 이전에 이 메소드가 문제없이 오버라이딩 되었는지 검사한다. &amp;lt; Generic &amp;gt; 제네릭 타입을 이용해서 컴파일 과정에서 타입 체크를 할 수 있다. 제네릭은 클래스와 인터페이스, 메소드를 정의할 때 타입 파라미터로 사용한다. 컴파일할 때 타입을 체크해서 에러를 사전에 잡을 수 있다. 컴파일러가 타입캐스팅을 해주기 때문에 개발자가 편리하다. 타입만 다르고 코드의 내용이 대부분 일치할 때, 코드의 재사용성이 좋아진다. &amp;lt; 정리 &amp;gt; 모든 클래스들이 접근 가능하여야 하고, 시작되기 전 메모리에 올려져 있어야 하며, return 값에는 의미가 없기 때문에 public static void main를 사용한다.</summary></entry><entry><title type="html">Database Sharding(샤딩)이란?</title><link href="http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/" rel="alternate" type="text/html" title="Database Sharding(샤딩)이란?" /><published>2019-05-17T23:00:00+09:00</published><updated>2019-05-17T23:00:00+09:00</updated><id>http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%A4%EB%94%A9</id><content type="html" xml:base="http://localhost:4000/database/2019/05/17/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%A4%EB%94%A9/">&lt;h1 id=&quot;-sharding샤딩-&quot;&gt;&amp;lt; Sharding(샤딩) &amp;gt;&lt;/h1&gt;
 &lt;p&gt;샤딩은 수평 분할(Horizontal Partitioning)과 동일하며, 인덱스의 크기를 줄이고, 작업 동시성을 늘리기 위한 것이다.&lt;/p&gt;
 
 &lt;p&gt;수평 분할(Horizontal Partitioning)이란 스키마(schema)가 같은 데이터를 두 개 이상의 테이블에 나누어 저장하는 디자인을 말한다.&lt;/p&gt;
@@ -167,7 +209,75 @@ RDBMS의 Join, Index, Transaction을 사용하여 복잡도를 줄이는 방식�
 
 &lt;p&gt;&lt;a href=&quot;https://nesoy.github.io/articles/2018-05/Database-Shard&quot;&gt;Database의 샤딩(Sharding)이란?&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6&quot;&gt;How Sharding Works&lt;/a&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="Sharding" /><category term="샤딩" /><summary type="html">&amp;lt; Sharding(샤딩) &amp;gt; 샤딩은 수평 분할(Horizontal Partitioning)과 동일하며, 인덱스의 크기를 줄이고, 작업 동시성을 늘리기 위한 것이다. 수평 분할(Horizontal Partitioning)이란 스키마(schema)가 같은 데이터를 두 개 이상의 테이블에 나누어 저장하는 디자인을 말한다. 가령 같은 주민 데이터를 처리하기 위해 스키마가 같은 ‘서현동주민 테이블’과 ‘정자동주민 테이블’을 사용하는 것을 말한다. 데이터베이스를 샤딩하게 되면 기존에 하나로 구성될 스키마를 다수의 복제본으로 구성하고 각각의 샤드에 어떤 데이터가 저장될지를 샤드키를 기준으로 분리한다. &amp;lt; Sharding(샤딩)의 단점 &amp;gt; 프로그래밍적, 운영적인 복잡도가 높아진다. 즉, 샤딩을 시작하기 전에 샤딩을 피하거나 지연시킬 수 있는 방법을 찾는게 우선이다. 좀더 고스펙의 컴퓨터를 사용한다. Read(Select) 명령이 많다면 Cache나 Database Replication을 적용한다. Table의 일부 Column만 사용한다면 수직 분할(Vertically Partitioning)을 사용한다 / Cold &amp;amp; Hot data를 사용한다. 참고) Database Replication이란? 2개 이상의 DBMS를 Master와 Slave로 나누어 동일한 데이터를 저장한다. Master DB는 Insert, Update, Delete의 기능을 수행하고, Slave DB에 실제 데이터를 복사한다. Slave DB 시간이 오래걸리는 Select문의 기능을 수행하여 전체적인 Select문 성능을 향상시킨다. 참고) Cold / Hot Data 란? Naver D2 :: Cold Storage 소개 Hot data : 자주 사용되는 데이터 Cold data : 드물게 사용되거나 아예 사용되지 않는 데이터 Cold Storage : 에너지 절감을 위해 연산 능력에서 손해를 보더라도 낮은 가격과 저전력으로 자주 사용되지 않는 데이터를 처리하는 데이터 저장 장치 및 시스템 &amp;lt; Sharding(샤딩)의 주요 관점 &amp;gt; 분산된 DB에서 어떻게 Data를 읽어올 것인지? 분산된 DB에 Data를 어떻게 잘 분산시킬지? » Shard Key를 어떻게 정의하는지에 따라 달라진다. &amp;lt; Case 1. Algorithm Sharding &amp;gt; Database id를 단순하게 나누어 샤딩하는 방식 Sharding Key는 hash(key) % NUM_DB 같은 방식 장점 같은 값을 가지는 key-value 데이터베이스에 적합하다. 단점 Cluster를 포함하는 Node 갯수가 변하게 되면 Resharding이 필요하다. Hash Key로 분산되기 때문에 공간에 대한 효율이 부족하다. &amp;lt; Case 2. Dynamic Sharding &amp;gt; 클라이언트는 Locator Service에 접근하여 Shard Key를 얻는다. 장점 Cluster가 포함하는 Node 갯수가 변하면 Shard Key를 추가하기만 하면 된다. 확장에 유연하게 대처가능하다. 단점 Data Relocation시에는 Locator Service의 Shard key Table도 일치시켜야 한다. Locator에 의존할 수 밖에 없는 구조이다. &amp;lt; Case 3. Entity Group &amp;gt; RDBMS의 Join, Index, Transaction을 사용하여 복잡도를 줄이는 방식과 유사 동일한 파티션의 관련 엔티티를 저장하여 단일 파티션 안에서 추가 기능을 제공하는 방식 장점 하나의 물리적인 Shard에 쿼리를 진행하면 효율적이된다. 사용자의 증가에 따른 확장성이 좋은 파티셔닝이다. 단점 특정 파티션간 쿼리가 자주 요구되는 경우가 있다. &amp;lt; 참고 자료 &amp;gt; Database의 샤딩(Sharding)이란? How Sharding Works</summary></entry><entry><title type="html">백준/11399 ATM</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/%EC%A0%95%EB%A0%AC/2019/05/16/%EB%B0%B1%EC%A4%80-11399-ATM/" rel="alternate" type="text/html" title="백준/11399 ATM" /><published>2019-05-16T13:36:00+09:00</published><updated>2019-05-16T13:36:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/%EC%A0%95%EB%A0%AC/2019/05/16/%EB%B0%B1%EC%A4%80%2011399%20ATM</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/%EC%A0%95%EB%A0%AC/2019/05/16/%EB%B0%B1%EC%A4%80-11399-ATM/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6&quot;&gt;How Sharding Works&lt;/a&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="Sharding" /><category term="샤딩" /><summary type="html">&amp;lt; Sharding(샤딩) &amp;gt; 샤딩은 수평 분할(Horizontal Partitioning)과 동일하며, 인덱스의 크기를 줄이고, 작업 동시성을 늘리기 위한 것이다. 수평 분할(Horizontal Partitioning)이란 스키마(schema)가 같은 데이터를 두 개 이상의 테이블에 나누어 저장하는 디자인을 말한다. 가령 같은 주민 데이터를 처리하기 위해 스키마가 같은 ‘서현동주민 테이블’과 ‘정자동주민 테이블’을 사용하는 것을 말한다. 데이터베이스를 샤딩하게 되면 기존에 하나로 구성될 스키마를 다수의 복제본으로 구성하고 각각의 샤드에 어떤 데이터가 저장될지를 샤드키를 기준으로 분리한다. &amp;lt; Sharding(샤딩)의 단점 &amp;gt; 프로그래밍적, 운영적인 복잡도가 높아진다. 즉, 샤딩을 시작하기 전에 샤딩을 피하거나 지연시킬 수 있는 방법을 찾는게 우선이다. 좀더 고스펙의 컴퓨터를 사용한다. Read(Select) 명령이 많다면 Cache나 Database Replication을 적용한다. Table의 일부 Column만 사용한다면 수직 분할(Vertically Partitioning)을 사용한다 / Cold &amp;amp; Hot data를 사용한다. 참고) Database Replication이란? 2개 이상의 DBMS를 Master와 Slave로 나누어 동일한 데이터를 저장한다. Master DB는 Insert, Update, Delete의 기능을 수행하고, Slave DB에 실제 데이터를 복사한다. Slave DB 시간이 오래걸리는 Select문의 기능을 수행하여 전체적인 Select문 성능을 향상시킨다. 참고) Cold / Hot Data 란? Naver D2 :: Cold Storage 소개 Hot data : 자주 사용되는 데이터 Cold data : 드물게 사용되거나 아예 사용되지 않는 데이터 Cold Storage : 에너지 절감을 위해 연산 능력에서 손해를 보더라도 낮은 가격과 저전력으로 자주 사용되지 않는 데이터를 처리하는 데이터 저장 장치 및 시스템 &amp;lt; Sharding(샤딩)의 주요 관점 &amp;gt; 분산된 DB에서 어떻게 Data를 읽어올 것인지? 분산된 DB에 Data를 어떻게 잘 분산시킬지? » Shard Key를 어떻게 정의하는지에 따라 달라진다. &amp;lt; Case 1. Algorithm Sharding &amp;gt; Database id를 단순하게 나누어 샤딩하는 방식 Sharding Key는 hash(key) % NUM_DB 같은 방식 장점 같은 값을 가지는 key-value 데이터베이스에 적합하다. 단점 Cluster를 포함하는 Node 갯수가 변하게 되면 Resharding이 필요하다. Hash Key로 분산되기 때문에 공간에 대한 효율이 부족하다. &amp;lt; Case 2. Dynamic Sharding &amp;gt; 클라이언트는 Locator Service에 접근하여 Shard Key를 얻는다. 장점 Cluster가 포함하는 Node 갯수가 변하면 Shard Key를 추가하기만 하면 된다. 확장에 유연하게 대처가능하다. 단점 Data Relocation시에는 Locator Service의 Shard key Table도 일치시켜야 한다. Locator에 의존할 수 밖에 없는 구조이다. &amp;lt; Case 3. Entity Group &amp;gt; RDBMS의 Join, Index, Transaction을 사용하여 복잡도를 줄이는 방식과 유사 동일한 파티션의 관련 엔티티를 저장하여 단일 파티션 안에서 추가 기능을 제공하는 방식 장점 하나의 물리적인 Shard에 쿼리를 진행하면 효율적이된다. 사용자의 증가에 따른 확장성이 좋은 파티셔닝이다. 단점 특정 파티션간 쿼리가 자주 요구되는 경우가 있다. &amp;lt; 참고 자료 &amp;gt; Database의 샤딩(Sharding)이란? How Sharding Works</summary></entry><entry><title type="html">Oracle ANSI SQL과 INNER/OUTER JOIN 차이</title><link href="http://localhost:4000/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/" rel="alternate" type="text/html" title="Oracle ANSI SQL과 INNER/OUTER JOIN 차이" /><published>2019-05-17T23:00:00+09:00</published><updated>2019-05-17T23:00:00+09:00</updated><id>http://localhost:4000/database/2019/05/17/Oracle%20ANSI%20SQL%EA%B3%BC%20%EB%82%B4%EC%99%B8%EB%B6%80%20JOIN</id><content type="html" xml:base="http://localhost:4000/database/2019/05/17/Oracle-ANSI-SQL%EA%B3%BC-%EB%82%B4%EC%99%B8%EB%B6%80-JOIN/">&lt;h1 id=&quot;-ansi-sql-&quot;&gt;&amp;lt; ANSI SQL &amp;gt;&lt;/h1&gt;
+&lt;p&gt;ANSI SQL에 대해 알아보자.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;표준 SQL문이기 때문에 DBMS의 종류에 제약을 받지 않는다. (MySQL, OracleDB..)&lt;/li&gt;
+  &lt;li&gt;테이블간의 Join 관계가 FROM 에서 명시되기 때문에 WHERE 문에서 조건만 확인하면 된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;즉, 가독성이 일반 Query문보다 좋다.&lt;/p&gt;
+
+&lt;p&gt;대표적인 예시로 ANSI SQL의 두번째 장점인 가독성에 대해서알아보자.&lt;/p&gt;
+
+&lt;p&gt;일반 SQL Query는 다음과 같다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- 일반적인 SQL Query
+SELECT * 
+FROM table1 as t1, table2 as t2 WHERE t1.a = t2.b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;즉, WHERE문에서 Table을 JOIN하는 방식이다.&lt;/p&gt;
+
+&lt;p&gt;단순한 Query라면 가독성에 전혀 문제가 없지만, Query가 길어지게되면 가독성이 떨어질 수 밖에 없다.&lt;/p&gt;
+
+&lt;p&gt;이와 다르게 ANSI SQL Query 는 FROM 절에서 JOIN을 이용하여 묶고, WHERE에는 검색 조건만 넣어 가독성이 좋다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- ANSI SQL Query 
+SELECT * 
+FROM table1 as t1 LEFT OUTER JOIN table as t2 ON t1.a = t2.b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;위의 ANSI SQL에서는 LEFT OUTER JOIN을 사용하여 FROM절에 Table JOIN 하였다.&lt;/p&gt;
+
+&lt;p&gt;ANSI SQL에서 사용하는 INNER/OUERT JOIN 의 개념을 명확히 아는 것 또한 중요하다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;-inner-join-&quot;&gt;&amp;lt; INNER JOIN &amp;gt;&lt;/h1&gt;
+&lt;p&gt;두 테이블간 ON 조건을 만족하는 ROW만 출력된다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- INNER JOIN 
+SELECT * 
+FROM table1 as t1 INNER JOIN table2 as t2 ON t1.a = t2.b;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Query가 위와 같을 때, ON 조건인 t1.a = t2.b 를 만족하는 Row 만 출력된다.&lt;/p&gt;
+
+&lt;h1 id=&quot;-outer-join-&quot;&gt;&amp;lt; OUTER JOIN &amp;gt;&lt;/h1&gt;
+&lt;p&gt;대표적으로 자주 사용하는 LEFT OUTER JOIN 에 대해서 알아보자.&lt;/p&gt;
+
+&lt;p&gt;OUTER 명령어는 생략이 가능하다. 즉, LEFT OUTER JOIN = LEFT JOIN과 같다.&lt;/p&gt;
+
+&lt;p&gt;LEFT TABLE 을 기준으로 오른쪽에 덧붙이는 느낌으로 생각하면 된다.&lt;/p&gt;
+
+&lt;p&gt;즉, LEFT TABLE의 결과값을 가져오고 ON 조건에 해당하는 경우 오른쪽에 매칭, 데이터가 없는 경우 NULL로 출력된다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SQL&quot;&gt;-- OUTER JOIN 
+SELECT * 
+FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.a = t2.b;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;t1.a = t2.b 인 경우, t1의 값이 10행 이라면, 해당 쿼리의 결과도 10행이 유지되고, ON 조건에 해당하는 Row가 있다면 오른쪽에 데이터가 매칭된다.&lt;/p&gt;
+
+&lt;p&gt;단, 1개의 t1 행에 ON 조건을 만족하는 t2의 값이 여러개라면, Row가 증가할 수도 있다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;-결론-&quot;&gt;&amp;lt; 결론 &amp;gt;&lt;/h1&gt;
+&lt;p&gt;ANSI SQL 에 맞춰서 Query를 짜는 습관을 가지자.&lt;/p&gt;
+
+&lt;p&gt;즉, WHERE 문에서는 검색조건만 넣도록, Table JOIN 은 FROM절에 묶어서 처리하자.&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="ANSI SQL" /><category term="INNER JOIN" /><category term="OUTER JOIN" /><summary type="html">&amp;lt; ANSI SQL &amp;gt; ANSI SQL에 대해 알아보자. 표준 SQL문이기 때문에 DBMS의 종류에 제약을 받지 않는다. (MySQL, OracleDB..) 테이블간의 Join 관계가 FROM 에서 명시되기 때문에 WHERE 문에서 조건만 확인하면 된다. 즉, 가독성이 일반 Query문보다 좋다. 대표적인 예시로 ANSI SQL의 두번째 장점인 가독성에 대해서알아보자. 일반 SQL Query는 다음과 같다. -- 일반적인 SQL Query SELECT * FROM table1 as t1, table2 as t2 WHERE t1.a = t2.b 즉, WHERE문에서 Table을 JOIN하는 방식이다. 단순한 Query라면 가독성에 전혀 문제가 없지만, Query가 길어지게되면 가독성이 떨어질 수 밖에 없다. 이와 다르게 ANSI SQL Query 는 FROM 절에서 JOIN을 이용하여 묶고, WHERE에는 검색 조건만 넣어 가독성이 좋다. -- ANSI SQL Query SELECT * FROM table1 as t1 LEFT OUTER JOIN table as t2 ON t1.a = t2.b 위의 ANSI SQL에서는 LEFT OUTER JOIN을 사용하여 FROM절에 Table JOIN 하였다. ANSI SQL에서 사용하는 INNER/OUERT JOIN 의 개념을 명확히 아는 것 또한 중요하다. &amp;lt; INNER JOIN &amp;gt; 두 테이블간 ON 조건을 만족하는 ROW만 출력된다. -- INNER JOIN SELECT * FROM table1 as t1 INNER JOIN table2 as t2 ON t1.a = t2.b; Query가 위와 같을 때, ON 조건인 t1.a = t2.b 를 만족하는 Row 만 출력된다. &amp;lt; OUTER JOIN &amp;gt; 대표적으로 자주 사용하는 LEFT OUTER JOIN 에 대해서 알아보자. OUTER 명령어는 생략이 가능하다. 즉, LEFT OUTER JOIN = LEFT JOIN과 같다. LEFT TABLE 을 기준으로 오른쪽에 덧붙이는 느낌으로 생각하면 된다. 즉, LEFT TABLE의 결과값을 가져오고 ON 조건에 해당하는 경우 오른쪽에 매칭, 데이터가 없는 경우 NULL로 출력된다. -- OUTER JOIN SELECT * FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.a = t2.b; t1.a = t2.b 인 경우, t1의 값이 10행 이라면, 해당 쿼리의 결과도 10행이 유지되고, ON 조건에 해당하는 Row가 있다면 오른쪽에 데이터가 매칭된다. 단, 1개의 t1 행에 ON 조건을 만족하는 t2의 값이 여러개라면, Row가 증가할 수도 있다. &amp;lt; 결론 &amp;gt; ANSI SQL 에 맞춰서 Query를 짜는 습관을 가지자. 즉, WHERE 문에서는 검색조건만 넣도록, Table JOIN 은 FROM절에 묶어서 처리하자.</summary></entry><entry><title type="html">백준/11399 ATM</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/%EC%A0%95%EB%A0%AC/2019/05/16/%EB%B0%B1%EC%A4%80-11399-ATM/" rel="alternate" type="text/html" title="백준/11399 ATM" /><published>2019-05-16T13:36:00+09:00</published><updated>2019-05-16T13:36:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/%EC%A0%95%EB%A0%AC/2019/05/16/%EB%B0%B1%EC%A4%80%2011399%20ATM</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/%EC%A0%95%EB%A0%AC/2019/05/16/%EB%B0%B1%EC%A4%80-11399-ATM/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/11399&quot;&gt;백준 ATM&lt;/a&gt; 문제는 오름차순 정렬 후 값을 더해가면 된다.&lt;/p&gt;
 
@@ -656,61 +766,4 @@ RDBMS의 Join, Index, Transaction을 사용하여 복잡도를 줄이는 방식�
 
 &lt;h2 id=&quot;-결과-&quot;&gt;&amp;lt; 결과 &amp;gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/11st_result.png&quot; alt=&quot;11st_result&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="11번가" /><category term="코딩테스트" /><category term="인적성" /><summary type="html">&amp;lt; 11번가 인턴 SKCT 및 코딩테스트 후기 &amp;gt; 다른 서류는 잘안붙는데 체험형 인턴이라 그런가 붙었다. 제출란에 포트폴리오가 선택이였는데 몇개 추가해서 제출한 덕인거같은 느낌..? &amp;lt; SKCT 후기 &amp;gt; 처음 보는 SKCT였다. 듣기로는 2019 상반기 공채랑 문제가 똑같다고 하던데 본인은 처음이라 잘 모르겠다. 총 인원 : 71명 응시 : 40명 불참 : 31명 개발 직군만 불참이 거의 절반가까이 된다. 아마도 체험형이고, 다른 기업 시험이 있기 때문에 겹쳐서 대부분 포기한 것이라 생각한다. 교재는 위포트를 사용했는데, 실제 시험장에서는 위포트보다 쉬웠다. 실행 역량 유튜브 보면서 공부(히로와 면접술사)했다. SKCT 실행역량에서 중요한 점은 역할에 맞게 행동한다. 주도적으로 당사자와 되도록 해결한다. 업무상 문제라면 보고해서 조치를 받는다. 위 방식대로 풀면 어느정도 감이 잡힌다. 실행역량은 겨우 다풀었는데 뒤에 인적성은 10문제 넘게 못푼것 같다. 결과가 나와봐야 알 것 같다. &amp;lt; 코딩 테스트 &amp;gt; 진행 방식 : 3문제 / 2시간 코딩테스트 보는 기업중 복붙을 못하게하는 기업이 있는데, 정말 이해할수가 없다. 자바같은경우 오버라이드하면 다적어야하는데.. 어느 줄에서 오류가 발생한지 알아내는 디버깅마저 힘들었다. 1번 문제는 단순 구현문제였는데 별로 어렵지 않았다. 2번 문제는 괄호의 값 문제와 유사하다. 입력으로 압축된 문자를 주어주고 이를 풀어내는 문제였다. ex) 4(3(h)g) =&amp;gt; hhghhghhghhg 여기서 계속 인덱스오류가 나서 못찾고 결국 제출했다. 다시 생각해보니 Stack으로 풀면되는 문제였는데.. 아쉬움이 남는다. 3번 문제도 네트워크 연결 문제와 상당히 비슷했다. 시험 당시에는 Union-Find가 아닌 Dijkstra로 풀었는데, 어디서 꼬였는지 절반만 맞고, 시간초과가 난 상태로 제출했다. 한마디로 절반만 맞은셈이니까 틀린문제다. 여러 유형을 더 접해봐야 할것 같다. 2번문제를 Stack으로 해결한다고 좀더 빨리 생각해야했는데 하는 아쉬움이 남는다. &amp;lt; 결과 &amp;gt;</summary></entry><entry><title type="html">Tistory to Github</title><link href="http://localhost:4000/guide/2013/12/25/Tistory-to-Github/" rel="alternate" type="text/html" title="Tistory to Github" /><published>2013-12-25T08:29:08+09:00</published><updated>2013-12-25T08:29:08+09:00</updated><id>http://localhost:4000/guide/2013/12/25/Tistory-to-Github</id><content type="html" xml:base="http://localhost:4000/guide/2013/12/25/Tistory-to-Github/">&lt;p&gt;기존 Tistory &lt;a href=&quot;https://sophia2730.tistory.com/&quot;&gt;https://sophia2730.tistory.com/&lt;/a&gt; 에서 Github 이전 작업 중입니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;normal-block&quot;&gt;Normal block&lt;/h1&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alert('Hello World!');
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print 'helloworld'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;highlight-block&quot;&gt;Highlight block&lt;/h1&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hello, world!'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'helloworld'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Image Test
-&lt;img src=&quot;/assets/images/searchicon.png&quot; alt=&quot;Image&quot; width=&quot;auto&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Local
-cd /Users/sophia/Desktop/Github/cs-Devlog
-bundle exec jekyll server&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Test" /><category term="Guide" /><summary type="html">기존 Tistory https://sophia2730.tistory.com/ 에서 Github 이전 작업 중입니다. Normal block alert('Hello World!'); print 'helloworld' Highlight block alert( 'Hello, world!' ); print 'helloworld' def foo puts 'foo' end def foo puts 'foo' end 1 2 3 def foo puts 'foo' end #include &amp;lt;iostream&amp;gt; using namespace std; void foo(int arg1, int arg2) { } int main() { string str; foo(1, 2); cout &amp;lt;&amp;lt; &quot;Hello World&quot; &amp;lt;&amp;lt; endl; return 0; } Image Test Local cd /Users/sophia/Desktop/Github/cs-Devlog bundle exec jekyll server</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/11st_result.png&quot; alt=&quot;11st_result&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="11번가" /><category term="코딩테스트" /><category term="인적성" /><summary type="html">&amp;lt; 11번가 인턴 SKCT 및 코딩테스트 후기 &amp;gt; 다른 서류는 잘안붙는데 체험형 인턴이라 그런가 붙었다. 제출란에 포트폴리오가 선택이였는데 몇개 추가해서 제출한 덕인거같은 느낌..? &amp;lt; SKCT 후기 &amp;gt; 처음 보는 SKCT였다. 듣기로는 2019 상반기 공채랑 문제가 똑같다고 하던데 본인은 처음이라 잘 모르겠다. 총 인원 : 71명 응시 : 40명 불참 : 31명 개발 직군만 불참이 거의 절반가까이 된다. 아마도 체험형이고, 다른 기업 시험이 있기 때문에 겹쳐서 대부분 포기한 것이라 생각한다. 교재는 위포트를 사용했는데, 실제 시험장에서는 위포트보다 쉬웠다. 실행 역량 유튜브 보면서 공부(히로와 면접술사)했다. SKCT 실행역량에서 중요한 점은 역할에 맞게 행동한다. 주도적으로 당사자와 되도록 해결한다. 업무상 문제라면 보고해서 조치를 받는다. 위 방식대로 풀면 어느정도 감이 잡힌다. 실행역량은 겨우 다풀었는데 뒤에 인적성은 10문제 넘게 못푼것 같다. 결과가 나와봐야 알 것 같다. &amp;lt; 코딩 테스트 &amp;gt; 진행 방식 : 3문제 / 2시간 코딩테스트 보는 기업중 복붙을 못하게하는 기업이 있는데, 정말 이해할수가 없다. 자바같은경우 오버라이드하면 다적어야하는데.. 어느 줄에서 오류가 발생한지 알아내는 디버깅마저 힘들었다. 1번 문제는 단순 구현문제였는데 별로 어렵지 않았다. 2번 문제는 괄호의 값 문제와 유사하다. 입력으로 압축된 문자를 주어주고 이를 풀어내는 문제였다. ex) 4(3(h)g) =&amp;gt; hhghhghhghhg 여기서 계속 인덱스오류가 나서 못찾고 결국 제출했다. 다시 생각해보니 Stack으로 풀면되는 문제였는데.. 아쉬움이 남는다. 3번 문제도 네트워크 연결 문제와 상당히 비슷했다. 시험 당시에는 Union-Find가 아닌 Dijkstra로 풀었는데, 어디서 꼬였는지 절반만 맞고, 시간초과가 난 상태로 제출했다. 한마디로 절반만 맞은셈이니까 틀린문제다. 여러 유형을 더 접해봐야 할것 같다. 2번문제를 Stack으로 해결한다고 좀더 빨리 생각해야했는데 하는 아쉬움이 남는다. &amp;lt; 결과 &amp;gt;</summary></entry></feed>
