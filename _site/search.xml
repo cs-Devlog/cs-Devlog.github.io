@@ -2,6 +2,29 @@
 <search>
   
     <entry>
+      <title><![CDATA[주소창에 www.naver.com을 치면 일어나는 일]]></title>
+      <url>/network/2019/05/21/www.naver.com%EC%9D%84-%EC%B9%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC/</url>
+      <content type="text"><![CDATA[주소창에 www.naver.com을 치면 일어나는 일주소창에 www.naver.com을 입력하면 어떤 일이 일어날까?면접 질문에서도 종종 나오는 이 방식은 생각보다 간단하다.방식에 대해 이해하기 전에 IP 주소, 도메인에 대한 사전 지식이 필요하다.IP 주소IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다.현재는 IPv4 버전(32비트)로 구성되어 있으며 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다.시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어있기 때문에 IP 주소가 부족하지 않다는 특징이 있다.도메인 네임(Domain Name)IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다.그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 도메인 네임이라고 한다.다시 말해서, 도메인 네임은 ‘naver.com’처럼 몇 개의 의미있는 문자들과 점(.)의 조합으로 구성된다.도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다.이때 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 DNS(Domain Name System) 이라고 부른다.다시 말해 사람이 도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 찾아갈 수 있다.WEB 동작 원리  사용자가 브라우저에 도메인 네임(www.naver.com)을 입력한다.  사용자가 입력한 URL 주소 중에서 도메인 네임(domain name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다.  페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다.  이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다.  검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다.  도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다.어려운 개념은 아니니 재미삼아 읽어봐도 좋을 것 같다.출처 : http://tcpschool.com/webbasic/works]]></content>
+      <categories>
+        
+          <category> Network </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Network </tag>
+        
+          <tag> IP 주소 </tag>
+        
+          <tag> DNS </tag>
+        
+          <tag> 도메인 </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title><![CDATA[ArrayList와 LinkedList]]></title>
       <url>/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80-LinkedList/</url>
       <content type="text"><![CDATA[ArrayList와 LinkedListArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다.하지만 내부적으로 작동하는 방식은 다르다.import java.io.*;import java.util.*; public class Main {    public static void main(String[] args) throws Exception {        ArrayList&lt;String&gt; alist = new ArrayList&lt;&gt;();        alist.add(0,"First");           //O(1)        alist.add("Third");             //O(1)        alist.add(1, "Second");         //O(n)        alist.remove(1);                //O(n)         alist.get(1);                   //O(1)         LinkedList&lt;String&gt; nlist = new LinkedList&lt;&gt;();        nlist.addFirst("First");        //O(1)        nlist.add("Second");            //O(1)        nlist.addLast("Third");         //O(1)        nlist.pollFirst();              //O(1)        nlist.pollLast();               //O(1)         nlist.get(0);                   //O(n)    }}ArrayList알고리즘 문제를 풀면서 가장 중요한 ArrayList와 LinkedList의 차이점은 시간복잡도의 차이라고 볼 수 있다.ArrayList는 동적으로 Array를 생성한다고 생각하면 배열과 비슷한 점이 많다.ArrayList는 remove 시에 O(n)의 시간복잡도를 가진다.i번째 배열을 지우고 최대 n만큼 앞으로 이동해야 하기 때문이다.&lt; ArrayList 중간 Insert &gt;&lt; ArrayList 중간 Remove &gt;삽입 또한 맨 뒤에삽입과 중간삽입으로 나눌 수 있는데, 중간에 삽입하는 경우 O(n), 맨 뒤에 삽입하는 경우 O(1)의 시간복잡도를 가진다.하지만 get 메소드는 해당 index를 바로 가져오기 때문에 O(1)의 시간복잡도를 가진다.LinkedList&lt; LinkedList 중간 add &gt;이에 비해, LinkedList는 Node를 사용하기 때문에 add, poll 시에 O(1)의 시간복잡도를 가진다.하지만 get 메소드 사용시에 앞에서부터 찾기 때문에 O(n)의 시간복잡도를 가진다.정리                   ArrayList      LinkedList                  삽입      addO(1) or O(n)      add, addFirst, addLastO(1)              삭제      removeO(n)      poll, pollFirst, pollLastO(1)              접근      getO(1)      getO(n)      ]]></content>
