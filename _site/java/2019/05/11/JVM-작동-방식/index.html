@@ -434,6 +434,8 @@
   <li>해석된 바이트코드는 Runtime Data Areas 에 배치되어 실질적인 수행이 이루어지게 된다.</li>
 </ol>
 
+<hr />
+
 <h2 id="class-loader클래스-로더">Class Loader(클래스 로더)</h2>
 <ul>
   <li>클래스 로더는 .class 파일을 읽어 바이트 코드를 메소드 영역(Method Area)에 저장한다.</li>
@@ -442,52 +444,52 @@
 
 <hr />
 
-<h1 id="-runtime-data-area-">&lt; Runtime Data Area &gt;</h1>
+<h2 id="-runtime-data-area-">&lt; Runtime Data Area &gt;</h2>
 <p><img src="/assets/images/jvm_memory.png" alt="Imeage" width="600" /></p>
 <ul>
   <li>프로그램 수행을 위해 os로부터 할당받는 메모리 영역으로 5가지로 볼 수 있다.</li>
 </ul>
 
-<h2 id="method-area">Method area</h2>
+<h3 id="method-area">Method area</h3>
 <ul>
   <li>클래스 정보를 처음 메모리 공간에 올릴 때 초기화되는 대상을 저장하기 위한 메모리공간이다.</li>
   <li>클래스 이름, 부모 클래스 이름, 메소드, 변수 정보 등과 같은 수준의 모든 클래스 정보와 static 변수들을 저장한다.</li>
 </ul>
 
-<h2 id="heap-area">Heap area</h2>
+<h3 id="heap-area">Heap area</h3>
 <ul>
   <li>모든 객체를 저장하는 가상 메모리 공간이다. new 연산자로 생성된 객체와 배열을 저장한다.</li>
 </ul>
 
-<h2 id="stack-area">Stack area</h2>
+<h3 id="stack-area">Stack area</h3>
 <ul>
   <li>프로그램 실행과정에서 임시로 할당되었다가 메소드를 빠져나가면 바로 소멸되는 특성의 데이터를 저장하기 위한 영역이다.</li>
   <li>각종 형태의 변수나 임시 데이터, 스레드, 메소드 정보를 저장한다.</li>
 </ul>
 
-<h2 id="pc-registers">PC Registers</h2>
+<h3 id="pc-registers">PC Registers</h3>
 <ul>
   <li>Thread가 어떤 부분을 명령으로 실행해야할 지에 대한 기록을 하는 부분으로 현재 수행중인 JVM 명령의 주소를 가진다.</li>
 </ul>
 
-<h2 id="native-method-stacks">Native Method Stacks</h2>
+<h3 id="native-method-stacks">Native Method Stacks</h3>
 <ul>
   <li>자바 프로그램이 컴파일되어 생성되는 실제 실행할 수 있는 기계어로 작성된 프로그램을 실행시키는 영역이다.</li>
 </ul>
 
 <hr />
 
-<h1 id="-execution-engine실행-엔진-">&lt; Execution Engine(실행 엔진) &gt;</h1>
+<h2 id="-execution-engine실행-엔진-">&lt; Execution Engine(실행 엔진) &gt;</h2>
 <ul>
   <li>바이트 코드로 된 .class 파일을 실행한다. 바이트 코드를 한줄씩 읽고 다양한 메모리 영역에 나타난 데이터와 정보를 사용한다.</li>
 </ul>
 
-<h2 id="interpreter">Interpreter</h2>
+<h3 id="interpreter">Interpreter</h3>
 <ul>
   <li>실행 엔진은 바이트코드를 한줄씩 읽어서 실행한다. 단점은 여러번 하나의 메소드를 호출할 경우 매번 해석을 요청해야하기 때문에 비효율적이다.</li>
 </ul>
 
-<h2 id="jitjust-in-time">JIT(Just-In-Time)</h2>
+<h3 id="jitjust-in-time">JIT(Just-In-Time)</h3>
 <ul>
   <li>인터프리터 방식의 단점을 보완하기 위해 도입된 JIT 컴파일러이다.</li>
   <li>전체 바이트 코드를 컴파일하고 네이티브 코드로 변경하여 더이상 인터프리팅 하지 않고 네이티브 코드로 직접 실행하는 방식이다.</li>
@@ -762,7 +764,7 @@
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-1"> <a class="nav-link" href="#-jvmjava-virtual-machine-"> <span class="nav-number">1</span> <span class="nav-text">&lt; JVM(Java Virtual Machine) &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-java-프로그램-실행-과정-"> <span class="nav-number">2</span> <span class="nav-text">&lt; Java 프로그램 실행 과정 &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#class-loader클래스-로더"> <span class="nav-number">2.1</span> <span class="nav-text">Class Loader(클래스 로더)</span> </a> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-runtime-data-area-"> <span class="nav-number">3</span> <span class="nav-text">&lt; Runtime Data Area &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#method-area"> <span class="nav-number">3.1</span> <span class="nav-text">Method area</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#heap-area"> <span class="nav-number">3.2</span> <span class="nav-text">Heap area</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#stack-area"> <span class="nav-number">3.3</span> <span class="nav-text">Stack area</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#pc-registers"> <span class="nav-number">3.4</span> <span class="nav-text">PC Registers</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#native-method-stacks"> <span class="nav-number">3.5</span> <span class="nav-text">Native Method Stacks</span> </a> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-execution-engine실행-엔진-"> <span class="nav-number">4</span> <span class="nav-text">&lt; Execution Engine(실행 엔진) &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#interpreter"> <span class="nav-number">4.1</span> <span class="nav-text">Interpreter</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#jitjust-in-time"> <span class="nav-number">4.2</span> <span class="nav-text">JIT(Just-In-Time)</span> </a> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-garbage-collector-"> <span class="nav-number">5</span> <span class="nav-text">&lt; Garbage Collector &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#메모리-누수-현상"> <span class="nav-number">5.1</span> <span class="nav-text">메모리 누수 현상</span> </a> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-참조-"> <span class="nav-number">6</span> <span class="nav-text">&lt; 참조 &gt;</span> </a> </li>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#-jvmjava-virtual-machine-"> <span class="nav-number">1</span> <span class="nav-text">&lt; JVM(Java Virtual Machine) &gt;</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-java-프로그램-실행-과정-"> <span class="nav-number">2</span> <span class="nav-text">&lt; Java 프로그램 실행 과정 &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#class-loader클래스-로더"> <span class="nav-number">2.1</span> <span class="nav-text">Class Loader(클래스 로더)</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#-runtime-data-area-"> <span class="nav-number">2.2</span> <span class="nav-text">&lt; Runtime Data Area &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#method-area"> <span class="nav-number">2.2.1</span> <span class="nav-text">Method area</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#heap-area"> <span class="nav-number">2.2.2</span> <span class="nav-text">Heap area</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#stack-area"> <span class="nav-number">2.2.3</span> <span class="nav-text">Stack area</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#pc-registers"> <span class="nav-number">2.2.4</span> <span class="nav-text">PC Registers</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#native-method-stacks"> <span class="nav-number">2.2.5</span> <span class="nav-text">Native Method Stacks</span> </a> </li> </ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#-execution-engine실행-엔진-"> <span class="nav-number">2.3</span> <span class="nav-text">&lt; Execution Engine(실행 엔진) &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#interpreter"> <span class="nav-number">2.3.1</span> <span class="nav-text">Interpreter</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#jitjust-in-time"> <span class="nav-number">2.3.2</span> <span class="nav-text">JIT(Just-In-Time)</span> </a> </li> </ol> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-garbage-collector-"> <span class="nav-number">3</span> <span class="nav-text">&lt; Garbage Collector &gt;</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#메모리-누수-현상"> <span class="nav-number">3.1</span> <span class="nav-text">메모리 누수 현상</span> </a> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#-참조-"> <span class="nav-number">4</span> <span class="nav-text">&lt; 참조 &gt;</span> </a> </li>
     </ol>
   </div>
             
