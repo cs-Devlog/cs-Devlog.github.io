@@ -10,19 +10,21 @@ tags:
 - Heap Area
 ---
 # Stack 영역
-- 프로그램 실행 과정에서 메소드 실행 시 임시로 할당되고 해당 메소드가 끝나면 바로 소멸되는 것들이 저장된다.
-- Heap 영역에 생성된 Object 타입의 데이터의 참조값이 할당된다.
+- 메소드 지역 변수를 Stack 형식으로 임시 할당하고, 해당 메소드가 종료되면 Stack 에서 전부 제거된다.
+- 원시타입 변수(byte, short, int, long, float, double, char, boolean)만 Stack에 저장된다.
+- 원시타입을 제외한 참조 변수의 경우 Heap 영역에 생성된 Object 주소값이 저장된다.
 
 # Heap 영역
 - Java에서 new 명령을 통해 생성된 인스턴스 변수가 놓인다.
 - 모든 Object 타입(Integer, String, ArrayList, ...)은 heap 영역에 생성된다.
+- Stack에 참조변수로 저장되어 Heap 영역에 Real Value가 저장되고 Stack 영역에는 주소값만 저장된다.
 - GC에 의해 지위지지 않는 이상 Heap 영역에 계속 남아있다.
 
 ~~~java
 public class Main {
     public static void main(String[] args) {
-        int port = 4000;
-        String host = "localhost";
+        int port = 4000;            //원시타입 변수이므로 Stack 영역에 저장
+        String host = "localhost";  //인스턴스 변수이므로 Heap 영역에 실질적인 값이 저장되고 Stack에 해당 주소값이 저장
     }
 }
 ~~~
