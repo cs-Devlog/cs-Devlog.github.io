@@ -1,6 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-23T13:57:37+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">11번가 면접 후기</title><link href="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="11번가 면접 후기" /><published>2019-05-23T13:00:08+09:00</published><updated>2019-05-23T13:00:08+09:00</updated><id>http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80%20%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/">&lt;p&gt;&lt;img src=&quot;/assets/images/11st_1.jpg&quot; alt=&quot;11st_1&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-27T16:49:21+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/1722 순열의 순서</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80-1722-%EC%88%9C%EC%97%B4%EC%9D%98-%EC%88%9C%EC%84%9C/" rel="alternate" type="text/html" title="백준/1722 순열의 순서" /><published>2019-05-26T00:11:00+09:00</published><updated>2019-05-26T00:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80%201722%20%EC%88%9C%EC%97%B4%EC%9D%98%20%EC%88%9C%EC%84%9C</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80-1722-%EC%88%9C%EC%97%B4%EC%9D%98-%EC%88%9C%EC%84%9C/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/11st_2.jpg&quot; alt=&quot;11st_2&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1722&quot;&gt;백준 순열의 순서&lt;/a&gt; 문제는 직접 구하지 않고 수학적인 연산이 필요하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;범위가 최대 20!이기 때문에 구하려고 들면 시간초과가 날 수 밖에 없다.&lt;/li&gt;
+  &lt;li&gt;아이디어는 factorial 값을 저장해둔 배열을 하나 만들고 모듈러 연산을 한다.&lt;/li&gt;
+  &lt;li&gt;만약 [3, 2, 4, 1] 배열이 있다고 했을 때 첫 번째가 4라면 [1, x, x, x], [2, x, x, x] 의 경우는 진행한 것으로 간주해 factorial[3] * 2 = 12 를 더한다.&lt;/li&gt;
+  &lt;li&gt;이후 두 번째 숫자가 2라면 [3, 1, x, x]의 경우의 수는 전부 진행한 것으로 간주해 factorial[2] * 1 을 더한다.&lt;/li&gt;
+  &lt;li&gt;k를 입력받을 때 1을 빼주는데 이유는 k 번째 다음 순열을 출력하기 때문이다.&lt;/li&gt;
+  &lt;li&gt;factorial 배열, 입력받는 k 변수는 long 형으로 선언해야 한다. 범위를 초과하기 때문!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;                &lt;span class=&quot;c1&quot;&gt;//Factorial값 미리 구해서 저장&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isUsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;//i번째 숫자 사용 여부&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;getFactorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseLong&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//i번째에서 몇 번째 숫자를 선택할 지 구한다&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;//mod 번째 숫자를 찾기 위한 변수&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//앞에서부터 해당 숫자를 확인할 때 사용하는 변수&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isUsed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;isUsed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;//움직이는 횟수&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//idx 숫자를 사용했는지 확인하는 변수&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isUsed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;isUsed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getFactorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;//factorial값 구하는 함수&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1722" /><category term="백준 순열의 순서" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; 백준 순열의 순서 문제는 직접 구하지 않고 수학적인 연산이 필요하다. 범위가 최대 20!이기 때문에 구하려고 들면 시간초과가 날 수 밖에 없다. 아이디어는 factorial 값을 저장해둔 배열을 하나 만들고 모듈러 연산을 한다. 만약 [3, 2, 4, 1] 배열이 있다고 했을 때 첫 번째가 4라면 [1, x, x, x], [2, x, x, x] 의 경우는 진행한 것으로 간주해 factorial[3] * 2 = 12 를 더한다. 이후 두 번째 숫자가 2라면 [3, 1, x, x]의 경우의 수는 전부 진행한 것으로 간주해 factorial[2] * 1 을 더한다. k를 입력받을 때 1을 빼주는데 이유는 k 번째 다음 순열을 출력하기 때문이다. factorial 배열, 입력받는 k 변수는 long 형으로 선언해야 한다. 범위를 초과하기 때문! &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static StringTokenizer stk; public static StringBuilder sb = new StringBuilder(); public static int n; public static long[] factorial; public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); n = Integer.parseInt(br.readLine()); int[] num = new int[n]; factorial = new long[n + 1]; //Factorial값 미리 구해서 저장 boolean[] isUsed = new boolean[n + 1]; //i번째 숫자 사용 여부 getFactorial(); stk = new StringTokenizer(br.readLine()); int type = Integer.parseInt(stk.nextToken()); if (type == 1) { long k = Long.parseLong(stk.nextToken()) - 1; for (int i = n; i &amp;gt; 0; i--) { long mod = k / factorial[i - 1] + 1; //i번째에서 몇 번째 숫자를 선택할 지 구한다 k %= factorial[i - 1]; long cnt = 0; //mod 번째 숫자를 찾기 위한 변수 int idx = 0; //앞에서부터 해당 숫자를 확인할 때 사용하는 변수 while (cnt != mod) { idx++; if (!isUsed[idx]) cnt++; } isUsed[idx] = true; sb.append(idx + &quot; &quot;); } } else { long ans = 0; for (int i = 0; i &amp;lt; n; i++) { num[i] = Integer.parseInt(stk.nextToken()); long cnt = 0; //움직이는 횟수 int idx = 0; //idx 숫자를 사용했는지 확인하는 변수 while (num[i] != idx) { idx++; if (!isUsed[idx]) cnt++; } isUsed[idx] = true; ans += (cnt - 1) * factorial[n - i - 1]; } sb.append(ans + 1); } System.out.println(sb); } public static void getFactorial() { //factorial값 구하는 함수 factorial[0] = 1; factorial[1] = 1; for (int i = 2; i &amp;lt;= n; i++) { factorial[i] = factorial[i - 1] * i; } } }</summary></entry><entry><title type="html">백준/1541 잃어버린 괄호</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80-1541-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/" rel="alternate" type="text/html" title="백준/1541 잃어버린 괄호" /><published>2019-05-25T23:11:00+09:00</published><updated>2019-05-25T23:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80%201541%20%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EA%B4%84%ED%98%B8</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80-1541-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1541&quot;&gt;백준 잃어버린 괄호&lt;/a&gt; 그리디하게 접근하면 해결할 수 있는 문제다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다.&lt;/li&gt;
+  &lt;li&gt;만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다.&lt;/li&gt;
+  &lt;li&gt;만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;//curr : +,- 연산 전의 숫자값 구하기, plus = curr값의 합&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hasMinus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;//입력받은 문자열에 '-'가 있는지 확인&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'+'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;plus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'-'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;minusCal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;plus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'0'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;minusCal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;minusCal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasMinus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//'-' 연산이 없다면 더한다.&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;plus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;hasMinus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                &lt;span class=&quot;c1&quot;&gt;//'-' 연산이 있다면 ans값에 빼준다.&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;plus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1541" /><category term="백준 잃어버린 괄호" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; 백준 잃어버린 괄호 그리디하게 접근하면 해결할 수 있는 문제다. boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다. 만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다. 만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까) &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static int curr, plus, ans; //curr : +,- 연산 전의 숫자값 구하기, plus = curr값의 합 public static boolean hasMinus = false; //입력받은 문자열에 '-'가 있는지 확인 public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); String target = br.readLine(); for (int i = 0; i &amp;lt; target.length(); i++) { char ch = target.charAt(i); if (ch == '+') { plus += curr; curr = 0; } else if (ch == '-') { minusCal(); plus = 0; curr = 0; } else { curr = curr * 10 + (ch - '0'); } } minusCal(); System.out.println(ans); } public static void minusCal() { if (!hasMinus) { //'-' 연산이 없다면 더한다. plus += curr; ans += plus; hasMinus = true; } else { //'-' 연산이 있다면 ans값에 빼준다. plus += curr; ans -= plus; } } }</summary></entry><entry><title type="html">11번가 면접 후기</title><link href="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="11번가 면접 후기" /><published>2019-05-23T13:00:08+09:00</published><updated>2019-05-23T13:00:08+09:00</updated><id>http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80%20%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/">&lt;p&gt;&lt;img src=&quot;/assets/images/11st_11.jpg&quot; alt=&quot;11st_1&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/11st_22.jpg&quot; alt=&quot;11st_2&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;11번가-면접-후기&quot;&gt;11번가 면접 후기&lt;/h1&gt;
 &lt;ul&gt;
@@ -261,7 +385,49 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://message0412.tistory.com/entry/HTTP-프로토콜-알아보기1&quot;&gt;https://message0412.tistory.com/entry/HTTP-프로토콜-알아보기1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://hashcode.co.kr/questions/3243&quot;&gt;https://hashcode.co.kr/questions/3243&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="HTTP" /><category term="REST" /><category term="Cookie" /><category term="Session" /><summary type="html">HTTP(HyperText Transfer Protocol)이란? 인터넷에서 데이터를 주고받을 수 있는 프로토콜로 웹 서버와 클라이언트간 통신하기 위한 규약 어느 종류의 데이터든지 전송할 수 있도록 설계되어있다. HTML 뿐만아니라 이미지, 동영상, 오디오, 텍스트 문서 등 종류를 가리지 않는다. 이름 그대로 하이퍼텍스트를 기반으로 데이터를 전송하겠다는 말이다. 간단히 말하면 링크기반으로 데이터에 접속하겠다는 의미이다. HTTP 작동 방식 TCP/IP를 사용하는 응용 프로토콜이며 HTTP 메세지는 HTTP 서버와 HTTP 클라이언트가 해석한다. HTTP는 연결 상태를 유지하지 않는 프로토콜이기 때문에 서버에 연결하고 Request에서 Response를 받으면 연결을 끊어버린다. 장점 : 수십만명이 웹 서비스를 사용하더라도 접속유지는 최소한으로 할 수 있기 때문에, 더 많은 유저의 요청을 처리 할 수 있다. 단점 : 연결을 끊어버리기 때문에 클라이언트의 이전 상태를 알 수 없다. 이를 위해 Cookie를 사용한다. 크롬 개발자도구의 네트워크 탭의 정보를 해석해보자. 요청한 URL은 http://sophia2730.tistory.com 이며 200 코드로 성공적인 요청이였다는 결과를 받았다. 여기서 작동한 Method는 GET이며 POST, PUT(수정) 등의 메소드를 사용하여 클라이언트와 서버가 데이터를 주고받는다. 여기서 URI를 자원으로 보고 Method를 동사로 보는 개발 방식이 REST 방식이다. REST API란? 웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일로, 자원을 표현으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미한다. 즉, URI를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다. REST API는 두 가지 특징을 가진다. URI는 정보의 자원을 표현해야 한다. ex) GET /members/delete/1 (X), DELETE /members/1 (O) 자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE)로 표현한다. 이러한 방식으로 확장성과 재사용성을 높여 유지보수 및 운용을 편리하게 할 수 있다. Cookie와 Session Cookie 모든 내용이 클라이언트측에서 저장되며 서버에 요청할 때 마다 HTTP 헤더에 쿠키 내용(KEY=VALUE)을 전달합니다. 최초 접속일 경우 사용자ID, 로그인시간, IP등을 암호화한 구문을 클라이언트의 쿠키에 KEY=VALUE 된 구문으로 생성해 클라이언트에게 쿠키에 저장하라고 응답합니다. (예 : state=ASKHDNxxu7432keedsa7jhklsadasdmslk ) 클라이언트는 매번 서버에 요청할 때 위 쿠키를 전달합니다. 서버는 로그인상황을 검사하기 위해서 매번 쿠키를 읽습니다. 그리고 위의 키를 찾아 정보를 해독하고, 서버에 있는 사용자 정보와 비교해 일치하면 로그인된 것으로 보고, 일치하지 않으면 불량요청 혹은 로그인하지 않은 사용자로 판별합니다. Session Session은 서버쪽에 저장되는 쿠키이며 클라이언트가 서버에 Request를 보내면 서버는 클라이언트한테 세션 ID를 제공한다. 로그인 요청이 들어왔을 때 정보가 일치하면 서버는 사용자ID, 로그인시간, IP 등을 저장하는 Session을 생성합니다. 클라이언트에 응답할 때 세션을 찾을 수 있는 Session ID를 클라이언트에 전달합니다.(보통 쿠키로 전달) 클라이언트는 다음 요청시, Session ID를 함께 요청(쿠키를 사용하든 다른 방법을 사용하든)합니다. 서버가 요청을 받은 경우 Session ID를 이용해서 서버에 저장된 세션을 찾아와 로그인을 확인할 수 있습니다. Cookie와 Session의 저장 정보와 위치 참고 https://message0412.tistory.com/entry/HTTP-프로토콜-알아보기1 https://hashcode.co.kr/questions/3243</summary></entry><entry><title type="html">ArrayList와 LinkedList</title><link href="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80-LinkedList/" rel="alternate" type="text/html" title="ArrayList와 LinkedList" /><published>2019-05-21T14:00:00+09:00</published><updated>2019-05-21T14:00:00+09:00</updated><id>http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80%20LinkedList</id><content type="html" xml:base="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80-LinkedList/">&lt;h1 id=&quot;arraylist와-linkedlist&quot;&gt;ArrayList와 LinkedList&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="HTTP" /><category term="REST" /><category term="Cookie" /><category term="Session" /><summary type="html">HTTP(HyperText Transfer Protocol)이란? 인터넷에서 데이터를 주고받을 수 있는 프로토콜로 웹 서버와 클라이언트간 통신하기 위한 규약 어느 종류의 데이터든지 전송할 수 있도록 설계되어있다. HTML 뿐만아니라 이미지, 동영상, 오디오, 텍스트 문서 등 종류를 가리지 않는다. 이름 그대로 하이퍼텍스트를 기반으로 데이터를 전송하겠다는 말이다. 간단히 말하면 링크기반으로 데이터에 접속하겠다는 의미이다. HTTP 작동 방식 TCP/IP를 사용하는 응용 프로토콜이며 HTTP 메세지는 HTTP 서버와 HTTP 클라이언트가 해석한다. HTTP는 연결 상태를 유지하지 않는 프로토콜이기 때문에 서버에 연결하고 Request에서 Response를 받으면 연결을 끊어버린다. 장점 : 수십만명이 웹 서비스를 사용하더라도 접속유지는 최소한으로 할 수 있기 때문에, 더 많은 유저의 요청을 처리 할 수 있다. 단점 : 연결을 끊어버리기 때문에 클라이언트의 이전 상태를 알 수 없다. 이를 위해 Cookie를 사용한다. 크롬 개발자도구의 네트워크 탭의 정보를 해석해보자. 요청한 URL은 http://sophia2730.tistory.com 이며 200 코드로 성공적인 요청이였다는 결과를 받았다. 여기서 작동한 Method는 GET이며 POST, PUT(수정) 등의 메소드를 사용하여 클라이언트와 서버가 데이터를 주고받는다. 여기서 URI를 자원으로 보고 Method를 동사로 보는 개발 방식이 REST 방식이다. REST API란? 웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일로, 자원을 표현으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미한다. 즉, URI를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다. REST API는 두 가지 특징을 가진다. URI는 정보의 자원을 표현해야 한다. ex) GET /members/delete/1 (X), DELETE /members/1 (O) 자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE)로 표현한다. 이러한 방식으로 확장성과 재사용성을 높여 유지보수 및 운용을 편리하게 할 수 있다. Cookie와 Session Cookie 모든 내용이 클라이언트측에서 저장되며 서버에 요청할 때 마다 HTTP 헤더에 쿠키 내용(KEY=VALUE)을 전달합니다. 최초 접속일 경우 사용자ID, 로그인시간, IP등을 암호화한 구문을 클라이언트의 쿠키에 KEY=VALUE 된 구문으로 생성해 클라이언트에게 쿠키에 저장하라고 응답합니다. (예 : state=ASKHDNxxu7432keedsa7jhklsadasdmslk ) 클라이언트는 매번 서버에 요청할 때 위 쿠키를 전달합니다. 서버는 로그인상황을 검사하기 위해서 매번 쿠키를 읽습니다. 그리고 위의 키를 찾아 정보를 해독하고, 서버에 있는 사용자 정보와 비교해 일치하면 로그인된 것으로 보고, 일치하지 않으면 불량요청 혹은 로그인하지 않은 사용자로 판별합니다. Session Session은 서버쪽에 저장되는 쿠키이며 클라이언트가 서버에 Request를 보내면 서버는 클라이언트한테 세션 ID를 제공한다. 로그인 요청이 들어왔을 때 정보가 일치하면 서버는 사용자ID, 로그인시간, IP 등을 저장하는 Session을 생성합니다. 클라이언트에 응답할 때 세션을 찾을 수 있는 Session ID를 클라이언트에 전달합니다.(보통 쿠키로 전달) 클라이언트는 다음 요청시, Session ID를 함께 요청(쿠키를 사용하든 다른 방법을 사용하든)합니다. 서버가 요청을 받은 경우 Session ID를 이용해서 서버에 저장된 세션을 찾아와 로그인을 확인할 수 있습니다. Cookie와 Session의 저장 정보와 위치 참고 https://message0412.tistory.com/entry/HTTP-프로토콜-알아보기1 https://hashcode.co.kr/questions/3243</summary></entry><entry><title type="html">주소창에 www.naver.com을 치면 일어나는 일</title><link href="http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84-%EC%B9%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC/" rel="alternate" type="text/html" title="주소창에 www.naver.com을 치면 일어나는 일" /><published>2019-05-21T14:00:00+09:00</published><updated>2019-05-21T14:00:00+09:00</updated><id>http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84%20%EC%B9%98%EB%A9%B4%20%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94%20%EC%9D%BC</id><content type="html" xml:base="http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84-%EC%B9%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC/">&lt;h1 id=&quot;주소창에-wwwnavercom을-치면-일어나는-일&quot;&gt;주소창에 www.naver.com을 치면 일어나는 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;주소창에 www.naver.com을 입력하면 어떤 일이 일어날까?&lt;/li&gt;
+  &lt;li&gt;면접 질문에서도 종종 나오는 이 방식은 생각보다 간단하다.&lt;/li&gt;
+  &lt;li&gt;방식에 대해 이해하기 전에 IP 주소, 도메인에 대한 사전 지식이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;ip-주소&quot;&gt;IP 주소&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다.&lt;/li&gt;
+  &lt;li&gt;현재는 IPv4 버전(32비트)로 구성되어 있으며 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다.&lt;/li&gt;
+  &lt;li&gt;시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어있기 때문에 IP 주소가 부족하지 않다는 특징이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;도메인-네임domain-name&quot;&gt;도메인 네임(Domain Name)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다.&lt;/li&gt;
+  &lt;li&gt;그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 &lt;strong&gt;&lt;em&gt;도메인 네임&lt;/em&gt;&lt;/strong&gt;이라고 한다.&lt;/li&gt;
+  &lt;li&gt;다시 말해서, 도메인 네임은 ‘naver.com’처럼 몇 개의 의미있는 문자들과 점(.)의 조합으로 구성된다.&lt;/li&gt;
+  &lt;li&gt;도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다.&lt;/li&gt;
+  &lt;li&gt;이때 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 &lt;strong&gt;&lt;em&gt;DNS(Domain Name System)&lt;/em&gt;&lt;/strong&gt; 이라고 부른다.&lt;/li&gt;
+  &lt;li&gt;다시 말해 사람이 도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 찾아갈 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;web-동작-원리&quot;&gt;WEB 동작 원리&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/web_process.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;사용자가 브라우저에 도메인 네임(www.naver.com)을 입력한다.&lt;/li&gt;
+  &lt;li&gt;사용자가 입력한 URL 주소 중에서 도메인 네임(domain name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다.&lt;/li&gt;
+  &lt;li&gt;페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다.&lt;/li&gt;
+  &lt;li&gt;이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다.&lt;/li&gt;
+  &lt;li&gt;검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다.&lt;/li&gt;
+  &lt;li&gt;도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;어려운 개념은 아니니 재미삼아 읽어봐도 좋을 것 같다.&lt;/p&gt;
+
+&lt;p&gt;출처 : &lt;a href=&quot;http://tcpschool.com/webbasic/works&quot;&gt;http://tcpschool.com/webbasic/works&lt;/a&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="IP 주소" /><category term="DNS" /><category term="도메인" /><summary type="html">주소창에 www.naver.com을 치면 일어나는 일 주소창에 www.naver.com을 입력하면 어떤 일이 일어날까? 면접 질문에서도 종종 나오는 이 방식은 생각보다 간단하다. 방식에 대해 이해하기 전에 IP 주소, 도메인에 대한 사전 지식이 필요하다. IP 주소 IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다. 현재는 IPv4 버전(32비트)로 구성되어 있으며 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다. 시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어있기 때문에 IP 주소가 부족하지 않다는 특징이 있다. 도메인 네임(Domain Name) IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다. 그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 도메인 네임이라고 한다. 다시 말해서, 도메인 네임은 ‘naver.com’처럼 몇 개의 의미있는 문자들과 점(.)의 조합으로 구성된다. 도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다. 이때 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 DNS(Domain Name System) 이라고 부른다. 다시 말해 사람이 도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 찾아갈 수 있다. WEB 동작 원리 사용자가 브라우저에 도메인 네임(www.naver.com)을 입력한다. 사용자가 입력한 URL 주소 중에서 도메인 네임(domain name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다. 페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다. 이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다. 검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다. 도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다. 어려운 개념은 아니니 재미삼아 읽어봐도 좋을 것 같다. 출처 : http://tcpschool.com/webbasic/works</summary></entry><entry><title type="html">ArrayList와 LinkedList</title><link href="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80-LinkedList/" rel="alternate" type="text/html" title="ArrayList와 LinkedList" /><published>2019-05-21T14:00:00+09:00</published><updated>2019-05-21T14:00:00+09:00</updated><id>http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80%20LinkedList</id><content type="html" xml:base="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80-LinkedList/">&lt;h1 id=&quot;arraylist와-linkedlist&quot;&gt;ArrayList와 LinkedList&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;ArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다.&lt;/li&gt;
   &lt;li&gt;하지만 내부적으로 작동하는 방식은 다르다.&lt;/li&gt;
@@ -352,49 +518,7 @@
       &lt;td style=&quot;text-align: center&quot;&gt;get&lt;br /&gt;O(n)&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>ChanSu Kim</name></author><category term="자료구조" /><category term="ArrayList" /><category term="LinkedList" /><category term="시간복잡도" /><summary type="html">ArrayList와 LinkedList ArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다. 하지만 내부적으로 작동하는 방식은 다르다. import java.io.*; import java.util.*; public class Main { public static void main(String[] args) throws Exception { ArrayList&amp;lt;String&amp;gt; alist = new ArrayList&amp;lt;&amp;gt;(); alist.add(0,&quot;First&quot;); //O(1) alist.add(&quot;Third&quot;); //O(1) alist.add(1, &quot;Second&quot;); //O(n) alist.remove(1); //O(n) alist.get(1); //O(1) LinkedList&amp;lt;String&amp;gt; nlist = new LinkedList&amp;lt;&amp;gt;(); nlist.addFirst(&quot;First&quot;); //O(1) nlist.add(&quot;Second&quot;); //O(1) nlist.addLast(&quot;Third&quot;); //O(1) nlist.pollFirst(); //O(1) nlist.pollLast(); //O(1) nlist.get(0); //O(n) } } ArrayList 알고리즘 문제를 풀면서 가장 중요한 ArrayList와 LinkedList의 차이점은 시간복잡도의 차이라고 볼 수 있다. ArrayList는 동적으로 Array를 생성한다고 생각하면 배열과 비슷한 점이 많다. ArrayList는 remove 시에 O(n)의 시간복잡도를 가진다. i번째 배열을 지우고 최대 n만큼 앞으로 이동해야 하기 때문이다. &amp;lt; ArrayList 중간 Insert &amp;gt; &amp;lt; ArrayList 중간 Remove &amp;gt; 삽입 또한 맨 뒤에삽입과 중간삽입으로 나눌 수 있는데, 중간에 삽입하는 경우 O(n), 맨 뒤에 삽입하는 경우 O(1)의 시간복잡도를 가진다. 하지만 get 메소드는 해당 index를 바로 가져오기 때문에 O(1)의 시간복잡도를 가진다. LinkedList &amp;lt; LinkedList 중간 add &amp;gt; 이에 비해, LinkedList는 Node를 사용하기 때문에 add, poll 시에 O(1)의 시간복잡도를 가진다. 하지만 get 메소드 사용시에 앞에서부터 찾기 때문에 O(n)의 시간복잡도를 가진다. 정리   ArrayList LinkedList 삽입 addO(1) or O(n) add, addFirst, addLastO(1) 삭제 removeO(n) poll, pollFirst, pollLastO(1) 접근 getO(1) getO(n)</summary></entry><entry><title type="html">주소창에 www.naver.com을 치면 일어나는 일</title><link href="http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84-%EC%B9%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC/" rel="alternate" type="text/html" title="주소창에 www.naver.com을 치면 일어나는 일" /><published>2019-05-21T14:00:00+09:00</published><updated>2019-05-21T14:00:00+09:00</updated><id>http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84%20%EC%B9%98%EB%A9%B4%20%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94%20%EC%9D%BC</id><content type="html" xml:base="http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84-%EC%B9%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC/">&lt;h1 id=&quot;주소창에-wwwnavercom을-치면-일어나는-일&quot;&gt;주소창에 www.naver.com을 치면 일어나는 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;주소창에 www.naver.com을 입력하면 어떤 일이 일어날까?&lt;/li&gt;
-  &lt;li&gt;면접 질문에서도 종종 나오는 이 방식은 생각보다 간단하다.&lt;/li&gt;
-  &lt;li&gt;방식에 대해 이해하기 전에 IP 주소, 도메인에 대한 사전 지식이 필요하다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;ip-주소&quot;&gt;IP 주소&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다.&lt;/li&gt;
-  &lt;li&gt;현재는 IPv4 버전(32비트)로 구성되어 있으며 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다.&lt;/li&gt;
-  &lt;li&gt;시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어있기 때문에 IP 주소가 부족하지 않다는 특징이 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;도메인-네임domain-name&quot;&gt;도메인 네임(Domain Name)&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다.&lt;/li&gt;
-  &lt;li&gt;그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 &lt;strong&gt;&lt;em&gt;도메인 네임&lt;/em&gt;&lt;/strong&gt;이라고 한다.&lt;/li&gt;
-  &lt;li&gt;다시 말해서, 도메인 네임은 ‘naver.com’처럼 몇 개의 의미있는 문자들과 점(.)의 조합으로 구성된다.&lt;/li&gt;
-  &lt;li&gt;도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다.&lt;/li&gt;
-  &lt;li&gt;이때 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 &lt;strong&gt;&lt;em&gt;DNS(Domain Name System)&lt;/em&gt;&lt;/strong&gt; 이라고 부른다.&lt;/li&gt;
-  &lt;li&gt;다시 말해 사람이 도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 찾아갈 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;web-동작-원리&quot;&gt;WEB 동작 원리&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/web_process.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;사용자가 브라우저에 도메인 네임(www.naver.com)을 입력한다.&lt;/li&gt;
-  &lt;li&gt;사용자가 입력한 URL 주소 중에서 도메인 네임(domain name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다.&lt;/li&gt;
-  &lt;li&gt;페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다.&lt;/li&gt;
-  &lt;li&gt;이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다.&lt;/li&gt;
-  &lt;li&gt;검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다.&lt;/li&gt;
-  &lt;li&gt;도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;어려운 개념은 아니니 재미삼아 읽어봐도 좋을 것 같다.&lt;/p&gt;
-
-&lt;p&gt;출처 : &lt;a href=&quot;http://tcpschool.com/webbasic/works&quot;&gt;http://tcpschool.com/webbasic/works&lt;/a&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="IP 주소" /><category term="DNS" /><category term="도메인" /><summary type="html">주소창에 www.naver.com을 치면 일어나는 일 주소창에 www.naver.com을 입력하면 어떤 일이 일어날까? 면접 질문에서도 종종 나오는 이 방식은 생각보다 간단하다. 방식에 대해 이해하기 전에 IP 주소, 도메인에 대한 사전 지식이 필요하다. IP 주소 IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다. 현재는 IPv4 버전(32비트)로 구성되어 있으며 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다. 시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어있기 때문에 IP 주소가 부족하지 않다는 특징이 있다. 도메인 네임(Domain Name) IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다. 그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 도메인 네임이라고 한다. 다시 말해서, 도메인 네임은 ‘naver.com’처럼 몇 개의 의미있는 문자들과 점(.)의 조합으로 구성된다. 도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다. 이때 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 DNS(Domain Name System) 이라고 부른다. 다시 말해 사람이 도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 찾아갈 수 있다. WEB 동작 원리 사용자가 브라우저에 도메인 네임(www.naver.com)을 입력한다. 사용자가 입력한 URL 주소 중에서 도메인 네임(domain name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다. 페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다. 이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다. 검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다. 도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다. 어려운 개념은 아니니 재미삼아 읽어봐도 좋을 것 같다. 출처 : http://tcpschool.com/webbasic/works</summary></entry><entry><title type="html">기억장치 관리</title><link href="http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC/" rel="alternate" type="text/html" title="기억장치 관리" /><published>2019-05-20T14:00:00+09:00</published><updated>2019-05-20T14:00:00+09:00</updated><id>http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98%20%EA%B4%80%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC/">&lt;h1 id=&quot;기억장치-배치-전략&quot;&gt;기억장치 배치 전략&lt;/h1&gt;
+&lt;/table&gt;</content><author><name>ChanSu Kim</name></author><category term="자료구조" /><category term="ArrayList" /><category term="LinkedList" /><category term="시간복잡도" /><summary type="html">ArrayList와 LinkedList ArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다. 하지만 내부적으로 작동하는 방식은 다르다. import java.io.*; import java.util.*; public class Main { public static void main(String[] args) throws Exception { ArrayList&amp;lt;String&amp;gt; alist = new ArrayList&amp;lt;&amp;gt;(); alist.add(0,&quot;First&quot;); //O(1) alist.add(&quot;Third&quot;); //O(1) alist.add(1, &quot;Second&quot;); //O(n) alist.remove(1); //O(n) alist.get(1); //O(1) LinkedList&amp;lt;String&amp;gt; nlist = new LinkedList&amp;lt;&amp;gt;(); nlist.addFirst(&quot;First&quot;); //O(1) nlist.add(&quot;Second&quot;); //O(1) nlist.addLast(&quot;Third&quot;); //O(1) nlist.pollFirst(); //O(1) nlist.pollLast(); //O(1) nlist.get(0); //O(n) } } ArrayList 알고리즘 문제를 풀면서 가장 중요한 ArrayList와 LinkedList의 차이점은 시간복잡도의 차이라고 볼 수 있다. ArrayList는 동적으로 Array를 생성한다고 생각하면 배열과 비슷한 점이 많다. ArrayList는 remove 시에 O(n)의 시간복잡도를 가진다. i번째 배열을 지우고 최대 n만큼 앞으로 이동해야 하기 때문이다. &amp;lt; ArrayList 중간 Insert &amp;gt; &amp;lt; ArrayList 중간 Remove &amp;gt; 삽입 또한 맨 뒤에삽입과 중간삽입으로 나눌 수 있는데, 중간에 삽입하는 경우 O(n), 맨 뒤에 삽입하는 경우 O(1)의 시간복잡도를 가진다. 하지만 get 메소드는 해당 index를 바로 가져오기 때문에 O(1)의 시간복잡도를 가진다. LinkedList &amp;lt; LinkedList 중간 add &amp;gt; 이에 비해, LinkedList는 Node를 사용하기 때문에 add, poll 시에 O(1)의 시간복잡도를 가진다. 하지만 get 메소드 사용시에 앞에서부터 찾기 때문에 O(n)의 시간복잡도를 가진다. 정리   ArrayList LinkedList 삽입 addO(1) or O(n) add, addFirst, addLastO(1) 삭제 removeO(n) poll, pollFirst, pollLastO(1) 접근 getO(1) getO(n)</summary></entry><entry><title type="html">기억장치 관리</title><link href="http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC/" rel="alternate" type="text/html" title="기억장치 관리" /><published>2019-05-20T14:00:00+09:00</published><updated>2019-05-20T14:00:00+09:00</updated><id>http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98%20%EA%B4%80%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC/">&lt;h1 id=&quot;기억장치-배치-전략&quot;&gt;기억장치 배치 전략&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;최초 적합(First Fit) : 가능한 영역 중에서 첫 번째 분할 영역에 배치시키는 방법&lt;/li&gt;
   &lt;li&gt;최적 적합(Best Fit)  : 가능한 영역 중에서 단편화를 가장 작게 남기는 분할 영역에 배치하는 방법&lt;/li&gt;
@@ -824,359 +948,7 @@
   &lt;li&gt;처음가 마지막을 인접시킨 것과 같은 원형 형태로 디스크를 처리한다.&lt;/li&gt;
   &lt;li&gt;디스크 대기 큐 : 53,98,183,37,122,14,124,65,67&lt;/li&gt;
   &lt;li&gt;이동 순서 : 53 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 0 -&amp;gt; 199 -&amp;gt; 183 -&amp;gt; 124 -&amp;gt; 122 -&amp;gt; 98 -&amp;gt; 67 -&amp;gt; 65&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="OS" /><category term="기억장치" /><category term="메모리 할당" /><category term="페이징" /><category term="세그먼테이션" /><category term="디스크 스케쥴링" /><summary type="html">기억장치 배치 전략 최초 적합(First Fit) : 가능한 영역 중에서 첫 번째 분할 영역에 배치시키는 방법 최적 적합(Best Fit) : 가능한 영역 중에서 단편화를 가장 작게 남기는 분할 영역에 배치하는 방법 최악 적합(Worst Fit) : 가능한 영역 중에서 단편화를 가장 많이 남기는 분할 영역에 배치하는 방법 영역번호 영역크기 상태 1 5K 공백 2 14K 공백 3 10K 사용중 4 12K 공백 5 16K 공백 배치 전략 중 10K 프로그램이 할당 받는 영역의 번호는 다음과 같다. 최초 적합(First Fit) : 10K 프로그램이 들어갈 수 있는 첫 번째 영역은 2번이다. 최적 적합(Best Fit) : 10K 프로그램이 들어가고 단편화를 가장 작게 남기는 영역은 4번이다. 최악 적합(Worst Fit) : 10K 프로그램이 들어가고 단편화를 가장 많이 남기는 영역은 5번이다. 가상기억장치 구현 보조기억장치(하드디스크)의 일부를 주기억장치처럼 사용하는 것으로 가상기억장치에 저장된 프로그램을 실행하려면 가상기억장치의 주소를 주기억장치의 주소로 바꾸눈 주소 변환 작업(매핑)이 필요하다. 페이징 기법 : 프로그램을 동일한 크기로 나눈 단위를 페이지라 하며 이 페이지를 블록으로 활용하는 기법 세그먼테이션 기법 : 프로그램을 가변적인 크기로 나눈 단위를 세그먼트라 하며, 이 세그먼트를 블록으로 사용하는 기법 내부 단변화 : 프로그램이 할당된 후 남는 빈 공간, 영역 크기 16K &amp;gt; 프로그램 크기 14K 인 경우 내부 단편화 2K 발생 외부 단편화 : 영역 크기보다 프로그램 크기가 커서 할당되지 않아 남는 빈 공간, 영억 크기 12K &amp;lt; 프로그램 크기 14K 인 경우 외부 단편화 2K 발생 페이징 기법 페이지 : 프로그램을 일정한 크기로 나눈 단위(일반적으로 1~4KB) 프레임 : 페이지 크기로 일정하게 나누어진 주기억장치 단위 주소 변환을 위해서 페이지의 위치 정보를 가지고 있는 페이지 맵 테이블이 필요하다. 외부 단편화는 발생하지 않지만 내부 단편화는 발생할 수 있다. 장점 : 여러 개의 프로그램을 동시 실행할 수 있어 다중 프로그래밍 정도가 향상된다. 단점 : 주소 변환 과정에서 CPU 사용시간이 낭비되고 내부 단편화 문제가 발생한다. 세그먼테이션 기법 세그먼트 : 사용자 주소 공간을 논리적인 단위로 나눈 것, 각 세그먼트는 고유한 이름과 크기를 가진다. 주소 변환을 위해 세그먼트가 존재하는 위치 정보를 가지고 있는 세그먼트 맵 테이블이 필요하다. 장점 : 외부단편화에 의한 기억장치 낭비를 줄일 수 있다. 단점 : 세그먼트 크기가 가변적이기 때문에 세그먼트 영역이 다른 세그먼트 영역을 침범하지 않는 기억장치 보호키가 필요하다. 페이지 교체 알고리즘 페이지 부재가 발생했을 때 가상기억장치의 필요한 페이지를 주기억장치에 적재하는 데 어떤 프레임을 선택해 교체할 지 결정하는 기법 FIFO(First In First Out) 가장 오래 있었던 페이지를 고체하는 기법이다. 벨레이디의 모순 현상이 발생한다.(프레임 수가 늘어나면 페이지 부재 수가 줄어들지 않는 현상) 참조 페이지 1 2 3 4 1 2 5 1 2 3 4 5 Frame 1 1 1 1 4 4 4 5 5 5 5 5 5 Frame 2   2 2 2 1 1 1 1 1 3 3 3 Frame 3     3 3 3 2 2 2 2 2 4 4 페이지 부재 O O O O O O O     O O   위 경우 페이지 부재가 총 9번 발생한다. 하지만, Frame 개수가 4개로 늘어나도 페이지 부재는 10번으로 증가한다. =&amp;gt; 벨레이디 모순 현상 LRU(Least Recently Used) 최근에 가장 오랫동안 사용하지 않은 페이지를 교체하는 기법 계수기나 스택같은 별로 하드웨어가 필요하며 시간적인 오버헤드가 발생하고, 실제로 구현하기 어렵다. 참조 페이지 2 3 2 1 5 2 3 5 Frame 1 2 2 2 2 2 2 2 2 Frame 2   3 3 3 5 5 5 5 Frame 3       1 1 1 3 3 페이지 부재 O O   O O   O   LFU(Least Frequently Used) 사용 빈도가 가장 적은 페이지를 교체하는 기법 활발하게 사용되는 페이지는 사용 횟수가 많아 교체되지 않고 사용된다. 초기에 많이 사용된 페이지가 그 후루도 사용되지 않을 경우 프레임을 계속 차지할 수 있다. 참조 페이지 2 3 1 3 1 2 4 5 Frame 1 2 2 2 2 2 2 2 2 Frame 2   3 3 3 3 3 3 3 Frame 3     1 1 1 1 1 1 Frame 4             4 5 페이지 부재 O O O       O O 가상기억창치 관리 페이지 크기 페이지 크기가 작을 경우 페이지 단편화가 가모되고 볼필요한 내용이 주기억장치에 적재될 확률이 적다. 페이지 정보를 가지는 페이지 맵 테이블 크기가 커지고 매핑 속도가 늦어진다. 디스크 접근 횟수가 많아져 전체적인 입출력 시간이 증가한다. 페이지 크기가 클 경우 페이지 정보를 갖는 맵 테이블의 크기가 작아지고, 매핑 속도가 빨라진다. 디스크 접근 횟수가 줄어들어 전체적인 입출력 시간이 감소한다. 페이지 단편화가 증가되고, 한 개의 페이지를 주기억장치로 이동하는 시간이 늘어난다. 구역성(Locality) 어느 순간 특정 페이지만 집중적으로 참조하는 것 시간 구역성 하나의 페이지를 일정 시간 동안 집중적으로 엑세스하는 현상 한번 참조한 페이지는 가까운 시간 내에 계속 참조할 가능성이 높다. 공간 구역성 어느 하나의 페이지를 참조하면 그 근처의 페이지를 참조할 가능성이 높다. 프로세스 실행 시 일정 위치의 페이지를 집중적으로 액세스하는 현상 워킹 셋(Working Set) 프로세스가 일정 시간 동안 자주 참조하는 페이지들의 집합 자주 참조되는 워킹 셋을 주기억장치에 상주시킴으로써 페이지 부재 및 교체 현상이 줄어들어 사용이 안정화된다. 스레싱(Thrashing) 프로세스 처리 시간보다 페이지 교체에 소요되는 시간이 더 많아지는 현상 어떤 프로세스가 실제로 사용하는 프레임 수만큼의 프레임을 갖지 못한 경우 발생 방지 방법 : 다중 프로그래밍 정도 완화, Working Set 이용 cf) 다중 프로그래밍 정도 : 얼마나 많은 프로그램을 동시에 수행하는 정도 디스크 스케줄링 사용할 데이터가 디스크 상의 여러 곳에 저장되어 있을 경우 디스크 헤드가 움직으는 경로를 결정하는 기법 목적 : 처리량 최대화, 응답 시간 최소화, 응답 시간 편차의 최소화 FCFS(First Come First Service) 디스크 대기 큐에 가장 먼저 들어온 트랙에 대한 요청을 먼저 서비스하는 기법 더 높은 우선순위의 요청이 입력되어도 순사가 바뀌지 않아 공평성이 보장된다. 디스크 오버헤드가 적을 때 효율적이며, 오버헤드가 커지면 응답 시간이 길어진다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 98 -&amp;gt; 183 -&amp;gt; 37 -&amp;gt; 122 -&amp;gt; 14 -&amp;gt; 124 -&amp;gt; 65 -&amp;gt; 67 SSTF(Shortest Seek Time First) 탐색 거리가 가장 짧은 트랙에 대한 요청을 먼저 서비스하는 기법 현재 헤드 위치에서 가장 가까운 거리에 있는 트랙으로 헤드를 이동한다. 현재 헤드 위치에 가장 가까운 트랙에 대한 요청이 계속 발생하는 경우 먼 거리의 서비스는 무한정 기다리는 기아 상태가 발생할 수 있다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183 SCAN SSTF가 갖는 탐색 시간의 편차를 해소하기 위한 기법 현재 헤드 위치에서 진행 방향이 결정되면 탐색 거리가 짧은 순서에 따라 그 방향의 모든 요청을 서비스 후 역방향의 요청 사항을 서비스한다. 오버헤드가 적을 경우 가장 효율적인 기법이다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183 -&amp;gt; 199 -&amp;gt; 37 -&amp;gt; 14 C-SCAN(Circular SCAN) 항상 바깥쪽에서 안쪽으로 한 방향으로만 움직이며 가장 짧은 탐색 거리를 갖는 요청을 서비스하는 기법 처음가 마지막을 인접시킨 것과 같은 원형 형태로 디스크를 처리한다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 0 -&amp;gt; 199 -&amp;gt; 183 -&amp;gt; 124 -&amp;gt; 122 -&amp;gt; 98 -&amp;gt; 67 -&amp;gt; 65</summary></entry><entry><title type="html">Stack 영역과 Heap 영역</title><link href="http://localhost:4000/java/2019/05/19/Stack-%EC%98%81%EC%97%AD%EA%B3%BC-Heap-%EC%98%81%EC%97%AD/" rel="alternate" type="text/html" title="Stack 영역과 Heap 영역" /><published>2019-05-19T17:00:00+09:00</published><updated>2019-05-19T17:00:00+09:00</updated><id>http://localhost:4000/java/2019/05/19/Stack%20%EC%98%81%EC%97%AD%EA%B3%BC%20Heap%20%EC%98%81%EC%97%AD</id><content type="html" xml:base="http://localhost:4000/java/2019/05/19/Stack-%EC%98%81%EC%97%AD%EA%B3%BC-Heap-%EC%98%81%EC%97%AD/">&lt;h1 id=&quot;stack-영역&quot;&gt;Stack 영역&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;메소드 지역 변수를 Stack 형식으로 임시 할당하고, 해당 메소드가 종료되면 Stack 에서 전부 제거된다.&lt;/li&gt;
-  &lt;li&gt;원시타입 변수(byte, short, int, long, float, double, char, boolean)만 Stack에 저장된다.&lt;/li&gt;
-  &lt;li&gt;원시타입을 제외한 참조 변수의 경우 Heap 영역에 생성된 Object 주소값이 저장된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;heap-영역&quot;&gt;Heap 영역&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Java에서 new 명령을 통해 생성된 인스턴스 변수가 놓인다.&lt;/li&gt;
-  &lt;li&gt;모든 Object 타입(Integer, String, ArrayList, …)은 heap 영역에 생성된다.&lt;/li&gt;
-  &lt;li&gt;Stack에 참조변수로 저장되어 Heap 영역에 Real Value가 저장되고 Stack 영역에는 주소값만 저장된다.&lt;/li&gt;
-  &lt;li&gt;GC에 의해 지위지지 않는 이상 Heap 영역에 계속 남아있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;//원시타입 변수이므로 Stack 영역에 저장&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;host&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//인스턴스 변수이므로 Heap 영역에 실질적인 값이 저장되고 Stack에 해당 주소값이 저장&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;위와 같은 코드가 있다고 가정했을 때, 해당하는 Stack 영역과 Heap 영역은 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/memory.png&quot; alt=&quot;memory&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Stack 영역에는 Heap 영역에 생성된 Object 타입의 데이터 참조값이 할당된다.&lt;/li&gt;
-  &lt;li&gt;만약, 여기서 host += :8080 이라는 코드를 추가하면, localhost에 값이 추가되는 것이 아니라 localhost:8080 라는 새로운 String Object가 할당되어 참조하게 된다.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;즉, localhost는 unreachable 객체가 되어 GC에 의해 메모리에서 제거된다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;참고 : &lt;a href=&quot;https://yaboong.github.io/java/2018/05/26/java-memory-management/&quot;&gt;https://yaboong.github.io/java/2018/05/26/java-memory-management/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Java" /><category term="Stack Area" /><category term="Heap Area" /><summary type="html">Stack 영역 메소드 지역 변수를 Stack 형식으로 임시 할당하고, 해당 메소드가 종료되면 Stack 에서 전부 제거된다. 원시타입 변수(byte, short, int, long, float, double, char, boolean)만 Stack에 저장된다. 원시타입을 제외한 참조 변수의 경우 Heap 영역에 생성된 Object 주소값이 저장된다. Heap 영역 Java에서 new 명령을 통해 생성된 인스턴스 변수가 놓인다. 모든 Object 타입(Integer, String, ArrayList, …)은 heap 영역에 생성된다. Stack에 참조변수로 저장되어 Heap 영역에 Real Value가 저장되고 Stack 영역에는 주소값만 저장된다. GC에 의해 지위지지 않는 이상 Heap 영역에 계속 남아있다. public class Main { public static void main(String[] args) { int port = 4000; //원시타입 변수이므로 Stack 영역에 저장 String host = &quot;localhost&quot;; //인스턴스 변수이므로 Heap 영역에 실질적인 값이 저장되고 Stack에 해당 주소값이 저장 } } 위와 같은 코드가 있다고 가정했을 때, 해당하는 Stack 영역과 Heap 영역은 다음과 같다. Stack 영역에는 Heap 영역에 생성된 Object 타입의 데이터 참조값이 할당된다. 만약, 여기서 host += :8080 이라는 코드를 추가하면, localhost에 값이 추가되는 것이 아니라 localhost:8080 라는 새로운 String Object가 할당되어 참조하게 된다. 즉, localhost는 unreachable 객체가 되어 GC에 의해 메모리에서 제거된다. 참고 : https://yaboong.github.io/java/2018/05/26/java-memory-management/</summary></entry><entry><title type="html">프로세스 동기화</title><link href="http://localhost:4000/os/2019/05/19/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EB%8F%99%EA%B8%B0%ED%99%94/" rel="alternate" type="text/html" title="프로세스 동기화" /><published>2019-05-19T17:00:00+09:00</published><updated>2019-05-19T17:00:00+09:00</updated><id>http://localhost:4000/os/2019/05/19/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EB%8F%99%EA%B8%B0%ED%99%94</id><content type="html" xml:base="http://localhost:4000/os/2019/05/19/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EB%8F%99%EA%B8%B0%ED%99%94/">&lt;h1 id=&quot;프로세스-동기화-배경&quot;&gt;프로세스 동기화 배경&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;프로세스가 병행 또는 병렬로 실행될 때 여러 프로세스가 공유하는 데이터의 무결성이 유지되어야 한다.&lt;/li&gt;
-  &lt;li&gt;병행 프로세스는 다중 처리 시스템이나 분산 처리 시스템에서 중요 개념으로 사용&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;임계-구역&quot;&gt;임계 구역&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;임계구역 안에서는 공유 변수를 변경, 테이블 갱신, 파일 쓰기 등의 작업을 수행한다.&lt;/li&gt;
-  &lt;li&gt;임계구역에는 하나의 프로세스만 접근할 수 있으며, 해당 프로세스가 자원을 반납해야 다른 프로세스가 자원 및 데이터를 사용할 수 있다.&lt;/li&gt;
-  &lt;li&gt;한 프로세스가 자신의 임계구역에서 수행하는 동안에는 다른 프로세스들은 그들의 임계구역에 들어갈 수 없다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;임계구역-문제-해결-방법&quot;&gt;임계구역 문제 해결 방법&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;상호 배제 기법
-    &lt;ul&gt;
-      &lt;li&gt;특정 프로세스가 공유 자원을 사용하고 있을 경우 다른 프로세스가 해당 공유 자원을 사용하지 못하게 제어하는 기법&lt;/li&gt;
-      &lt;li&gt;두 개의 프로세스 기준 : 피터슨 알고리즘(두 프로세스가 두 개의 데이터 항목을 공유하여 자원을 사용하는 방법)&lt;/li&gt;
-      &lt;li&gt;여러 개의 프로세스 기준 : Lamport의 빵집 알고리즘(각 프로세스에 번호를 부여하여 자원을 사용하도록 하는 방볍)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;진행
-    &lt;ul&gt;
-      &lt;li&gt;자신의 임계구역에서 실행되는 프로세스가 없고 자신의 임계구역으로 진입하려는 프로세스가 있다면 잔류 구역에서 실행 중이지 않은 프로세스들만 임계영역에 진입 대상이 되고, 이 선택은 무한정 연기되지 않음!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;한계 대기
-    &lt;ul&gt;
-      &lt;li&gt;프로세스가 자기의 임계구역에 진입하려는 요청을 한 후로부터 요청이 허용될 때까지 다른 프로세스들이 임계영역에 그들 자신의 임계구역에 진입을 허용하는 횟수의 한계가 필요하다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;mutex-lock상호-배재&quot;&gt;Mutex Lock(상호 배재)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/mutex.png&quot; alt=&quot;mutex&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Mutex가 지켜주는 덕에 화장실을 한명만 사용할 수 있다.&lt;/li&gt;
-  &lt;li&gt;즉, Mutex는 임계구역을 보호하고 프로세스간 경쟁을 방지하기 위해 사용&lt;/li&gt;
-  &lt;li&gt;boolean available 변수를 사용 =&amp;gt; 락의 가용 여부 표시&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//Lock 획득
-&lt;/span&gt;    &lt;span class=&quot;err&quot;&gt;임계구역&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//Lock 반환
-&lt;/span&gt;    &lt;span class=&quot;err&quot;&gt;나머지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;구역&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;세마포어semaphore&quot;&gt;세마포어(Semaphore)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Mutex와 유사하게 동작하지만 프로세스들이 자신들의 행동을 더 정교하게 동기화 할 수 있는 방법 제공&lt;/li&gt;
-  &lt;li&gt;각 프로세스에 제어신호를 전달하여 순차적으로 진행하기 위한 동기화 구현&lt;/li&gt;
-  &lt;li&gt;세마포 S = 정수 변수, wait(s)와 signal(s)로만 접근이 가능하다. S = 0인 경우 모든 자원이 사용 중을 의미&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//wait(S) =&amp;gt; 상호배재 보장
-//임계구역에 진입하기 전에 확인
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//누군가 사용하고 있다면
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;양수가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;될&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;때까지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;현재&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;프로세스를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기다림&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//임계 구역에 진입이 가능하다면
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//Signal(S) =&amp;gt; 진행 보장
-//임계구역을 떠날 때 실행
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자원&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;반환전에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기다리는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;프로세스가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;있다면&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;err&quot;&gt;그&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;중&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;한개&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;프로세스를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;임계&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;구역&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;진입&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;//list에서 기다리는 프로세스가 없다면
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;mutex와-세마포어의-차이&quot;&gt;Mutex와 세마포어의 차이&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Mutex(상호 배재)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Critical Section을 가진 쓰레드들의 Running time이 서로 겹치지 않게 각각 단독으로 실행되게 하는 기술&lt;/li&gt;
-  &lt;li&gt;Mutex 객체를 두 쓰레드가 동시에 사용할 수 없다. (1개의 쓰레드만 Critical Section에 접근 가능하도록 하는 기술)&lt;/li&gt;
-  &lt;li&gt;cf) Critical Section : 각 프로세스에서 공유데이터를 엑세스하는 프로그램 코드부분&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;세마포어(Semaphore)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;공유된 자원의 데이터를 여러 프로세스가 접근하는 것을 막는 것&lt;/li&gt;
-  &lt;li&gt;만약, 화장실 칸이 4개라면 4개의 프로세스는 사용 가능하고, 나머지 프로세스는 대기해야 한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;고전적인-동기화-문제&quot;&gt;고전적인 동기화 문제&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;생산자-소비자 문제
-    &lt;ul&gt;
-      &lt;li&gt;생산자가 데이터를 생산하여 입력된 경우에만 접근하도록 구성하는 방식&lt;/li&gt;
-      &lt;li&gt;생산자는 꽉찬 버퍼를 생산하고 소비자는 비어있는 버퍼를 생산한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;읽기-쓰기 문제
-    &lt;ul&gt;
-      &lt;li&gt;두 Reader가 동시에 공유 데이터를 접근하는 것은 허용하나, 동시에 Writer를 허용하지 않는 방식&lt;/li&gt;
-      &lt;li&gt;Writer보다 Reader 요청이 많은 경우 병행성을 높일 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;식사하는 철학자 문제
-    &lt;ul&gt;
-      &lt;li&gt;5명의 철학자들은 생각하고 먹는 일을 수행(철학자 : 프로세스, 젓가락 : 자원)&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;철학자는 양쪽의 젓가락을 사용하여 식사를 하고, 식사를 마친 철학자는 젓가락을 내려놓고 다시 생각한다.&lt;/li&gt;
-      &lt;li&gt;철학자는 2개의 젓가락을 손에 쥐어야 식사를 할 수 있고, 한 번에 하나씩 잡을 수 있다.&lt;/li&gt;
-      &lt;li&gt;옆 사람이 식사중이면 젓가락 잡는 것을 대기한다.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;5명의 철학자가 동시에 식사를 하게 되면 모두 왼쪽 포크만을 가지게 되고 오른쪽 포크를 대기하는 교착 상태(Deadlock)이 발생한다.&lt;/p&gt;
-
-&lt;p&gt;이를 방지하기 위한 방법은 대표적으로 3가지이다.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;최대 4명의 철학자들만이 테이블에 앉을 수 있도록 한다. =&amp;gt; 젓가락이 하나 남기 때문에 어떤 철학자는 식사가 가능하다.&lt;/li&gt;
-  &lt;li&gt;한 철학자가 동시에 두개의 젓가락을 모두 집을 수 있을 때만 젓가락을 집도록 허용한다.(즉, 임계구역 안에서만 젓가락을 집어야 한다)&lt;/li&gt;
-  &lt;li&gt;비대칭 해결안을 사용한다.(홀수 번 철학자는 왼쪽, 짝수 번 철학자는 오른쪽 젓가락부터 집는다)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;교착상태deadlock&quot;&gt;교착상태(DeadLock)&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;상호 배제에 의해 나타나는 문제점으로 둘 이상의 프로세스들이 자원을 점유한 상태에서 서로 다른 프로세스가 점유하고 있는 자원을 요구하며 무한정 기다리는 현상&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;예방-기법&quot;&gt;예방 기법&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;상호 배재 부정 : 한 번에 여러 개의 프로세스가 공유 자원을 사용할 수 있도록 한다.&lt;/li&gt;
-  &lt;li&gt;점유 및 대기 부정 : 프로세스가 실행되기 전 필요한 모든 자원을 할당해 프로세스 대기를 없애거나 자원이 점유되지 않은 상태에서만 자원을 요구하도록 한다.&lt;/li&gt;
-  &lt;li&gt;비선점 부정 : 자원을 점유하고 있는 프로세스가 다른 자원을 요구할 때 점유하고 있는 자원을 반납하고, 요구 자원을 사용하기 위해 기다리게 한다.&lt;/li&gt;
-  &lt;li&gt;환형 대기 부정 : 자원을 선형 순서로 분류해 고유 번호를 할당하고, 각 프로세스는 현재 점유한 고유 번호보다 앞이나 뒤 한쪽 방향으로만 자원을 요구하도록 한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;회피-기법dijkstra-제안한-은행원-알고리즘&quot;&gt;회피 기법(Dijkstra 제안한 은행원 알고리즘)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;안정 상태 : 모든 프로세스가 교착상태를 일으키지 않으면서 각 프로세스가 요구한 최대 요구량만큼 필요한 자원을 할당해 줄 수 있는 상태&lt;/li&gt;
-  &lt;li&gt;불안정 상태 : 교착상태의 필수 조건으로 교착상태가 발생할 수 있는 상태&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;은행원 알고리즘 : 안전상태를 유지할 수 있는 요구만을 수락하고 불안전 상태를 초래할 사용자의 요구는 나중에 만족될 수 있을 때까지 계속 거절하는 알고리즘&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;각 프로세스마다 할당할 수 있는 최대 자원을 계산한다.&lt;/li&gt;
-  &lt;li&gt;각 프로세스마다 자원을 할당한 후에도 안전 상태를 유지할 수 있는지 확인하고 자원을 할당한다.&lt;/li&gt;
-  &lt;li&gt;추가적인 자원을 할당해도 안전 상태를 유지할 수 있다면 자원을 할당할 수 있다. 하지만 불안전상태가 된다면 교착상태가 되므로 거절한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Available : 각 종류별로 가용한 자원의 개수, Available[i] = k 라면 R[i] 를 K개 사용할 수 있다는 뜻&lt;/li&gt;
-  &lt;li&gt;Max : 각 프로세스가 최대로 필요로 하는 자원의 개수, Max[i,j] = k 라면 Process[i]가 R[j]를 K개까지 요청할 수 있다는 뜻&lt;/li&gt;
-  &lt;li&gt;Allocation : 각 프로세스에게 현재 나가있는 자원의 개수, Allocation[i,j] = k 라면 현재 Process[i]가 R[j]를 K개 사용 중이라는 뜻&lt;/li&gt;
-  &lt;li&gt;Need : 각 프로세스가 향후 요청할 수 있는 자원의 개수, Need[i,j] = k라면 Process[i]가 향후 R[j]를 K개 요청할 수 있다는 뜻
-    &lt;ul&gt;
-      &lt;li&gt;Need = Max - Allocation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;자원-요청-알고리즘&quot;&gt;자원 요청 알고리즘&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;만약 &lt;strong&gt;Request[i] &amp;lt;= Need[i]&lt;/strong&gt; 이면 2단계로 이동, 아니면 시스템에 있는 개수보다 더 많이 요청했기 때문에 오류로 처리&lt;/li&gt;
-  &lt;li&gt;만약 &lt;strong&gt;Request[i] &amp;lt;= Available[i]&lt;/strong&gt; 이면 3단꼐로 이동, 아니면 요청한 자원이 지금 없으므로 Process[i]는 기다려야 한다.&lt;/li&gt;
-  &lt;li&gt;Process[i]에게 할당한 것처럼 시스템 상태정보를 바꿔 본다.
-    &lt;ul&gt;
-      &lt;li&gt;Available = Available - Request[i]&lt;/li&gt;
-      &lt;li&gt;Allocation[i] = Allocation[i] + Request[i]&lt;/li&gt;
-      &lt;li&gt;Need[i] = Need[i] - Request[i]&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;만약, 이렇게 바뀐 상태가 안전하다면 Process[i]에게 자원을 할당한다. 그렇지 않다면 상태를 원상태로 되돌리고 Request[i]가 만족될 때까지 기다린다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;예를 통해 알아보자. 프로세스 P와 A 자원 10개, B 자원 5개, C 자원 7개가 있을 때 다음과 같은 예시가 있다고 가정하자.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Process&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Allocation&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Max&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Need&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Type&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;A&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;B&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;C&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;A&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;B&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;C&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;A&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;B&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;P[0]&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;P[1]&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;P[2]&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;P[3]&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;P[4]&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Need 값은 Max - Allocation 으로 구할 수 있으며 이 경우 남은 자원 수는 다음과 같다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Available&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;A&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;B&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10 - (0+2+3+2+0) = 3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5 - (1+0+0+1+0) = 3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7 - (0+0+2+1+2) = 2&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;여기서 P[1]이 A 자원 1개와 C 자원 2개를 추가로 요청한다고 가정해보자. 이 때의 Request[1] = (1,0,2) 가 된다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Request[i] &amp;lt;= Need[i]&lt;/strong&gt;를 검사한다. (1,0,2) &amp;lt;= (1,2,2)이므로 조건을 만족한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Request[i] &amp;lt;= Available[i]&lt;/strong&gt;를 검사한다. (1,0,2) &amp;lt;= (3,3,2) 이므로 조건을 만족한다.&lt;/li&gt;
-  &lt;li&gt;Process[i]에게 할당한 것처럼 시스템 상태정보를 바꿔 본다.
-    &lt;ul&gt;
-      &lt;li&gt;Available[1] = Available[1] (3,3,2) - Request[1] (1,0,2) = (2,3,0)&lt;/li&gt;
-      &lt;li&gt;Allocation[1] = Allocation[1] (2,0,0) + Request[1] (1,0,2) = (3,0,2)&lt;/li&gt;
-      &lt;li&gt;Need[1] = Need[1] (1,2,2) - Request[1] (1,0,2) = (0,2,0)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;위 상태는 안정 상태이므로 Process[1] 의 요청을 즉시 들어줄 수 있다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;위 예시에서는 &lt;strong&gt;&amp;lt;P[1], P[3], P[4], P[2], P[0]&amp;gt;&lt;/strong&gt; 순서로 진행하면 안정 순서열이 된다.&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="OS" /><category term="프로세스 동기화" /><category term="Mutex" /><category term="Semaphore" /><category term="뮤텍스" /><category term="세마포어" /><category term="데드락" /><category term="은행원 알고리즘" /><summary type="html">프로세스 동기화 배경 프로세스가 병행 또는 병렬로 실행될 때 여러 프로세스가 공유하는 데이터의 무결성이 유지되어야 한다. 병행 프로세스는 다중 처리 시스템이나 분산 처리 시스템에서 중요 개념으로 사용 임계 구역 임계구역 안에서는 공유 변수를 변경, 테이블 갱신, 파일 쓰기 등의 작업을 수행한다. 임계구역에는 하나의 프로세스만 접근할 수 있으며, 해당 프로세스가 자원을 반납해야 다른 프로세스가 자원 및 데이터를 사용할 수 있다. 한 프로세스가 자신의 임계구역에서 수행하는 동안에는 다른 프로세스들은 그들의 임계구역에 들어갈 수 없다. 임계구역 문제 해결 방법 상호 배제 기법 특정 프로세스가 공유 자원을 사용하고 있을 경우 다른 프로세스가 해당 공유 자원을 사용하지 못하게 제어하는 기법 두 개의 프로세스 기준 : 피터슨 알고리즘(두 프로세스가 두 개의 데이터 항목을 공유하여 자원을 사용하는 방법) 여러 개의 프로세스 기준 : Lamport의 빵집 알고리즘(각 프로세스에 번호를 부여하여 자원을 사용하도록 하는 방볍) 진행 자신의 임계구역에서 실행되는 프로세스가 없고 자신의 임계구역으로 진입하려는 프로세스가 있다면 잔류 구역에서 실행 중이지 않은 프로세스들만 임계영역에 진입 대상이 되고, 이 선택은 무한정 연기되지 않음! 한계 대기 프로세스가 자기의 임계구역에 진입하려는 요청을 한 후로부터 요청이 허용될 때까지 다른 프로세스들이 임계영역에 그들 자신의 임계구역에 진입을 허용하는 횟수의 한계가 필요하다. Mutex Lock(상호 배재) Mutex가 지켜주는 덕에 화장실을 한명만 사용할 수 있다. 즉, Mutex는 임계구역을 보호하고 프로세스간 경쟁을 방지하기 위해 사용 boolean available 변수를 사용 =&amp;gt; 락의 가용 여부 표시 do { //Lock 획득 임계구역 //Lock 반환 나머지 구역 } while(true); 세마포어(Semaphore) Mutex와 유사하게 동작하지만 프로세스들이 자신들의 행동을 더 정교하게 동기화 할 수 있는 방법 제공 각 프로세스에 제어신호를 전달하여 순차적으로 진행하기 위한 동기화 구현 세마포 S = 정수 변수, wait(s)와 signal(s)로만 접근이 가능하다. S = 0인 경우 모든 자원이 사용 중을 의미 //wait(S) =&amp;gt; 상호배재 보장 //임계구역에 진입하기 전에 확인 if (S &amp;lt;= 0) //누군가 사용하고 있다면 S가 양수가 될 때까지 현재 프로세스를 list에서 기다림 else //임계 구역에 진입이 가능하다면 S = S - 1; //Signal(S) =&amp;gt; 진행 보장 //임계구역을 떠날 때 실행 if (자원 반환전에 list에서 기다리는 프로세스가 있다면) 그 중 한개 프로세스를 임계 구역 진입 else //list에서 기다리는 프로세스가 없다면 S = S + 1; Mutex와 세마포어의 차이 Mutex(상호 배재) Critical Section을 가진 쓰레드들의 Running time이 서로 겹치지 않게 각각 단독으로 실행되게 하는 기술 Mutex 객체를 두 쓰레드가 동시에 사용할 수 없다. (1개의 쓰레드만 Critical Section에 접근 가능하도록 하는 기술) cf) Critical Section : 각 프로세스에서 공유데이터를 엑세스하는 프로그램 코드부분 세마포어(Semaphore) 공유된 자원의 데이터를 여러 프로세스가 접근하는 것을 막는 것 만약, 화장실 칸이 4개라면 4개의 프로세스는 사용 가능하고, 나머지 프로세스는 대기해야 한다. 고전적인 동기화 문제 생산자-소비자 문제 생산자가 데이터를 생산하여 입력된 경우에만 접근하도록 구성하는 방식 생산자는 꽉찬 버퍼를 생산하고 소비자는 비어있는 버퍼를 생산한다. 읽기-쓰기 문제 두 Reader가 동시에 공유 데이터를 접근하는 것은 허용하나, 동시에 Writer를 허용하지 않는 방식 Writer보다 Reader 요청이 많은 경우 병행성을 높일 수 있다. 식사하는 철학자 문제 5명의 철학자들은 생각하고 먹는 일을 수행(철학자 : 프로세스, 젓가락 : 자원) 철학자는 양쪽의 젓가락을 사용하여 식사를 하고, 식사를 마친 철학자는 젓가락을 내려놓고 다시 생각한다. 철학자는 2개의 젓가락을 손에 쥐어야 식사를 할 수 있고, 한 번에 하나씩 잡을 수 있다. 옆 사람이 식사중이면 젓가락 잡는 것을 대기한다. 5명의 철학자가 동시에 식사를 하게 되면 모두 왼쪽 포크만을 가지게 되고 오른쪽 포크를 대기하는 교착 상태(Deadlock)이 발생한다. 이를 방지하기 위한 방법은 대표적으로 3가지이다. 최대 4명의 철학자들만이 테이블에 앉을 수 있도록 한다. =&amp;gt; 젓가락이 하나 남기 때문에 어떤 철학자는 식사가 가능하다. 한 철학자가 동시에 두개의 젓가락을 모두 집을 수 있을 때만 젓가락을 집도록 허용한다.(즉, 임계구역 안에서만 젓가락을 집어야 한다) 비대칭 해결안을 사용한다.(홀수 번 철학자는 왼쪽, 짝수 번 철학자는 오른쪽 젓가락부터 집는다) 교착상태(DeadLock) 상호 배제에 의해 나타나는 문제점으로 둘 이상의 프로세스들이 자원을 점유한 상태에서 서로 다른 프로세스가 점유하고 있는 자원을 요구하며 무한정 기다리는 현상 예방 기법 상호 배재 부정 : 한 번에 여러 개의 프로세스가 공유 자원을 사용할 수 있도록 한다. 점유 및 대기 부정 : 프로세스가 실행되기 전 필요한 모든 자원을 할당해 프로세스 대기를 없애거나 자원이 점유되지 않은 상태에서만 자원을 요구하도록 한다. 비선점 부정 : 자원을 점유하고 있는 프로세스가 다른 자원을 요구할 때 점유하고 있는 자원을 반납하고, 요구 자원을 사용하기 위해 기다리게 한다. 환형 대기 부정 : 자원을 선형 순서로 분류해 고유 번호를 할당하고, 각 프로세스는 현재 점유한 고유 번호보다 앞이나 뒤 한쪽 방향으로만 자원을 요구하도록 한다. 회피 기법(Dijkstra 제안한 은행원 알고리즘) 안정 상태 : 모든 프로세스가 교착상태를 일으키지 않으면서 각 프로세스가 요구한 최대 요구량만큼 필요한 자원을 할당해 줄 수 있는 상태 불안정 상태 : 교착상태의 필수 조건으로 교착상태가 발생할 수 있는 상태 은행원 알고리즘 : 안전상태를 유지할 수 있는 요구만을 수락하고 불안전 상태를 초래할 사용자의 요구는 나중에 만족될 수 있을 때까지 계속 거절하는 알고리즘 각 프로세스마다 할당할 수 있는 최대 자원을 계산한다. 각 프로세스마다 자원을 할당한 후에도 안전 상태를 유지할 수 있는지 확인하고 자원을 할당한다. 추가적인 자원을 할당해도 안전 상태를 유지할 수 있다면 자원을 할당할 수 있다. 하지만 불안전상태가 된다면 교착상태가 되므로 거절한다. Available : 각 종류별로 가용한 자원의 개수, Available[i] = k 라면 R[i] 를 K개 사용할 수 있다는 뜻 Max : 각 프로세스가 최대로 필요로 하는 자원의 개수, Max[i,j] = k 라면 Process[i]가 R[j]를 K개까지 요청할 수 있다는 뜻 Allocation : 각 프로세스에게 현재 나가있는 자원의 개수, Allocation[i,j] = k 라면 현재 Process[i]가 R[j]를 K개 사용 중이라는 뜻 Need : 각 프로세스가 향후 요청할 수 있는 자원의 개수, Need[i,j] = k라면 Process[i]가 향후 R[j]를 K개 요청할 수 있다는 뜻 Need = Max - Allocation 자원 요청 알고리즘 만약 Request[i] &amp;lt;= Need[i] 이면 2단계로 이동, 아니면 시스템에 있는 개수보다 더 많이 요청했기 때문에 오류로 처리 만약 Request[i] &amp;lt;= Available[i] 이면 3단꼐로 이동, 아니면 요청한 자원이 지금 없으므로 Process[i]는 기다려야 한다. Process[i]에게 할당한 것처럼 시스템 상태정보를 바꿔 본다. Available = Available - Request[i] Allocation[i] = Allocation[i] + Request[i] Need[i] = Need[i] - Request[i] 만약, 이렇게 바뀐 상태가 안전하다면 Process[i]에게 자원을 할당한다. 그렇지 않다면 상태를 원상태로 되돌리고 Request[i]가 만족될 때까지 기다린다. 예를 통해 알아보자. 프로세스 P와 A 자원 10개, B 자원 5개, C 자원 7개가 있을 때 다음과 같은 예시가 있다고 가정하자. Process   Allocation     Max     Need   Type A B C A B C A B C P[0] 0 1 0 7 5 3 7 4 3 P[1] 2 0 0 3 2 2 1 2 2 P[2] 3 0 2 9 0 2 6 0 0 P[3] 2 1 1 2 2 2 0 1 1 P[4] 0 0 2 4 3 3 4 3 1 Need 값은 Max - Allocation 으로 구할 수 있으며 이 경우 남은 자원 수는 다음과 같다.   Available   A B C 10 - (0+2+3+2+0) = 3 5 - (1+0+0+1+0) = 3 7 - (0+0+2+1+2) = 2 여기서 P[1]이 A 자원 1개와 C 자원 2개를 추가로 요청한다고 가정해보자. 이 때의 Request[1] = (1,0,2) 가 된다. Request[i] &amp;lt;= Need[i]를 검사한다. (1,0,2) &amp;lt;= (1,2,2)이므로 조건을 만족한다. Request[i] &amp;lt;= Available[i]를 검사한다. (1,0,2) &amp;lt;= (3,3,2) 이므로 조건을 만족한다. Process[i]에게 할당한 것처럼 시스템 상태정보를 바꿔 본다. Available[1] = Available[1] (3,3,2) - Request[1] (1,0,2) = (2,3,0) Allocation[1] = Allocation[1] (2,0,0) + Request[1] (1,0,2) = (3,0,2) Need[1] = Need[1] (1,2,2) - Request[1] (1,0,2) = (0,2,0) 위 상태는 안정 상태이므로 Process[1] 의 요청을 즉시 들어줄 수 있다. 위 예시에서는 &amp;lt;P[1], P[3], P[4], P[2], P[0]&amp;gt; 순서로 진행하면 안정 순서열이 된다.</summary></entry><entry><title type="html">운영체제와 CPU 스케쥴링</title><link href="http://localhost:4000/os/2019/05/19/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%99%80-CPU-%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81/" rel="alternate" type="text/html" title="운영체제와 CPU 스케쥴링" /><published>2019-05-19T17:00:00+09:00</published><updated>2019-05-19T17:00:00+09:00</updated><id>http://localhost:4000/os/2019/05/19/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%99%80%20CPU%20%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81</id><content type="html" xml:base="http://localhost:4000/os/2019/05/19/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%99%80-CPU-%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81/">&lt;h1 id=&quot;운영체제란&quot;&gt;운영체제란?&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="OS" /><category term="기억장치" /><category term="메모리 할당" /><category term="페이징" /><category term="세그먼테이션" /><category term="디스크 스케쥴링" /><summary type="html">기억장치 배치 전략 최초 적합(First Fit) : 가능한 영역 중에서 첫 번째 분할 영역에 배치시키는 방법 최적 적합(Best Fit) : 가능한 영역 중에서 단편화를 가장 작게 남기는 분할 영역에 배치하는 방법 최악 적합(Worst Fit) : 가능한 영역 중에서 단편화를 가장 많이 남기는 분할 영역에 배치하는 방법 영역번호 영역크기 상태 1 5K 공백 2 14K 공백 3 10K 사용중 4 12K 공백 5 16K 공백 배치 전략 중 10K 프로그램이 할당 받는 영역의 번호는 다음과 같다. 최초 적합(First Fit) : 10K 프로그램이 들어갈 수 있는 첫 번째 영역은 2번이다. 최적 적합(Best Fit) : 10K 프로그램이 들어가고 단편화를 가장 작게 남기는 영역은 4번이다. 최악 적합(Worst Fit) : 10K 프로그램이 들어가고 단편화를 가장 많이 남기는 영역은 5번이다. 가상기억장치 구현 보조기억장치(하드디스크)의 일부를 주기억장치처럼 사용하는 것으로 가상기억장치에 저장된 프로그램을 실행하려면 가상기억장치의 주소를 주기억장치의 주소로 바꾸눈 주소 변환 작업(매핑)이 필요하다. 페이징 기법 : 프로그램을 동일한 크기로 나눈 단위를 페이지라 하며 이 페이지를 블록으로 활용하는 기법 세그먼테이션 기법 : 프로그램을 가변적인 크기로 나눈 단위를 세그먼트라 하며, 이 세그먼트를 블록으로 사용하는 기법 내부 단변화 : 프로그램이 할당된 후 남는 빈 공간, 영역 크기 16K &amp;gt; 프로그램 크기 14K 인 경우 내부 단편화 2K 발생 외부 단편화 : 영역 크기보다 프로그램 크기가 커서 할당되지 않아 남는 빈 공간, 영억 크기 12K &amp;lt; 프로그램 크기 14K 인 경우 외부 단편화 2K 발생 페이징 기법 페이지 : 프로그램을 일정한 크기로 나눈 단위(일반적으로 1~4KB) 프레임 : 페이지 크기로 일정하게 나누어진 주기억장치 단위 주소 변환을 위해서 페이지의 위치 정보를 가지고 있는 페이지 맵 테이블이 필요하다. 외부 단편화는 발생하지 않지만 내부 단편화는 발생할 수 있다. 장점 : 여러 개의 프로그램을 동시 실행할 수 있어 다중 프로그래밍 정도가 향상된다. 단점 : 주소 변환 과정에서 CPU 사용시간이 낭비되고 내부 단편화 문제가 발생한다. 세그먼테이션 기법 세그먼트 : 사용자 주소 공간을 논리적인 단위로 나눈 것, 각 세그먼트는 고유한 이름과 크기를 가진다. 주소 변환을 위해 세그먼트가 존재하는 위치 정보를 가지고 있는 세그먼트 맵 테이블이 필요하다. 장점 : 외부단편화에 의한 기억장치 낭비를 줄일 수 있다. 단점 : 세그먼트 크기가 가변적이기 때문에 세그먼트 영역이 다른 세그먼트 영역을 침범하지 않는 기억장치 보호키가 필요하다. 페이지 교체 알고리즘 페이지 부재가 발생했을 때 가상기억장치의 필요한 페이지를 주기억장치에 적재하는 데 어떤 프레임을 선택해 교체할 지 결정하는 기법 FIFO(First In First Out) 가장 오래 있었던 페이지를 고체하는 기법이다. 벨레이디의 모순 현상이 발생한다.(프레임 수가 늘어나면 페이지 부재 수가 줄어들지 않는 현상) 참조 페이지 1 2 3 4 1 2 5 1 2 3 4 5 Frame 1 1 1 1 4 4 4 5 5 5 5 5 5 Frame 2   2 2 2 1 1 1 1 1 3 3 3 Frame 3     3 3 3 2 2 2 2 2 4 4 페이지 부재 O O O O O O O     O O   위 경우 페이지 부재가 총 9번 발생한다. 하지만, Frame 개수가 4개로 늘어나도 페이지 부재는 10번으로 증가한다. =&amp;gt; 벨레이디 모순 현상 LRU(Least Recently Used) 최근에 가장 오랫동안 사용하지 않은 페이지를 교체하는 기법 계수기나 스택같은 별로 하드웨어가 필요하며 시간적인 오버헤드가 발생하고, 실제로 구현하기 어렵다. 참조 페이지 2 3 2 1 5 2 3 5 Frame 1 2 2 2 2 2 2 2 2 Frame 2   3 3 3 5 5 5 5 Frame 3       1 1 1 3 3 페이지 부재 O O   O O   O   LFU(Least Frequently Used) 사용 빈도가 가장 적은 페이지를 교체하는 기법 활발하게 사용되는 페이지는 사용 횟수가 많아 교체되지 않고 사용된다. 초기에 많이 사용된 페이지가 그 후루도 사용되지 않을 경우 프레임을 계속 차지할 수 있다. 참조 페이지 2 3 1 3 1 2 4 5 Frame 1 2 2 2 2 2 2 2 2 Frame 2   3 3 3 3 3 3 3 Frame 3     1 1 1 1 1 1 Frame 4             4 5 페이지 부재 O O O       O O 가상기억창치 관리 페이지 크기 페이지 크기가 작을 경우 페이지 단편화가 가모되고 볼필요한 내용이 주기억장치에 적재될 확률이 적다. 페이지 정보를 가지는 페이지 맵 테이블 크기가 커지고 매핑 속도가 늦어진다. 디스크 접근 횟수가 많아져 전체적인 입출력 시간이 증가한다. 페이지 크기가 클 경우 페이지 정보를 갖는 맵 테이블의 크기가 작아지고, 매핑 속도가 빨라진다. 디스크 접근 횟수가 줄어들어 전체적인 입출력 시간이 감소한다. 페이지 단편화가 증가되고, 한 개의 페이지를 주기억장치로 이동하는 시간이 늘어난다. 구역성(Locality) 어느 순간 특정 페이지만 집중적으로 참조하는 것 시간 구역성 하나의 페이지를 일정 시간 동안 집중적으로 엑세스하는 현상 한번 참조한 페이지는 가까운 시간 내에 계속 참조할 가능성이 높다. 공간 구역성 어느 하나의 페이지를 참조하면 그 근처의 페이지를 참조할 가능성이 높다. 프로세스 실행 시 일정 위치의 페이지를 집중적으로 액세스하는 현상 워킹 셋(Working Set) 프로세스가 일정 시간 동안 자주 참조하는 페이지들의 집합 자주 참조되는 워킹 셋을 주기억장치에 상주시킴으로써 페이지 부재 및 교체 현상이 줄어들어 사용이 안정화된다. 스레싱(Thrashing) 프로세스 처리 시간보다 페이지 교체에 소요되는 시간이 더 많아지는 현상 어떤 프로세스가 실제로 사용하는 프레임 수만큼의 프레임을 갖지 못한 경우 발생 방지 방법 : 다중 프로그래밍 정도 완화, Working Set 이용 cf) 다중 프로그래밍 정도 : 얼마나 많은 프로그램을 동시에 수행하는 정도 디스크 스케줄링 사용할 데이터가 디스크 상의 여러 곳에 저장되어 있을 경우 디스크 헤드가 움직으는 경로를 결정하는 기법 목적 : 처리량 최대화, 응답 시간 최소화, 응답 시간 편차의 최소화 FCFS(First Come First Service) 디스크 대기 큐에 가장 먼저 들어온 트랙에 대한 요청을 먼저 서비스하는 기법 더 높은 우선순위의 요청이 입력되어도 순사가 바뀌지 않아 공평성이 보장된다. 디스크 오버헤드가 적을 때 효율적이며, 오버헤드가 커지면 응답 시간이 길어진다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 98 -&amp;gt; 183 -&amp;gt; 37 -&amp;gt; 122 -&amp;gt; 14 -&amp;gt; 124 -&amp;gt; 65 -&amp;gt; 67 SSTF(Shortest Seek Time First) 탐색 거리가 가장 짧은 트랙에 대한 요청을 먼저 서비스하는 기법 현재 헤드 위치에서 가장 가까운 거리에 있는 트랙으로 헤드를 이동한다. 현재 헤드 위치에 가장 가까운 트랙에 대한 요청이 계속 발생하는 경우 먼 거리의 서비스는 무한정 기다리는 기아 상태가 발생할 수 있다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183 SCAN SSTF가 갖는 탐색 시간의 편차를 해소하기 위한 기법 현재 헤드 위치에서 진행 방향이 결정되면 탐색 거리가 짧은 순서에 따라 그 방향의 모든 요청을 서비스 후 역방향의 요청 사항을 서비스한다. 오버헤드가 적을 경우 가장 효율적인 기법이다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183 -&amp;gt; 199 -&amp;gt; 37 -&amp;gt; 14 C-SCAN(Circular SCAN) 항상 바깥쪽에서 안쪽으로 한 방향으로만 움직이며 가장 짧은 탐색 거리를 갖는 요청을 서비스하는 기법 처음가 마지막을 인접시킨 것과 같은 원형 형태로 디스크를 처리한다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 0 -&amp;gt; 199 -&amp;gt; 183 -&amp;gt; 124 -&amp;gt; 122 -&amp;gt; 98 -&amp;gt; 67 -&amp;gt; 65</summary></entry><entry><title type="html">운영체제와 CPU 스케쥴링</title><link href="http://localhost:4000/os/2019/05/19/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%99%80-CPU-%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81/" rel="alternate" type="text/html" title="운영체제와 CPU 스케쥴링" /><published>2019-05-19T17:00:00+09:00</published><updated>2019-05-19T17:00:00+09:00</updated><id>http://localhost:4000/os/2019/05/19/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%99%80%20CPU%20%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81</id><content type="html" xml:base="http://localhost:4000/os/2019/05/19/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%99%80-CPU-%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81/">&lt;h1 id=&quot;운영체제란&quot;&gt;운영체제란?&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;제한된 컴퓨터 각종 자원을 효율적으로 관리하여 사용자에게 편리한 환경을 제공하는 소프트웨어&lt;/li&gt;
 &lt;/ul&gt;

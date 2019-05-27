@@ -2,6 +2,56 @@
 <search>
   
     <entry>
+      <title><![CDATA[백준/1722 순열의 순서]]></title>
+      <url>/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80-1722-%EC%88%9C%EC%97%B4%EC%9D%98-%EC%88%9C%EC%84%9C/</url>
+      <content type="text"><![CDATA[&lt; 문제 분석 및 풀이 방법 &gt;백준 순열의 순서 문제는 직접 구하지 않고 수학적인 연산이 필요하다.  범위가 최대 20!이기 때문에 구하려고 들면 시간초과가 날 수 밖에 없다.  아이디어는 factorial 값을 저장해둔 배열을 하나 만들고 모듈러 연산을 한다.  만약 [3, 2, 4, 1] 배열이 있다고 했을 때 첫 번째가 4라면 [1, x, x, x], [2, x, x, x] 의 경우는 진행한 것으로 간주해 factorial[3] * 2 = 12 를 더한다.  이후 두 번째 숫자가 2라면 [3, 1, x, x]의 경우의 수는 전부 진행한 것으로 간주해 factorial[2] * 1 을 더한다.  k를 입력받을 때 1을 빼주는데 이유는 k 번째 다음 순열을 출력하기 때문이다.  factorial 배열, 입력받는 k 변수는 long 형으로 선언해야 한다. 범위를 초과하기 때문!&lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static StringTokenizer stk;    public static StringBuilder sb = new StringBuilder();    public static int n;    public static long[] factorial;    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        n = Integer.parseInt(br.readLine());        int[] num = new int[n];        factorial = new long[n + 1];                //Factorial값 미리 구해서 저장        boolean[] isUsed = new boolean[n + 1];      //i번째 숫자 사용 여부        getFactorial();        stk = new StringTokenizer(br.readLine());        int type = Integer.parseInt(stk.nextToken());        if (type == 1) {            long k = Long.parseLong(stk.nextToken()) - 1;            for (int i = n; i &gt; 0; i--) {                long mod = k / factorial[i - 1] + 1;    //i번째에서 몇 번째 숫자를 선택할 지 구한다                k %= factorial[i - 1];                long cnt = 0;       //mod 번째 숫자를 찾기 위한 변수                int idx = 0;        //앞에서부터 해당 숫자를 확인할 때 사용하는 변수                while (cnt != mod) {                    idx++;                    if (!isUsed[idx]) cnt++;                }                isUsed[idx] = true;                sb.append(idx + " ");            }        } else {            long ans = 0;            for (int i = 0; i &lt; n; i++) {                num[i] = Integer.parseInt(stk.nextToken());                long cnt = 0;       //움직이는 횟수                int idx = 0;        //idx 숫자를 사용했는지 확인하는 변수                while (num[i] != idx) {                    idx++;                    if (!isUsed[idx]) cnt++;                }                isUsed[idx] = true;                ans += (cnt - 1) * factorial[n - i - 1];            }            sb.append(ans + 1);        }        System.out.println(sb);    }    public static void getFactorial() {     //factorial값 구하는 함수        factorial[0] = 1;        factorial[1] = 1;        for (int i = 2; i &lt;= n; i++) {            factorial[i] = factorial[i - 1] * i;        }    }}]]></content>
+      <categories>
+        
+          <category> 백준 </category>
+        
+          <category> Algorithm </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> 백준 </tag>
+        
+          <tag> 백준 1722 </tag>
+        
+          <tag> 백준 순열의 순서 </tag>
+        
+          <tag> 스텍 </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[백준/1541 잃어버린 괄호]]></title>
+      <url>/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80-1541-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</url>
+      <content type="text"><![CDATA[&lt; 문제 분석 및 풀이 방법 &gt;백준 잃어버린 괄호 그리디하게 접근하면 해결할 수 있는 문제다.  boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다.  만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다.  만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까)&lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static int curr, plus, ans;          //curr : +,- 연산 전의 숫자값 구하기, plus = curr값의 합    public static boolean hasMinus = false;     //입력받은 문자열에 '-'가 있는지 확인    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        String target = br.readLine();        for (int i = 0; i &lt; target.length(); i++) {            char ch = target.charAt(i);            if (ch == '+') {                plus += curr;                curr = 0;            } else if (ch == '-') {                minusCal();                plus = 0;                curr = 0;            } else {                curr = curr * 10 + (ch - '0');            }        }        minusCal();        System.out.println(ans);    }    public static void minusCal() {        if (!hasMinus) {        //'-' 연산이 없다면 더한다.            plus += curr;            ans += plus;            hasMinus = true;        } else {                //'-' 연산이 있다면 ans값에 빼준다.            plus += curr;            ans -= plus;        }    }}]]></content>
+      <categories>
+        
+          <category> 백준 </category>
+        
+          <category> Algorithm </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> 백준 </tag>
+        
+          <tag> 백준 1541 </tag>
+        
+          <tag> 백준 잃어버린 괄호 </tag>
+        
+          <tag> 스텍 </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title><![CDATA[11번가 면접 후기]]></title>
       <url>/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/</url>
       <content type="text"><![CDATA[11번가 면접 후기  서울스퀘어 도착후 졸업예정서, 성적증명서 등 서류 제출  11번가 인턴 면접은 특이하게 PT 면접, 직무 면접, 코딩테스트 리뷰 3개로 나누어 진행한다.PT 면접 준비  도착하면 한 15분 정도 대기하다 옆 강의실로 이동한다.  40분동안 준비하고 5-10분정도 발표&amp;질문 받는다고 안내 받는다.  PT 관련 주제를 나눠주고 2개 주제 중 하나를 선택한다.  주제 하나는 배치 관련 질문이였고 선택한 주제는 11번가 검색창에서 어떤 상품을 검색하면 카테고리와의 유사도를 구하는 문제였다.  핸드폰이 사용가능하고 작성한 종이를 면접장에 가지고 간다.  40분이 지나고 나서 면접장으로 이동한다.면접 후기  면접이 조금 특이하게 2:1면접으로 40분이 진행되는데 순서가 정해져 있는것은 아니다.  면접관 재량에 따라 PT 발표했다가 코딩테스트 리뷰했다가 자소서 질문한다.&lt; 직무 면접 &gt;  입장하자마자 최대한 편하게 해주려고 하신다. 간단하게 회사 지원동기를 묻는다.          SI보다 서비스 개발이 하고싶다고 했다가 SI도 배울거 많다며 한소리 들었다.      트래픽 경험하고 싶다고 했다가 11번가는 중개자 역할로 고객이 판매자와 구매자가 있는데 판매자로 가면 어쩔건지 물어봣다가 털림        다른 지원자와 대비했을때 기술적인 강점이 뭐라고 생각하는지?          데이터베이스라고 했다가 처음들어보는 명령어 물어보길래 모른다고 답함      그럼 inner join과 outer join 설명해봐라 =&gt; 반대로 대답해서 또 한소리 들음        딥러닝 프로젝트 중 사이킷런 라벨링이 뭐한건지 설명 =&gt; 대답 못함  Spring 프로젝트 중 어떤걸 담당했고 어떤 기능을 개발했는지  REST는 직접 설계했는지&lt; PT 면접 &gt;  특정 검색어가 어떤 상품 카테고리와 연관성이 있는지 추출하는 시스템 설계하는 것이 주제  논리적/물리적 설계가 필요하다는데 제대로 이해 못함  TF-IDF 활용한다고 했더니 어떤 문서를 기준으로 할 것인지 물어봄  발표 중간중간 궁금한 점을 질문한다.  논리적/물리적 설계가 부족했는지 유스케이스나 데이터흐름을 그려달라고 했는데 여기서부터 막히기 시작  여기저기서 까이고 정신이 없었다.&lt; 코딩테스트 리뷰 &gt;  전공 면접 준비하는 시간에 다른 지원자들은 안주는데 나한테만 코딩테스트 준비하라고 코드를 뽑아줌(왜지?)  1번 문제는 100점이라 안물어봤는데 2,3번 코드 설명함  2번 문제는 당시에는 인덱스로 접근했지만 스텍으로 접근하면 될 것 같다고 말슴드림  3번 문제는 다익스트라랑 프림이랑 헷갈려서 틀렸다고 말씀드림  알고리즘 공부좀 한거같은데 만약 음수가 있다면 어떻게 할껀지? =&gt; 벨만포드 알고리즘을 활용할 것이라고 말씀드림      우선순위 큐에 대해서 설명해달라 하셔서 힙 정렬과 같이 말씀드림    마지막 질문한번 해보라고 하셔서 맥북을 쓰는거로 아는데 두 분다 삼성노트북을 사용하시길래 이유를 여쭤봄      백앤드/DBA/프론트 등 어떤 개발자가 되고 싶은지        정말 40분 면접 중에서 20분은 털린 듯.. 특히 PT 면접을 깊이 물어보셔서 답을 제대로 못한게 아쉽다.    면접비는 5월말에 통장으로 입금해주신다 했으니 아마 발표 시즌이랑 비슷하게 겹칠듯싶다.]]></content>
