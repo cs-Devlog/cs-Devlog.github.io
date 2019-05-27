@@ -2,6 +2,25 @@
 <search>
   
     <entry>
+      <title><![CDATA[동원엔터프라이즈 인적성 후기]]></title>
+      <url>/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/27/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%9D%B8%EC%A0%81%EC%84%B1-%ED%9B%84%EA%B8%B0/</url>
+      <content type="text"><![CDATA[&lt; 동원엔터프라이즈 인적성 후기 &gt;  5월 26일 잠실고등학교에서 동원엔터프라이즈 인적성을 보고 왔다.  자소서가 항목별 300자 쓰라고 하길래 붙을 줄 생각도 못하고있었는데 뜬금 합격.  오전/오후로 나누어져있는데 오후에 거의 900명가까이 됫으니 총 1800명정도? (계열사가 워낙 많지만)  입장시 로비에서 물이랑 GNC 비타민을 준다.&lt; 인성 검사 후기 &gt;  다른 기업과 달리 인성검사를 먼저 본다.  각 문항마다 매우아니다&lt;&gt;매우그렇다 로 선택한다.  다른 점은 4문항이 한 세트가 되어 가장 가깝다고 생각되는 것 하나와 가장 멀다고 생각되는 것 하나를 선택해야 한다.  인성검사치고 시간이 엄청 널널하지는 않다.&lt; 적성 고사 후기 &gt;  적성 고사는 언어, 수리, 상황판단, 상식 총 4개의 영역으로 구성되어 있다.  4 영역 모두 감점이 있기 때문에 찍을 수도 없다. 물론 상식은 좀 찍었지만..언어  지문이 엄청 길지는 않다. 평균적으로 시험지 한쪽에 2문제씩 나오는 정도?  4문제를 못풀었지만 언어 자신없는 내가 무난하다 느낄정도로 난이도가 평이했다.수리  꽤 어려웠다고 생각한다. 6문제 가량을 못풀었다.  계산도 중간중간 꼬이다보니 시간이 많이 걸렸는데 연산하다가 자료해석은 거의 구경도못했다.상황판단  이전 SKCT를 공부했던 경험이 있어서 별도로 공부는 진행하지 않았다.  큰 고민없이 25문제 전부 풀었다.상식  정말 모르면 답이없다.  찍으면 안되지만 어느정도 보고 찍었다.  최근 이슈랑 약어가 나오기 때문에 공부를 한다기보다 평소 자세히 봐야한다.  예를 들면 FAANG -&gt; WNSSS, 헌법 불합치, 대통령 권한, 디지털 디바이드, 학교폭력위원회 등 단순 공부로 할 수 있는 영역이 아니다.&lt; 결과 발표 &gt;  5/31 예정]]></content>
+      <categories>
+        
+          <category> 인적성 </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> 인적성 </tag>
+        
+          <tag> 동원엔터프라이즈 </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title><![CDATA[백준/1722 순열의 순서]]></title>
       <url>/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80-1722-%EC%88%9C%EC%97%B4%EC%9D%98-%EC%88%9C%EC%84%9C/</url>
       <content type="text"><![CDATA[&lt; 문제 분석 및 풀이 방법 &gt;백준 순열의 순서 문제는 직접 구하지 않고 수학적인 연산이 필요하다.  범위가 최대 20!이기 때문에 구하려고 들면 시간초과가 날 수 밖에 없다.  아이디어는 factorial 값을 저장해둔 배열을 하나 만들고 모듈러 연산을 한다.  만약 [3, 2, 4, 1] 배열이 있다고 했을 때 첫 번째가 4라면 [1, x, x, x], [2, x, x, x] 의 경우는 진행한 것으로 간주해 factorial[3] * 2 = 12 를 더한다.  이후 두 번째 숫자가 2라면 [3, 1, x, x]의 경우의 수는 전부 진행한 것으로 간주해 factorial[2] * 1 을 더한다.  k를 입력받을 때 1을 빼주는데 이유는 k 번째 다음 순열을 출력하기 때문이다.  factorial 배열, 입력받는 k 변수는 long 형으로 선언해야 한다. 범위를 초과하기 때문!&lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static StringTokenizer stk;    public static StringBuilder sb = new StringBuilder();    public static int n;    public static long[] factorial;    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        n = Integer.parseInt(br.readLine());        int[] num = new int[n];        factorial = new long[n + 1];                //Factorial값 미리 구해서 저장        boolean[] isUsed = new boolean[n + 1];      //i번째 숫자 사용 여부        getFactorial();        stk = new StringTokenizer(br.readLine());        int type = Integer.parseInt(stk.nextToken());        if (type == 1) {            long k = Long.parseLong(stk.nextToken()) - 1;            for (int i = n; i &gt; 0; i--) {                long mod = k / factorial[i - 1] + 1;    //i번째에서 몇 번째 숫자를 선택할 지 구한다                k %= factorial[i - 1];                long cnt = 0;       //mod 번째 숫자를 찾기 위한 변수                int idx = 0;        //앞에서부터 해당 숫자를 확인할 때 사용하는 변수                while (cnt != mod) {                    idx++;                    if (!isUsed[idx]) cnt++;                }                isUsed[idx] = true;                sb.append(idx + " ");            }        } else {            long ans = 0;            for (int i = 0; i &lt; n; i++) {                num[i] = Integer.parseInt(stk.nextToken());                long cnt = 0;       //움직이는 횟수                int idx = 0;        //idx 숫자를 사용했는지 확인하는 변수                while (num[i] != idx) {                    idx++;                    if (!isUsed[idx]) cnt++;                }                isUsed[idx] = true;                ans += (cnt - 1) * factorial[n - i - 1];            }            sb.append(ans + 1);        }        System.out.println(sb);    }    public static void getFactorial() {     //factorial값 구하는 함수        factorial[0] = 1;        factorial[1] = 1;        for (int i = 2; i &lt;= n; i++) {            factorial[i] = factorial[i - 1] * i;        }    }}]]></content>
@@ -436,7 +455,7 @@
     <entry>
       <title><![CDATA[2019 CJ인적성(CJAT) 후기]]></title>
       <url>/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/12/2019-CJ%EC%9D%B8%EC%A0%81%EC%84%B1(CJAT)-%ED%9B%84%EA%B8%B0/</url>
-      <content type="text"><![CDATA[&lt; CJ 인적성(CJAT) 후기 &gt;평소 쉽다고 소문난 CJ 인적성이지만 이번에는 예시문제 4개만 주고 아무런 정보를 주지 않았다.기사를 찾아봐도 평소 CJ 문제집으로 공부하다가는 큰코다친다 이런식으로 나와있길래GSAT처럼 나올 것 같은 느낌이라 20대인적성 문제를 풀면서 대비했다.&lt; CJAT 시험 정보 &gt;GSAT처럼 단계별 풀고 넘어가는 방식1 교시 25문제 30분 (독해, 요약 15문제 + 언어 추리 15문제)2교시 15문제 15분 (글의 구조 순서 15문제)3교시 25문제 35분 (수리 25문제)4교시 15문제 20분 (신유형 도형돌리기 15문제)다른건 둘째치고 4교시가 LG 도형돌리기와 비슷하지만 차이점이 있다.신유형의 경우 예시문제에 규칙이 주어진다. ex) ㅇ3 =&gt; 시계방항 270도 회전, ㅁ3 =&gt; 도형 내부 270도 회전 ..이런식으로 순서도에 따라 이동하면서 회전을 다 수행했을 때 결과를 찾으면 된다.곧 유형 분석법이 나오겠지만 개인적으로 쉽게 푸는 방법은 보기에 전부 들어가 있는 도형 하나를 잡고 이걸 조건에 따라 같이 돌려보면 훨씬 수월하게 문제를 풀 수 있다.총 못푼문제는 20문제 가량 되는거 같은데 결과는 나와봐야 알 것 같다.&lt; 결과 &gt;]]></content>
+      <content type="text"><![CDATA[&lt; CJ 인적성(CJAT) 후기 &gt;  평소 쉽다고 소문난 CJ 인적성이지만 이번에는 예시문제 4개만 주고 아무런 정보를 주지 않았다.  기사를 찾아봐도 평소 CJ 문제집으로 공부하다가는 큰코다친다 이런식으로 나와있길래  GSAT처럼 나올 것 같은 느낌이라 20대인적성 문제를 풀면서 대비했다.&lt; CJAT 시험 정보 &gt;  GSAT처럼 단계별 풀고 넘어가는 방식  1 교시 25문제 30분 (독해, 요약 15문제 + 언어 추리 15문제)  2교시 15문제 15분 (글의 구조 순서 15문제)  3교시 25문제 35분 (수리 25문제)  4교시 15문제 20분 (신유형 도형돌리기 15문제)  다른건 둘째치고 4교시가 LG 도형돌리기와 비슷하지만 차이점이 있다.  신유형의 경우 예시문제에 규칙이 주어진다. ex) ㅇ3 =&gt; 시계방항 270도 회전, ㅁ3 =&gt; 도형 내부 270도 회전 ..  이런식으로 순서도에 따라 이동하면서 회전을 다 수행했을 때 결과를 찾으면 된다.  곧 유형 분석법이 나오겠지만 개인적으로 쉽게 푸는 방법은 보기에 전부 들어가 있는 도형 하나를 잡고 이걸 조건에 따라 같이 돌려보면 훨씬 수월하게 문제를 풀 수 있다.  총 못푼문제는 20문제 가량 되는거 같은데 결과는 나와봐야 알 것 같다.&lt; 결과 &gt;]]></content>
       <categories>
         
           <category> 인적성 </category>
