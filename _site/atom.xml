@@ -1,4 +1,427 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-28T14:41:49+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/11004 K번째 수</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80-11004-K%EB%B2%88%EC%A7%B8-%EC%88%98/" rel="alternate" type="text/html" title="백준/11004 K번째 수" /><published>2019-05-27T14:11:00+09:00</published><updated>2019-05-27T14:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80%2011004%20K%EB%B2%88%EC%A7%B8%20%EC%88%98</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80-11004-K%EB%B2%88%EC%A7%B8-%EC%88%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T00:29:14+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">데이터베이스 고급 기능</title><link href="http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B3%A0%EA%B8%89-%EA%B8%B0%EB%8A%A5/" rel="alternate" type="text/html" title="데이터베이스 고급 기능" /><published>2019-05-29T00:01:00+09:00</published><updated>2019-05-29T00:01:00+09:00</updated><id>http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EA%B3%A0%EA%B8%89%20%EA%B8%B0%EB%8A%A5</id><content type="html" xml:base="http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B3%A0%EA%B8%89-%EA%B8%B0%EB%8A%A5/">&lt;h1 id=&quot;트랜잭션&quot;&gt;트랜잭션&lt;/h1&gt;
+&lt;h2 id=&quot;-트랜잭션-정의-&quot;&gt;&amp;lt; 트랜잭션 정의 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;한꺼번에 모두 수행되어야 할 일련의 연산들&lt;/li&gt;
+  &lt;li&gt;병행 제어 및 회복 작업시 처리되는 작업의 논리적 단위&lt;/li&gt;
+  &lt;li&gt;하나의 트랜잭션은 Commit / RollBack된다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-트랜잭션-특징acid-&quot;&gt;&amp;lt; 트랜잭션 특징(ACID) &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;원자성(Automicity)    : Do or Nothing, 트랜잭션 내의 모든 명령은 완벽히 수행되거나 전부가 취소되어야 한다.&lt;/li&gt;
+  &lt;li&gt;일관성(Consistency)   : 트랜잭션 실행이 성공적으로 완료되면 일관성 있는 데이터베이스의 상태는 일관되어야 한다.&lt;/li&gt;
+  &lt;li&gt;독립성(Isolation)     : 어느 하나의 트랜잭션 실행중에 다른 트랜잭션 연산이 끼어들 수 없다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지속성(Durability)    : 완료된 트랜잭션은 시스템의 고장나도 영구적으로 반영되어야 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Commit 연산 : 한개의 트랜잭션에 대한 작업이 성공적으로 끝났고, 데이터베이스가 일관된 상태에 있을 때 이 트랜잭션이 수행한 연산이 완료됨을 알려주는 연산&lt;/li&gt;
+  &lt;li&gt;Rollback 연산 : 하나의 트랜잭션 처리가 비정상적으로 종료되어 데이터베이스의 일관성을 깨뜨렸을 때, 트랜잭션의 원자성을 구현하기 위해 이 트랜잭션이 수행한 모든 연산을 Undo하는 연산이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;병행제어-기법&quot;&gt;병행제어 기법&lt;/h1&gt;
+&lt;h2 id=&quot;-병행제어의-목적-&quot;&gt;&amp;lt; 병행제어의 목적 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터베이스 공유를 최대화한다.&lt;/li&gt;
+  &lt;li&gt;시스템 활용도를 최대화한다.&lt;/li&gt;
+  &lt;li&gt;데이터베이스 일관성을 유지한다.&lt;/li&gt;
+  &lt;li&gt;사용자 응답 시간을 최소화한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-로킹locking-기법-&quot;&gt;&amp;lt; 로킹(Locking) 기법 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;트랜잭션들이 어떤 로킹 단위를 액세스하기 전에 Lock을 요청해서 Lock이 허락되야 그 로킹 단위를 액세스 하는 기법&lt;/li&gt;
+  &lt;li&gt;로킹 단위 : 병행제어에서 한꺼번에 로킹할 수 있는 객체의 크기를 의미하며 로킹의 단위가 크면 로크 수가 작아 관리하기 쉽지만 병행성 수준이 낮아진다.&lt;/li&gt;
+  &lt;li&gt;데이터를 갱신할 때 순서, 잠금(Lock) → 실행(Execute) → 해제(Unlock)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;공유 잠금&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;배타 잠금&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;공유 잠금&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;접근 허용&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;대기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;배타 잠금&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;대기&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;대기&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;공유 잠금(Shared-Lock) : 잠금 걸린 데이터에 대해 읽기 가능, 기록 불가능.&lt;/li&gt;
+  &lt;li&gt;배타 잠금(Exclusive-Lock) : 잠금 걸린 데이터에 대해 읽기, 기록 모두 불가능.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;-2-단계-잠금-규약two-phase-lock-protocol-기법-&quot;&gt;&amp;lt; 2-단계 잠금 규약(Two-Phase Lock Protocol) 기법 &amp;gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;트랜잭션 스케쥴의 직렬성을 보장하는 대표적인 기법
+― 확장(Growing) 단계 : 잠금만 수행할 수 있음. (해제 불가)
+― 축소(Shrinking) 단계 : 해제만 수행할 수 있음. (잠금 불가)&lt;/li&gt;
+  &lt;li&gt;장점 : 직렬성 보장 / 단점 : 교착 상태 예방 불가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;-타임-스탬프time-stamp-ordering-기법-&quot;&gt;&amp;lt; 타임 스탬프(Time Stamp Ordering) 기법 &amp;gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;시스템에 도착한 순서대로 타임 스탬프를 부여하여, 순서대로 실행하도록 한다.&lt;/li&gt;
+  &lt;li&gt;교착 상태가 발생하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;무결성&quot;&gt;무결성&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터베이스의 저장된 데이터 값과 현실 세계의 실제값이 일치하는 정확성을 의미한다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;무결성&lt;/strong&gt; : 데이터의 정확성과 일관성을 유지하고 보증하는 것
+    &lt;ul&gt;
+      &lt;li&gt;고유 무결성 : 릴레이션의 특정 속성에 대해서 각 튜플이 갖는 값들이 서로 달라야 한다.&lt;/li&gt;
+      &lt;li&gt;개체 무결성 : 릴레이션에서 기본키를 구성하는 속성은 NULL 값이나 중복값을 가질 수 없다.&lt;/li&gt;
+      &lt;li&gt;참조 무결성 : 외래키 값은 NULL 이거나 참조 릴레이션의 기본키 값과 동일해야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;보안&quot;&gt;보안&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터베이스의 일부분 또는 전체에 대해서 권한이 없는 사용자가 엑세스하는 것을 금지하기 위한 기술&lt;/li&gt;
+  &lt;li&gt;데이터베이스 사용자들은 일반적으로 서로 다른 객체에 대해 다른 접근 권리/권한을 갖게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-암호화-기법-&quot;&gt;&amp;lt; 암호화 기법 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;개인키 암호 방식 = 대칭형 암호 알고리즘
+    &lt;ul&gt;
+      &lt;li&gt;동일한 키로 데이터 암호화/복호화 진행&lt;/li&gt;
+      &lt;li&gt;수신자에게 키를 전달하는 방법
+        &lt;ol&gt;
+          &lt;li&gt;Key를 비대칭형 암호 알고리즘을 이용하여 암호화 시킨 후 전송&lt;/li&gt;
+          &lt;li&gt;실제 Key를 전송하지 않고도 A와 B가 동일한 Key를 생성할 수 있도록 하는 Diffie-Hellman 알고리즘을 사용하는 것&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;공개키 암호 방식 = 비대칭형 암호 알고리즘
+    &lt;ol&gt;
+      &lt;li&gt;A는 공개키(public key)와 개인키(private key) 를 생성한다.
+        &lt;ul&gt;
+          &lt;li&gt;A의 공개키를 이용하여 암호화된 데이터는 A의 개인키로만 복호화가 가능하다.&lt;/li&gt;
+          &lt;li&gt;A의 개인키를 이용하여 암호화된 데이터는 A의 공개키로만 복호화가 가능하다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;A와 B는 각자의 공개키를 서로에게 알려준다.
+        &lt;ul&gt;
+          &lt;li&gt;A : 공개A키, 개인A키, 공개B키&lt;/li&gt;
+          &lt;li&gt;B : 공개B키, 개인B키, 공개A키&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;A는 B에게 데이터를 전송하기 위해 B의 공개B키를 이용하여 데이터를 암호화한 후 전송한다&lt;/li&gt;
+      &lt;li&gt;암호화된 데이터는 개인B키를 가지고 있는 B만 해독할 수 있다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-권한-부여-기법-&quot;&gt;&amp;lt; 권한 부여 기법 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;GRANT : 권한 부여 명령
+    &lt;ul&gt;
+      &lt;li&gt;GRANT 사용자 등급 TO 사용자 ID 리스트&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;REVOKE : 권한 취소 명령
+    &lt;ul&gt;
+      &lt;li&gt;REVOKE 사용자 등급 FROM 사용자 ID 리스트&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;분산-데이터베이스&quot;&gt;분산 데이터베이스&lt;/h1&gt;
+&lt;h2 id=&quot;-분산-데이터베이스-정의-&quot;&gt;&amp;lt; 분산 데이터베이스 정의 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;논리적으로는 하나의 시스템에 속하지만 물리적으로는 네트워크를 통해 여러 개의 사이트에 분산되어 있는 데이터베이스&lt;/li&gt;
+  &lt;li&gt;장점 : 자료의 공유성 향상, 시스템 성능 향상, 신뢰성 및 가용성이 높다&lt;/li&gt;
+  &lt;li&gt;단점 : DBMS가 수행할 기능이 복잡, DB설계가 복잡, 소프트웨어 개발 비용이 증가&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="트랜잭션" /><category term="ACID" /><category term="병행 제어" /><category term="무결성" /><summary type="html">트랜잭션 &amp;lt; 트랜잭션 정의 &amp;gt; 한꺼번에 모두 수행되어야 할 일련의 연산들 병행 제어 및 회복 작업시 처리되는 작업의 논리적 단위 하나의 트랜잭션은 Commit / RollBack된다 &amp;lt; 트랜잭션 특징(ACID) &amp;gt; 원자성(Automicity) : Do or Nothing, 트랜잭션 내의 모든 명령은 완벽히 수행되거나 전부가 취소되어야 한다. 일관성(Consistency) : 트랜잭션 실행이 성공적으로 완료되면 일관성 있는 데이터베이스의 상태는 일관되어야 한다. 독립성(Isolation) : 어느 하나의 트랜잭션 실행중에 다른 트랜잭션 연산이 끼어들 수 없다. 지속성(Durability) : 완료된 트랜잭션은 시스템의 고장나도 영구적으로 반영되어야 한다. Commit 연산 : 한개의 트랜잭션에 대한 작업이 성공적으로 끝났고, 데이터베이스가 일관된 상태에 있을 때 이 트랜잭션이 수행한 연산이 완료됨을 알려주는 연산 Rollback 연산 : 하나의 트랜잭션 처리가 비정상적으로 종료되어 데이터베이스의 일관성을 깨뜨렸을 때, 트랜잭션의 원자성을 구현하기 위해 이 트랜잭션이 수행한 모든 연산을 Undo하는 연산이다. 병행제어 기법 &amp;lt; 병행제어의 목적 &amp;gt; 데이터베이스 공유를 최대화한다. 시스템 활용도를 최대화한다. 데이터베이스 일관성을 유지한다. 사용자 응답 시간을 최소화한다. &amp;lt; 로킹(Locking) 기법 &amp;gt; 트랜잭션들이 어떤 로킹 단위를 액세스하기 전에 Lock을 요청해서 Lock이 허락되야 그 로킹 단위를 액세스 하는 기법 로킹 단위 : 병행제어에서 한꺼번에 로킹할 수 있는 객체의 크기를 의미하며 로킹의 단위가 크면 로크 수가 작아 관리하기 쉽지만 병행성 수준이 낮아진다. 데이터를 갱신할 때 순서, 잠금(Lock) → 실행(Execute) → 해제(Unlock)   공유 잠금 배타 잠금 공유 잠금 접근 허용 대기 배타 잠금 대기 대기 공유 잠금(Shared-Lock) : 잠금 걸린 데이터에 대해 읽기 가능, 기록 불가능. 배타 잠금(Exclusive-Lock) : 잠금 걸린 데이터에 대해 읽기, 기록 모두 불가능. &amp;lt; 2-단계 잠금 규약(Two-Phase Lock Protocol) 기법 &amp;gt; 트랜잭션 스케쥴의 직렬성을 보장하는 대표적인 기법 ― 확장(Growing) 단계 : 잠금만 수행할 수 있음. (해제 불가) ― 축소(Shrinking) 단계 : 해제만 수행할 수 있음. (잠금 불가) 장점 : 직렬성 보장 / 단점 : 교착 상태 예방 불가능 &amp;lt; 타임 스탬프(Time Stamp Ordering) 기법 &amp;gt; 시스템에 도착한 순서대로 타임 스탬프를 부여하여, 순서대로 실행하도록 한다. 교착 상태가 발생하지 않는다. 무결성 데이터베이스의 저장된 데이터 값과 현실 세계의 실제값이 일치하는 정확성을 의미한다. 무결성 : 데이터의 정확성과 일관성을 유지하고 보증하는 것 고유 무결성 : 릴레이션의 특정 속성에 대해서 각 튜플이 갖는 값들이 서로 달라야 한다. 개체 무결성 : 릴레이션에서 기본키를 구성하는 속성은 NULL 값이나 중복값을 가질 수 없다. 참조 무결성 : 외래키 값은 NULL 이거나 참조 릴레이션의 기본키 값과 동일해야 한다. 보안 데이터베이스의 일부분 또는 전체에 대해서 권한이 없는 사용자가 엑세스하는 것을 금지하기 위한 기술 데이터베이스 사용자들은 일반적으로 서로 다른 객체에 대해 다른 접근 권리/권한을 갖게 된다. &amp;lt; 암호화 기법 &amp;gt; 개인키 암호 방식 = 대칭형 암호 알고리즘 동일한 키로 데이터 암호화/복호화 진행 수신자에게 키를 전달하는 방법 Key를 비대칭형 암호 알고리즘을 이용하여 암호화 시킨 후 전송 실제 Key를 전송하지 않고도 A와 B가 동일한 Key를 생성할 수 있도록 하는 Diffie-Hellman 알고리즘을 사용하는 것 공개키 암호 방식 = 비대칭형 암호 알고리즘 A는 공개키(public key)와 개인키(private key) 를 생성한다. A의 공개키를 이용하여 암호화된 데이터는 A의 개인키로만 복호화가 가능하다. A의 개인키를 이용하여 암호화된 데이터는 A의 공개키로만 복호화가 가능하다. A와 B는 각자의 공개키를 서로에게 알려준다. A : 공개A키, 개인A키, 공개B키 B : 공개B키, 개인B키, 공개A키 A는 B에게 데이터를 전송하기 위해 B의 공개B키를 이용하여 데이터를 암호화한 후 전송한다 암호화된 데이터는 개인B키를 가지고 있는 B만 해독할 수 있다. &amp;lt; 권한 부여 기법 &amp;gt; GRANT : 권한 부여 명령 GRANT 사용자 등급 TO 사용자 ID 리스트 REVOKE : 권한 취소 명령 REVOKE 사용자 등급 FROM 사용자 ID 리스트 분산 데이터베이스 &amp;lt; 분산 데이터베이스 정의 &amp;gt; 논리적으로는 하나의 시스템에 속하지만 물리적으로는 네트워크를 통해 여러 개의 사이트에 분산되어 있는 데이터베이스 장점 : 자료의 공유성 향상, 시스템 성능 향상, 신뢰성 및 가용성이 높다 단점 : DBMS가 수행할 기능이 복잡, DB설계가 복잡, 소프트웨어 개발 비용이 증가</summary></entry><entry><title type="html">관계 데이터베이스 모델과 언어</title><link href="http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%96%B8%EC%96%B4/" rel="alternate" type="text/html" title="관계 데이터베이스 모델과 언어" /><published>2019-05-28T23:01:00+09:00</published><updated>2019-05-28T23:01:00+09:00</updated><id>http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EB%AA%A8%EB%8D%B8%EA%B3%BC%20%EC%96%B8%EC%96%B4</id><content type="html" xml:base="http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%96%B8%EC%96%B4/">&lt;h1 id=&quot;관계형-데이터페이스-구조&quot;&gt;관계형 데이터페이스 구조&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;릴레이션(Relation): 데이터베이스 테이블&lt;/li&gt;
+  &lt;li&gt;튜플(Tuple)     : 릴레이션을 구성하는 각각의 행, 튜플의 수를 카디널리티라 부른다.&lt;/li&gt;
+  &lt;li&gt;속성(Attribute) : 데이터베이스를 구성하는 가장 작은 논리적 단위&lt;/li&gt;
+  &lt;li&gt;도메인(Domain)   : 도메인은 하나의 애트리뷰트가 취할 수 있는 같은 타입의 원자들의 집합&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-릴레이션의-특징-&quot;&gt;&amp;lt; 릴레이션의 특징 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;한 릴레이션에 포함된 튜플은 모두 다르다.&lt;/li&gt;
+  &lt;li&gt;튜플 사이의 순서가 없고 삽입/삭제 등으로 인해 시간에 따라 변한다.&lt;/li&gt;
+  &lt;li&gt;속성 값은 논리적으로 더 이상 쪼갤 수 없는 원자값만을 저장한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;관계형-데이터베이스-제약-조건&quot;&gt;관계형 데이터베이스 제약 조건&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;후보키 : 기본키로 사용할 수 있는 속성, 모든 튜플에 대해서 &lt;strong&gt;유일성&lt;/strong&gt;과 &lt;strong&gt;최소성&lt;/strong&gt;을 만족한다.
+    &lt;ul&gt;
+      &lt;li&gt;유일성 : 하나의 키 값으로 하나의 튜플을 유일하게 식별 가능해야 한다.&lt;/li&gt;
+      &lt;li&gt;최소성 : 모든 레코드들을 유일하게 식별하는 데 꼭 필요한 속성만으로만 구성되어야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;기본키 : 후보키중 선택한 주 키로 NULL 값을 가질 수 없다.&lt;/li&gt;
+  &lt;li&gt;대체키 : 후보키가 둘 이상일 때 기본키를 제외한 나머지 후보키를 말한다.&lt;/li&gt;
+  &lt;li&gt;외래키 : 관계를 맺고 있는 두 실레이션에서 한 릴레이션이 참조하고 있는 다른 릴레이션의 기본키와 같은 릴레이션의 속성을 말한다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;무결성&lt;/strong&gt; : 데이터의 정확성과 일관성을 유지하고 보증하는 것
+    &lt;ul&gt;
+      &lt;li&gt;개체 무결성 : 릴레이션에서 기본키를 구성하는 속성은 NULL 값이나 중복값을 가질 수 없다.&lt;/li&gt;
+      &lt;li&gt;참조 무결성 : 외래키 값은 NULL 이거나 참조 릴레이션의 기본키 값과 동일해야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;관계-대수-및-관계-해석&quot;&gt;관계 대수 및 관계 해석&lt;/h1&gt;
+&lt;h2 id=&quot;-관계-대수-&quot;&gt;&amp;lt; 관계 대수 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;관계형 데이터베이스에서 원하는 정보와 어떻게 유도하는지 기술하는 절차적인 언어
+&lt;img src=&quot;/assets/images/database_relation.png&quot; alt=&quot;11st_result&quot; width=&quot;700&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-관계-해석-&quot;&gt;&amp;lt; 관계 해석 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;관계 데이터의 연산을 표현하는 방법으로 원하는 정보를 정의할 때는 계산 수식을 사용한다.&lt;/li&gt;
+  &lt;li&gt;원하는 정보가 무엇인지만 정의하는 비절차적 특징을 지닌다.&lt;/li&gt;
+  &lt;li&gt;튜플 관계해석과 도메인 관계해석이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;정규화&quot;&gt;정규화&lt;/h1&gt;
+&lt;h2 id=&quot;-정규화-목적-&quot;&gt;&amp;lt; 정규화 목적 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;종속성 이론을 이용하여 잘못 설계된 관계셩 스키마를 더 작은 속성의 세트로 쪼개 바람직한 스키마로 만들어 가는 과정&lt;/li&gt;
+  &lt;li&gt;데이터 구조의 안정성을 최대화해 &lt;strong&gt;중복성 및 종속성을 배제&lt;/strong&gt;시키는 방법으로 사용한다.&lt;/li&gt;
+  &lt;li&gt;효과적인 검색 알고리즘을 생성하고 중복을 배제해 삽입/삭제/갱신 이상의 발생을 방지한다.
+    &lt;ul&gt;
+      &lt;li&gt;삽입 이상 : 릴레이션에 데이터를 삽입할 때 의도와는 상관없는 원하지 않는 값들도 함께 삽입되는 현상&lt;/li&gt;
+      &lt;li&gt;삭제 이상 : 릴레이션에 한 튜플을 삭제할 때 의도와는 상관없는 값들도 함께 삭제되는 현상&lt;/li&gt;
+      &lt;li&gt;갱신 이상 : 릴레이션에서 튜플에 있는 속성 값을 갱신할 때 일부 튜플의 정보만 갱신되어 정보에 모순이 생기는 현상&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-정규화-과정-&quot;&gt;&amp;lt; 정규화 과정 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;제 1정규형 : 다치가 존재하지 않는 릴레이션&lt;/li&gt;
+  &lt;li&gt;제 2정규형 : 부분 함수적 종속성 x (기본키가 기본키가 아닌 속성에 종속 관계를 가짐)
+    &lt;ul&gt;
+      &lt;li&gt;R(&lt;strong&gt;&lt;em&gt;A&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;B&lt;/em&gt;&lt;/strong&gt;, C, D), A-&amp;gt;C 일때 R1(&lt;strong&gt;&lt;em&gt;A&lt;/em&gt;&lt;/strong&gt;, C), R2(&lt;strong&gt;&lt;em&gt;A&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;B&lt;/em&gt;&lt;/strong&gt;, D)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;제 3정규형 : 이행적 종속 관계 x (기본키가 아닌 속성이 다른 속성에 종속 관계를 가짐)
+    &lt;ul&gt;
+      &lt;li&gt;R(&lt;strong&gt;&lt;em&gt;A&lt;/em&gt;&lt;/strong&gt;,&lt;strong&gt;&lt;em&gt;B&lt;/em&gt;&lt;/strong&gt;, C, D), C-&amp;gt;D 일때 R1(&lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, D), R2(&lt;strong&gt;&lt;em&gt;A&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;B&lt;/em&gt;&lt;/strong&gt;, D)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;BCNF : 3 정규형에서 결정자이며 후보키가 아닌것 제거&lt;/li&gt;
+  &lt;li&gt;cf) 종속 관계 : ‘학번’에 따라 ‘이름’이 결정될 때 ‘이름’을 ‘학번’에 함수 종속적이라 하며 ‘학번-&amp;gt;이름’으로 표기한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;데이터베이스-언어&quot;&gt;데이터베이스 언어&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;DDL(Data Definition Language)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;DB 구조, 데이터 형식, 접근 방식 등 DB를 구축하거나 수정할 목적으로 사용되는 언어&lt;/li&gt;
+      &lt;li&gt;외부 스키마 명세를 정의하고 논리적/물리적 데이터 구조 정의&lt;/li&gt;
+      &lt;li&gt;CREATE, ALTER, DROP, RENAME 등의 명령어를 사용한다.
+        &lt;ul&gt;
+          &lt;li&gt;CREATE SCHEMA/DOMAIN/TABLE/INDEX 이름&lt;/li&gt;
+          &lt;li&gt;ALTER TABLE 테이블이름 ADD/ALTER/DROP 속성이름&lt;/li&gt;
+          &lt;li&gt;DROP SCHEMA/DOMAIN/TABLE/VIEW [CASCADE/RESCTRICTED]&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;DML(Data Manipulation Language)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;사용자가 데이터를 처리할 수 있게하는 도구로 사용자와 DBMS간의 인터페이스를 제공한다.&lt;/li&gt;
+      &lt;li&gt;SELECT, INSERT, DELETE, UPDATE 등의 명령어를 사용한다.&lt;/li&gt;
+      &lt;li&gt;SELCT ~ FROM ~ WHERE ~ GROUP BY ~ HAVING ~&lt;/li&gt;
+      &lt;li&gt;INSERT ~ INTO ~ VALUES ~&lt;/li&gt;
+      &lt;li&gt;DELETE ~ FROM ~ WHERE ~&lt;/li&gt;
+      &lt;li&gt;UPDATE ~ SET ~ WHERE ~&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;DCL(Data Control Language)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;무결성, 보안 및 권한 제어, 회복 등을 하기 위한 언어다.&lt;/li&gt;
+      &lt;li&gt;GRANT(권한 생성), REVOKE(권한 삭제)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;뷰view&quot;&gt;뷰(VIEW)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;사용자에게 접근이 허용된 자료만을 제한적으로 보여주기 위해 유도된 가상 테이블이다.&lt;/li&gt;
+  &lt;li&gt;물리적으로 저장장치에 존재하지 않지만 있는 것처럼 간주한다.&lt;/li&gt;
+  &lt;li&gt;기본 테이블과 같은 구조를 가지며 조작도 기본 테이블과 거의 같다.&lt;/li&gt;
+  &lt;li&gt;정의된 뷰는 다른 뷰의 정의에 기초가 될 수 있다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;뷰가 정의된 기본 테이블이나 뷰를 삭제하면 그 테이블을 기초로 정의된 다른 뷰도 삭제된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;장점&lt;/strong&gt; : 접근 제어를 통한 자동 보안과 사용자 데이터를 간단하게 해준다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;단점&lt;/strong&gt; : ALTER VIEW로 정의를 변경할 수 없다. 삽입/삭제/갱신 연산에 제약이 따른다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;시스템-카탈로그-데이터-사전&quot;&gt;시스템 카탈로그 (=데이터 사전)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;시스템 자체에 관련이 있는 다양한 객체에 관한 정보를 포함하는 시스템 데이터베이스이다.&lt;/li&gt;
+  &lt;li&gt;데이터 객체에 대한 정의나 명세에 관한 정보를 유지/관리하는 시스템 테이블이다.&lt;/li&gt;
+  &lt;li&gt;데이터 정의어의 결과로 구성되는 기본 테이블, 뷰, 인덱스, 접근 권한 등의 데이터베이스 구조 및 통계 정보를 저장한다.&lt;/li&gt;
+  &lt;li&gt;카탈로그는 DBMS가 스스로 생성하고 유지한다.&lt;/li&gt;
+  &lt;li&gt;시스템 테이블로 구성되어 있어 일반 이용자도 SQL을 이용하여 내용을 검색할 수 있다.&lt;/li&gt;
+  &lt;li&gt;INSERT/DELETE/UPDATE 문으로 카탈로그를 갱신하는 것은 허용되지 않는다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="관계형 데이터베이스" /><category term="정규화" /><category term="뷰" /><category term="시스템 카탈로그" /><summary type="html">관계형 데이터페이스 구조 릴레이션(Relation): 데이터베이스 테이블 튜플(Tuple) : 릴레이션을 구성하는 각각의 행, 튜플의 수를 카디널리티라 부른다. 속성(Attribute) : 데이터베이스를 구성하는 가장 작은 논리적 단위 도메인(Domain) : 도메인은 하나의 애트리뷰트가 취할 수 있는 같은 타입의 원자들의 집합 &amp;lt; 릴레이션의 특징 &amp;gt; 한 릴레이션에 포함된 튜플은 모두 다르다. 튜플 사이의 순서가 없고 삽입/삭제 등으로 인해 시간에 따라 변한다. 속성 값은 논리적으로 더 이상 쪼갤 수 없는 원자값만을 저장한다. 관계형 데이터베이스 제약 조건 후보키 : 기본키로 사용할 수 있는 속성, 모든 튜플에 대해서 유일성과 최소성을 만족한다. 유일성 : 하나의 키 값으로 하나의 튜플을 유일하게 식별 가능해야 한다. 최소성 : 모든 레코드들을 유일하게 식별하는 데 꼭 필요한 속성만으로만 구성되어야 한다. 기본키 : 후보키중 선택한 주 키로 NULL 값을 가질 수 없다. 대체키 : 후보키가 둘 이상일 때 기본키를 제외한 나머지 후보키를 말한다. 외래키 : 관계를 맺고 있는 두 실레이션에서 한 릴레이션이 참조하고 있는 다른 릴레이션의 기본키와 같은 릴레이션의 속성을 말한다. 무결성 : 데이터의 정확성과 일관성을 유지하고 보증하는 것 개체 무결성 : 릴레이션에서 기본키를 구성하는 속성은 NULL 값이나 중복값을 가질 수 없다. 참조 무결성 : 외래키 값은 NULL 이거나 참조 릴레이션의 기본키 값과 동일해야 한다. 관계 대수 및 관계 해석 &amp;lt; 관계 대수 &amp;gt; 관계형 데이터베이스에서 원하는 정보와 어떻게 유도하는지 기술하는 절차적인 언어 &amp;lt; 관계 해석 &amp;gt; 관계 데이터의 연산을 표현하는 방법으로 원하는 정보를 정의할 때는 계산 수식을 사용한다. 원하는 정보가 무엇인지만 정의하는 비절차적 특징을 지닌다. 튜플 관계해석과 도메인 관계해석이 있다. 정규화 &amp;lt; 정규화 목적 &amp;gt; 종속성 이론을 이용하여 잘못 설계된 관계셩 스키마를 더 작은 속성의 세트로 쪼개 바람직한 스키마로 만들어 가는 과정 데이터 구조의 안정성을 최대화해 중복성 및 종속성을 배제시키는 방법으로 사용한다. 효과적인 검색 알고리즘을 생성하고 중복을 배제해 삽입/삭제/갱신 이상의 발생을 방지한다. 삽입 이상 : 릴레이션에 데이터를 삽입할 때 의도와는 상관없는 원하지 않는 값들도 함께 삽입되는 현상 삭제 이상 : 릴레이션에 한 튜플을 삭제할 때 의도와는 상관없는 값들도 함께 삭제되는 현상 갱신 이상 : 릴레이션에서 튜플에 있는 속성 값을 갱신할 때 일부 튜플의 정보만 갱신되어 정보에 모순이 생기는 현상 &amp;lt; 정규화 과정 &amp;gt; 제 1정규형 : 다치가 존재하지 않는 릴레이션 제 2정규형 : 부분 함수적 종속성 x (기본키가 기본키가 아닌 속성에 종속 관계를 가짐) R(A, B, C, D), A-&amp;gt;C 일때 R1(A, C), R2(A, B, D) 제 3정규형 : 이행적 종속 관계 x (기본키가 아닌 속성이 다른 속성에 종속 관계를 가짐) R(A,B, C, D), C-&amp;gt;D 일때 R1(C, D), R2(A, B, D) BCNF : 3 정규형에서 결정자이며 후보키가 아닌것 제거 cf) 종속 관계 : ‘학번’에 따라 ‘이름’이 결정될 때 ‘이름’을 ‘학번’에 함수 종속적이라 하며 ‘학번-&amp;gt;이름’으로 표기한다. 데이터베이스 언어 DDL(Data Definition Language) DB 구조, 데이터 형식, 접근 방식 등 DB를 구축하거나 수정할 목적으로 사용되는 언어 외부 스키마 명세를 정의하고 논리적/물리적 데이터 구조 정의 CREATE, ALTER, DROP, RENAME 등의 명령어를 사용한다. CREATE SCHEMA/DOMAIN/TABLE/INDEX 이름 ALTER TABLE 테이블이름 ADD/ALTER/DROP 속성이름 DROP SCHEMA/DOMAIN/TABLE/VIEW [CASCADE/RESCTRICTED] DML(Data Manipulation Language) 사용자가 데이터를 처리할 수 있게하는 도구로 사용자와 DBMS간의 인터페이스를 제공한다. SELECT, INSERT, DELETE, UPDATE 등의 명령어를 사용한다. SELCT ~ FROM ~ WHERE ~ GROUP BY ~ HAVING ~ INSERT ~ INTO ~ VALUES ~ DELETE ~ FROM ~ WHERE ~ UPDATE ~ SET ~ WHERE ~ DCL(Data Control Language) 무결성, 보안 및 권한 제어, 회복 등을 하기 위한 언어다. GRANT(권한 생성), REVOKE(권한 삭제) 뷰(VIEW) 사용자에게 접근이 허용된 자료만을 제한적으로 보여주기 위해 유도된 가상 테이블이다. 물리적으로 저장장치에 존재하지 않지만 있는 것처럼 간주한다. 기본 테이블과 같은 구조를 가지며 조작도 기본 테이블과 거의 같다. 정의된 뷰는 다른 뷰의 정의에 기초가 될 수 있다. 뷰가 정의된 기본 테이블이나 뷰를 삭제하면 그 테이블을 기초로 정의된 다른 뷰도 삭제된다. 장점 : 접근 제어를 통한 자동 보안과 사용자 데이터를 간단하게 해준다. 단점 : ALTER VIEW로 정의를 변경할 수 없다. 삽입/삭제/갱신 연산에 제약이 따른다. 시스템 카탈로그 (=데이터 사전) 시스템 자체에 관련이 있는 다양한 객체에 관한 정보를 포함하는 시스템 데이터베이스이다. 데이터 객체에 대한 정의나 명세에 관한 정보를 유지/관리하는 시스템 테이블이다. 데이터 정의어의 결과로 구성되는 기본 테이블, 뷰, 인덱스, 접근 권한 등의 데이터베이스 구조 및 통계 정보를 저장한다. 카탈로그는 DBMS가 스스로 생성하고 유지한다. 시스템 테이블로 구성되어 있어 일반 이용자도 SQL을 이용하여 내용을 검색할 수 있다. INSERT/DELETE/UPDATE 문으로 카탈로그를 갱신하는 것은 허용되지 않는다.</summary></entry><entry><title type="html">데이터베이스 개념 및 모델링</title><link href="http://localhost:4000/database/2019/05/28/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EB%AA%A8%EB%8D%B8%EB%A7%81/" rel="alternate" type="text/html" title="데이터베이스 개념 및 모델링" /><published>2019-05-28T21:01:00+09:00</published><updated>2019-05-28T21:01:00+09:00</updated><id>http://localhost:4000/database/2019/05/28/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20%EB%AA%A8%EB%8D%B8%EB%A7%81</id><content type="html" xml:base="http://localhost:4000/database/2019/05/28/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EB%AA%A8%EB%8D%B8%EB%A7%81/">&lt;h1 id=&quot;데이터베이스-개념&quot;&gt;데이터베이스 개념&lt;/h1&gt;
+&lt;h2 id=&quot;-데이터베이스-정의-&quot;&gt;&amp;lt; 데이터베이스 정의 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;통합된 데이터 : 자료의 중복을 배제한 데이터의 모임&lt;/li&gt;
+  &lt;li&gt;저장된 데이터 : 저장 매체에 저장된 자료&lt;/li&gt;
+  &lt;li&gt;운영 데이터   : 조직의 고유 업무 수행을 위해 반드시 필요한 자료&lt;/li&gt;
+  &lt;li&gt;공용 데이터   : 여러 응용 시스템들이 공동 소유하는 자료&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-데이터베이스-특징&quot;&gt;&amp;lt; 데이터베이스 특징&amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;실시간 접근성 : 실시간 처리에 대한 응답이 가능해야 한다.&lt;/li&gt;
+  &lt;li&gt;계속적인 변화 : 데이터 삽입, 수정, 삭제, 갱신으로 항상 최신의 데이터를 유지해야 한다.&lt;/li&gt;
+  &lt;li&gt;동시 공용     : 다수의 사용자가 동시에 같은 내용의 데이터를 이용할 수 있어야 한다.&lt;/li&gt;
+  &lt;li&gt;내용 참조     : 데이터를 참조시 사용자가 요구하는 데이터 내용으로 데이터를 찾는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;dbms-기능&quot;&gt;DBMS 기능&lt;/h1&gt;
+&lt;h2 id=&quot;-dbms-정의-&quot;&gt;&amp;lt; DBMS 정의 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;사용자와 데이터베이스 상에서 사용자의 요구에 따라 정보를 생성 및 관리해주는 소프트웨어&lt;/li&gt;
+  &lt;li&gt;파일 시스템의 단점인 &lt;strong&gt;종속성, 중복성&lt;/strong&gt;의 단점을 해결한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-dbms-필수-기능-&quot;&gt;&amp;lt; DBMS 필수 기능 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;정의(Definition) 기능&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;데이터베이스에 저장할 데이터의 형과 구조에 대한 정의, 이용 방식, 제약 조건 등을 명시하는 기능&lt;/li&gt;
+      &lt;li&gt;데이터와 데이터 관계를 명확히 명세할 수 있어야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;조작(Manipulation) 기능&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;데이터 검색/갱신/삽입/삭제 등을 체계적으로 처리하기 위해 사용자&amp;lt;-&amp;gt;데이터베이스 사이의 인터페이스 수단 제공&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;제어(Control) 기능&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;데이터의 &lt;strong&gt;무결성&lt;/strong&gt;이 유지되어야 한다.&lt;/li&gt;
+      &lt;li&gt;사용자별 허가된 데이터만 접근할 수 있도록 &lt;strong&gt;권한 검사&lt;/strong&gt;를 수행한다.&lt;/li&gt;
+      &lt;li&gt;여러 사용자가 데이터베이스를 동시에 접근해 데이터를 처리할 때 처리 결과가 항상 정확성을 유지하도록 &lt;strong&gt;병행 제어&lt;/strong&gt;를 수행해야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;스키마&quot;&gt;스키마&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터베이스의 구조와 제약조건에 관한 전반적인 명세를 기술한 메타데이터 집합이다.&lt;/li&gt;
+  &lt;li&gt;스키마는 데이터 개체(Entity), 속성(Attribute), 관계(Relationship) 및 제약 조건에 전반적으로 정의한다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;외부 스키마&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;사용자가 각 개인의 입장에서 필요로 하는 데이터베이스 논리적 구조를 정의한 것&lt;/li&gt;
+      &lt;li&gt;일반 사용자는 SQL을 이용해 DB를 쉽게 사용할 수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;개념 스키마&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;데이터베이스의 전체적인 논리적 구조로 단순 스키마라고 하면 개념 스키마를 의미한다.&lt;/li&gt;
+      &lt;li&gt;개체간의 관계와 제약조건, 접근권한, 보안 및 무결성 규칙에 관한 명세를 정의한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;내부 스키마&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;물리적 저장장치의 입장에서 본 데이터베이스 구조로 시스템 설계자가 보는 관점의 스키마를 의미한다.&lt;/li&gt;
+      &lt;li&gt;실제로 데이터베이스에 저장될 레코드의 물리적인 구조를 정의하고 저장 데이터 표현 방법, 내부 레코드 물리적 순서 등을 나타낸다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;데이터-모델&quot;&gt;데이터 모델&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;개체(Entity) : 레코드에 대응하는 것으로 어떤 정보를 제공하는 역할 수행&lt;/li&gt;
+  &lt;li&gt;속성(Attribute) : 데이터의 가장 작은 논리적 단위로서 파일 구조상의 데이터 항목 또는 데이터 필드에 해당&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-e-r-모델-&quot;&gt;&amp;lt; E-R 모델 &amp;gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/erd.png&quot; alt=&quot;11st_result&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;개체와 개체간의 관계를 기본 요소로 이용하여 데이터를 개념적인 논리 데이터로 표현하는 방법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;데이터베이스-설계&quot;&gt;데이터베이스 설계&lt;/h1&gt;
+&lt;h2 id=&quot;-데이터베이스-설계-고려-사항&quot;&gt;&amp;lt; 데이터베이스 설계 고려 사항&amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;무결성 : 삽입, 삭제, 갱신 등의 연산 후에도 저장된 데이터가 정해진 제약 조건을 항상 만족해야 함&lt;/li&gt;
+  &lt;li&gt;일관성 : 데이터베이스에 저장된 데이터들 사이나 특정 질의에 대한 응답이 처음부터 끝까지 일정해야 함&lt;/li&gt;
+  &lt;li&gt;회복  : 시스템 장애가 발생시 장애 발생 직전 상태로 복구할 수 있어야 함&lt;/li&gt;
+  &lt;li&gt;보안, 효울성, 데이터베이스 확장 등…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-개념적-설계-&quot;&gt;&amp;lt; 개념적 설계 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;현실 세계에 대한 인식을 추상적 개념으로 표현하는 과정&lt;/li&gt;
+  &lt;li&gt;개념 스키마 모델링과 트랜잭션 모델링을 병행 수행한다.&lt;/li&gt;
+  &lt;li&gt;요구 분석 단계에서 나온 결과를 DBMS에 독립적인 E-R 다이어그램으로 작성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-논리적-설계-&quot;&gt;&amp;lt; 논리적 설계 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;현실 세계 자료를 컴퓨터가 처리할 수 있는 물리적 저장장치에 저장할 수 있도록 변환하기 위해 논리적 구조로 변환시키는 과정&lt;/li&gt;
+  &lt;li&gt;데이터 타입과 데이터 타입들 간의 관계로 표현되는 논리적 구조의 데이터로 모델화&lt;/li&gt;
+  &lt;li&gt;개념 스키마를 평가 및 적재하고 DBMS에 따라 서로 다른 논리적 스키마를 설계하는 단계&lt;/li&gt;
+  &lt;li&gt;트랜잭션 인터페이스 / 테이블 설계&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-물리적-설계-&quot;&gt;&amp;lt; 물리적 설계 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;논리적 구조로 표현된 데이터를 물리적 저장장치에 저장할 수 있는 물리적 구조의 데이터로 변환하는 과정&lt;/li&gt;
+  &lt;li&gt;데이터베이스 파일의 저장 구조 및 액세스 경로를 결정한다&lt;/li&gt;
+  &lt;li&gt;저장 레코드의 형식, 순서, 접근 경로와 같은 정보를 사용하여 데이터가 저장되는 방법을 묘사한다.&lt;/li&gt;
+  &lt;li&gt;저장 레코드 양식 설계, 레코드 집중의 분석 및 설계, 접근 경로 설계 등이 필수적으로 포함&lt;/li&gt;
+  &lt;li&gt;기본적인 데이터 단위는 저장 레코드이며 여러 타입의 저장 레코드 집합이다&lt;/li&gt;
+  &lt;li&gt;고려 사항 : 인덱스 구조, 레코드 크기, 레코드 개수, 트랜잭션 갱신과 참조 성향 등&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="스키마" /><category term="데이터베이스 특징" /><category term="데이터베이스 설계" /><summary type="html">데이터베이스 개념 &amp;lt; 데이터베이스 정의 &amp;gt; 통합된 데이터 : 자료의 중복을 배제한 데이터의 모임 저장된 데이터 : 저장 매체에 저장된 자료 운영 데이터 : 조직의 고유 업무 수행을 위해 반드시 필요한 자료 공용 데이터 : 여러 응용 시스템들이 공동 소유하는 자료 &amp;lt; 데이터베이스 특징&amp;gt; 실시간 접근성 : 실시간 처리에 대한 응답이 가능해야 한다. 계속적인 변화 : 데이터 삽입, 수정, 삭제, 갱신으로 항상 최신의 데이터를 유지해야 한다. 동시 공용 : 다수의 사용자가 동시에 같은 내용의 데이터를 이용할 수 있어야 한다. 내용 참조 : 데이터를 참조시 사용자가 요구하는 데이터 내용으로 데이터를 찾는다. DBMS 기능 &amp;lt; DBMS 정의 &amp;gt; 사용자와 데이터베이스 상에서 사용자의 요구에 따라 정보를 생성 및 관리해주는 소프트웨어 파일 시스템의 단점인 종속성, 중복성의 단점을 해결한다. &amp;lt; DBMS 필수 기능 &amp;gt; 정의(Definition) 기능 데이터베이스에 저장할 데이터의 형과 구조에 대한 정의, 이용 방식, 제약 조건 등을 명시하는 기능 데이터와 데이터 관계를 명확히 명세할 수 있어야 한다. 조작(Manipulation) 기능 데이터 검색/갱신/삽입/삭제 등을 체계적으로 처리하기 위해 사용자&amp;lt;-&amp;gt;데이터베이스 사이의 인터페이스 수단 제공 제어(Control) 기능 데이터의 무결성이 유지되어야 한다. 사용자별 허가된 데이터만 접근할 수 있도록 권한 검사를 수행한다. 여러 사용자가 데이터베이스를 동시에 접근해 데이터를 처리할 때 처리 결과가 항상 정확성을 유지하도록 병행 제어를 수행해야 한다. 스키마 데이터베이스의 구조와 제약조건에 관한 전반적인 명세를 기술한 메타데이터 집합이다. 스키마는 데이터 개체(Entity), 속성(Attribute), 관계(Relationship) 및 제약 조건에 전반적으로 정의한다. 외부 스키마 사용자가 각 개인의 입장에서 필요로 하는 데이터베이스 논리적 구조를 정의한 것 일반 사용자는 SQL을 이용해 DB를 쉽게 사용할 수 있다. 개념 스키마 데이터베이스의 전체적인 논리적 구조로 단순 스키마라고 하면 개념 스키마를 의미한다. 개체간의 관계와 제약조건, 접근권한, 보안 및 무결성 규칙에 관한 명세를 정의한다. 내부 스키마 물리적 저장장치의 입장에서 본 데이터베이스 구조로 시스템 설계자가 보는 관점의 스키마를 의미한다. 실제로 데이터베이스에 저장될 레코드의 물리적인 구조를 정의하고 저장 데이터 표현 방법, 내부 레코드 물리적 순서 등을 나타낸다. 데이터 모델 개체(Entity) : 레코드에 대응하는 것으로 어떤 정보를 제공하는 역할 수행 속성(Attribute) : 데이터의 가장 작은 논리적 단위로서 파일 구조상의 데이터 항목 또는 데이터 필드에 해당 &amp;lt; E-R 모델 &amp;gt; 개체와 개체간의 관계를 기본 요소로 이용하여 데이터를 개념적인 논리 데이터로 표현하는 방법 데이터베이스 설계 &amp;lt; 데이터베이스 설계 고려 사항&amp;gt; 무결성 : 삽입, 삭제, 갱신 등의 연산 후에도 저장된 데이터가 정해진 제약 조건을 항상 만족해야 함 일관성 : 데이터베이스에 저장된 데이터들 사이나 특정 질의에 대한 응답이 처음부터 끝까지 일정해야 함 회복 : 시스템 장애가 발생시 장애 발생 직전 상태로 복구할 수 있어야 함 보안, 효울성, 데이터베이스 확장 등… &amp;lt; 개념적 설계 &amp;gt; 현실 세계에 대한 인식을 추상적 개념으로 표현하는 과정 개념 스키마 모델링과 트랜잭션 모델링을 병행 수행한다. 요구 분석 단계에서 나온 결과를 DBMS에 독립적인 E-R 다이어그램으로 작성 &amp;lt; 논리적 설계 &amp;gt; 현실 세계 자료를 컴퓨터가 처리할 수 있는 물리적 저장장치에 저장할 수 있도록 변환하기 위해 논리적 구조로 변환시키는 과정 데이터 타입과 데이터 타입들 간의 관계로 표현되는 논리적 구조의 데이터로 모델화 개념 스키마를 평가 및 적재하고 DBMS에 따라 서로 다른 논리적 스키마를 설계하는 단계 트랜잭션 인터페이스 / 테이블 설계 &amp;lt; 물리적 설계 &amp;gt; 논리적 구조로 표현된 데이터를 물리적 저장장치에 저장할 수 있는 물리적 구조의 데이터로 변환하는 과정 데이터베이스 파일의 저장 구조 및 액세스 경로를 결정한다 저장 레코드의 형식, 순서, 접근 경로와 같은 정보를 사용하여 데이터가 저장되는 방법을 묘사한다. 저장 레코드 양식 설계, 레코드 집중의 분석 및 설계, 접근 경로 설계 등이 필수적으로 포함 기본적인 데이터 단위는 저장 레코드이며 여러 타입의 저장 레코드 집합이다 고려 사항 : 인덱스 구조, 레코드 크기, 레코드 개수, 트랜잭션 갱신과 참조 성향 등</summary></entry><entry><title type="html">백준/11004 K번째 수</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80-11004-K%EB%B2%88%EC%A7%B8-%EC%88%98/" rel="alternate" type="text/html" title="백준/11004 K번째 수" /><published>2019-05-27T14:11:00+09:00</published><updated>2019-05-27T14:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80%2011004%20K%EB%B2%88%EC%A7%B8%20%EC%88%98</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80-11004-K%EB%B2%88%EC%A7%B8-%EC%88%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/11004&quot;&gt;Backjoon :: K번째 수&lt;/a&gt; 문제는 MergeSort를 활용해 풀 수 있다.&lt;/p&gt;
 
@@ -439,223 +862,4 @@
   &lt;li&gt;&lt;a href=&quot;https://github.com/WeareSoft/tech-interview/&quot;&gt;https://github.com/WeareSoft/tech-interview/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://shlee0882.tistory.com/110&quot;&gt;https://shlee0882.tistory.com/110&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.ciokorea.com/news/36536&quot;&gt;http://www.ciokorea.com/news/36536&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="OSI 7 Layer" /><summary type="html">OSI 7 Layer이란? 개방형 시스템 상호연결(Open System Intercon-nection, OSI) 모델 상호 이질적인 네트워크간의 연결에 어려움이 많은데 이러한 호환성의 결여를 막기위해 ISO(국제 표준화 기구)에서는 OSI 참조모델을 제시함 네트워크에서 통신이 일어나는 과정을 7단계로 나눈 것 네트워크 통신 과정을 7단계로 나눈 이유는? 계층을 나눈 이유는 통신이 일어나는 과정이 단계별로 파악할 수 있기 때문이다! 문제가 발생하더라도 해당 계층만 고치면 된다. OSI 7 Layer 구조 1단계 : 물리 계층(Physical)** 말 그대로 시스템의 물리적 표현을 나타낸다. (=물리적 장비) 2단계 : 데이터 링크 계층 (Data Link) 노드 간 데이터 전송을 제공하며 물리 계층의 오류 수정도 처리한다. 주소 값은 물리적으로 할당 받는데, 이는 네트워크 카드가 만들어질 때부터 맥 주소(MAC address)가 정해져 있다는 뜻이다. ex) 이더넷 3단계 : 네트워크 계층(Network) 여러개의 노드를 거칠때마다 경로를 찾아주는 역할을 하는 계층 데이터를 목적지까지 가장 안전하고 빠르게 전달하는 기능(라우팅) 보스턴에 있는 컴퓨터가 캘리포니아에 있는 서버에 연결하려고 할 때 그 경로는 수백 만 가지다. 이 계층의 라우터가 이 작업을 효율적으로 처리한다. 4단계 : 전송 계층(Transport) 양 끝단(End to end)의 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해 주어, 상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다. 전송 계층은 특정 연결의 유효성을 제어하고, 일부 프로토콜은 상태 개념이 있고(stateful), 연결 기반(connection oriented)이다. 대표적인 예로 TCP가 있다. 5단계 : 세션 계층(Session) 양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다. TCP/IP 세션을 만들고 없애는 책임을 진다. 6단계 : 표현 계층(Presentation) 코드 간의 번역을 담당하여 사용자의 명령어를 완성 및 결과 표현한다. 데이터를 안전하게 전송하기 위해 암호화/복호화 하는 역할 수행 7단계 : 응용 계층(Application) HTTP, FTP, SMTP, POP3, IMAP, Telnet 등과 같은 프로토콜이 있다. 사용자는 용도에 맞는 프로토콜을 선택하고 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. ex) MS Office, Chrome … OSI 7 Layer 쉽게 외우는 방법 CIOKorea에 나와있는 재미있는 방법 물리 계층에서 응용 계층까지(아래에서 위로)(P-D-N-T-S-P-A) 소시지 피자를 버리지 말아 주세요(Please-Do-Not-Throw-Sausage-Pizza-Away) 참고 https://github.com/WeareSoft/tech-interview/ https://shlee0882.tistory.com/110 http://www.ciokorea.com/news/36536</summary></entry><entry><title type="html">HTTP와 REST API, Cookie, Session</title><link href="http://localhost:4000/network/2019/05/21/HTTP%EC%99%80-REST-API/" rel="alternate" type="text/html" title="HTTP와 REST API, Cookie, Session" /><published>2019-05-21T17:00:00+09:00</published><updated>2019-05-21T17:00:00+09:00</updated><id>http://localhost:4000/network/2019/05/21/HTTP%EC%99%80%20REST%20API</id><content type="html" xml:base="http://localhost:4000/network/2019/05/21/HTTP%EC%99%80-REST-API/">&lt;h1 id=&quot;httphypertext-transfer-protocol이란&quot;&gt;HTTP(HyperText Transfer Protocol)이란?&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;인터넷에서 데이터를 주고받을 수 있는 프로토콜로 웹 서버와 클라이언트간 통신하기 위한 규약&lt;/li&gt;
-  &lt;li&gt;어느 종류의 데이터든지 전송할 수 있도록 설계되어있다. HTML 뿐만아니라 이미지, 동영상, 오디오, 텍스트 문서 등 종류를 가리지 않는다.&lt;/li&gt;
-  &lt;li&gt;이름 그대로 하이퍼텍스트를 기반으로 데이터를 전송하겠다는 말이다. 간단히 말하면 링크기반으로 데이터에 접속하겠다는 의미이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;http-작동-방식&quot;&gt;HTTP 작동 방식&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;TCP/IP를 사용하는 응용 프로토콜이며 HTTP 메세지는 HTTP 서버와 HTTP 클라이언트가 해석한다.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;HTTP는 연결 상태를 유지하지 않는 프로토콜이기 때문에 서버에 연결하고 Request에서 Response를 받으면 연결을 끊어버린다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;장점&lt;/strong&gt; : 수십만명이 웹 서비스를 사용하더라도 접속유지는 최소한으로 할 수 있기 때문에, 더 많은 유저의 요청을 처리 할 수 있다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;단점&lt;/strong&gt; : 연결을 끊어버리기 때문에 클라이언트의 이전 상태를 알 수 없다. 이를 위해 Cookie를 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/network_http.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;크롬 개발자도구의 네트워크 탭의 정보를 해석해보자.&lt;/li&gt;
-  &lt;li&gt;요청한 URL은 &lt;a href=&quot;http://sophia2730.tistory.com&quot;&gt;http://sophia2730.tistory.com&lt;/a&gt; 이며 200 코드로 성공적인 요청이였다는 결과를 받았다.&lt;/li&gt;
-  &lt;li&gt;여기서 작동한 Method는 GET이며 POST, PUT(수정) 등의 메소드를 사용하여 클라이언트와 서버가 데이터를 주고받는다.&lt;/li&gt;
-  &lt;li&gt;여기서 URI를 자원으로 보고 Method를 동사로 보는 개발 방식이 REST 방식이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;rest-api란&quot;&gt;REST API란?&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일로, 자원을 표현으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미한다.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;즉, URI를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;REST API는 두 가지 특징을 가진다.
-    &lt;ol&gt;
-      &lt;li&gt;URI는 정보의 자원을 표현해야 한다.  ex) GET /members/delete/1 (X),  DELETE /members/1 (O)&lt;/li&gt;
-      &lt;li&gt;자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE)로 표현한다.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이러한 방식으로 확장성과 재사용성을 높여 유지보수 및 운용을 편리하게 할 수 있다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;cookie와-session&quot;&gt;Cookie와 Session&lt;/h1&gt;
-&lt;h2 id=&quot;cookie&quot;&gt;Cookie&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;모든 내용이 클라이언트측에서 저장되며 서버에 요청할 때 마다 HTTP 헤더에 쿠키 내용(&lt;strong&gt;KEY=VALUE&lt;/strong&gt;)을 전달합니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/web_cookie.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;최초 접속일 경우 사용자ID, 로그인시간, IP등을 암호화한 구문을 클라이언트의 쿠키에 &lt;strong&gt;KEY=VALUE&lt;/strong&gt; 된 구문으로 생성해 클라이언트에게 쿠키에 저장하라고 응답합니다. (예 : state=ASKHDNxxu7432keedsa7jhklsadasdmslk )&lt;/li&gt;
-  &lt;li&gt;클라이언트는 매번 서버에 요청할 때 위 쿠키를 전달합니다.&lt;/li&gt;
-  &lt;li&gt;서버는 로그인상황을 검사하기 위해서 매번 쿠키를 읽습니다. 그리고 위의 키를 찾아 정보를 해독하고, 서버에 있는 사용자 정보와 비교해 일치하면 로그인된 것으로 보고, 일치하지 않으면 불량요청 혹은 로그인하지 않은 사용자로 판별합니다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;session&quot;&gt;Session&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Session은 서버쪽에 저장되는 쿠키이며 클라이언트가 서버에 Request를 보내면 서버는 클라이언트한테 세션 ID를 제공한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/web_session.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;로그인 요청이 들어왔을 때 정보가 일치하면 서버는 사용자ID, 로그인시간, IP 등을 저장하는 Session을 생성합니다.&lt;/li&gt;
-  &lt;li&gt;클라이언트에 응답할 때 세션을 찾을 수 있는 Session ID를 클라이언트에 전달합니다.(보통 쿠키로 전달)&lt;/li&gt;
-  &lt;li&gt;클라이언트는 다음 요청시, Session ID를 함께 요청(쿠키를 사용하든 다른 방법을 사용하든)합니다.&lt;/li&gt;
-  &lt;li&gt;서버가 요청을 받은 경우 Session ID를 이용해서 서버에 저장된 세션을 찾아와 로그인을 확인할 수 있습니다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;cookie와-session의-저장-정보와-위치&quot;&gt;Cookie와 Session의 저장 정보와 위치&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/cookie-session.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://message0412.tistory.com/entry/HTTP-프로토콜-알아보기1&quot;&gt;https://message0412.tistory.com/entry/HTTP-프로토콜-알아보기1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hashcode.co.kr/questions/3243&quot;&gt;https://hashcode.co.kr/questions/3243&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="HTTP" /><category term="REST" /><category term="Cookie" /><category term="Session" /><summary type="html">HTTP(HyperText Transfer Protocol)이란? 인터넷에서 데이터를 주고받을 수 있는 프로토콜로 웹 서버와 클라이언트간 통신하기 위한 규약 어느 종류의 데이터든지 전송할 수 있도록 설계되어있다. HTML 뿐만아니라 이미지, 동영상, 오디오, 텍스트 문서 등 종류를 가리지 않는다. 이름 그대로 하이퍼텍스트를 기반으로 데이터를 전송하겠다는 말이다. 간단히 말하면 링크기반으로 데이터에 접속하겠다는 의미이다. HTTP 작동 방식 TCP/IP를 사용하는 응용 프로토콜이며 HTTP 메세지는 HTTP 서버와 HTTP 클라이언트가 해석한다. HTTP는 연결 상태를 유지하지 않는 프로토콜이기 때문에 서버에 연결하고 Request에서 Response를 받으면 연결을 끊어버린다. 장점 : 수십만명이 웹 서비스를 사용하더라도 접속유지는 최소한으로 할 수 있기 때문에, 더 많은 유저의 요청을 처리 할 수 있다. 단점 : 연결을 끊어버리기 때문에 클라이언트의 이전 상태를 알 수 없다. 이를 위해 Cookie를 사용한다. 크롬 개발자도구의 네트워크 탭의 정보를 해석해보자. 요청한 URL은 http://sophia2730.tistory.com 이며 200 코드로 성공적인 요청이였다는 결과를 받았다. 여기서 작동한 Method는 GET이며 POST, PUT(수정) 등의 메소드를 사용하여 클라이언트와 서버가 데이터를 주고받는다. 여기서 URI를 자원으로 보고 Method를 동사로 보는 개발 방식이 REST 방식이다. REST API란? 웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일로, 자원을 표현으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미한다. 즉, URI를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다. REST API는 두 가지 특징을 가진다. URI는 정보의 자원을 표현해야 한다. ex) GET /members/delete/1 (X), DELETE /members/1 (O) 자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE)로 표현한다. 이러한 방식으로 확장성과 재사용성을 높여 유지보수 및 운용을 편리하게 할 수 있다. Cookie와 Session Cookie 모든 내용이 클라이언트측에서 저장되며 서버에 요청할 때 마다 HTTP 헤더에 쿠키 내용(KEY=VALUE)을 전달합니다. 최초 접속일 경우 사용자ID, 로그인시간, IP등을 암호화한 구문을 클라이언트의 쿠키에 KEY=VALUE 된 구문으로 생성해 클라이언트에게 쿠키에 저장하라고 응답합니다. (예 : state=ASKHDNxxu7432keedsa7jhklsadasdmslk ) 클라이언트는 매번 서버에 요청할 때 위 쿠키를 전달합니다. 서버는 로그인상황을 검사하기 위해서 매번 쿠키를 읽습니다. 그리고 위의 키를 찾아 정보를 해독하고, 서버에 있는 사용자 정보와 비교해 일치하면 로그인된 것으로 보고, 일치하지 않으면 불량요청 혹은 로그인하지 않은 사용자로 판별합니다. Session Session은 서버쪽에 저장되는 쿠키이며 클라이언트가 서버에 Request를 보내면 서버는 클라이언트한테 세션 ID를 제공한다. 로그인 요청이 들어왔을 때 정보가 일치하면 서버는 사용자ID, 로그인시간, IP 등을 저장하는 Session을 생성합니다. 클라이언트에 응답할 때 세션을 찾을 수 있는 Session ID를 클라이언트에 전달합니다.(보통 쿠키로 전달) 클라이언트는 다음 요청시, Session ID를 함께 요청(쿠키를 사용하든 다른 방법을 사용하든)합니다. 서버가 요청을 받은 경우 Session ID를 이용해서 서버에 저장된 세션을 찾아와 로그인을 확인할 수 있습니다. Cookie와 Session의 저장 정보와 위치 참고 https://message0412.tistory.com/entry/HTTP-프로토콜-알아보기1 https://hashcode.co.kr/questions/3243</summary></entry><entry><title type="html">주소창에 www.naver.com을 치면 일어나는 일</title><link href="http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84-%EC%B9%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC/" rel="alternate" type="text/html" title="주소창에 www.naver.com을 치면 일어나는 일" /><published>2019-05-21T14:00:00+09:00</published><updated>2019-05-21T14:00:00+09:00</updated><id>http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84%20%EC%B9%98%EB%A9%B4%20%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94%20%EC%9D%BC</id><content type="html" xml:base="http://localhost:4000/network/2019/05/21/www.naver.com%EC%9D%84-%EC%B9%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC/">&lt;h1 id=&quot;주소창에-wwwnavercom을-치면-일어나는-일&quot;&gt;주소창에 www.naver.com을 치면 일어나는 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;주소창에 www.naver.com을 입력하면 어떤 일이 일어날까?&lt;/li&gt;
-  &lt;li&gt;면접 질문에서도 종종 나오는 이 방식은 생각보다 간단하다.&lt;/li&gt;
-  &lt;li&gt;방식에 대해 이해하기 전에 IP 주소, 도메인에 대한 사전 지식이 필요하다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;ip-주소&quot;&gt;IP 주소&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다.&lt;/li&gt;
-  &lt;li&gt;현재는 IPv4 버전(32비트)로 구성되어 있으며 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다.&lt;/li&gt;
-  &lt;li&gt;시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어있기 때문에 IP 주소가 부족하지 않다는 특징이 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;도메인-네임domain-name&quot;&gt;도메인 네임(Domain Name)&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다.&lt;/li&gt;
-  &lt;li&gt;그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 &lt;strong&gt;&lt;em&gt;도메인 네임&lt;/em&gt;&lt;/strong&gt;이라고 한다.&lt;/li&gt;
-  &lt;li&gt;다시 말해서, 도메인 네임은 ‘naver.com’처럼 몇 개의 의미있는 문자들과 점(.)의 조합으로 구성된다.&lt;/li&gt;
-  &lt;li&gt;도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다.&lt;/li&gt;
-  &lt;li&gt;이때 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 &lt;strong&gt;&lt;em&gt;DNS(Domain Name System)&lt;/em&gt;&lt;/strong&gt; 이라고 부른다.&lt;/li&gt;
-  &lt;li&gt;다시 말해 사람이 도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 찾아갈 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;web-동작-원리&quot;&gt;WEB 동작 원리&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/web_process.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;사용자가 브라우저에 도메인 네임(www.naver.com)을 입력한다.&lt;/li&gt;
-  &lt;li&gt;사용자가 입력한 URL 주소 중에서 도메인 네임(domain name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다.&lt;/li&gt;
-  &lt;li&gt;페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다.&lt;/li&gt;
-  &lt;li&gt;이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다.&lt;/li&gt;
-  &lt;li&gt;검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다.&lt;/li&gt;
-  &lt;li&gt;도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;어려운 개념은 아니니 재미삼아 읽어봐도 좋을 것 같다.&lt;/p&gt;
-
-&lt;p&gt;출처 : &lt;a href=&quot;http://tcpschool.com/webbasic/works&quot;&gt;http://tcpschool.com/webbasic/works&lt;/a&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="IP 주소" /><category term="DNS" /><category term="도메인" /><summary type="html">주소창에 www.naver.com을 치면 일어나는 일 주소창에 www.naver.com을 입력하면 어떤 일이 일어날까? 면접 질문에서도 종종 나오는 이 방식은 생각보다 간단하다. 방식에 대해 이해하기 전에 IP 주소, 도메인에 대한 사전 지식이 필요하다. IP 주소 IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다. 현재는 IPv4 버전(32비트)로 구성되어 있으며 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다. 시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어있기 때문에 IP 주소가 부족하지 않다는 특징이 있다. 도메인 네임(Domain Name) IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다. 그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 도메인 네임이라고 한다. 다시 말해서, 도메인 네임은 ‘naver.com’처럼 몇 개의 의미있는 문자들과 점(.)의 조합으로 구성된다. 도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다. 이때 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 DNS(Domain Name System) 이라고 부른다. 다시 말해 사람이 도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 찾아갈 수 있다. WEB 동작 원리 사용자가 브라우저에 도메인 네임(www.naver.com)을 입력한다. 사용자가 입력한 URL 주소 중에서 도메인 네임(domain name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다. 페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다. 이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다. 검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다. 도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다. 어려운 개념은 아니니 재미삼아 읽어봐도 좋을 것 같다. 출처 : http://tcpschool.com/webbasic/works</summary></entry><entry><title type="html">ArrayList와 LinkedList</title><link href="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80-LinkedList/" rel="alternate" type="text/html" title="ArrayList와 LinkedList" /><published>2019-05-21T14:00:00+09:00</published><updated>2019-05-21T14:00:00+09:00</updated><id>http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80%20LinkedList</id><content type="html" xml:base="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/2019/05/21/ArrayList%EC%99%80-LinkedList/">&lt;h1 id=&quot;arraylist와-linkedlist&quot;&gt;ArrayList와 LinkedList&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;ArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다.&lt;/li&gt;
-  &lt;li&gt;하지만 내부적으로 작동하는 방식은 다르다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
- 
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;First&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Third&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Second&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;//O(n)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;                &lt;span class=&quot;c1&quot;&gt;//O(n)&lt;/span&gt;
- 
-        &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;                   &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
- 
-        &lt;span class=&quot;n&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nlist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;nlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addFirst&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;First&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;nlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Second&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;nlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addLast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Third&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;nlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pollFirst&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;              &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;nlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pollLast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;//O(1)&lt;/span&gt;
- 
-        &lt;span class=&quot;n&quot;&gt;nlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;                   &lt;span class=&quot;c1&quot;&gt;//O(n)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;arraylist&quot;&gt;ArrayList&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;알고리즘 문제를 풀면서 가장 중요한 ArrayList와 LinkedList의 차이점은 시간복잡도의 차이라고 볼 수 있다.&lt;/li&gt;
-  &lt;li&gt;ArrayList는 동적으로 Array를 생성한다고 생각하면 배열과 비슷한 점이 많다.&lt;/li&gt;
-  &lt;li&gt;ArrayList는 remove 시에 O(n)의 시간복잡도를 가진다.&lt;/li&gt;
-  &lt;li&gt;i번째 배열을 지우고 최대 n만큼 앞으로 이동해야 하기 때문이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&amp;lt; ArrayList 중간 Insert &amp;gt;
-&lt;img src=&quot;/assets/images/ArrayList_insert.png&quot; alt=&quot;11st_result&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt; ArrayList 중간 Remove &amp;gt;
-&lt;img src=&quot;/assets/images/ArrayList_insert.png&quot; alt=&quot;11st_result&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;삽입 또한 맨 뒤에삽입과 중간삽입으로 나눌 수 있는데, 중간에 삽입하는 경우 O(n), 맨 뒤에 삽입하는 경우 O(1)의 시간복잡도를 가진다.&lt;/li&gt;
-  &lt;li&gt;하지만 get 메소드는 해당 index를 바로 가져오기 때문에 O(1)의 시간복잡도를 가진다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;linkedlist&quot;&gt;LinkedList&lt;/h2&gt;
-
-&lt;p&gt;&amp;lt; LinkedList 중간 add &amp;gt;
-&lt;img src=&quot;/assets/images/LinkedList_add.png&quot; alt=&quot;11st_result&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;이에 비해, LinkedList는 Node를 사용하기 때문에 add, poll 시에 O(1)의 시간복잡도를 가진다.&lt;/li&gt;
-  &lt;li&gt;하지만 get 메소드 사용시에 앞에서부터 찾기 때문에 O(n)의 시간복잡도를 가진다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;정리&quot;&gt;정리&lt;/h1&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;ArrayList&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;LinkedList&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;삽입&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;add&lt;br /&gt;O(1) or O(n)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;add, addFirst, addLast&lt;br /&gt;O(1)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;삭제&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;remove&lt;br /&gt;O(n)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;poll, pollFirst, pollLast&lt;br /&gt;O(1)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;접근&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;get&lt;br /&gt;O(1)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;get&lt;br /&gt;O(n)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>ChanSu Kim</name></author><category term="자료구조" /><category term="ArrayList" /><category term="LinkedList" /><category term="시간복잡도" /><summary type="html">ArrayList와 LinkedList ArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다. 하지만 내부적으로 작동하는 방식은 다르다. import java.io.*; import java.util.*; public class Main { public static void main(String[] args) throws Exception { ArrayList&amp;lt;String&amp;gt; alist = new ArrayList&amp;lt;&amp;gt;(); alist.add(0,&quot;First&quot;); //O(1) alist.add(&quot;Third&quot;); //O(1) alist.add(1, &quot;Second&quot;); //O(n) alist.remove(1); //O(n) alist.get(1); //O(1) LinkedList&amp;lt;String&amp;gt; nlist = new LinkedList&amp;lt;&amp;gt;(); nlist.addFirst(&quot;First&quot;); //O(1) nlist.add(&quot;Second&quot;); //O(1) nlist.addLast(&quot;Third&quot;); //O(1) nlist.pollFirst(); //O(1) nlist.pollLast(); //O(1) nlist.get(0); //O(n) } } ArrayList 알고리즘 문제를 풀면서 가장 중요한 ArrayList와 LinkedList의 차이점은 시간복잡도의 차이라고 볼 수 있다. ArrayList는 동적으로 Array를 생성한다고 생각하면 배열과 비슷한 점이 많다. ArrayList는 remove 시에 O(n)의 시간복잡도를 가진다. i번째 배열을 지우고 최대 n만큼 앞으로 이동해야 하기 때문이다. &amp;lt; ArrayList 중간 Insert &amp;gt; &amp;lt; ArrayList 중간 Remove &amp;gt; 삽입 또한 맨 뒤에삽입과 중간삽입으로 나눌 수 있는데, 중간에 삽입하는 경우 O(n), 맨 뒤에 삽입하는 경우 O(1)의 시간복잡도를 가진다. 하지만 get 메소드는 해당 index를 바로 가져오기 때문에 O(1)의 시간복잡도를 가진다. LinkedList &amp;lt; LinkedList 중간 add &amp;gt; 이에 비해, LinkedList는 Node를 사용하기 때문에 add, poll 시에 O(1)의 시간복잡도를 가진다. 하지만 get 메소드 사용시에 앞에서부터 찾기 때문에 O(n)의 시간복잡도를 가진다. 정리   ArrayList LinkedList 삽입 addO(1) or O(n) add, addFirst, addLastO(1) 삭제 removeO(n) poll, pollFirst, pollLastO(1) 접근 getO(1) getO(n)</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="OSI 7 Layer" /><summary type="html">OSI 7 Layer이란? 개방형 시스템 상호연결(Open System Intercon-nection, OSI) 모델 상호 이질적인 네트워크간의 연결에 어려움이 많은데 이러한 호환성의 결여를 막기위해 ISO(국제 표준화 기구)에서는 OSI 참조모델을 제시함 네트워크에서 통신이 일어나는 과정을 7단계로 나눈 것 네트워크 통신 과정을 7단계로 나눈 이유는? 계층을 나눈 이유는 통신이 일어나는 과정이 단계별로 파악할 수 있기 때문이다! 문제가 발생하더라도 해당 계층만 고치면 된다. OSI 7 Layer 구조 1단계 : 물리 계층(Physical)** 말 그대로 시스템의 물리적 표현을 나타낸다. (=물리적 장비) 2단계 : 데이터 링크 계층 (Data Link) 노드 간 데이터 전송을 제공하며 물리 계층의 오류 수정도 처리한다. 주소 값은 물리적으로 할당 받는데, 이는 네트워크 카드가 만들어질 때부터 맥 주소(MAC address)가 정해져 있다는 뜻이다. ex) 이더넷 3단계 : 네트워크 계층(Network) 여러개의 노드를 거칠때마다 경로를 찾아주는 역할을 하는 계층 데이터를 목적지까지 가장 안전하고 빠르게 전달하는 기능(라우팅) 보스턴에 있는 컴퓨터가 캘리포니아에 있는 서버에 연결하려고 할 때 그 경로는 수백 만 가지다. 이 계층의 라우터가 이 작업을 효율적으로 처리한다. 4단계 : 전송 계층(Transport) 양 끝단(End to end)의 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해 주어, 상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다. 전송 계층은 특정 연결의 유효성을 제어하고, 일부 프로토콜은 상태 개념이 있고(stateful), 연결 기반(connection oriented)이다. 대표적인 예로 TCP가 있다. 5단계 : 세션 계층(Session) 양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다. TCP/IP 세션을 만들고 없애는 책임을 진다. 6단계 : 표현 계층(Presentation) 코드 간의 번역을 담당하여 사용자의 명령어를 완성 및 결과 표현한다. 데이터를 안전하게 전송하기 위해 암호화/복호화 하는 역할 수행 7단계 : 응용 계층(Application) HTTP, FTP, SMTP, POP3, IMAP, Telnet 등과 같은 프로토콜이 있다. 사용자는 용도에 맞는 프로토콜을 선택하고 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. ex) MS Office, Chrome … OSI 7 Layer 쉽게 외우는 방법 CIOKorea에 나와있는 재미있는 방법 물리 계층에서 응용 계층까지(아래에서 위로)(P-D-N-T-S-P-A) 소시지 피자를 버리지 말아 주세요(Please-Do-Not-Throw-Sausage-Pizza-Away) 참고 https://github.com/WeareSoft/tech-interview/ https://shlee0882.tistory.com/110 http://www.ciokorea.com/news/36536</summary></entry></feed>
