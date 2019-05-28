@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-27T17:06:11+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">동원엔터프라이즈 인적성 후기</title><link href="http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/27/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%9D%B8%EC%A0%81%EC%84%B1-%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="동원엔터프라이즈 인적성 후기" /><published>2019-05-27T00:11:00+09:00</published><updated>2019-05-27T00:11:00+09:00</updated><id>http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/27/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88%20%EC%9D%B8%EC%A0%81%EC%84%B1%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/27/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%9D%B8%EC%A0%81%EC%84%B1-%ED%9B%84%EA%B8%B0/">&lt;h1 id=&quot;-동원엔터프라이즈-인적성-후기-&quot;&gt;&amp;lt; 동원엔터프라이즈 인적성 후기 &amp;gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-28T14:41:49+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/11004 K번째 수</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80-11004-K%EB%B2%88%EC%A7%B8-%EC%88%98/" rel="alternate" type="text/html" title="백준/11004 K번째 수" /><published>2019-05-27T14:11:00+09:00</published><updated>2019-05-27T14:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80%2011004%20K%EB%B2%88%EC%A7%B8%20%EC%88%98</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/27/%EB%B0%B1%EC%A4%80-11004-K%EB%B2%88%EC%A7%B8-%EC%88%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/11004&quot;&gt;Backjoon :: K번째 수&lt;/a&gt; 문제는 MergeSort를 활용해 풀 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;범위가 500만이기 때문에 O(n^2) 시간복잡도로는 해결할 수 없다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;따라서 O(nlogn) 시간복잡도인 QuickSort와 MergeSort를 사용해야 하는데 평균 O(nlogn)인 MergeSort를 사용했다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MergeSort 작동 방식
+    &lt;ol&gt;
+      &lt;li&gt;현재 배열 num과 임시 배열 tmp를 파라미터로 넘긴다.&lt;/li&gt;
+      &lt;li&gt;start &amp;lt; end 가 아닐 경우까지 쪼갠다.&lt;/li&gt;
+      &lt;li&gt;다 쪼개졌다면 MergeSort 함수로 넘어간다.&lt;/li&gt;
+      &lt;li&gt;num 배열을 tmp 배열에 옮긴다.&lt;/li&gt;
+      &lt;li&gt;tmp 배열의 left, right 인덱스를 비교하면서 num 배열에 저장한다.&lt;/li&gt;
+      &lt;li&gt;while문을 통해 남아있는 배열을 num 배열에 옮긴다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//tmp 배열에 값을 옮긴다.&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//num 배열에 비교하면서 저장&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//어느 한쪽에 남은 tmp 배열을 num 배열에 저장&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 11004" /><category term="백준 K번째 수" /><category term="합병정렬" /><category term="MergeSort" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: K번째 수 문제는 MergeSort를 활용해 풀 수 있다. 범위가 500만이기 때문에 O(n^2) 시간복잡도로는 해결할 수 없다. 따라서 O(nlogn) 시간복잡도인 QuickSort와 MergeSort를 사용해야 하는데 평균 O(nlogn)인 MergeSort를 사용했다. MergeSort 작동 방식 현재 배열 num과 임시 배열 tmp를 파라미터로 넘긴다. start &amp;lt; end 가 아닐 경우까지 쪼갠다. 다 쪼개졌다면 MergeSort 함수로 넘어간다. num 배열을 tmp 배열에 옮긴다. tmp 배열의 left, right 인덱스를 비교하면서 num 배열에 저장한다. while문을 통해 남아있는 배열을 num 배열에 옮긴다. &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static StringTokenizer stk; public static StringBuilder sb = new StringBuilder(); public static int[] num, tmp; public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); stk = new StringTokenizer(br.readLine()); int n = Integer.parseInt(stk.nextToken()); int k = Integer.parseInt(stk.nextToken()); num = new int[n]; tmp = new int[n]; stk = new StringTokenizer(br.readLine()); for (int i = 0; i &amp;lt; n; i++) { num[i] = Integer.parseInt(stk.nextToken()); } merge(0, n - 1); System.out.println(num[k - 1]); } public static void merge(int start, int end) { if (start &amp;lt; end) { int mid = (start + end) / 2; merge(start, mid); merge(mid + 1, end); mergeSort(start, mid, end); } } public static void mergeSort(int start, int mid, int end) { for (int i = start; i &amp;lt;= end; i++) { tmp[i] = num[i]; //tmp 배열에 값을 옮긴다. } int left = start; int right = mid + 1; int idx = start; while (left &amp;lt;= mid &amp;amp;&amp;amp; right &amp;lt;= end) { //num 배열에 비교하면서 저장 if (tmp[left] &amp;gt;= tmp[right]) { num[idx++] = tmp[right++]; } else { num[idx++] = tmp[left++]; } } //어느 한쪽에 남은 tmp 배열을 num 배열에 저장 while (left &amp;lt;= mid) num[idx++] = tmp[left++]; while (right &amp;lt;= end) num[idx++] = tmp[right++]; } }</summary></entry><entry><title type="html">동원엔터프라이즈 인적성 후기</title><link href="http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/27/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%9D%B8%EC%A0%81%EC%84%B1-%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="동원엔터프라이즈 인적성 후기" /><published>2019-05-27T00:11:00+09:00</published><updated>2019-05-27T00:11:00+09:00</updated><id>http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/27/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88%20%EC%9D%B8%EC%A0%81%EC%84%B1%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EC%9D%B8%EC%A0%81%EC%84%B1/2019/05/27/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%9D%B8%EC%A0%81%EC%84%B1-%ED%9B%84%EA%B8%B0/">&lt;h1 id=&quot;-동원엔터프라이즈-인적성-후기-&quot;&gt;&amp;lt; 동원엔터프라이즈 인적성 후기 &amp;gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/dongwon.jpg&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -59,7 +136,7 @@
   &lt;li&gt;5/31 예정&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="인적성" /><category term="동원엔터프라이즈" /><summary type="html">&amp;lt; 동원엔터프라이즈 인적성 후기 &amp;gt; 5월 26일 잠실고등학교에서 동원엔터프라이즈 인적성을 보고 왔다. 자소서가 항목별 300자 쓰라고 하길래 붙을 줄 생각도 못하고있었는데 뜬금 합격. 오전/오후로 나누어져있는데 오후에 거의 900명가까이 됫으니 총 1800명정도? (계열사가 워낙 많지만) 입장시 로비에서 물이랑 GNC 비타민을 준다. &amp;lt; 인성 검사 후기 &amp;gt; 다른 기업과 달리 인성검사를 먼저 본다. 각 문항마다 매우아니다&amp;lt;&amp;gt;매우그렇다 로 선택한다. 다른 점은 4문항이 한 세트가 되어 가장 가깝다고 생각되는 것 하나와 가장 멀다고 생각되는 것 하나를 선택해야 한다. 인성검사치고 시간이 엄청 널널하지는 않다. &amp;lt; 적성 고사 후기 &amp;gt; 적성 고사는 언어, 수리, 상황판단, 상식 총 4개의 영역으로 구성되어 있다. 4 영역 모두 감점이 있기 때문에 찍을 수도 없다. 물론 상식은 좀 찍었지만.. 언어 지문이 엄청 길지는 않다. 평균적으로 시험지 한쪽에 2문제씩 나오는 정도? 4문제를 못풀었지만 언어 자신없는 내가 무난하다 느낄정도로 난이도가 평이했다. 수리 꽤 어려웠다고 생각한다. 6문제 가량을 못풀었다. 계산도 중간중간 꼬이다보니 시간이 많이 걸렸는데 연산하다가 자료해석은 거의 구경도못했다. 상황판단 이전 SKCT를 공부했던 경험이 있어서 별도로 공부는 진행하지 않았다. 큰 고민없이 25문제 전부 풀었다. 상식 정말 모르면 답이없다. 찍으면 안되지만 어느정도 보고 찍었다. 최근 이슈랑 약어가 나오기 때문에 공부를 한다기보다 평소 자세히 봐야한다. 예를 들면 FAANG -&amp;gt; WNSSS, 헌법 불합치, 대통령 권한, 디지털 디바이드, 학교폭력위원회 등 단순 공부로 할 수 있는 영역이 아니다. &amp;lt; 결과 발표 &amp;gt; 5/31 예정</summary></entry><entry><title type="html">백준/1722 순열의 순서</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80-1722-%EC%88%9C%EC%97%B4%EC%9D%98-%EC%88%9C%EC%84%9C/" rel="alternate" type="text/html" title="백준/1722 순열의 순서" /><published>2019-05-26T00:11:00+09:00</published><updated>2019-05-26T00:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80%201722%20%EC%88%9C%EC%97%B4%EC%9D%98%20%EC%88%9C%EC%84%9C</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/26/%EB%B0%B1%EC%A4%80-1722-%EC%88%9C%EC%97%B4%EC%9D%98-%EC%88%9C%EC%84%9C/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1722&quot;&gt;백준 순열의 순서&lt;/a&gt; 문제는 직접 구하지 않고 수학적인 연산이 필요하다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1722&quot;&gt;Backjoon :: 순열의 순서&lt;/a&gt; 문제는 직접 구하지 않고 수학적인 연산이 필요하다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;범위가 최대 20!이기 때문에 구하려고 들면 시간초과가 날 수 밖에 없다.&lt;/li&gt;
@@ -69,6 +146,8 @@
   &lt;li&gt;k를 입력받을 때 1을 빼주는데 이유는 k 번째 다음 순열을 출력하기 때문이다.&lt;/li&gt;
   &lt;li&gt;factorial 배열, 입력받는 k 변수는 long 형으로 선언해야 한다. 범위를 초과하기 때문!&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
 
@@ -131,15 +210,17 @@
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1722" /><category term="백준 순열의 순서" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; 백준 순열의 순서 문제는 직접 구하지 않고 수학적인 연산이 필요하다. 범위가 최대 20!이기 때문에 구하려고 들면 시간초과가 날 수 밖에 없다. 아이디어는 factorial 값을 저장해둔 배열을 하나 만들고 모듈러 연산을 한다. 만약 [3, 2, 4, 1] 배열이 있다고 했을 때 첫 번째가 4라면 [1, x, x, x], [2, x, x, x] 의 경우는 진행한 것으로 간주해 factorial[3] * 2 = 12 를 더한다. 이후 두 번째 숫자가 2라면 [3, 1, x, x]의 경우의 수는 전부 진행한 것으로 간주해 factorial[2] * 1 을 더한다. k를 입력받을 때 1을 빼주는데 이유는 k 번째 다음 순열을 출력하기 때문이다. factorial 배열, 입력받는 k 변수는 long 형으로 선언해야 한다. 범위를 초과하기 때문! &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static StringTokenizer stk; public static StringBuilder sb = new StringBuilder(); public static int n; public static long[] factorial; public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); n = Integer.parseInt(br.readLine()); int[] num = new int[n]; factorial = new long[n + 1]; //Factorial값 미리 구해서 저장 boolean[] isUsed = new boolean[n + 1]; //i번째 숫자 사용 여부 getFactorial(); stk = new StringTokenizer(br.readLine()); int type = Integer.parseInt(stk.nextToken()); if (type == 1) { long k = Long.parseLong(stk.nextToken()) - 1; for (int i = n; i &amp;gt; 0; i--) { long mod = k / factorial[i - 1] + 1; //i번째에서 몇 번째 숫자를 선택할 지 구한다 k %= factorial[i - 1]; long cnt = 0; //mod 번째 숫자를 찾기 위한 변수 int idx = 0; //앞에서부터 해당 숫자를 확인할 때 사용하는 변수 while (cnt != mod) { idx++; if (!isUsed[idx]) cnt++; } isUsed[idx] = true; sb.append(idx + &quot; &quot;); } } else { long ans = 0; for (int i = 0; i &amp;lt; n; i++) { num[i] = Integer.parseInt(stk.nextToken()); long cnt = 0; //움직이는 횟수 int idx = 0; //idx 숫자를 사용했는지 확인하는 변수 while (num[i] != idx) { idx++; if (!isUsed[idx]) cnt++; } isUsed[idx] = true; ans += (cnt - 1) * factorial[n - i - 1]; } sb.append(ans + 1); } System.out.println(sb); } public static void getFactorial() { //factorial값 구하는 함수 factorial[0] = 1; factorial[1] = 1; for (int i = 2; i &amp;lt;= n; i++) { factorial[i] = factorial[i - 1] * i; } } }</summary></entry><entry><title type="html">백준/1541 잃어버린 괄호</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80-1541-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/" rel="alternate" type="text/html" title="백준/1541 잃어버린 괄호" /><published>2019-05-25T23:11:00+09:00</published><updated>2019-05-25T23:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80%201541%20%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EA%B4%84%ED%98%B8</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80-1541-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1722" /><category term="백준 순열의 순서" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: 순열의 순서 문제는 직접 구하지 않고 수학적인 연산이 필요하다. 범위가 최대 20!이기 때문에 구하려고 들면 시간초과가 날 수 밖에 없다. 아이디어는 factorial 값을 저장해둔 배열을 하나 만들고 모듈러 연산을 한다. 만약 [3, 2, 4, 1] 배열이 있다고 했을 때 첫 번째가 4라면 [1, x, x, x], [2, x, x, x] 의 경우는 진행한 것으로 간주해 factorial[3] * 2 = 12 를 더한다. 이후 두 번째 숫자가 2라면 [3, 1, x, x]의 경우의 수는 전부 진행한 것으로 간주해 factorial[2] * 1 을 더한다. k를 입력받을 때 1을 빼주는데 이유는 k 번째 다음 순열을 출력하기 때문이다. factorial 배열, 입력받는 k 변수는 long 형으로 선언해야 한다. 범위를 초과하기 때문! &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static StringTokenizer stk; public static StringBuilder sb = new StringBuilder(); public static int n; public static long[] factorial; public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); n = Integer.parseInt(br.readLine()); int[] num = new int[n]; factorial = new long[n + 1]; //Factorial값 미리 구해서 저장 boolean[] isUsed = new boolean[n + 1]; //i번째 숫자 사용 여부 getFactorial(); stk = new StringTokenizer(br.readLine()); int type = Integer.parseInt(stk.nextToken()); if (type == 1) { long k = Long.parseLong(stk.nextToken()) - 1; for (int i = n; i &amp;gt; 0; i--) { long mod = k / factorial[i - 1] + 1; //i번째에서 몇 번째 숫자를 선택할 지 구한다 k %= factorial[i - 1]; long cnt = 0; //mod 번째 숫자를 찾기 위한 변수 int idx = 0; //앞에서부터 해당 숫자를 확인할 때 사용하는 변수 while (cnt != mod) { idx++; if (!isUsed[idx]) cnt++; } isUsed[idx] = true; sb.append(idx + &quot; &quot;); } } else { long ans = 0; for (int i = 0; i &amp;lt; n; i++) { num[i] = Integer.parseInt(stk.nextToken()); long cnt = 0; //움직이는 횟수 int idx = 0; //idx 숫자를 사용했는지 확인하는 변수 while (num[i] != idx) { idx++; if (!isUsed[idx]) cnt++; } isUsed[idx] = true; ans += (cnt - 1) * factorial[n - i - 1]; } sb.append(ans + 1); } System.out.println(sb); } public static void getFactorial() { //factorial값 구하는 함수 factorial[0] = 1; factorial[1] = 1; for (int i = 2; i &amp;lt;= n; i++) { factorial[i] = factorial[i - 1] * i; } } }</summary></entry><entry><title type="html">백준/1541 잃어버린 괄호</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80-1541-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/" rel="alternate" type="text/html" title="백준/1541 잃어버린 괄호" /><published>2019-05-25T23:11:00+09:00</published><updated>2019-05-25T23:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80%201541%20%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EA%B4%84%ED%98%B8</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/25/%EB%B0%B1%EC%A4%80-1541-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1541&quot;&gt;백준 잃어버린 괄호&lt;/a&gt; 그리디하게 접근하면 해결할 수 있는 문제다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1541&quot;&gt;Backjoon :: 잃어버린 괄호&lt;/a&gt; 그리디하게 접근하면 해결할 수 있는 문제다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다.&lt;/li&gt;
   &lt;li&gt;만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다.&lt;/li&gt;
   &lt;li&gt;만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까)&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
 
@@ -181,7 +262,7 @@
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1541" /><category term="백준 잃어버린 괄호" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; 백준 잃어버린 괄호 그리디하게 접근하면 해결할 수 있는 문제다. boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다. 만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다. 만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까) &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static int curr, plus, ans; //curr : +,- 연산 전의 숫자값 구하기, plus = curr값의 합 public static boolean hasMinus = false; //입력받은 문자열에 '-'가 있는지 확인 public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); String target = br.readLine(); for (int i = 0; i &amp;lt; target.length(); i++) { char ch = target.charAt(i); if (ch == '+') { plus += curr; curr = 0; } else if (ch == '-') { minusCal(); plus = 0; curr = 0; } else { curr = curr * 10 + (ch - '0'); } } minusCal(); System.out.println(ans); } public static void minusCal() { if (!hasMinus) { //'-' 연산이 없다면 더한다. plus += curr; ans += plus; hasMinus = true; } else { //'-' 연산이 있다면 ans값에 빼준다. plus += curr; ans -= plus; } } }</summary></entry><entry><title type="html">11번가 면접 후기</title><link href="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="11번가 면접 후기" /><published>2019-05-23T13:00:08+09:00</published><updated>2019-05-23T13:00:08+09:00</updated><id>http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80%20%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/">&lt;p&gt;&lt;img src=&quot;/assets/images/11st_11.jpg&quot; alt=&quot;11st_1&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1541" /><category term="백준 잃어버린 괄호" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: 잃어버린 괄호 그리디하게 접근하면 해결할 수 있는 문제다. boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다. 만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다. 만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까) &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static int curr, plus, ans; //curr : +,- 연산 전의 숫자값 구하기, plus = curr값의 합 public static boolean hasMinus = false; //입력받은 문자열에 '-'가 있는지 확인 public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); String target = br.readLine(); for (int i = 0; i &amp;lt; target.length(); i++) { char ch = target.charAt(i); if (ch == '+') { plus += curr; curr = 0; } else if (ch == '-') { minusCal(); plus = 0; curr = 0; } else { curr = curr * 10 + (ch - '0'); } } minusCal(); System.out.println(ans); } public static void minusCal() { if (!hasMinus) { //'-' 연산이 없다면 더한다. plus += curr; ans += plus; hasMinus = true; } else { //'-' 연산이 있다면 ans값에 빼준다. plus += curr; ans -= plus; } } }</summary></entry><entry><title type="html">11번가 면접 후기</title><link href="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="11번가 면접 후기" /><published>2019-05-23T13:00:08+09:00</published><updated>2019-05-23T13:00:08+09:00</updated><id>http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80%20%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/">&lt;p&gt;&lt;img src=&quot;/assets/images/11st_11.jpg&quot; alt=&quot;11st_1&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/11st_22.jpg&quot; alt=&quot;11st_2&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 
@@ -577,434 +658,4 @@
       &lt;td style=&quot;text-align: center&quot;&gt;get&lt;br /&gt;O(n)&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>ChanSu Kim</name></author><category term="자료구조" /><category term="ArrayList" /><category term="LinkedList" /><category term="시간복잡도" /><summary type="html">ArrayList와 LinkedList ArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다. 하지만 내부적으로 작동하는 방식은 다르다. import java.io.*; import java.util.*; public class Main { public static void main(String[] args) throws Exception { ArrayList&amp;lt;String&amp;gt; alist = new ArrayList&amp;lt;&amp;gt;(); alist.add(0,&quot;First&quot;); //O(1) alist.add(&quot;Third&quot;); //O(1) alist.add(1, &quot;Second&quot;); //O(n) alist.remove(1); //O(n) alist.get(1); //O(1) LinkedList&amp;lt;String&amp;gt; nlist = new LinkedList&amp;lt;&amp;gt;(); nlist.addFirst(&quot;First&quot;); //O(1) nlist.add(&quot;Second&quot;); //O(1) nlist.addLast(&quot;Third&quot;); //O(1) nlist.pollFirst(); //O(1) nlist.pollLast(); //O(1) nlist.get(0); //O(n) } } ArrayList 알고리즘 문제를 풀면서 가장 중요한 ArrayList와 LinkedList의 차이점은 시간복잡도의 차이라고 볼 수 있다. ArrayList는 동적으로 Array를 생성한다고 생각하면 배열과 비슷한 점이 많다. ArrayList는 remove 시에 O(n)의 시간복잡도를 가진다. i번째 배열을 지우고 최대 n만큼 앞으로 이동해야 하기 때문이다. &amp;lt; ArrayList 중간 Insert &amp;gt; &amp;lt; ArrayList 중간 Remove &amp;gt; 삽입 또한 맨 뒤에삽입과 중간삽입으로 나눌 수 있는데, 중간에 삽입하는 경우 O(n), 맨 뒤에 삽입하는 경우 O(1)의 시간복잡도를 가진다. 하지만 get 메소드는 해당 index를 바로 가져오기 때문에 O(1)의 시간복잡도를 가진다. LinkedList &amp;lt; LinkedList 중간 add &amp;gt; 이에 비해, LinkedList는 Node를 사용하기 때문에 add, poll 시에 O(1)의 시간복잡도를 가진다. 하지만 get 메소드 사용시에 앞에서부터 찾기 때문에 O(n)의 시간복잡도를 가진다. 정리   ArrayList LinkedList 삽입 addO(1) or O(n) add, addFirst, addLastO(1) 삭제 removeO(n) poll, pollFirst, pollLastO(1) 접근 getO(1) getO(n)</summary></entry><entry><title type="html">기억장치 관리</title><link href="http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC/" rel="alternate" type="text/html" title="기억장치 관리" /><published>2019-05-20T14:00:00+09:00</published><updated>2019-05-20T14:00:00+09:00</updated><id>http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98%20%EA%B4%80%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/os/2019/05/20/%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC/">&lt;h1 id=&quot;기억장치-배치-전략&quot;&gt;기억장치 배치 전략&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;최초 적합(First Fit) : 가능한 영역 중에서 첫 번째 분할 영역에 배치시키는 방법&lt;/li&gt;
-  &lt;li&gt;최적 적합(Best Fit)  : 가능한 영역 중에서 단편화를 가장 작게 남기는 분할 영역에 배치하는 방법&lt;/li&gt;
-  &lt;li&gt;최악 적합(Worst Fit) : 가능한 영역 중에서 단편화를 가장 많이 남기는 분할 영역에 배치하는 방법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;영역번호&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;영역크기&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;상태&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5K&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;공백&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;14K&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;공백&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10K&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;사용중&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;12K&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;공백&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;16K&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;공백&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;배치 전략 중 10K 프로그램이 할당 받는 영역의 번호는 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;최초 적합(First Fit) : 10K 프로그램이 들어갈 수 있는 첫 번째 영역은 2번이다.&lt;/li&gt;
-  &lt;li&gt;최적 적합(Best Fit)  : 10K 프로그램이 들어가고 단편화를 가장 작게 남기는 영역은 4번이다.&lt;/li&gt;
-  &lt;li&gt;최악 적합(Worst Fit) : 10K 프로그램이 들어가고 단편화를 가장 많이 남기는 영역은 5번이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;가상기억장치-구현&quot;&gt;가상기억장치 구현&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;보조기억장치(하드디스크)의 일부를 주기억장치처럼 사용하는 것으로 가상기억장치에 저장된 프로그램을 실행하려면 가상기억장치의 주소를 주기억장치의 주소로 바꾸눈 &lt;strong&gt;주소 변환 작업(매핑)&lt;/strong&gt;이 필요하다.&lt;/li&gt;
-  &lt;li&gt;페이징 기법 : 프로그램을 동일한 크기로 나눈 단위를 페이지라 하며 이 페이지를 블록으로 활용하는 기법&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;세그먼테이션 기법 : 프로그램을 가변적인 크기로 나눈 단위를 세그먼트라 하며, 이 세그먼트를 블록으로 사용하는 기법&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;내부 단변화 : 프로그램이 할당된 후 남는 빈 공간, 영역 크기 16K &amp;gt; 프로그램 크기 14K 인 경우 내부 단편화 2K 발생&lt;/li&gt;
-  &lt;li&gt;외부 단편화 : 영역 크기보다 프로그램 크기가 커서 할당되지 않아 남는 빈 공간, 영억 크기 12K &amp;lt; 프로그램 크기 14K 인 경우 외부 단편화 2K 발생&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;페이징-기법&quot;&gt;페이징 기법&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;페이지 : 프로그램을 일정한 크기로 나눈 단위(일반적으로 1~4KB)&lt;/li&gt;
-  &lt;li&gt;프레임 : 페이지 크기로 일정하게 나누어진 주기억장치 단위&lt;/li&gt;
-  &lt;li&gt;주소 변환을 위해서 페이지의 위치 정보를 가지고 있는 페이지 맵 테이블이 필요하다.&lt;/li&gt;
-  &lt;li&gt;외부 단편화는 발생하지 않지만 내부 단편화는 발생할 수 있다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;장점&lt;/strong&gt; : 여러 개의 프로그램을 동시 실행할 수 있어 다중 프로그래밍 정도가 향상된다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;단점&lt;/strong&gt; : 주소 변환 과정에서 CPU 사용시간이 낭비되고 내부 단편화 문제가 발생한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/paging.png&quot; alt=&quot;paging&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;세그먼테이션-기법&quot;&gt;세그먼테이션 기법&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;세그먼트 : 사용자 주소 공간을 논리적인 단위로 나눈 것, 각 세그먼트는 고유한 이름과 크기를 가진다.&lt;/li&gt;
-  &lt;li&gt;주소 변환을 위해 세그먼트가 존재하는 위치 정보를 가지고 있는 세그먼트 맵 테이블이 필요하다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;장점&lt;/strong&gt; : 외부단편화에 의한 기억장치 낭비를 줄일 수 있다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;단점&lt;/strong&gt; : 세그먼트 크기가 가변적이기 때문에 세그먼트 영역이 다른 세그먼트 영역을 침범하지 않는 기억장치 보호키가 필요하다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/segment.png&quot; alt=&quot;paging&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;페이지-교체-알고리즘&quot;&gt;페이지 교체 알고리즘&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;페이지 부재가 발생했을 때 가상기억장치의 필요한 페이지를 주기억장치에 적재하는 데 어떤 프레임을 선택해 교체할 지 결정하는 기법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;fifofirst-in-first-out&quot;&gt;FIFO(First In First Out)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;가장 오래 있었던 페이지를 고체하는 기법이다.&lt;/li&gt;
-  &lt;li&gt;벨레이디의 모순 현상이 발생한다.(프레임 수가 늘어나면 페이지 부재 수가 줄어들지 않는 현상)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;참조 페이지&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;5&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;5&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;1&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;4&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;5&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;5&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;1&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;1&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;3&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;3&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;4&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;페이지 부재&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;위 경우 페이지 부재가 총 9번 발생한다.&lt;/li&gt;
-  &lt;li&gt;하지만, Frame 개수가 4개로 늘어나도 페이지 부재는 10번으로 증가한다. =&amp;gt; 벨레이디 모순 현상&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;lruleast-recently-used&quot;&gt;LRU(Least Recently Used)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;최근에 가장 오랫동안 사용하지 않은 페이지를 교체하는 기법&lt;/li&gt;
-  &lt;li&gt;계수기나 스택같은 별로 하드웨어가 필요하며 시간적인 오버헤드가 발생하고, 실제로 구현하기 어렵다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;참조 페이지&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;5&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;5&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;3&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;5&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;5&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;1&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;3&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;페이지 부재&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;lfuleast-frequently-used&quot;&gt;LFU(Least Frequently Used)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;사용 빈도가 가장 적은 페이지를 교체하는 기법&lt;/li&gt;
-  &lt;li&gt;활발하게 사용되는 페이지는 사용 횟수가 많아 교체되지 않고 사용된다.&lt;/li&gt;
-  &lt;li&gt;초기에 많이 사용된 페이지가 그 후루도 사용되지 않을 경우 프레임을 계속 차지할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;참조 페이지&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;5&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;2&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;3&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;3&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;1&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;1&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Frame 4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;4&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;5&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;페이지 부재&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;가상기억창치-관리&quot;&gt;가상기억창치 관리&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;페이지 크기
-    &lt;ul&gt;
-      &lt;li&gt;페이지 크기가 작을 경우
-        &lt;ul&gt;
-          &lt;li&gt;페이지 단편화가 가모되고 볼필요한 내용이 주기억장치에 적재될 확률이 적다.&lt;/li&gt;
-          &lt;li&gt;페이지 정보를 가지는 페이지 맵 테이블 크기가 커지고 매핑 속도가 늦어진다.&lt;/li&gt;
-          &lt;li&gt;디스크 접근 횟수가 많아져 전체적인 입출력 시간이 증가한다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;페이지 크기가 클 경우
-        &lt;ul&gt;
-          &lt;li&gt;페이지 정보를 갖는 맵 테이블의 크기가 작아지고, 매핑 속도가 빨라진다.&lt;/li&gt;
-          &lt;li&gt;디스크 접근 횟수가 줄어들어 전체적인 입출력 시간이 감소한다.&lt;/li&gt;
-          &lt;li&gt;페이지 단편화가 증가되고, 한 개의 페이지를 주기억장치로 이동하는 시간이 늘어난다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;구역성(Locality)
-    &lt;ul&gt;
-      &lt;li&gt;어느 순간 특정 페이지만 집중적으로 참조하는 것&lt;/li&gt;
-      &lt;li&gt;시간 구역성
-        &lt;ul&gt;
-          &lt;li&gt;하나의 페이지를 일정 시간 동안 집중적으로 엑세스하는 현상&lt;/li&gt;
-          &lt;li&gt;한번 참조한 페이지는 가까운 시간 내에 계속 참조할 가능성이 높다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;공간 구역성
-        &lt;ul&gt;
-          &lt;li&gt;어느 하나의 페이지를 참조하면 그 근처의 페이지를 참조할 가능성이 높다.&lt;/li&gt;
-          &lt;li&gt;프로세스 실행 시 일정 위치의 페이지를 집중적으로 액세스하는 현상&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;워킹 셋(Working Set)
-    &lt;ul&gt;
-      &lt;li&gt;프로세스가 일정 시간 동안 자주 참조하는 페이지들의 집합&lt;/li&gt;
-      &lt;li&gt;자주 참조되는 워킹 셋을 주기억장치에 상주시킴으로써 페이지 부재 및 교체 현상이 줄어들어 사용이 안정화된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;스레싱(Thrashing)
-    &lt;ul&gt;
-      &lt;li&gt;프로세스 처리 시간보다 페이지 교체에 소요되는 시간이 더 많아지는 현상&lt;/li&gt;
-      &lt;li&gt;어떤 프로세스가 실제로 사용하는 프레임 수만큼의 프레임을 갖지 못한 경우 발생&lt;/li&gt;
-      &lt;li&gt;방지 방법 : 다중 프로그래밍 정도 완화, Working Set 이용&lt;/li&gt;
-      &lt;li&gt;cf) 다중 프로그래밍 정도 : 얼마나 많은 프로그램을 동시에 수행하는 정도&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;디스크-스케줄링&quot;&gt;디스크 스케줄링&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;사용할 데이터가 디스크 상의 여러 곳에 저장되어 있을 경우 디스크 헤드가 움직으는 경로를 결정하는 기법&lt;/li&gt;
-  &lt;li&gt;목적 : 처리량 최대화, 응답 시간 최소화, 응답 시간 편차의 최소화&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;fcfsfirst-come-first-service&quot;&gt;FCFS(First Come First Service)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;디스크 대기 큐에 가장 먼저 들어온 트랙에 대한 요청을 먼저 서비스하는 기법&lt;/li&gt;
-  &lt;li&gt;더 높은 우선순위의 요청이 입력되어도 순사가 바뀌지 않아 공평성이 보장된다.&lt;/li&gt;
-  &lt;li&gt;디스크 오버헤드가 적을 때 효율적이며, 오버헤드가 커지면 응답 시간이 길어진다.&lt;/li&gt;
-  &lt;li&gt;디스크 대기 큐 : 53,98,183,37,122,14,124,65,67&lt;/li&gt;
-  &lt;li&gt;이동 순서 : 53 -&amp;gt; 98 -&amp;gt; 183 -&amp;gt; 37 -&amp;gt; 122 -&amp;gt; 14 -&amp;gt; 124 -&amp;gt; 65 -&amp;gt; 67&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sstfshortest-seek-time-first&quot;&gt;SSTF(Shortest Seek Time First)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;탐색 거리가 가장 짧은 트랙에 대한 요청을 먼저 서비스하는 기법&lt;/li&gt;
-  &lt;li&gt;현재 헤드 위치에서 가장 가까운 거리에 있는 트랙으로 헤드를 이동한다.&lt;/li&gt;
-  &lt;li&gt;현재 헤드 위치에 가장 가까운 트랙에 대한 요청이 계속 발생하는 경우 먼 거리의 서비스는 무한정 기다리는 기아 상태가 발생할 수 있다.&lt;/li&gt;
-  &lt;li&gt;디스크 대기 큐 : 53,98,183,37,122,14,124,65,67&lt;/li&gt;
-  &lt;li&gt;이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;scan&quot;&gt;SCAN&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;SSTF가 갖는 탐색 시간의 편차를 해소하기 위한 기법&lt;/li&gt;
-  &lt;li&gt;현재 헤드 위치에서 진행 방향이 결정되면 탐색 거리가 짧은 순서에 따라 그 방향의 모든 요청을 서비스 후 역방향의 요청 사항을 서비스한다.&lt;/li&gt;
-  &lt;li&gt;오버헤드가 적을 경우 가장 효율적인 기법이다.&lt;/li&gt;
-  &lt;li&gt;디스크 대기 큐 : 53,98,183,37,122,14,124,65,67&lt;/li&gt;
-  &lt;li&gt;이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183 -&amp;gt; 199 -&amp;gt; 37 -&amp;gt; 14&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;c-scancircular-scan&quot;&gt;C-SCAN(Circular SCAN)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;항상 바깥쪽에서 안쪽으로 한 방향으로만 움직이며 가장 짧은 탐색 거리를 갖는 요청을 서비스하는 기법&lt;/li&gt;
-  &lt;li&gt;처음가 마지막을 인접시킨 것과 같은 원형 형태로 디스크를 처리한다.&lt;/li&gt;
-  &lt;li&gt;디스크 대기 큐 : 53,98,183,37,122,14,124,65,67&lt;/li&gt;
-  &lt;li&gt;이동 순서 : 53 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 0 -&amp;gt; 199 -&amp;gt; 183 -&amp;gt; 124 -&amp;gt; 122 -&amp;gt; 98 -&amp;gt; 67 -&amp;gt; 65&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="OS" /><category term="기억장치" /><category term="메모리 할당" /><category term="페이징" /><category term="세그먼테이션" /><category term="디스크 스케쥴링" /><summary type="html">기억장치 배치 전략 최초 적합(First Fit) : 가능한 영역 중에서 첫 번째 분할 영역에 배치시키는 방법 최적 적합(Best Fit) : 가능한 영역 중에서 단편화를 가장 작게 남기는 분할 영역에 배치하는 방법 최악 적합(Worst Fit) : 가능한 영역 중에서 단편화를 가장 많이 남기는 분할 영역에 배치하는 방법 영역번호 영역크기 상태 1 5K 공백 2 14K 공백 3 10K 사용중 4 12K 공백 5 16K 공백 배치 전략 중 10K 프로그램이 할당 받는 영역의 번호는 다음과 같다. 최초 적합(First Fit) : 10K 프로그램이 들어갈 수 있는 첫 번째 영역은 2번이다. 최적 적합(Best Fit) : 10K 프로그램이 들어가고 단편화를 가장 작게 남기는 영역은 4번이다. 최악 적합(Worst Fit) : 10K 프로그램이 들어가고 단편화를 가장 많이 남기는 영역은 5번이다. 가상기억장치 구현 보조기억장치(하드디스크)의 일부를 주기억장치처럼 사용하는 것으로 가상기억장치에 저장된 프로그램을 실행하려면 가상기억장치의 주소를 주기억장치의 주소로 바꾸눈 주소 변환 작업(매핑)이 필요하다. 페이징 기법 : 프로그램을 동일한 크기로 나눈 단위를 페이지라 하며 이 페이지를 블록으로 활용하는 기법 세그먼테이션 기법 : 프로그램을 가변적인 크기로 나눈 단위를 세그먼트라 하며, 이 세그먼트를 블록으로 사용하는 기법 내부 단변화 : 프로그램이 할당된 후 남는 빈 공간, 영역 크기 16K &amp;gt; 프로그램 크기 14K 인 경우 내부 단편화 2K 발생 외부 단편화 : 영역 크기보다 프로그램 크기가 커서 할당되지 않아 남는 빈 공간, 영억 크기 12K &amp;lt; 프로그램 크기 14K 인 경우 외부 단편화 2K 발생 페이징 기법 페이지 : 프로그램을 일정한 크기로 나눈 단위(일반적으로 1~4KB) 프레임 : 페이지 크기로 일정하게 나누어진 주기억장치 단위 주소 변환을 위해서 페이지의 위치 정보를 가지고 있는 페이지 맵 테이블이 필요하다. 외부 단편화는 발생하지 않지만 내부 단편화는 발생할 수 있다. 장점 : 여러 개의 프로그램을 동시 실행할 수 있어 다중 프로그래밍 정도가 향상된다. 단점 : 주소 변환 과정에서 CPU 사용시간이 낭비되고 내부 단편화 문제가 발생한다. 세그먼테이션 기법 세그먼트 : 사용자 주소 공간을 논리적인 단위로 나눈 것, 각 세그먼트는 고유한 이름과 크기를 가진다. 주소 변환을 위해 세그먼트가 존재하는 위치 정보를 가지고 있는 세그먼트 맵 테이블이 필요하다. 장점 : 외부단편화에 의한 기억장치 낭비를 줄일 수 있다. 단점 : 세그먼트 크기가 가변적이기 때문에 세그먼트 영역이 다른 세그먼트 영역을 침범하지 않는 기억장치 보호키가 필요하다. 페이지 교체 알고리즘 페이지 부재가 발생했을 때 가상기억장치의 필요한 페이지를 주기억장치에 적재하는 데 어떤 프레임을 선택해 교체할 지 결정하는 기법 FIFO(First In First Out) 가장 오래 있었던 페이지를 고체하는 기법이다. 벨레이디의 모순 현상이 발생한다.(프레임 수가 늘어나면 페이지 부재 수가 줄어들지 않는 현상) 참조 페이지 1 2 3 4 1 2 5 1 2 3 4 5 Frame 1 1 1 1 4 4 4 5 5 5 5 5 5 Frame 2   2 2 2 1 1 1 1 1 3 3 3 Frame 3     3 3 3 2 2 2 2 2 4 4 페이지 부재 O O O O O O O     O O   위 경우 페이지 부재가 총 9번 발생한다. 하지만, Frame 개수가 4개로 늘어나도 페이지 부재는 10번으로 증가한다. =&amp;gt; 벨레이디 모순 현상 LRU(Least Recently Used) 최근에 가장 오랫동안 사용하지 않은 페이지를 교체하는 기법 계수기나 스택같은 별로 하드웨어가 필요하며 시간적인 오버헤드가 발생하고, 실제로 구현하기 어렵다. 참조 페이지 2 3 2 1 5 2 3 5 Frame 1 2 2 2 2 2 2 2 2 Frame 2   3 3 3 5 5 5 5 Frame 3       1 1 1 3 3 페이지 부재 O O   O O   O   LFU(Least Frequently Used) 사용 빈도가 가장 적은 페이지를 교체하는 기법 활발하게 사용되는 페이지는 사용 횟수가 많아 교체되지 않고 사용된다. 초기에 많이 사용된 페이지가 그 후루도 사용되지 않을 경우 프레임을 계속 차지할 수 있다. 참조 페이지 2 3 1 3 1 2 4 5 Frame 1 2 2 2 2 2 2 2 2 Frame 2   3 3 3 3 3 3 3 Frame 3     1 1 1 1 1 1 Frame 4             4 5 페이지 부재 O O O       O O 가상기억창치 관리 페이지 크기 페이지 크기가 작을 경우 페이지 단편화가 가모되고 볼필요한 내용이 주기억장치에 적재될 확률이 적다. 페이지 정보를 가지는 페이지 맵 테이블 크기가 커지고 매핑 속도가 늦어진다. 디스크 접근 횟수가 많아져 전체적인 입출력 시간이 증가한다. 페이지 크기가 클 경우 페이지 정보를 갖는 맵 테이블의 크기가 작아지고, 매핑 속도가 빨라진다. 디스크 접근 횟수가 줄어들어 전체적인 입출력 시간이 감소한다. 페이지 단편화가 증가되고, 한 개의 페이지를 주기억장치로 이동하는 시간이 늘어난다. 구역성(Locality) 어느 순간 특정 페이지만 집중적으로 참조하는 것 시간 구역성 하나의 페이지를 일정 시간 동안 집중적으로 엑세스하는 현상 한번 참조한 페이지는 가까운 시간 내에 계속 참조할 가능성이 높다. 공간 구역성 어느 하나의 페이지를 참조하면 그 근처의 페이지를 참조할 가능성이 높다. 프로세스 실행 시 일정 위치의 페이지를 집중적으로 액세스하는 현상 워킹 셋(Working Set) 프로세스가 일정 시간 동안 자주 참조하는 페이지들의 집합 자주 참조되는 워킹 셋을 주기억장치에 상주시킴으로써 페이지 부재 및 교체 현상이 줄어들어 사용이 안정화된다. 스레싱(Thrashing) 프로세스 처리 시간보다 페이지 교체에 소요되는 시간이 더 많아지는 현상 어떤 프로세스가 실제로 사용하는 프레임 수만큼의 프레임을 갖지 못한 경우 발생 방지 방법 : 다중 프로그래밍 정도 완화, Working Set 이용 cf) 다중 프로그래밍 정도 : 얼마나 많은 프로그램을 동시에 수행하는 정도 디스크 스케줄링 사용할 데이터가 디스크 상의 여러 곳에 저장되어 있을 경우 디스크 헤드가 움직으는 경로를 결정하는 기법 목적 : 처리량 최대화, 응답 시간 최소화, 응답 시간 편차의 최소화 FCFS(First Come First Service) 디스크 대기 큐에 가장 먼저 들어온 트랙에 대한 요청을 먼저 서비스하는 기법 더 높은 우선순위의 요청이 입력되어도 순사가 바뀌지 않아 공평성이 보장된다. 디스크 오버헤드가 적을 때 효율적이며, 오버헤드가 커지면 응답 시간이 길어진다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 98 -&amp;gt; 183 -&amp;gt; 37 -&amp;gt; 122 -&amp;gt; 14 -&amp;gt; 124 -&amp;gt; 65 -&amp;gt; 67 SSTF(Shortest Seek Time First) 탐색 거리가 가장 짧은 트랙에 대한 요청을 먼저 서비스하는 기법 현재 헤드 위치에서 가장 가까운 거리에 있는 트랙으로 헤드를 이동한다. 현재 헤드 위치에 가장 가까운 트랙에 대한 요청이 계속 발생하는 경우 먼 거리의 서비스는 무한정 기다리는 기아 상태가 발생할 수 있다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183 SCAN SSTF가 갖는 탐색 시간의 편차를 해소하기 위한 기법 현재 헤드 위치에서 진행 방향이 결정되면 탐색 거리가 짧은 순서에 따라 그 방향의 모든 요청을 서비스 후 역방향의 요청 사항을 서비스한다. 오버헤드가 적을 경우 가장 효율적인 기법이다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 65 -&amp;gt; 67 -&amp;gt; 98 -&amp;gt; 122 -&amp;gt; 124 -&amp;gt; 183 -&amp;gt; 199 -&amp;gt; 37 -&amp;gt; 14 C-SCAN(Circular SCAN) 항상 바깥쪽에서 안쪽으로 한 방향으로만 움직이며 가장 짧은 탐색 거리를 갖는 요청을 서비스하는 기법 처음가 마지막을 인접시킨 것과 같은 원형 형태로 디스크를 처리한다. 디스크 대기 큐 : 53,98,183,37,122,14,124,65,67 이동 순서 : 53 -&amp;gt; 37 -&amp;gt; 14 -&amp;gt; 0 -&amp;gt; 199 -&amp;gt; 183 -&amp;gt; 124 -&amp;gt; 122 -&amp;gt; 98 -&amp;gt; 67 -&amp;gt; 65</summary></entry></feed>
+&lt;/table&gt;</content><author><name>ChanSu Kim</name></author><category term="자료구조" /><category term="ArrayList" /><category term="LinkedList" /><category term="시간복잡도" /><summary type="html">ArrayList와 LinkedList ArrayList와 LinktedList 둘다 모두 Java에서 제공하는 List 인터페이스를 구현한 Collection 구현체이다. 하지만 내부적으로 작동하는 방식은 다르다. import java.io.*; import java.util.*; public class Main { public static void main(String[] args) throws Exception { ArrayList&amp;lt;String&amp;gt; alist = new ArrayList&amp;lt;&amp;gt;(); alist.add(0,&quot;First&quot;); //O(1) alist.add(&quot;Third&quot;); //O(1) alist.add(1, &quot;Second&quot;); //O(n) alist.remove(1); //O(n) alist.get(1); //O(1) LinkedList&amp;lt;String&amp;gt; nlist = new LinkedList&amp;lt;&amp;gt;(); nlist.addFirst(&quot;First&quot;); //O(1) nlist.add(&quot;Second&quot;); //O(1) nlist.addLast(&quot;Third&quot;); //O(1) nlist.pollFirst(); //O(1) nlist.pollLast(); //O(1) nlist.get(0); //O(n) } } ArrayList 알고리즘 문제를 풀면서 가장 중요한 ArrayList와 LinkedList의 차이점은 시간복잡도의 차이라고 볼 수 있다. ArrayList는 동적으로 Array를 생성한다고 생각하면 배열과 비슷한 점이 많다. ArrayList는 remove 시에 O(n)의 시간복잡도를 가진다. i번째 배열을 지우고 최대 n만큼 앞으로 이동해야 하기 때문이다. &amp;lt; ArrayList 중간 Insert &amp;gt; &amp;lt; ArrayList 중간 Remove &amp;gt; 삽입 또한 맨 뒤에삽입과 중간삽입으로 나눌 수 있는데, 중간에 삽입하는 경우 O(n), 맨 뒤에 삽입하는 경우 O(1)의 시간복잡도를 가진다. 하지만 get 메소드는 해당 index를 바로 가져오기 때문에 O(1)의 시간복잡도를 가진다. LinkedList &amp;lt; LinkedList 중간 add &amp;gt; 이에 비해, LinkedList는 Node를 사용하기 때문에 add, poll 시에 O(1)의 시간복잡도를 가진다. 하지만 get 메소드 사용시에 앞에서부터 찾기 때문에 O(n)의 시간복잡도를 가진다. 정리   ArrayList LinkedList 삽입 addO(1) or O(n) add, addFirst, addLastO(1) 삭제 removeO(n) poll, pollFirst, pollLastO(1) 접근 getO(1) getO(n)</summary></entry></feed>
