@@ -1,4 +1,176 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T00:29:14+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">데이터베이스 고급 기능</title><link href="http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B3%A0%EA%B8%89-%EA%B8%B0%EB%8A%A5/" rel="alternate" type="text/html" title="데이터베이스 고급 기능" /><published>2019-05-29T00:01:00+09:00</published><updated>2019-05-29T00:01:00+09:00</updated><id>http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EA%B3%A0%EA%B8%89%20%EA%B8%B0%EB%8A%A5</id><content type="html" xml:base="http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B3%A0%EA%B8%89-%EA%B8%B0%EB%8A%A5/">&lt;h1 id=&quot;트랜잭션&quot;&gt;트랜잭션&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T00:56:28+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">정렬 알고리즘</title><link href="http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" rel="alternate" type="text/html" title="정렬 알고리즘" /><published>2019-05-29T00:01:11+09:00</published><updated>2019-05-29T00:01:11+09:00</updated><id>http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98</id><content type="html" xml:base="http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">&lt;h1 id=&quot;버블-정렬bubble-sort&quot;&gt;버블 정렬(Bubble Sort)&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/BubbleSort.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;인접한 두 숫자를 비교해서 변경하는 방법&lt;/li&gt;
+  &lt;li&gt;오른쪽부터 최대값/최소값을 정렬해 나가는 방식&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;BubbleSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;선택-정렬selection-sort&quot;&gt;선택 정렬(Selection Sort)&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/SelectionSort.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;자신보다 뒤에있는 숫자들 중 가장 작은 숫자를 발견해서 맨 앞에서부터 채우는 정렬&lt;/li&gt;
+  &lt;li&gt;왼쪽부터 최대값/최소값을 정렬해 나가는 방식&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SelectionSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;삽입-정렬insertion-sort&quot;&gt;삽입 정렬(Insertion Sort)&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/InsertionSort.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;i번째 배열 값부터 앞으로 탐색하며 자신보다 작다면 swap하는 정렬&lt;/li&gt;
+  &lt;li&gt;n번째 수행시 n번째 까지 정렬되는 방법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;InsertioinSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;퀵-정렬quick-sort&quot;&gt;퀵 정렬(Quick Sort)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;pivot을 정하고 pivot 좌/우를 정렬하면서 전체 배열을 정렬&lt;/li&gt;
+  &lt;li&gt;자바에서 Arrays.sort를 사용하변 내부는 Quick Sort로 구현되어있다.&lt;/li&gt;
+  &lt;li&gt;평균 O(nlogn) 이지만 최악에 O(n^2) 이므로 데이터가 많은 경우 조심해야 한다.&lt;/li&gt;
+  &lt;li&gt;최악의 경우란 아이러니하게도 정렬된 경우를 의미한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-작동-방식-&quot;&gt;&amp;lt; 작동 방식 &amp;gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/QuickSort_1.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;pivot을 가운데 값으로 설정하고 Left, Right 를 각 끝의 idx를 지정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/QuickSort_2.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;num[left] &amp;gt; pivot, num[right] &amp;lt; pivot 조건을 만족할 때까지 left, right를 움직인다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/QuickSort_3.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;둘의 위치를 바꾼다. 이렇게 되면 pivot 왼쪽에는 pivot보다 작은 값, 오른쪽에는 큰값이 정렬된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;QuickSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuickSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuickSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;합병-정렬merge-sort&quot;&gt;합병 정렬(Merge Sort)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;합병 정렬은 O(nlogn) 의 시간복잡도를 보장한다.&lt;/li&gt;
+  &lt;li&gt;단점은 임시 배열 공간이 추가로 필요하다는 점이다.&lt;/li&gt;
+  &lt;li&gt;분할 정복으로 구현하는데 배열을 최대한 나누고 각 배열을 다시 정렬하면서 합병하는 방식이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-작동-방식--1&quot;&gt;&amp;lt; 작동 방식 &amp;gt;&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;나눌 수 있는 만큼 끝까지 나눈다. (1개가 될때까지)&lt;/li&gt;
+  &lt;li&gt;나누어진 배열을 임시 배열에 저장하고 이를 비교하면서 확인한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/MergeSort_1.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;left = start, right = mid+1로 설정하고 서로 비교해 작은 값을 data에 덮어씌운다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/MergeSort_2.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;left를 한칸 이동하고 작은 값을 data에 덮어씌운다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/MergeSort_3.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;right를 한칸 이동하고 작은 값을 data에 덮어씌운다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/MergeSort_4.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;right가 배열의 끝에 도달했기 때문에 남은 left를 data에 덮어씌운다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//tmp 배열에 값을 옮긴다.&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//num 배열에 비교하면서 저장&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//어느 한쪽에 남은 tmp 배열을 num 배열에 저장&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="Algorithm" /><category term="Sort" /><category term="Bubble Sort" /><category term="Selection Sort" /><category term="Insertion Sort" /><category term="Quick Sort" /><category term="Merge Sort" /><summary type="html">버블 정렬(Bubble Sort) 인접한 두 숫자를 비교해서 변경하는 방법 오른쪽부터 최대값/최소값을 정렬해 나가는 방식 public void BubbleSort(int[] num) { for (int i = 0; i &amp;lt; num.length; i++) { for (int j = i + 1; j &amp;lt; num.length; j++) { if (num[i] &amp;gt; num[j]) swap(i, j, num); } } } 선택 정렬(Selection Sort) 자신보다 뒤에있는 숫자들 중 가장 작은 숫자를 발견해서 맨 앞에서부터 채우는 정렬 왼쪽부터 최대값/최소값을 정렬해 나가는 방식 public void SelectionSort(int[] num) { for (int i = 0; i &amp;lt; num.length; i++) { int min = i; for (int j = i + 1; j &amp;lt; num.length; j++) { if (num[min] &amp;gt; num[j]) min = j; } if (num[min] &amp;lt; num[i]) swap(min, i, num); } } 삽입 정렬(Insertion Sort) i번째 배열 값부터 앞으로 탐색하며 자신보다 작다면 swap하는 정렬 n번째 수행시 n번째 까지 정렬되는 방법 public void InsertioinSort(int[] num) { for (int i = 1; i &amp;lt; num.length; i++) { int tmp = num[i]; for (int j = i - 1; j &amp;gt;= 0; j--) { if (tmp &amp;lt; num[j]) { num[j + 1] = num[j]; num[j] = tmp; } } } } 퀵 정렬(Quick Sort) pivot을 정하고 pivot 좌/우를 정렬하면서 전체 배열을 정렬 자바에서 Arrays.sort를 사용하변 내부는 Quick Sort로 구현되어있다. 평균 O(nlogn) 이지만 최악에 O(n^2) 이므로 데이터가 많은 경우 조심해야 한다. 최악의 경우란 아이러니하게도 정렬된 경우를 의미한다. &amp;lt; 작동 방식 &amp;gt; pivot을 가운데 값으로 설정하고 Left, Right 를 각 끝의 idx를 지정한다. num[left] &amp;gt; pivot, num[right] &amp;lt; pivot 조건을 만족할 때까지 left, right를 움직인다. 둘의 위치를 바꾼다. 이렇게 되면 pivot 왼쪽에는 pivot보다 작은 값, 오른쪽에는 큰값이 정렬된다. &amp;lt; 소스 코드 &amp;gt; public int partition(int left, int right, int[] num) { int pivot = num[(left + right) / 2]; while (left &amp;lt;= right) { while (num[left] &amp;lt; pivot) left++; while (num[right] &amp;gt; pivot) right--; if (left &amp;lt;= right) { swap(left, right, num); left++; right--; } } return left; } public void QuickSort(int left, int right, int[] num) { if (left &amp;lt; right) { int pivot = partition(left, right, num); if (left &amp;lt; pivot - 1) QuickSort(left, pivot - 1, num); if (right &amp;gt; pivot) QuickSort(pivot, right, num); } } 합병 정렬(Merge Sort) 합병 정렬은 O(nlogn) 의 시간복잡도를 보장한다. 단점은 임시 배열 공간이 추가로 필요하다는 점이다. 분할 정복으로 구현하는데 배열을 최대한 나누고 각 배열을 다시 정렬하면서 합병하는 방식이다. &amp;lt; 작동 방식 &amp;gt; 나눌 수 있는 만큼 끝까지 나눈다. (1개가 될때까지) 나누어진 배열을 임시 배열에 저장하고 이를 비교하면서 확인한다. left = start, right = mid+1로 설정하고 서로 비교해 작은 값을 data에 덮어씌운다. left를 한칸 이동하고 작은 값을 data에 덮어씌운다. right를 한칸 이동하고 작은 값을 data에 덮어씌운다. right가 배열의 끝에 도달했기 때문에 남은 left를 data에 덮어씌운다. public void merge(int start, int end) { if (start &amp;lt; end) { int mid = (start + end) / 2; merge(start, mid); merge(mid + 1, end); mergeSort(start, mid, end); } } public void mergeSort(int start, int mid, int end) { for (int i = start; i &amp;lt;= end; i++) { tmp[i] = num[i]; //tmp 배열에 값을 옮긴다. } int left = start; int right = mid + 1; int idx = start; while (left &amp;lt;= mid &amp;amp;&amp;amp; right &amp;lt;= end) { //num 배열에 비교하면서 저장 if (tmp[left] &amp;gt;= tmp[right]) { num[idx++] = tmp[right++]; } else { num[idx++] = tmp[left++]; } } //어느 한쪽에 남은 tmp 배열을 num 배열에 저장 while (left &amp;lt;= mid) num[idx++] = tmp[left++]; while (right &amp;lt;= end) num[idx++] = tmp[right++]; }</summary></entry><entry><title type="html">데이터베이스 고급 기능</title><link href="http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B3%A0%EA%B8%89-%EA%B8%B0%EB%8A%A5/" rel="alternate" type="text/html" title="데이터베이스 고급 기능" /><published>2019-05-29T00:01:00+09:00</published><updated>2019-05-29T00:01:00+09:00</updated><id>http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EA%B3%A0%EA%B8%89%20%EA%B8%B0%EB%8A%A5</id><content type="html" xml:base="http://localhost:4000/database/2019/05/29/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B3%A0%EA%B8%89-%EA%B8%B0%EB%8A%A5/">&lt;h1 id=&quot;트랜잭션&quot;&gt;트랜잭션&lt;/h1&gt;
 &lt;h2 id=&quot;-트랜잭션-정의-&quot;&gt;&amp;lt; 트랜잭션 정의 &amp;gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;한꺼번에 모두 수행되어야 할 일련의 연산들&lt;/li&gt;
@@ -787,79 +959,4 @@
   &lt;li&gt;UDP Header의 CheckSum 필드를 통해 최소한의 오류만 검출한다.&lt;/li&gt;
   &lt;li&gt;흐름제어를 못하기 때문에 패킷이 재대로 전송 되었는지, 오류가 없는지 확인할 수 없다.&lt;/li&gt;
   &lt;li&gt;빠른 속도를 보여주지만 신뢰성이 없다. 스트리밍같은 서비스에 주로 사용된다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="TCP" /><category term="가상회선 패킷" /><category term="UDP" /><category term="데이터그램 패킷" /><summary type="html">TCP((Transmission Control Protocol) 인터넷 상에서 데이터를 패킷 형태로 보내기 위해 IP와 함께 사용하는 프로토콜이다. TCP와 IP를 함께 사용하는데, TCP는 발신지에서 수신지로 패킷을 전송하기 위한 논리적 경로를 배정한다. 연결형 서비스로 가상 회선 방식을 제공한다. 연결 시 3-way Handshaking 사용, 해체 시 4-way Handshaking 사용 흐름제어(송신하는 곳에서 감당이 안되게 많은 데이터를 빠르게 보내 수신하는 곳에서 문제가 일어나는 것을 막는다) 혼잡제어(네트워크 내의 패킷 수가 넘치게 증가하지 않도록 방지하는 것) 높은 신뢰성을 보장하지만 UDP보다 느린 속도를 가진다. ( 신뢰성 &amp;gt; 속도 ) UDP(User Datagram Protocol) 데이터를 데이터그램 단위로 처리하는 프로토콜, 데이터그램이란 독립적인 관계를 지니는 패킷 비연결형 프로토콜로 연결을 위한 논리적인 경로가 없다. 즉, 각각 다른 경로로 패킷을 전송하여 빠른 속도를 보여준다. UDP Header의 CheckSum 필드를 통해 최소한의 오류만 검출한다. 흐름제어를 못하기 때문에 패킷이 재대로 전송 되었는지, 오류가 없는지 확인할 수 없다. 빠른 속도를 보여주지만 신뢰성이 없다. 스트리밍같은 서비스에 주로 사용된다.</summary></entry><entry><title type="html">OSI 7 Layer란?</title><link href="http://localhost:4000/network/2019/05/22/OSI-7-Layer/" rel="alternate" type="text/html" title="OSI 7 Layer란?" /><published>2019-05-22T00:00:30+09:00</published><updated>2019-05-22T00:00:30+09:00</updated><id>http://localhost:4000/network/2019/05/22/OSI%207%20Layer</id><content type="html" xml:base="http://localhost:4000/network/2019/05/22/OSI-7-Layer/">&lt;h1 id=&quot;osi-7-layer이란&quot;&gt;OSI 7 Layer이란?&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;개방형 시스템 상호연결(Open System Intercon-nection, OSI) 모델&lt;/li&gt;
-  &lt;li&gt;상호 이질적인 네트워크간의 연결에 어려움이 많은데 이러한 호환성의 결여를 막기위해 ISO(국제 표준화 기구)에서는 OSI 참조모델을 제시함&lt;/li&gt;
-  &lt;li&gt;네트워크에서 통신이 일어나는 과정을 7단계로 나눈 것&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;네트워크 통신 과정을 7단계로 나눈 이유는?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;계층을 나눈 이유는 통신이 일어나는 과정이 단계별로 파악할 수 있기 때문이다!&lt;/li&gt;
-  &lt;li&gt;문제가 발생하더라도 해당 계층만 고치면 된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;osi-7-layer-구조&quot;&gt;OSI 7 Layer 구조&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/osi7layer.png&quot; alt=&quot;web_process&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;1단계--물리-계층physical&quot;&gt;1단계 : 물리 계층(Physical)**&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;말 그대로 시스템의 물리적 표현을 나타낸다. (=물리적 장비)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2단계--데이터-링크-계층-data-link&quot;&gt;2단계 : 데이터 링크 계층 (Data Link)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;노드 간 데이터 전송을 제공하며 물리 계층의 오류 수정도 처리한다.&lt;/li&gt;
-  &lt;li&gt;주소 값은 물리적으로 할당 받는데, 이는 네트워크 카드가 만들어질 때부터 맥 주소(MAC address)가 정해져 있다는 뜻이다. ex) 이더넷&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3단계--네트워크-계층network&quot;&gt;3단계 : 네트워크 계층(Network)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;여러개의 노드를 거칠때마다 경로를 찾아주는 역할을 하는 계층&lt;/li&gt;
-  &lt;li&gt;데이터를 목적지까지 가장 안전하고 빠르게 전달하는 기능(라우팅)&lt;/li&gt;
-  &lt;li&gt;보스턴에 있는 컴퓨터가 캘리포니아에 있는 서버에 연결하려고 할 때 그 경로는 수백 만 가지다. 이 계층의 라우터가 이 작업을 효율적으로 처리한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4단계--전송-계층transport&quot;&gt;4단계 : 전송 계층(Transport)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;양 끝단(End to end)의 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해 주어, 상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다.&lt;/li&gt;
-  &lt;li&gt;전송 계층은 특정 연결의 유효성을 제어하고, 일부 프로토콜은 상태 개념이 있고(stateful), 연결 기반(connection oriented)이다. 대표적인 예로 TCP가 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5단계--세션-계층session&quot;&gt;5단계 : 세션 계층(Session)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다.&lt;/li&gt;
-  &lt;li&gt;TCP/IP 세션을 만들고 없애는 책임을 진다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6단계--표현-계층presentation&quot;&gt;6단계 : 표현 계층(Presentation)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드 간의 번역을 담당하여 사용자의 명령어를 완성 및 결과 표현한다.&lt;/li&gt;
-  &lt;li&gt;데이터를 안전하게 전송하기 위해 암호화/복호화 하는 역할 수행&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;7단계--응용-계층application&quot;&gt;7단계 : 응용 계층(Application)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;HTTP, FTP, SMTP, POP3, IMAP, Telnet 등과 같은 프로토콜이 있다.&lt;/li&gt;
-  &lt;li&gt;사용자는 용도에 맞는 프로토콜을 선택하고 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. ex) MS Office, Chrome …&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;osi-7-layer-쉽게-외우는-방법&quot;&gt;OSI 7 Layer 쉽게 외우는 방법&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;CIOKorea에 나와있는 재미있는 방법&lt;/li&gt;
-  &lt;li&gt;물리 계층에서 응용 계층까지(아래에서 위로)(P-D-N-T-S-P-A)&lt;/li&gt;
-  &lt;li&gt;소시지 피자를 버리지 말아 주세요(Please-Do-Not-Throw-Sausage-Pizza-Away)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/WeareSoft/tech-interview/&quot;&gt;https://github.com/WeareSoft/tech-interview/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://shlee0882.tistory.com/110&quot;&gt;https://shlee0882.tistory.com/110&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.ciokorea.com/news/36536&quot;&gt;http://www.ciokorea.com/news/36536&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="OSI 7 Layer" /><summary type="html">OSI 7 Layer이란? 개방형 시스템 상호연결(Open System Intercon-nection, OSI) 모델 상호 이질적인 네트워크간의 연결에 어려움이 많은데 이러한 호환성의 결여를 막기위해 ISO(국제 표준화 기구)에서는 OSI 참조모델을 제시함 네트워크에서 통신이 일어나는 과정을 7단계로 나눈 것 네트워크 통신 과정을 7단계로 나눈 이유는? 계층을 나눈 이유는 통신이 일어나는 과정이 단계별로 파악할 수 있기 때문이다! 문제가 발생하더라도 해당 계층만 고치면 된다. OSI 7 Layer 구조 1단계 : 물리 계층(Physical)** 말 그대로 시스템의 물리적 표현을 나타낸다. (=물리적 장비) 2단계 : 데이터 링크 계층 (Data Link) 노드 간 데이터 전송을 제공하며 물리 계층의 오류 수정도 처리한다. 주소 값은 물리적으로 할당 받는데, 이는 네트워크 카드가 만들어질 때부터 맥 주소(MAC address)가 정해져 있다는 뜻이다. ex) 이더넷 3단계 : 네트워크 계층(Network) 여러개의 노드를 거칠때마다 경로를 찾아주는 역할을 하는 계층 데이터를 목적지까지 가장 안전하고 빠르게 전달하는 기능(라우팅) 보스턴에 있는 컴퓨터가 캘리포니아에 있는 서버에 연결하려고 할 때 그 경로는 수백 만 가지다. 이 계층의 라우터가 이 작업을 효율적으로 처리한다. 4단계 : 전송 계층(Transport) 양 끝단(End to end)의 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해 주어, 상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다. 전송 계층은 특정 연결의 유효성을 제어하고, 일부 프로토콜은 상태 개념이 있고(stateful), 연결 기반(connection oriented)이다. 대표적인 예로 TCP가 있다. 5단계 : 세션 계층(Session) 양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다. TCP/IP 세션을 만들고 없애는 책임을 진다. 6단계 : 표현 계층(Presentation) 코드 간의 번역을 담당하여 사용자의 명령어를 완성 및 결과 표현한다. 데이터를 안전하게 전송하기 위해 암호화/복호화 하는 역할 수행 7단계 : 응용 계층(Application) HTTP, FTP, SMTP, POP3, IMAP, Telnet 등과 같은 프로토콜이 있다. 사용자는 용도에 맞는 프로토콜을 선택하고 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. ex) MS Office, Chrome … OSI 7 Layer 쉽게 외우는 방법 CIOKorea에 나와있는 재미있는 방법 물리 계층에서 응용 계층까지(아래에서 위로)(P-D-N-T-S-P-A) 소시지 피자를 버리지 말아 주세요(Please-Do-Not-Throw-Sausage-Pizza-Away) 참고 https://github.com/WeareSoft/tech-interview/ https://shlee0882.tistory.com/110 http://www.ciokorea.com/news/36536</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="TCP" /><category term="가상회선 패킷" /><category term="UDP" /><category term="데이터그램 패킷" /><summary type="html">TCP((Transmission Control Protocol) 인터넷 상에서 데이터를 패킷 형태로 보내기 위해 IP와 함께 사용하는 프로토콜이다. TCP와 IP를 함께 사용하는데, TCP는 발신지에서 수신지로 패킷을 전송하기 위한 논리적 경로를 배정한다. 연결형 서비스로 가상 회선 방식을 제공한다. 연결 시 3-way Handshaking 사용, 해체 시 4-way Handshaking 사용 흐름제어(송신하는 곳에서 감당이 안되게 많은 데이터를 빠르게 보내 수신하는 곳에서 문제가 일어나는 것을 막는다) 혼잡제어(네트워크 내의 패킷 수가 넘치게 증가하지 않도록 방지하는 것) 높은 신뢰성을 보장하지만 UDP보다 느린 속도를 가진다. ( 신뢰성 &amp;gt; 속도 ) UDP(User Datagram Protocol) 데이터를 데이터그램 단위로 처리하는 프로토콜, 데이터그램이란 독립적인 관계를 지니는 패킷 비연결형 프로토콜로 연결을 위한 논리적인 경로가 없다. 즉, 각각 다른 경로로 패킷을 전송하여 빠른 속도를 보여준다. UDP Header의 CheckSum 필드를 통해 최소한의 오류만 검출한다. 흐름제어를 못하기 때문에 패킷이 재대로 전송 되었는지, 오류가 없는지 확인할 수 없다. 빠른 속도를 보여주지만 신뢰성이 없다. 스트리밍같은 서비스에 주로 사용된다.</summary></entry></feed>
