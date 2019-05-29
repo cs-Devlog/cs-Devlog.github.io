@@ -2,6 +2,33 @@
 <search>
   
     <entry>
+      <title><![CDATA[백준/10779 쇠막대기]]></title>
+      <url>/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/</url>
+      <content type="text"><![CDATA[&lt; 문제 분석 및 풀이 방법 &gt;Backjoon :: 쇠막대기 문제는 Stack 자료구조를 활용해 풀 수 있다.  입력 받은 문자열을 하나씩 탐색하면서 ‘(‘ 일때와 ‘)’로 나누어 생각한다.  ’(‘ 문자라면 Stack에 추가한다.  ’)’ 문자라면 바로 앞에 ‘(‘ 문자가 오는지 확인한다. (레이저인지 여부를 확인하기 위해)          만약 레이저라면 Stack 크기만큼 더해준다. (레이저로 나누면 Stack 크기만큼 레이저 왼쪽에 막대기가 생기기 때문!)      만약 막대기 끝이라면 막대기 갯수인 1개를 더해준다.    (끝부분 막대기를 더해준다)      &lt; 소스 코드 &gt;import java.io.*;import java.util.*;public class Main {    public static void main(String[] args) throws Exception {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        char[] target = br.readLine().toCharArray();        Stack&lt;Character&gt; stack = new Stack&lt;&gt;();        int ans = 0;        for (int i = 0; i &lt; target.length; i++) {            char ch = target[i];            if (ch == '(') {                stack.push(target[i]);                continue;            }            stack.pop();                //')' 문자 제거            if (target[i - 1] == '(') { //만약 레이저라면                ans += stack.size();    //레이저 왼쪽 막대 갯수를 더한다            } else {                    //막대의 끝이라면                ans += 1;               //자기 자신 막대를 더한다            }        }        System.out.println(ans);    }}]]></content>
+      <categories>
+        
+          <category> 백준 </category>
+        
+          <category> Algorithm </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> 백준 </tag>
+        
+          <tag> 백준 10779 </tag>
+        
+          <tag> 백준 쇠막대기 </tag>
+        
+          <tag> Stack </tag>
+        
+          <tag> 스텍 </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title><![CDATA[정렬 알고리즘]]></title>
       <url>/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</url>
       <content type="text"><![CDATA[버블 정렬(Bubble Sort)  인접한 두 숫자를 비교해서 변경하는 방법  오른쪽부터 최대값/최소값을 정렬해 나가는 방식public void BubbleSort(int[] num) {    for (int i = 0; i &lt; num.length; i++) {        for (int j = i + 1; j &lt; num.length; j++) {            if (num[i] &gt; num[j]) swap(i, j, num);        }    }}선택 정렬(Selection Sort)  자신보다 뒤에있는 숫자들 중 가장 작은 숫자를 발견해서 맨 앞에서부터 채우는 정렬  왼쪽부터 최대값/최소값을 정렬해 나가는 방식public void SelectionSort(int[] num) {    for (int i = 0; i &lt; num.length; i++) {        int min = i;        for (int j = i + 1; j &lt; num.length; j++) {            if (num[min] &gt; num[j]) min = j;        }        if (num[min] &lt; num[i]) swap(min, i, num);    }}삽입 정렬(Insertion Sort)  i번째 배열 값부터 앞으로 탐색하며 자신보다 작다면 swap하는 정렬  n번째 수행시 n번째 까지 정렬되는 방법public void InsertioinSort(int[] num) {    for (int i = 1; i &lt; num.length; i++) {        int tmp = num[i];        for (int j = i - 1; j &gt;= 0; j--) {            if (tmp &lt; num[j]) {                num[j + 1] = num[j];                num[j] = tmp;            }        }    }}퀵 정렬(Quick Sort)  pivot을 정하고 pivot 좌/우를 정렬하면서 전체 배열을 정렬  자바에서 Arrays.sort를 사용하변 내부는 Quick Sort로 구현되어있다.  평균 O(nlogn) 이지만 최악에 O(n^2) 이므로 데이터가 많은 경우 조심해야 한다.  최악의 경우란 아이러니하게도 정렬된 경우를 의미한다.&lt; 작동 방식 &gt;  pivot을 가운데 값으로 설정하고 Left, Right 를 각 끝의 idx를 지정한다.  num[left] &gt; pivot, num[right] &lt; pivot 조건을 만족할 때까지 left, right를 움직인다.  둘의 위치를 바꾼다. 이렇게 되면 pivot 왼쪽에는 pivot보다 작은 값, 오른쪽에는 큰값이 정렬된다.&lt; 소스 코드 &gt;public int partition(int left, int right, int[] num) {    int pivot = num[(left + right) / 2];    while (left &lt;= right) {        while (num[left] &lt; pivot) left++;        while (num[right] &gt; pivot) right--;        if (left &lt;= right) {            swap(left, right, num);            left++;            right--;        }    }    return left;} public void QuickSort(int left, int right, int[] num) {    if (left &lt; right) {        int pivot = partition(left, right, num);        if (left &lt; pivot - 1) QuickSort(left, pivot - 1, num);        if (right &gt; pivot) QuickSort(pivot, right, num);    }}합병 정렬(Merge Sort)  합병 정렬은 O(nlogn) 의 시간복잡도를 보장한다.  단점은 임시 배열 공간이 추가로 필요하다는 점이다.  분할 정복으로 구현하는데 배열을 최대한 나누고 각 배열을 다시 정렬하면서 합병하는 방식이다.&lt; 작동 방식 &gt;  나눌 수 있는 만큼 끝까지 나눈다. (1개가 될때까지)  나누어진 배열을 임시 배열에 저장하고 이를 비교하면서 확인한다.  left = start, right = mid+1로 설정하고 서로 비교해 작은 값을 data에 덮어씌운다.  left를 한칸 이동하고 작은 값을 data에 덮어씌운다.  right를 한칸 이동하고 작은 값을 data에 덮어씌운다.  right가 배열의 끝에 도달했기 때문에 남은 left를 data에 덮어씌운다.public void merge(int start, int end) {    if (start &lt; end) {        int mid = (start + end) / 2;        merge(start, mid);        merge(mid + 1, end);        mergeSort(start, mid, end);    }}public void mergeSort(int start, int mid, int end) {    for (int i = start; i &lt;= end; i++) {        tmp[i] = num[i];    //tmp 배열에 값을 옮긴다.    }    int left = start;    int right = mid + 1;    int idx = start;    while (left &lt;= mid &amp;&amp; right &lt;= end) {        //num 배열에 비교하면서 저장        if (tmp[left] &gt;= tmp[right]) {            num[idx++] = tmp[right++];        } else {            num[idx++] = tmp[left++];        }    }    //어느 한쪽에 남은 tmp 배열을 num 배열에 저장    while (left &lt;= mid) num[idx++] = tmp[left++];    while (right &lt;= end) num[idx++] = tmp[right++];}]]></content>
