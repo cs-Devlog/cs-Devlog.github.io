@@ -121,6 +121,10 @@
 <lastmod>2019-05-29T11:11:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/network/2019/05/29/TCP%EC%99%80-IP/</loc>
+<lastmod>2019-05-29T13:01:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -155,5 +159,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page3/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page4/</loc>
 </url>
 </urlset>

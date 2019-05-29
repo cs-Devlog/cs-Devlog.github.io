@@ -1,4 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T13:56:19+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/10779 쇠막대기</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/" rel="alternate" type="text/html" title="백준/10779 쇠막대기" /><published>2019-05-29T11:11:00+09:00</published><updated>2019-05-29T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80%2010779%20%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T16:23:29+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">TCP/IP</title><link href="http://localhost:4000/network/2019/05/29/TCP%EC%99%80-IP/" rel="alternate" type="text/html" title="TCP/IP" /><published>2019-05-29T13:01:00+09:00</published><updated>2019-05-29T13:01:00+09:00</updated><id>http://localhost:4000/network/2019/05/29/TCP%EC%99%80%20IP</id><content type="html" xml:base="http://localhost:4000/network/2019/05/29/TCP%EC%99%80-IP/">&lt;h1 id=&quot;네트워크-용어&quot;&gt;네트워크 용어&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;네트워크 : 컴퓨터끼리 정보를 주고 받을 수 있는 상태를 말한다.&lt;/li&gt;
+  &lt;li&gt;프로토콜 : 국가끼리 문제없이 교류할 수 있도록 정해진 규칙&lt;/li&gt;
+  &lt;li&gt;TCP/IP : 네트워크 상 송수신을 원할하게 수행하기 위한 규칙으로 데이터 송수신에 관한 일련의 작업을 하나로 모은 것&lt;/li&gt;
+  &lt;li&gt;패킷    : 데이터 전송시 데이터를 일정 크기로 잘라서 보내는 방식으로, 보통 1 패킷 = 1024 비트이다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/22/OSI-7-Layer/&quot;&gt;&lt;strong&gt;cf) OSI 7 계층&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;tcpip-작동-방식&quot;&gt;TCP/IP 작동 방식&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 애플리케이션 층 (HTTP, SMTP, POP3, FTP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;애플리케이션간 데이터를 주고받기 위해 필요한 정보를 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 트랜스포트 층 (TCP / UDP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;데이터를 패킷으로 나누고 애플리케이션을 나타내는 번호와 데이터 조합하기 위한 정보를 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 네트워크 층 ( IP )&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;송수신할 컴퓨터 주소와 불명인 경우 데이터를 파기하는 표시 등을 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 데이터링크 층 (Ethernet)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;네트워크 종류에 맞춘 형식으로 수신지 정보 등을 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 물리 층&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;비트열을 신호로 변환해 전송한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 물리 층&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;신호를 비트열로 변환한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 데이터링크 층 (Ethernet)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;헤더에 적힌 정보를 확인하고 지정된 프로토콜에게 전달한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 네트워크 층 ( IP )&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;헤더에 적힌 수신처가 맞는지 확인하고 지정된 프로토콜에게 전달한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 트랜스포트 층 (TCP / UDP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;헤더를 확인하고 데이터를 순서대로 나열해 조합한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 애플리케이션 층 (HTTP, SMTP, POP3, FTP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;조합된 데이터를 확인한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;애플리케이션-층&quot;&gt;애플리케이션 층&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;컴퓨터끼리의 주고받기를 사용자가 이용할 수 있는 ‘통신 서비스’ 형태로 만드는 것(서버/클라이언트)&lt;/li&gt;
+  &lt;li&gt;애플리케이션 헤더 : 요청과 응답에 관한 정보가 들어있는 헤더&lt;/li&gt;
+  &lt;li&gt;HTTP 프로토콜 : 하나의 요청에 하나의 응답을 반환하고 연결을 해제하는 방법&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/21/HTTP와-REST-API/&quot;&gt;&lt;strong&gt;cf) HTTP 프로토콜과 Cookie/Session&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;트랜스포트-층&quot;&gt;트랜스포트 층&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;애플리케이션 층과 네트워크 층의 중개 역할을 수행&lt;/li&gt;
+  &lt;li&gt;TCP 프로토콜과 UDP 프로토콜이 존재한다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/22/TCP와-UDP/&quot;&gt;&lt;strong&gt;cf) TCP/UDP 프로토콜 차이점&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;네트워크-층&quot;&gt;네트워크 층&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;누가 누구에게 전달할 지를 결정하는 주요 역할, 적절한 루트를 사용해 전달하는 역할(Router)&lt;/li&gt;
+  &lt;li&gt;IP 주소 : 인터넷 상의 컴퓨터들을 식별하기 위해 인터넷에 연결된 컴퓨터에 주어지는 숫자&lt;/li&gt;
+  &lt;li&gt;IP 프로토콜 : 비커넥션형 프로토콜로 UDP와 동일하다. 신뢰성 있는 IP를 지원하기 위해 ICMP 프로토콜이 있다.&lt;/li&gt;
+  &lt;li&gt;ICMP 프로토콜 : 수신인에게 전달되지 않는 등 문제 발생 시 송신자에게 그 사실을 알려주는 메세지를 전송한다.&lt;/li&gt;
+  &lt;li&gt;IP 데이터그램 : 트랜스포트 층으로부터 데이터를 받아 IP 헤더를 붙인 것&lt;/li&gt;
+  &lt;li&gt;Best Effort 방식 -&amp;gt; 노력은 하지만 결과는 보장하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;데이터링크-층&quot;&gt;데이터링크 층&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터 링크 안에서 데이터를 어떻게 주고받을지 결정하는 역할&lt;/li&gt;
+  &lt;li&gt;NIC(Network Interface Card)을 통해 비트열 &amp;lt;-&amp;gt; 신호 변환&lt;/li&gt;
+  &lt;li&gt;NIC에는 MAC 주소라는 고유 번호가 할당되어 있어 MAC 주소가 일치하는 경우에만 수신자 NIC에서 데이터를 받는다.&lt;/li&gt;
+  &lt;li&gt;수신인의 IP 주소만 알고 MAC 주소를 모르는 경우 ARP(Address Resolution Protocol) 프로토콜을 활용한다.
+    &lt;ol&gt;
+      &lt;li&gt;MAC 주소를 알고싶은 컴퓨터의 IP 주소를 ARP 패킷에 적고 브로드캐스트 MAC 주소 앞으로 보낸다.&lt;/li&gt;
+      &lt;li&gt;자신의 IP 주소가 아니라면 파기하고, 자신의 IP 주소라면 MAC 주소를 적은 ARP 패킷을 송신자에게 보낸다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-csma-프로토콜-&quot;&gt;&amp;lt; CSMA 프로토콜 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜을&lt;/li&gt;
+  &lt;li&gt;즉, 노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-csmacd-&quot;&gt;&amp;lt; CSMA/CD &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;송신 전에 전송매체가 비어 있는지 확인하고(Carrier Sense), 비어 있으면 신호를 전송하고(Multiple Access), 전송 후에 충돌이 있는지 확인(Collision Detection) 하는 방식&lt;/li&gt;
+  &lt;li&gt;데이터 프레임 간의 충돌이 발생하는 것을 보완하기 위해 CSMA 방식에 충돌 검증 + 재전송 기능 추가&lt;/li&gt;
+  &lt;li&gt;모든 노드가 순서와 규칙 없이 경쟁하여 선로를 점유하는 방식으로 토큰 버스, 토큰 링은 각 노드에 차례로 점유할 기회를 주는 순차적 할당 방식&lt;/li&gt;
+  &lt;li&gt;전송량이 적을 때 효율적이고 버스형 LAN에 가장 일반적으로 이용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;송신하기 전에 송신중인 다른 노드가 없는지 조사한다.&lt;/li&gt;
+  &lt;li&gt;MAC 주소 b 앞으로 데이터를 전송한다.&lt;/li&gt;
+  &lt;li&gt;자기 앞으로 온 데이터일 경우 회수, 아닐 경우 파기한다.&lt;/li&gt;
+  &lt;li&gt;충돌을 감지했을 때는 잠시 후 다시 전송한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;csmaca-&quot;&gt;&amp;lt;CSMA/CA &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;CSMA 방식 기반에 RTS와 CTS를 사전에 주고 받음으로써 전송할 시간을 미리 예약하여 충돌을 미연에 방지하는 방식&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="TCP" /><category term="IP" /><category term="프로토콜" /><summary type="html">네트워크 용어 네트워크 : 컴퓨터끼리 정보를 주고 받을 수 있는 상태를 말한다. 프로토콜 : 국가끼리 문제없이 교류할 수 있도록 정해진 규칙 TCP/IP : 네트워크 상 송수신을 원할하게 수행하기 위한 규칙으로 데이터 송수신에 관한 일련의 작업을 하나로 모은 것 패킷 : 데이터 전송시 데이터를 일정 크기로 잘라서 보내는 방식으로, 보통 1 패킷 = 1024 비트이다. cf) OSI 7 계층 TCP/IP 작동 방식 [송신자 A] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 애플리케이션간 데이터를 주고받기 위해 필요한 정보를 작성한다. [송신자 A] 트랜스포트 층 (TCP / UDP) 데이터를 패킷으로 나누고 애플리케이션을 나타내는 번호와 데이터 조합하기 위한 정보를 작성한다. [송신자 A] 네트워크 층 ( IP ) 송수신할 컴퓨터 주소와 불명인 경우 데이터를 파기하는 표시 등을 작성한다. [송신자 A] 데이터링크 층 (Ethernet) 네트워크 종류에 맞춘 형식으로 수신지 정보 등을 작성한다. [송신자 A] 물리 층 비트열을 신호로 변환해 전송한다. [수신자 B] 물리 층 신호를 비트열로 변환한다. [수신자 B] 데이터링크 층 (Ethernet) 헤더에 적힌 정보를 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 네트워크 층 ( IP ) 헤더에 적힌 수신처가 맞는지 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 트랜스포트 층 (TCP / UDP) 헤더를 확인하고 데이터를 순서대로 나열해 조합한다. [수신자 B] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 조합된 데이터를 확인한다. 애플리케이션 층 컴퓨터끼리의 주고받기를 사용자가 이용할 수 있는 ‘통신 서비스’ 형태로 만드는 것(서버/클라이언트) 애플리케이션 헤더 : 요청과 응답에 관한 정보가 들어있는 헤더 HTTP 프로토콜 : 하나의 요청에 하나의 응답을 반환하고 연결을 해제하는 방법 cf) HTTP 프로토콜과 Cookie/Session 트랜스포트 층 애플리케이션 층과 네트워크 층의 중개 역할을 수행 TCP 프로토콜과 UDP 프로토콜이 존재한다. cf) TCP/UDP 프로토콜 차이점 네트워크 층 누가 누구에게 전달할 지를 결정하는 주요 역할, 적절한 루트를 사용해 전달하는 역할(Router) IP 주소 : 인터넷 상의 컴퓨터들을 식별하기 위해 인터넷에 연결된 컴퓨터에 주어지는 숫자 IP 프로토콜 : 비커넥션형 프로토콜로 UDP와 동일하다. 신뢰성 있는 IP를 지원하기 위해 ICMP 프로토콜이 있다. ICMP 프로토콜 : 수신인에게 전달되지 않는 등 문제 발생 시 송신자에게 그 사실을 알려주는 메세지를 전송한다. IP 데이터그램 : 트랜스포트 층으로부터 데이터를 받아 IP 헤더를 붙인 것 Best Effort 방식 -&amp;gt; 노력은 하지만 결과는 보장하지 않는다. 데이터링크 층 데이터 링크 안에서 데이터를 어떻게 주고받을지 결정하는 역할 NIC(Network Interface Card)을 통해 비트열 &amp;lt;-&amp;gt; 신호 변환 NIC에는 MAC 주소라는 고유 번호가 할당되어 있어 MAC 주소가 일치하는 경우에만 수신자 NIC에서 데이터를 받는다. 수신인의 IP 주소만 알고 MAC 주소를 모르는 경우 ARP(Address Resolution Protocol) 프로토콜을 활용한다. MAC 주소를 알고싶은 컴퓨터의 IP 주소를 ARP 패킷에 적고 브로드캐스트 MAC 주소 앞으로 보낸다. 자신의 IP 주소가 아니라면 파기하고, 자신의 IP 주소라면 MAC 주소를 적은 ARP 패킷을 송신자에게 보낸다. &amp;lt; CSMA 프로토콜 &amp;gt; 동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜을 즉, 노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법 &amp;lt; CSMA/CD &amp;gt; 송신 전에 전송매체가 비어 있는지 확인하고(Carrier Sense), 비어 있으면 신호를 전송하고(Multiple Access), 전송 후에 충돌이 있는지 확인(Collision Detection) 하는 방식 데이터 프레임 간의 충돌이 발생하는 것을 보완하기 위해 CSMA 방식에 충돌 검증 + 재전송 기능 추가 모든 노드가 순서와 규칙 없이 경쟁하여 선로를 점유하는 방식으로 토큰 버스, 토큰 링은 각 노드에 차례로 점유할 기회를 주는 순차적 할당 방식 전송량이 적을 때 효율적이고 버스형 LAN에 가장 일반적으로 이용 송신하기 전에 송신중인 다른 노드가 없는지 조사한다. MAC 주소 b 앞으로 데이터를 전송한다. 자기 앞으로 온 데이터일 경우 회수, 아닐 경우 파기한다. 충돌을 감지했을 때는 잠시 후 다시 전송한다. &amp;lt;CSMA/CA &amp;gt; CSMA 방식 기반에 RTS와 CTS를 사전에 주고 받음으로써 전송할 시간을 미리 예약하여 충돌을 미연에 방지하는 방식</summary></entry><entry><title type="html">백준/10779 쇠막대기</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/" rel="alternate" type="text/html" title="백준/10779 쇠막대기" /><published>2019-05-29T11:11:00+09:00</published><updated>2019-05-29T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80%2010779%20%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/10799&quot;&gt;Backjoon :: 쇠막대기&lt;/a&gt; 문제는 Stack 자료구조를 활용해 풀 수 있다.&lt;/p&gt;
 
@@ -901,81 +1032,4 @@
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1541" /><category term="백준 잃어버린 괄호" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: 잃어버린 괄호 그리디하게 접근하면 해결할 수 있는 문제다. boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다. 만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다. 만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까) &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static int curr, plus, ans; //curr : +,- 연산 전의 숫자값 구하기, plus = curr값의 합 public static boolean hasMinus = false; //입력받은 문자열에 '-'가 있는지 확인 public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); String target = br.readLine(); for (int i = 0; i &amp;lt; target.length(); i++) { char ch = target.charAt(i); if (ch == '+') { plus += curr; curr = 0; } else if (ch == '-') { minusCal(); plus = 0; curr = 0; } else { curr = curr * 10 + (ch - '0'); } } minusCal(); System.out.println(ans); } public static void minusCal() { if (!hasMinus) { //'-' 연산이 없다면 더한다. plus += curr; ans += plus; hasMinus = true; } else { //'-' 연산이 있다면 ans값에 빼준다. plus += curr; ans -= plus; } } }</summary></entry><entry><title type="html">11번가 면접 후기</title><link href="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="11번가 면접 후기" /><published>2019-05-23T13:00:08+09:00</published><updated>2019-05-23T13:00:08+09:00</updated><id>http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80%20%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/05/23/11%EB%B2%88%EA%B0%80-%EB%A9%B4%EC%A0%91%ED%9B%84%EA%B8%B0/">&lt;p&gt;&lt;img src=&quot;/assets/images/11st_11.jpg&quot; alt=&quot;11st_1&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/11st_22.jpg&quot; alt=&quot;11st_2&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;11번가-면접-후기&quot;&gt;11번가 면접 후기&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;서울스퀘어 도착후 졸업예정서, 성적증명서 등 서류 제출&lt;/li&gt;
-  &lt;li&gt;11번가 인턴 면접은 특이하게 PT 면접, 직무 면접, 코딩테스트 리뷰 3개로 나누어 진행한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;pt-면접-준비&quot;&gt;PT 면접 준비&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;도착하면 한 15분 정도 대기하다 옆 강의실로 이동한다.&lt;/li&gt;
-  &lt;li&gt;40분동안 준비하고 5-10분정도 발표&amp;amp;질문 받는다고 안내 받는다.&lt;/li&gt;
-  &lt;li&gt;PT 관련 주제를 나눠주고 2개 주제 중 하나를 선택한다.&lt;/li&gt;
-  &lt;li&gt;주제 하나는 배치 관련 질문이였고 선택한 주제는 11번가 검색창에서 어떤 상품을 검색하면 카테고리와의 유사도를 구하는 문제였다.&lt;/li&gt;
-  &lt;li&gt;핸드폰이 사용가능하고 작성한 종이를 면접장에 가지고 간다.&lt;/li&gt;
-  &lt;li&gt;40분이 지나고 나서 면접장으로 이동한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;면접-후기&quot;&gt;면접 후기&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;면접이 조금 특이하게 2:1면접으로 40분이 진행되는데 순서가 정해져 있는것은 아니다.&lt;/li&gt;
-  &lt;li&gt;면접관 재량에 따라 PT 발표했다가 코딩테스트 리뷰했다가 자소서 질문한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;-직무-면접-&quot;&gt;&amp;lt; 직무 면접 &amp;gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;입장하자마자 최대한 편하게 해주려고 하신다. 간단하게 회사 지원동기를 묻는다.
-    &lt;ul&gt;
-      &lt;li&gt;SI보다 서비스 개발이 하고싶다고 했다가 SI도 배울거 많다며 한소리 들었다.&lt;/li&gt;
-      &lt;li&gt;트래픽 경험하고 싶다고 했다가 11번가는 중개자 역할로 고객이 판매자와 구매자가 있는데 판매자로 가면 어쩔건지 물어봣다가 털림&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;다른 지원자와 대비했을때 기술적인 강점이 뭐라고 생각하는지?
-    &lt;ul&gt;
-      &lt;li&gt;데이터베이스라고 했다가 처음들어보는 명령어 물어보길래 모른다고 답함&lt;/li&gt;
-      &lt;li&gt;그럼 inner join과 outer join 설명해봐라 =&amp;gt; 반대로 대답해서 또 한소리 들음&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;딥러닝 프로젝트 중 사이킷런 라벨링이 뭐한건지 설명 =&amp;gt; 대답 못함&lt;/li&gt;
-  &lt;li&gt;Spring 프로젝트 중 어떤걸 담당했고 어떤 기능을 개발했는지&lt;/li&gt;
-  &lt;li&gt;REST는 직접 설계했는지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;-pt-면접-&quot;&gt;&amp;lt; PT 면접 &amp;gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;특정 검색어가 어떤 상품 카테고리와 연관성이 있는지 추출하는 시스템 설계하는 것이 주제&lt;/li&gt;
-  &lt;li&gt;논리적/물리적 설계가 필요하다는데 제대로 이해 못함&lt;/li&gt;
-  &lt;li&gt;TF-IDF 활용한다고 했더니 어떤 문서를 기준으로 할 것인지 물어봄&lt;/li&gt;
-  &lt;li&gt;발표 중간중간 궁금한 점을 질문한다.&lt;/li&gt;
-  &lt;li&gt;논리적/물리적 설계가 부족했는지 유스케이스나 데이터흐름을 그려달라고 했는데 여기서부터 막히기 시작&lt;/li&gt;
-  &lt;li&gt;여기저기서 까이고 정신이 없었다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;-코딩테스트-리뷰-&quot;&gt;&amp;lt; 코딩테스트 리뷰 &amp;gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;전공 면접 준비하는 시간에 다른 지원자들은 안주는데 나한테만 코딩테스트 준비하라고 코드를 뽑아줌(왜지?)&lt;/li&gt;
-  &lt;li&gt;1번 문제는 100점이라 안물어봤는데 2,3번 코드 설명함&lt;/li&gt;
-  &lt;li&gt;2번 문제는 당시에는 인덱스로 접근했지만 스텍으로 접근하면 될 것 같다고 말슴드림&lt;/li&gt;
-  &lt;li&gt;3번 문제는 다익스트라랑 프림이랑 헷갈려서 틀렸다고 말씀드림&lt;/li&gt;
-  &lt;li&gt;알고리즘 공부좀 한거같은데 만약 음수가 있다면 어떻게 할껀지? =&amp;gt; 벨만포드 알고리즘을 활용할 것이라고 말씀드림&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;우선순위 큐에 대해서 설명해달라 하셔서 힙 정렬과 같이 말씀드림&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;마지막 질문한번 해보라고 하셔서 맥북을 쓰는거로 아는데 두 분다 삼성노트북을 사용하시길래 이유를 여쭤봄&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;백앤드/DBA/프론트 등 어떤 개발자가 되고 싶은지&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;정말 40분 면접 중에서 20분은 털린 듯.. 특히 PT 면접을 깊이 물어보셔서 답을 제대로 못한게 아쉽다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;면접비는 5월말에 통장으로 입금해주신다 했으니 아마 발표 시즌이랑 비슷하게 겹칠듯싶다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="11번가" /><category term="PT 면접" /><category term="코딩테스트 면접" /><category term="면접" /><summary type="html">11번가 면접 후기 서울스퀘어 도착후 졸업예정서, 성적증명서 등 서류 제출 11번가 인턴 면접은 특이하게 PT 면접, 직무 면접, 코딩테스트 리뷰 3개로 나누어 진행한다. PT 면접 준비 도착하면 한 15분 정도 대기하다 옆 강의실로 이동한다. 40분동안 준비하고 5-10분정도 발표&amp;amp;질문 받는다고 안내 받는다. PT 관련 주제를 나눠주고 2개 주제 중 하나를 선택한다. 주제 하나는 배치 관련 질문이였고 선택한 주제는 11번가 검색창에서 어떤 상품을 검색하면 카테고리와의 유사도를 구하는 문제였다. 핸드폰이 사용가능하고 작성한 종이를 면접장에 가지고 간다. 40분이 지나고 나서 면접장으로 이동한다. 면접 후기 면접이 조금 특이하게 2:1면접으로 40분이 진행되는데 순서가 정해져 있는것은 아니다. 면접관 재량에 따라 PT 발표했다가 코딩테스트 리뷰했다가 자소서 질문한다. &amp;lt; 직무 면접 &amp;gt; 입장하자마자 최대한 편하게 해주려고 하신다. 간단하게 회사 지원동기를 묻는다. SI보다 서비스 개발이 하고싶다고 했다가 SI도 배울거 많다며 한소리 들었다. 트래픽 경험하고 싶다고 했다가 11번가는 중개자 역할로 고객이 판매자와 구매자가 있는데 판매자로 가면 어쩔건지 물어봣다가 털림 다른 지원자와 대비했을때 기술적인 강점이 뭐라고 생각하는지? 데이터베이스라고 했다가 처음들어보는 명령어 물어보길래 모른다고 답함 그럼 inner join과 outer join 설명해봐라 =&amp;gt; 반대로 대답해서 또 한소리 들음 딥러닝 프로젝트 중 사이킷런 라벨링이 뭐한건지 설명 =&amp;gt; 대답 못함 Spring 프로젝트 중 어떤걸 담당했고 어떤 기능을 개발했는지 REST는 직접 설계했는지 &amp;lt; PT 면접 &amp;gt; 특정 검색어가 어떤 상품 카테고리와 연관성이 있는지 추출하는 시스템 설계하는 것이 주제 논리적/물리적 설계가 필요하다는데 제대로 이해 못함 TF-IDF 활용한다고 했더니 어떤 문서를 기준으로 할 것인지 물어봄 발표 중간중간 궁금한 점을 질문한다. 논리적/물리적 설계가 부족했는지 유스케이스나 데이터흐름을 그려달라고 했는데 여기서부터 막히기 시작 여기저기서 까이고 정신이 없었다. &amp;lt; 코딩테스트 리뷰 &amp;gt; 전공 면접 준비하는 시간에 다른 지원자들은 안주는데 나한테만 코딩테스트 준비하라고 코드를 뽑아줌(왜지?) 1번 문제는 100점이라 안물어봤는데 2,3번 코드 설명함 2번 문제는 당시에는 인덱스로 접근했지만 스텍으로 접근하면 될 것 같다고 말슴드림 3번 문제는 다익스트라랑 프림이랑 헷갈려서 틀렸다고 말씀드림 알고리즘 공부좀 한거같은데 만약 음수가 있다면 어떻게 할껀지? =&amp;gt; 벨만포드 알고리즘을 활용할 것이라고 말씀드림 우선순위 큐에 대해서 설명해달라 하셔서 힙 정렬과 같이 말씀드림 마지막 질문한번 해보라고 하셔서 맥북을 쓰는거로 아는데 두 분다 삼성노트북을 사용하시길래 이유를 여쭤봄 백앤드/DBA/프론트 등 어떤 개발자가 되고 싶은지 정말 40분 면접 중에서 20분은 털린 듯.. 특히 PT 면접을 깊이 물어보셔서 답을 제대로 못한게 아쉽다. 면접비는 5월말에 통장으로 입금해주신다 했으니 아마 발표 시즌이랑 비슷하게 겹칠듯싶다.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 1541" /><category term="백준 잃어버린 괄호" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: 잃어버린 괄호 그리디하게 접근하면 해결할 수 있는 문제다. boolean hasMinus 변수 하나를 만든다. 이 변수에는 ‘-‘가 입력받은 문자열에 존재하는 지를 확인한다. 만약 문자열에서 ‘-‘를 한번도 못 만낫다면 계속 숫자를 더한다. 만약 문자열에서 ‘-‘를 만나면 ‘-‘ 이후에 나오는 모든 숫자들은 빼도 된다. (‘+’ 연산은 괄호로 묶어 최대값으로 만들고 빼면 되니까) &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static int curr, plus, ans; //curr : +,- 연산 전의 숫자값 구하기, plus = curr값의 합 public static boolean hasMinus = false; //입력받은 문자열에 '-'가 있는지 확인 public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); String target = br.readLine(); for (int i = 0; i &amp;lt; target.length(); i++) { char ch = target.charAt(i); if (ch == '+') { plus += curr; curr = 0; } else if (ch == '-') { minusCal(); plus = 0; curr = 0; } else { curr = curr * 10 + (ch - '0'); } } minusCal(); System.out.println(ans); } public static void minusCal() { if (!hasMinus) { //'-' 연산이 없다면 더한다. plus += curr; ans += plus; hasMinus = true; } else { //'-' 연산이 있다면 ans값에 빼준다. plus += curr; ans -= plus; } } }</summary></entry></feed>
