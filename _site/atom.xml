@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-31T18:27:46+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/2138 전구와 스위치</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/" rel="alternate" type="text/html" title="백준/2138 전구와 스위치" /><published>2019-05-30T11:11:00+09:00</published><updated>2019-05-30T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80%202138%20%EC%A0%84%EA%B5%AC%EC%99%80%20%EC%8A%A4%EC%9C%84%EC%B9%98</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-31T18:31:46+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/2138 전구와 스위치</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/" rel="alternate" type="text/html" title="백준/2138 전구와 스위치" /><published>2019-05-30T11:11:00+09:00</published><updated>2019-05-30T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80%202138%20%EC%A0%84%EA%B5%AC%EC%99%80%20%EC%8A%A4%EC%9C%84%EC%B9%98</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2138&quot;&gt;Backjoon :: 전구와 스위치&lt;/a&gt; 문제는 비트마스크 연산으로 구현한다.&lt;/p&gt;
 
@@ -247,7 +247,7 @@
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 10779" /><category term="백준 쇠막대기" /><category term="Stack" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: 쇠막대기 문제는 Stack 자료구조를 활용해 풀 수 있다. 입력 받은 문자열을 하나씩 탐색하면서 ‘(‘ 일때와 ‘)’로 나누어 생각한다. ’(‘ 문자라면 Stack에 추가한다. ’)’ 문자라면 바로 앞에 ‘(‘ 문자가 오는지 확인한다. (레이저인지 여부를 확인하기 위해) 만약 레이저라면 Stack 크기만큼 더해준다. (레이저로 나누면 Stack 크기만큼 레이저 왼쪽에 막대기가 생기기 때문!) 만약 막대기 끝이라면 막대기 갯수인 1개를 더해준다. (끝부분 막대기를 더해준다) &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); char[] target = br.readLine().toCharArray(); Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); int ans = 0; for (int i = 0; i &amp;lt; target.length; i++) { char ch = target[i]; if (ch == '(') { stack.push(target[i]); continue; } stack.pop(); //')' 문자 제거 if (target[i - 1] == '(') { //만약 레이저라면 ans += stack.size(); //레이저 왼쪽 막대 갯수를 더한다 } else { //막대의 끝이라면 ans += 1; //자기 자신 막대를 더한다 } } System.out.println(ans); } }</summary></entry><entry><title type="html">정렬 알고리즘</title><link href="http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" rel="alternate" type="text/html" title="정렬 알고리즘" /><published>2019-05-29T00:01:11+09:00</published><updated>2019-05-29T00:01:11+09:00</updated><id>http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98</id><content type="html" xml:base="http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">&lt;h1 id=&quot;버블-정렬bubble-sort&quot;&gt;버블 정렬(Bubble Sort)&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/BubbleSort.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/BubbleSort1.png&quot; alt=&quot;BubbleSort&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;인접한 두 숫자를 비교해서 변경하는 방법&lt;/li&gt;
   &lt;li&gt;오른쪽부터 최대값/최소값을 정렬해 나가는 방식&lt;/li&gt;
@@ -265,7 +265,7 @@
 &lt;hr /&gt;
 
 &lt;h1 id=&quot;선택-정렬selection-sort&quot;&gt;선택 정렬(Selection Sort)&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/SelectionSort.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/SelectionSort.png&quot; alt=&quot;SelectionSort&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;자신보다 뒤에있는 숫자들 중 가장 작은 숫자를 발견해서 맨 앞에서부터 채우는 정렬&lt;/li&gt;
   &lt;li&gt;왼쪽부터 최대값/최소값을 정렬해 나가는 방식&lt;/li&gt;
@@ -285,7 +285,7 @@
 &lt;hr /&gt;
 
 &lt;h1 id=&quot;삽입-정렬insertion-sort&quot;&gt;삽입 정렬(Insertion Sort)&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/InsertionSort.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/InsertionSort.png&quot; alt=&quot;InsertionSort&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;i번째 배열 값부터 앞으로 탐색하며 자신보다 작다면 swap하는 정렬&lt;/li&gt;
   &lt;li&gt;n번째 수행시 n번째 까지 정렬되는 방법&lt;/li&gt;
