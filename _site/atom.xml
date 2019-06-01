@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-31T18:31:46+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/2138 전구와 스위치</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/" rel="alternate" type="text/html" title="백준/2138 전구와 스위치" /><published>2019-05-30T11:11:00+09:00</published><updated>2019-05-30T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80%202138%20%EC%A0%84%EA%B5%AC%EC%99%80%20%EC%8A%A4%EC%9C%84%EC%B9%98</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-01T15:48:50+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">백준/2138 전구와 스위치</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/" rel="alternate" type="text/html" title="백준/2138 전구와 스위치" /><published>2019-05-30T11:11:00+09:00</published><updated>2019-05-30T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80%202138%20%EC%A0%84%EA%B5%AC%EC%99%80%20%EC%8A%A4%EC%9C%84%EC%B9%98</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2138&quot;&gt;Backjoon :: 전구와 스위치&lt;/a&gt; 문제는 비트마스크 연산으로 구현한다.&lt;/p&gt;
 
@@ -138,7 +138,8 @@
 
 &lt;hr /&gt;
 
-&lt;h1 id=&quot;애플리케이션-층&quot;&gt;애플리케이션 층&lt;/h1&gt;
+&lt;h1 id=&quot;tcpip-4-계층---인터넷-모델&quot;&gt;TCP/IP 4 계층 - 인터넷 모델&lt;/h1&gt;
+&lt;h2 id=&quot;-응용-계층-&quot;&gt;&amp;lt; 응용 계층 &amp;gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;컴퓨터끼리의 주고받기를 사용자가 이용할 수 있는 ‘통신 서비스’ 형태로 만드는 것(서버/클라이언트)&lt;/li&gt;
   &lt;li&gt;애플리케이션 헤더 : 요청과 응답에 관한 정보가 들어있는 헤더&lt;/li&gt;
@@ -146,14 +147,14 @@
   &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/21/HTTP와-REST-API/&quot;&gt;&lt;strong&gt;cf) HTTP 프로토콜과 Cookie/Session&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;트랜스포트-층&quot;&gt;트랜스포트 층&lt;/h1&gt;
+&lt;h2 id=&quot;-전송-계층-&quot;&gt;&amp;lt; 전송 계층 &amp;gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;애플리케이션 층과 네트워크 층의 중개 역할을 수행&lt;/li&gt;
   &lt;li&gt;TCP 프로토콜과 UDP 프로토콜이 존재한다.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/22/TCP와-UDP/&quot;&gt;&lt;strong&gt;cf) TCP/UDP 프로토콜 차이점&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;네트워크-층&quot;&gt;네트워크 층&lt;/h1&gt;
+&lt;h2 id=&quot;-인터넷-계층-&quot;&gt;&amp;lt; 인터넷 계층 &amp;gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;누가 누구에게 전달할 지를 결정하는 주요 역할, 적절한 루트를 사용해 전달하는 역할(Router)&lt;/li&gt;
   &lt;li&gt;IP 주소 : 인터넷 상의 컴퓨터들을 식별하기 위해 인터넷에 연결된 컴퓨터에 주어지는 숫자&lt;/li&gt;
@@ -163,7 +164,7 @@
   &lt;li&gt;Best Effort 방식 -&amp;gt; 노력은 하지만 결과는 보장하지 않는다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;데이터링크-층&quot;&gt;데이터링크 층&lt;/h1&gt;
+&lt;h2 id=&quot;-네트워크-인터페이스-계층-&quot;&gt;&amp;lt; 네트워크 인터페이스 계층 &amp;gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;데이터 링크 안에서 데이터를 어떻게 주고받을지 결정하는 역할&lt;/li&gt;
   &lt;li&gt;NIC(Network Interface Card)을 통해 비트열 &amp;lt;-&amp;gt; 신호 변환&lt;/li&gt;
@@ -176,13 +177,13 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;-csma-프로토콜-&quot;&gt;&amp;lt; CSMA 프로토콜 &amp;gt;&lt;/h2&gt;
+&lt;h3 id=&quot;-csma-프로토콜-&quot;&gt;&amp;lt; CSMA 프로토콜 &amp;gt;&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜을&lt;/li&gt;
-  &lt;li&gt;즉, 노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법&lt;/li&gt;
+  &lt;li&gt;동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜&lt;/li&gt;
+  &lt;li&gt;노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;-csmacd-&quot;&gt;&amp;lt; CSMA/CD &amp;gt;&lt;/h2&gt;
+&lt;h3 id=&quot;-csmacd-&quot;&gt;&amp;lt; CSMA/CD &amp;gt;&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;송신 전에 전송매체가 비어 있는지 확인하고(Carrier Sense), 비어 있으면 신호를 전송하고(Multiple Access), 전송 후에 충돌이 있는지 확인(Collision Detection) 하는 방식&lt;/li&gt;
   &lt;li&gt;데이터 프레임 간의 충돌이 발생하는 것을 보완하기 위해 CSMA 방식에 충돌 검증 + 재전송 기능 추가&lt;/li&gt;
@@ -197,12 +198,12 @@
   &lt;li&gt;충돌을 감지했을 때는 잠시 후 다시 전송한다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;csmaca-&quot;&gt;&amp;lt;CSMA/CA &amp;gt;&lt;/h2&gt;
+&lt;h3 id=&quot;csmaca-&quot;&gt;&amp;lt;CSMA/CA &amp;gt;&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;CSMA 방식 기반에 RTS와 CTS를 사전에 주고 받음으로써 전송할 시간을 미리 예약하여 충돌을 미연에 방지하는 방식&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="TCP" /><category term="IP" /><category term="프로토콜" /><summary type="html">네트워크 용어 네트워크 : 컴퓨터끼리 정보를 주고 받을 수 있는 상태를 말한다. 프로토콜 : 국가끼리 문제없이 교류할 수 있도록 정해진 규칙 TCP/IP : 네트워크 상 송수신을 원할하게 수행하기 위한 규칙으로 데이터 송수신에 관한 일련의 작업을 하나로 모은 것 패킷 : 데이터 전송시 데이터를 일정 크기로 잘라서 보내는 방식으로, 보통 1 패킷 = 1024 비트이다. cf) OSI 7 계층 TCP/IP 작동 방식 [송신자 A] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 애플리케이션간 데이터를 주고받기 위해 필요한 정보를 작성한다. [송신자 A] 트랜스포트 층 (TCP / UDP) 데이터를 패킷으로 나누고 애플리케이션을 나타내는 번호와 데이터 조합하기 위한 정보를 작성한다. [송신자 A] 네트워크 층 ( IP ) 송수신할 컴퓨터 주소와 불명인 경우 데이터를 파기하는 표시 등을 작성한다. [송신자 A] 데이터링크 층 (Ethernet) 네트워크 종류에 맞춘 형식으로 수신지 정보 등을 작성한다. [송신자 A] 물리 층 비트열을 신호로 변환해 전송한다. [수신자 B] 물리 층 신호를 비트열로 변환한다. [수신자 B] 데이터링크 층 (Ethernet) 헤더에 적힌 정보를 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 네트워크 층 ( IP ) 헤더에 적힌 수신처가 맞는지 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 트랜스포트 층 (TCP / UDP) 헤더를 확인하고 데이터를 순서대로 나열해 조합한다. [수신자 B] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 조합된 데이터를 확인한다. 애플리케이션 층 컴퓨터끼리의 주고받기를 사용자가 이용할 수 있는 ‘통신 서비스’ 형태로 만드는 것(서버/클라이언트) 애플리케이션 헤더 : 요청과 응답에 관한 정보가 들어있는 헤더 HTTP 프로토콜 : 하나의 요청에 하나의 응답을 반환하고 연결을 해제하는 방법 cf) HTTP 프로토콜과 Cookie/Session 트랜스포트 층 애플리케이션 층과 네트워크 층의 중개 역할을 수행 TCP 프로토콜과 UDP 프로토콜이 존재한다. cf) TCP/UDP 프로토콜 차이점 네트워크 층 누가 누구에게 전달할 지를 결정하는 주요 역할, 적절한 루트를 사용해 전달하는 역할(Router) IP 주소 : 인터넷 상의 컴퓨터들을 식별하기 위해 인터넷에 연결된 컴퓨터에 주어지는 숫자 IP 프로토콜 : 비커넥션형 프로토콜로 UDP와 동일하다. 신뢰성 있는 IP를 지원하기 위해 ICMP 프로토콜이 있다. ICMP 프로토콜 : 수신인에게 전달되지 않는 등 문제 발생 시 송신자에게 그 사실을 알려주는 메세지를 전송한다. IP 데이터그램 : 트랜스포트 층으로부터 데이터를 받아 IP 헤더를 붙인 것 Best Effort 방식 -&amp;gt; 노력은 하지만 결과는 보장하지 않는다. 데이터링크 층 데이터 링크 안에서 데이터를 어떻게 주고받을지 결정하는 역할 NIC(Network Interface Card)을 통해 비트열 &amp;lt;-&amp;gt; 신호 변환 NIC에는 MAC 주소라는 고유 번호가 할당되어 있어 MAC 주소가 일치하는 경우에만 수신자 NIC에서 데이터를 받는다. 수신인의 IP 주소만 알고 MAC 주소를 모르는 경우 ARP(Address Resolution Protocol) 프로토콜을 활용한다. MAC 주소를 알고싶은 컴퓨터의 IP 주소를 ARP 패킷에 적고 브로드캐스트 MAC 주소 앞으로 보낸다. 자신의 IP 주소가 아니라면 파기하고, 자신의 IP 주소라면 MAC 주소를 적은 ARP 패킷을 송신자에게 보낸다. &amp;lt; CSMA 프로토콜 &amp;gt; 동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜을 즉, 노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법 &amp;lt; CSMA/CD &amp;gt; 송신 전에 전송매체가 비어 있는지 확인하고(Carrier Sense), 비어 있으면 신호를 전송하고(Multiple Access), 전송 후에 충돌이 있는지 확인(Collision Detection) 하는 방식 데이터 프레임 간의 충돌이 발생하는 것을 보완하기 위해 CSMA 방식에 충돌 검증 + 재전송 기능 추가 모든 노드가 순서와 규칙 없이 경쟁하여 선로를 점유하는 방식으로 토큰 버스, 토큰 링은 각 노드에 차례로 점유할 기회를 주는 순차적 할당 방식 전송량이 적을 때 효율적이고 버스형 LAN에 가장 일반적으로 이용 송신하기 전에 송신중인 다른 노드가 없는지 조사한다. MAC 주소 b 앞으로 데이터를 전송한다. 자기 앞으로 온 데이터일 경우 회수, 아닐 경우 파기한다. 충돌을 감지했을 때는 잠시 후 다시 전송한다. &amp;lt;CSMA/CA &amp;gt; CSMA 방식 기반에 RTS와 CTS를 사전에 주고 받음으로써 전송할 시간을 미리 예약하여 충돌을 미연에 방지하는 방식</summary></entry><entry><title type="html">백준/10779 쇠막대기</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/" rel="alternate" type="text/html" title="백준/10779 쇠막대기" /><published>2019-05-29T11:11:00+09:00</published><updated>2019-05-29T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80%2010779%20%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+&lt;hr /&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="TCP" /><category term="IP" /><category term="프로토콜" /><summary type="html">네트워크 용어 네트워크 : 컴퓨터끼리 정보를 주고 받을 수 있는 상태를 말한다. 프로토콜 : 국가끼리 문제없이 교류할 수 있도록 정해진 규칙 TCP/IP : 네트워크 상 송수신을 원할하게 수행하기 위한 규칙으로 데이터 송수신에 관한 일련의 작업을 하나로 모은 것 패킷 : 데이터 전송시 데이터를 일정 크기로 잘라서 보내는 방식으로, 보통 1 패킷 = 1024 비트이다. cf) OSI 7 계층 TCP/IP 작동 방식 [송신자 A] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 애플리케이션간 데이터를 주고받기 위해 필요한 정보를 작성한다. [송신자 A] 트랜스포트 층 (TCP / UDP) 데이터를 패킷으로 나누고 애플리케이션을 나타내는 번호와 데이터 조합하기 위한 정보를 작성한다. [송신자 A] 네트워크 층 ( IP ) 송수신할 컴퓨터 주소와 불명인 경우 데이터를 파기하는 표시 등을 작성한다. [송신자 A] 데이터링크 층 (Ethernet) 네트워크 종류에 맞춘 형식으로 수신지 정보 등을 작성한다. [송신자 A] 물리 층 비트열을 신호로 변환해 전송한다. [수신자 B] 물리 층 신호를 비트열로 변환한다. [수신자 B] 데이터링크 층 (Ethernet) 헤더에 적힌 정보를 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 네트워크 층 ( IP ) 헤더에 적힌 수신처가 맞는지 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 트랜스포트 층 (TCP / UDP) 헤더를 확인하고 데이터를 순서대로 나열해 조합한다. [수신자 B] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 조합된 데이터를 확인한다. TCP/IP 4 계층 - 인터넷 모델 &amp;lt; 응용 계층 &amp;gt; 컴퓨터끼리의 주고받기를 사용자가 이용할 수 있는 ‘통신 서비스’ 형태로 만드는 것(서버/클라이언트) 애플리케이션 헤더 : 요청과 응답에 관한 정보가 들어있는 헤더 HTTP 프로토콜 : 하나의 요청에 하나의 응답을 반환하고 연결을 해제하는 방법 cf) HTTP 프로토콜과 Cookie/Session &amp;lt; 전송 계층 &amp;gt; 애플리케이션 층과 네트워크 층의 중개 역할을 수행 TCP 프로토콜과 UDP 프로토콜이 존재한다. cf) TCP/UDP 프로토콜 차이점 &amp;lt; 인터넷 계층 &amp;gt; 누가 누구에게 전달할 지를 결정하는 주요 역할, 적절한 루트를 사용해 전달하는 역할(Router) IP 주소 : 인터넷 상의 컴퓨터들을 식별하기 위해 인터넷에 연결된 컴퓨터에 주어지는 숫자 IP 프로토콜 : 비커넥션형 프로토콜로 UDP와 동일하다. 신뢰성 있는 IP를 지원하기 위해 ICMP 프로토콜이 있다. ICMP 프로토콜 : 수신인에게 전달되지 않는 등 문제 발생 시 송신자에게 그 사실을 알려주는 메세지를 전송한다. IP 데이터그램 : 트랜스포트 층으로부터 데이터를 받아 IP 헤더를 붙인 것 Best Effort 방식 -&amp;gt; 노력은 하지만 결과는 보장하지 않는다. &amp;lt; 네트워크 인터페이스 계층 &amp;gt; 데이터 링크 안에서 데이터를 어떻게 주고받을지 결정하는 역할 NIC(Network Interface Card)을 통해 비트열 &amp;lt;-&amp;gt; 신호 변환 NIC에는 MAC 주소라는 고유 번호가 할당되어 있어 MAC 주소가 일치하는 경우에만 수신자 NIC에서 데이터를 받는다. 수신인의 IP 주소만 알고 MAC 주소를 모르는 경우 ARP(Address Resolution Protocol) 프로토콜을 활용한다. MAC 주소를 알고싶은 컴퓨터의 IP 주소를 ARP 패킷에 적고 브로드캐스트 MAC 주소 앞으로 보낸다. 자신의 IP 주소가 아니라면 파기하고, 자신의 IP 주소라면 MAC 주소를 적은 ARP 패킷을 송신자에게 보낸다. &amp;lt; CSMA 프로토콜 &amp;gt; 동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜 노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법 &amp;lt; CSMA/CD &amp;gt; 송신 전에 전송매체가 비어 있는지 확인하고(Carrier Sense), 비어 있으면 신호를 전송하고(Multiple Access), 전송 후에 충돌이 있는지 확인(Collision Detection) 하는 방식 데이터 프레임 간의 충돌이 발생하는 것을 보완하기 위해 CSMA 방식에 충돌 검증 + 재전송 기능 추가 모든 노드가 순서와 규칙 없이 경쟁하여 선로를 점유하는 방식으로 토큰 버스, 토큰 링은 각 노드에 차례로 점유할 기회를 주는 순차적 할당 방식 전송량이 적을 때 효율적이고 버스형 LAN에 가장 일반적으로 이용 송신하기 전에 송신중인 다른 노드가 없는지 조사한다. MAC 주소 b 앞으로 데이터를 전송한다. 자기 앞으로 온 데이터일 경우 회수, 아닐 경우 파기한다. 충돌을 감지했을 때는 잠시 후 다시 전송한다. &amp;lt;CSMA/CA &amp;gt; CSMA 방식 기반에 RTS와 CTS를 사전에 주고 받음으로써 전송할 시간을 미리 예약하여 충돌을 미연에 방지하는 방식</summary></entry><entry><title type="html">백준/10779 쇠막대기</title><link href="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/" rel="alternate" type="text/html" title="백준/10779 쇠막대기" /><published>2019-05-29T11:11:00+09:00</published><updated>2019-05-29T11:11:00+09:00</updated><id>http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80%2010779%20%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%B0%B1%EC%A4%80/algorithm/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/10799&quot;&gt;Backjoon :: 쇠막대기&lt;/a&gt; 문제는 Stack 자료구조를 활용해 풀 수 있다.&lt;/p&gt;
 
@@ -422,7 +423,12 @@
     &lt;p&gt;지속성(Durability)    : 완료된 트랜잭션은 시스템의 고장나도 영구적으로 반영되어야 한다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Commit 연산 : 한개의 트랜잭션에 대한 작업이 성공적으로 끝났고, 데이터베이스가 일관된 상태에 있을 때 이 트랜잭션이 수행한 연산이 완료됨을 알려주는 연산&lt;/li&gt;
-  &lt;li&gt;Rollback 연산 : 하나의 트랜잭션 처리가 비정상적으로 종료되어 데이터베이스의 일관성을 깨뜨렸을 때, 트랜잭션의 원자성을 구현하기 위해 이 트랜잭션이 수행한 모든 연산을 Undo하는 연산이다.&lt;/li&gt;
+  &lt;li&gt;Rollback 연산 : 하나의 트랜잭션 처리가 비정상적으로 종료되어 데이터베이스의 일관성을 깨뜨렸을 때, 트랜잭션의 원자성을 구현하기 위해 이 트랜잭션이 수행한 모든 연산을 Undo하는 연산이다.
+    &lt;ul&gt;
+      &lt;li&gt;Redo : 고장 발생 전, 트랜잭션이 완료 명령을 수행했다면 로그를 이용해 복원하고 Check Point 이후부터 다시 수행하는 방식&lt;/li&gt;
+      &lt;li&gt;Undo : 고장 발생 전, 트랜잭션이 완료 명령을 수행하지 못했다면 DB에 반영된 갱신 사항을 처음까지 취소&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -439,8 +445,18 @@
 &lt;h2 id=&quot;-로킹locking-기법-&quot;&gt;&amp;lt; 로킹(Locking) 기법 &amp;gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;트랜잭션들이 어떤 로킹 단위를 액세스하기 전에 Lock을 요청해서 Lock이 허락되야 그 로킹 단위를 액세스 하는 기법&lt;/li&gt;
-  &lt;li&gt;로킹 단위 : 병행제어에서 한꺼번에 로킹할 수 있는 객체의 크기를 의미하며 로킹의 단위가 크면 로크 수가 작아 관리하기 쉽지만 병행성 수준이 낮아진다.&lt;/li&gt;
-  &lt;li&gt;데이터를 갱신할 때 순서, 잠금(Lock) → 실행(Execute) → 해제(Unlock)&lt;/li&gt;
+  &lt;li&gt;로킹 단위 : 병행제어에서 한꺼번에 로킹할 수 있는 객체의 크기를 의미하며 로킹의 단위가 크면 로크 수가 작아 관리하기 쉽지만 병행성 수준이 낮아진다.
+    &lt;ul&gt;
+      &lt;li&gt;로킹 단위가 크면 lock 개수가 적어 관리하기 쉽지만 병행성 수준이 낮아진다.&lt;/li&gt;
+      &lt;li&gt;로킹 단위가 작으면 lock 개수가 많아 관리하기는 복잡하지만 병행성 수준이 높아진다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;데이터를 갱신할 때 잠금(Lock) → 실행(Execute) → 해제(Unlock)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;교착상태(Deadlock)&lt;/strong&gt; : Lock상태가 오래 유지되어 다른 Transaction들이 더이상 진행하지 못하고 무한정 대기상태를 뜻한다&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;공유 잠금(Shared-Lock)&lt;/strong&gt; : 한 트랜잭션이 데이터 x에 lock-S 를 걸면 다른 트랜잭션은 데이터 x에 대해 read 가능 / write 불가능&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;배타 잠금(Exclusive-Lock)&lt;/strong&gt; : 한 트랜잭션이 데이터 x에 lock-X 를 걸면 다른 트랜잭션은 데이터 x에 대해 read 불가능 / write 불가능&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;table&gt;
@@ -465,16 +481,21 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;공유 잠금(Shared-Lock) : 잠금 걸린 데이터에 대해 읽기 가능, 기록 불가능.&lt;/li&gt;
-  &lt;li&gt;배타 잠금(Exclusive-Lock) : 잠금 걸린 데이터에 대해 읽기, 기록 모두 불가능.&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&quot;-2-단계-잠금-규약two-phase-lock-protocol-기법-&quot;&gt;&amp;lt; 2-단계 잠금 규약(Two-Phase Lock Protocol) 기법 &amp;gt;&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;트랜잭션 스케쥴의 직렬성을 보장하는 대표적인 기법
-― 확장(Growing) 단계 : 잠금만 수행할 수 있음. (해제 불가)
-― 축소(Shrinking) 단계 : 해제만 수행할 수 있음. (잠금 불가)&lt;/li&gt;
+  &lt;li&gt;트랜잭션 스케쥴의 직렬성을 보장하는 대표적인 기법&lt;/li&gt;
+  &lt;li&gt;확장 단계(Growing Phase)
+    &lt;ul&gt;
+      &lt;li&gt;Lock을 설정하는 단계, 해제 불가&lt;/li&gt;
+      &lt;li&gt;새로운 lock 연산만 수행할 수 있고 unlock 연산은 수행할 수 없는 단계&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;축소 단계(Shirinking Phase)
+    &lt;ul&gt;
+      &lt;li&gt;Lock을 해제하는 단계, 잠금 불가&lt;/li&gt;
+      &lt;li&gt;unlock 연산만 실행할 수 있고 일단 unlock 연산을 실행하면 lock 연산은 실행할 수 없는 단계&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;장점 : 직렬성 보장 / 단점 : 교착 상태 예방 불가능&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -484,11 +505,18 @@
   &lt;li&gt;교착 상태가 발생하지 않는다.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h3 id=&quot;-로킹-규약-&quot;&gt;&amp;lt; 로킹 규약 &amp;gt;&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;트랜잭션 T가 read(x)나 write(x) 연산을 하려면 반드시 먼저 lock(x) 연산을 실행해야 한다.&lt;/li&gt;
+  &lt;li&gt;트랜잭션 T가 실행한 lock(x)에 대해서는 T가 모든 실행을 종료하기 전에 반드시 unlock(x)을 실행시켜야 한다.&lt;/li&gt;
+  &lt;li&gt;다른 트랜잭션에 의해 이미 x에 lock이 걸려있다면 다시 lock(x)를 실행할 수 없다.&lt;/li&gt;
+  &lt;li&gt;트랜잭션 T가 lock(x)를 실행하지 않았다면 T가 unlock(x)를 실행할 수 없다.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;hr /&gt;
 
 &lt;h1 id=&quot;무결성&quot;&gt;무결성&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;데이터베이스의 저장된 데이터 값과 현실 세계의 실제값이 일치하는 정확성을 의미한다.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;무결성&lt;/strong&gt; : 데이터의 정확성과 일관성을 유지하고 보증하는 것
     &lt;ul&gt;
       &lt;li&gt;고유 무결성 : 릴레이션의 특정 속성에 대해서 각 튜플이 갖는 값들이 서로 달라야 한다.&lt;/li&gt;
@@ -496,6 +524,7 @@
       &lt;li&gt;참조 무결성 : 외래키 값은 NULL 이거나 참조 릴레이션의 기본키 값과 동일해야 한다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;cf) 정확성 : 데이터베이스의 저장된 데이터 값과 현실 세계의 실제값이 일치하는 정도&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -507,37 +536,37 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;-암호화-기법-&quot;&gt;&amp;lt; 암호화 기법 &amp;gt;&lt;/h2&gt;
+&lt;h3 id=&quot;-개인키-암호-방식--대칭형-암호-알고리즘-&quot;&gt;&amp;lt; 개인키 암호 방식 = 대칭형 암호 알고리즘 &amp;gt;&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;개인키 암호 방식 = 대칭형 암호 알고리즘
+  &lt;li&gt;동일한 키로 데이터 암호화/복호화 진행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;수신자에게 키를 전달하는 방법
     &lt;ul&gt;
-      &lt;li&gt;동일한 키로 데이터 암호화/복호화 진행&lt;/li&gt;
-      &lt;li&gt;수신자에게 키를 전달하는 방법
-        &lt;ol&gt;
-          &lt;li&gt;Key를 비대칭형 암호 알고리즘을 이용하여 암호화 시킨 후 전송&lt;/li&gt;
-          &lt;li&gt;실제 Key를 전송하지 않고도 A와 B가 동일한 Key를 생성할 수 있도록 하는 Diffie-Hellman 알고리즘을 사용하는 것&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
+      &lt;li&gt;Key를 비대칭형 암호 알고리즘을 이용하여 암호화 시킨 후 전송&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;공개키 암호 방식 = 비대칭형 암호 알고리즘
-    &lt;ol&gt;
-      &lt;li&gt;A는 공개키(public key)와 개인키(private key) 를 생성한다.
-        &lt;ul&gt;
-          &lt;li&gt;A의 공개키를 이용하여 암호화된 데이터는 A의 개인키로만 복호화가 가능하다.&lt;/li&gt;
-          &lt;li&gt;A의 개인키를 이용하여 암호화된 데이터는 A의 공개키로만 복호화가 가능하다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;A와 B는 각자의 공개키를 서로에게 알려준다.
-        &lt;ul&gt;
-          &lt;li&gt;A : 공개A키, 개인A키, 공개B키&lt;/li&gt;
-          &lt;li&gt;B : 공개B키, 개인B키, 공개A키&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;A는 B에게 데이터를 전송하기 위해 B의 공개B키를 이용하여 데이터를 암호화한 후 전송한다&lt;/li&gt;
-      &lt;li&gt;암호화된 데이터는 개인B키를 가지고 있는 B만 해독할 수 있다.&lt;/li&gt;
-    &lt;/ol&gt;
+  &lt;li&gt;실제 Key를 전송하지 않고도 A와 B가 동일한 Key를 생성할 수 있도록 하는 Diffie-Hellman 알고리즘 사용&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;-공개키-암호-방식--비대칭형-암호-알고리즘-&quot;&gt;&amp;lt; 공개키 암호 방식 = 비대칭형 암호 알고리즘 &amp;gt;&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;A는 공개키(public key)와 개인키(private key) 를 생성한다.
+    &lt;ul&gt;
+      &lt;li&gt;A의 공개키를 이용하여 암호화된 데이터는 A의 개인키로만 복호화가 가능하다.&lt;/li&gt;
+      &lt;li&gt;A의 개인키를 이용하여 암호화된 데이터는 A의 공개키로만 복호화가 가능하다.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;A와 B는 각자의 공개키를 서로에게 알려준다.
+    &lt;ul&gt;
+      &lt;li&gt;A : 공개A키, 개인A키, 공개B키&lt;/li&gt;
+      &lt;li&gt;B : 공개B키, 개인B키, 공개A키&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A는 B에게 데이터를 전송하기 위해 B의 공개B키를 이용하여 데이터를 암호화한 후 전송한다&lt;/li&gt;
+  &lt;li&gt;암호화된 데이터는 개인B키를 가지고 있는 B만 해독할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h2 id=&quot;-권한-부여-기법-&quot;&gt;&amp;lt; 권한 부여 기법 &amp;gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -561,7 +590,7 @@
   &lt;li&gt;논리적으로는 하나의 시스템에 속하지만 물리적으로는 네트워크를 통해 여러 개의 사이트에 분산되어 있는 데이터베이스&lt;/li&gt;
   &lt;li&gt;장점 : 자료의 공유성 향상, 시스템 성능 향상, 신뢰성 및 가용성이 높다&lt;/li&gt;
   &lt;li&gt;단점 : DBMS가 수행할 기능이 복잡, DB설계가 복잡, 소프트웨어 개발 비용이 증가&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="트랜잭션" /><category term="ACID" /><category term="병행 제어" /><category term="무결성" /><summary type="html">트랜잭션 &amp;lt; 트랜잭션 정의 &amp;gt; 한꺼번에 모두 수행되어야 할 일련의 연산들 병행 제어 및 회복 작업시 처리되는 작업의 논리적 단위 하나의 트랜잭션은 Commit / RollBack된다 &amp;lt; 트랜잭션 특징(ACID) &amp;gt; 원자성(Automicity) : Do or Nothing, 트랜잭션 내의 모든 명령은 완벽히 수행되거나 전부가 취소되어야 한다. 일관성(Consistency) : 트랜잭션 실행이 성공적으로 완료되면 일관성 있는 데이터베이스의 상태는 일관되어야 한다. 독립성(Isolation) : 어느 하나의 트랜잭션 실행중에 다른 트랜잭션 연산이 끼어들 수 없다. 지속성(Durability) : 완료된 트랜잭션은 시스템의 고장나도 영구적으로 반영되어야 한다. Commit 연산 : 한개의 트랜잭션에 대한 작업이 성공적으로 끝났고, 데이터베이스가 일관된 상태에 있을 때 이 트랜잭션이 수행한 연산이 완료됨을 알려주는 연산 Rollback 연산 : 하나의 트랜잭션 처리가 비정상적으로 종료되어 데이터베이스의 일관성을 깨뜨렸을 때, 트랜잭션의 원자성을 구현하기 위해 이 트랜잭션이 수행한 모든 연산을 Undo하는 연산이다. 병행제어 기법 &amp;lt; 병행제어의 목적 &amp;gt; 데이터베이스 공유를 최대화한다. 시스템 활용도를 최대화한다. 데이터베이스 일관성을 유지한다. 사용자 응답 시간을 최소화한다. &amp;lt; 로킹(Locking) 기법 &amp;gt; 트랜잭션들이 어떤 로킹 단위를 액세스하기 전에 Lock을 요청해서 Lock이 허락되야 그 로킹 단위를 액세스 하는 기법 로킹 단위 : 병행제어에서 한꺼번에 로킹할 수 있는 객체의 크기를 의미하며 로킹의 단위가 크면 로크 수가 작아 관리하기 쉽지만 병행성 수준이 낮아진다. 데이터를 갱신할 때 순서, 잠금(Lock) → 실행(Execute) → 해제(Unlock)   공유 잠금 배타 잠금 공유 잠금 접근 허용 대기 배타 잠금 대기 대기 공유 잠금(Shared-Lock) : 잠금 걸린 데이터에 대해 읽기 가능, 기록 불가능. 배타 잠금(Exclusive-Lock) : 잠금 걸린 데이터에 대해 읽기, 기록 모두 불가능. &amp;lt; 2-단계 잠금 규약(Two-Phase Lock Protocol) 기법 &amp;gt; 트랜잭션 스케쥴의 직렬성을 보장하는 대표적인 기법 ― 확장(Growing) 단계 : 잠금만 수행할 수 있음. (해제 불가) ― 축소(Shrinking) 단계 : 해제만 수행할 수 있음. (잠금 불가) 장점 : 직렬성 보장 / 단점 : 교착 상태 예방 불가능 &amp;lt; 타임 스탬프(Time Stamp Ordering) 기법 &amp;gt; 시스템에 도착한 순서대로 타임 스탬프를 부여하여, 순서대로 실행하도록 한다. 교착 상태가 발생하지 않는다. 무결성 데이터베이스의 저장된 데이터 값과 현실 세계의 실제값이 일치하는 정확성을 의미한다. 무결성 : 데이터의 정확성과 일관성을 유지하고 보증하는 것 고유 무결성 : 릴레이션의 특정 속성에 대해서 각 튜플이 갖는 값들이 서로 달라야 한다. 개체 무결성 : 릴레이션에서 기본키를 구성하는 속성은 NULL 값이나 중복값을 가질 수 없다. 참조 무결성 : 외래키 값은 NULL 이거나 참조 릴레이션의 기본키 값과 동일해야 한다. 보안 데이터베이스의 일부분 또는 전체에 대해서 권한이 없는 사용자가 엑세스하는 것을 금지하기 위한 기술 데이터베이스 사용자들은 일반적으로 서로 다른 객체에 대해 다른 접근 권리/권한을 갖게 된다. &amp;lt; 암호화 기법 &amp;gt; 개인키 암호 방식 = 대칭형 암호 알고리즘 동일한 키로 데이터 암호화/복호화 진행 수신자에게 키를 전달하는 방법 Key를 비대칭형 암호 알고리즘을 이용하여 암호화 시킨 후 전송 실제 Key를 전송하지 않고도 A와 B가 동일한 Key를 생성할 수 있도록 하는 Diffie-Hellman 알고리즘을 사용하는 것 공개키 암호 방식 = 비대칭형 암호 알고리즘 A는 공개키(public key)와 개인키(private key) 를 생성한다. A의 공개키를 이용하여 암호화된 데이터는 A의 개인키로만 복호화가 가능하다. A의 개인키를 이용하여 암호화된 데이터는 A의 공개키로만 복호화가 가능하다. A와 B는 각자의 공개키를 서로에게 알려준다. A : 공개A키, 개인A키, 공개B키 B : 공개B키, 개인B키, 공개A키 A는 B에게 데이터를 전송하기 위해 B의 공개B키를 이용하여 데이터를 암호화한 후 전송한다 암호화된 데이터는 개인B키를 가지고 있는 B만 해독할 수 있다. &amp;lt; 권한 부여 기법 &amp;gt; GRANT : 권한 부여 명령 GRANT 사용자 등급 TO 사용자 ID 리스트 REVOKE : 권한 취소 명령 REVOKE 사용자 등급 FROM 사용자 ID 리스트 분산 데이터베이스 &amp;lt; 분산 데이터베이스 정의 &amp;gt; 논리적으로는 하나의 시스템에 속하지만 물리적으로는 네트워크를 통해 여러 개의 사이트에 분산되어 있는 데이터베이스 장점 : 자료의 공유성 향상, 시스템 성능 향상, 신뢰성 및 가용성이 높다 단점 : DBMS가 수행할 기능이 복잡, DB설계가 복잡, 소프트웨어 개발 비용이 증가</summary></entry><entry><title type="html">관계 데이터베이스 모델과 언어</title><link href="http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%96%B8%EC%96%B4/" rel="alternate" type="text/html" title="관계 데이터베이스 모델과 언어" /><published>2019-05-28T23:01:00+09:00</published><updated>2019-05-28T23:01:00+09:00</updated><id>http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EB%AA%A8%EB%8D%B8%EA%B3%BC%20%EC%96%B8%EC%96%B4</id><content type="html" xml:base="http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%96%B8%EC%96%B4/">&lt;h1 id=&quot;관계형-데이터페이스-구조&quot;&gt;관계형 데이터페이스 구조&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="Database" /><category term="트랜잭션" /><category term="ACID" /><category term="병행 제어" /><category term="무결성" /><summary type="html">트랜잭션 &amp;lt; 트랜잭션 정의 &amp;gt; 한꺼번에 모두 수행되어야 할 일련의 연산들 병행 제어 및 회복 작업시 처리되는 작업의 논리적 단위 하나의 트랜잭션은 Commit / RollBack된다 &amp;lt; 트랜잭션 특징(ACID) &amp;gt; 원자성(Automicity) : Do or Nothing, 트랜잭션 내의 모든 명령은 완벽히 수행되거나 전부가 취소되어야 한다. 일관성(Consistency) : 트랜잭션 실행이 성공적으로 완료되면 일관성 있는 데이터베이스의 상태는 일관되어야 한다. 독립성(Isolation) : 어느 하나의 트랜잭션 실행중에 다른 트랜잭션 연산이 끼어들 수 없다. 지속성(Durability) : 완료된 트랜잭션은 시스템의 고장나도 영구적으로 반영되어야 한다. Commit 연산 : 한개의 트랜잭션에 대한 작업이 성공적으로 끝났고, 데이터베이스가 일관된 상태에 있을 때 이 트랜잭션이 수행한 연산이 완료됨을 알려주는 연산 Rollback 연산 : 하나의 트랜잭션 처리가 비정상적으로 종료되어 데이터베이스의 일관성을 깨뜨렸을 때, 트랜잭션의 원자성을 구현하기 위해 이 트랜잭션이 수행한 모든 연산을 Undo하는 연산이다. Redo : 고장 발생 전, 트랜잭션이 완료 명령을 수행했다면 로그를 이용해 복원하고 Check Point 이후부터 다시 수행하는 방식 Undo : 고장 발생 전, 트랜잭션이 완료 명령을 수행하지 못했다면 DB에 반영된 갱신 사항을 처음까지 취소 병행제어 기법 &amp;lt; 병행제어의 목적 &amp;gt; 데이터베이스 공유를 최대화한다. 시스템 활용도를 최대화한다. 데이터베이스 일관성을 유지한다. 사용자 응답 시간을 최소화한다. &amp;lt; 로킹(Locking) 기법 &amp;gt; 트랜잭션들이 어떤 로킹 단위를 액세스하기 전에 Lock을 요청해서 Lock이 허락되야 그 로킹 단위를 액세스 하는 기법 로킹 단위 : 병행제어에서 한꺼번에 로킹할 수 있는 객체의 크기를 의미하며 로킹의 단위가 크면 로크 수가 작아 관리하기 쉽지만 병행성 수준이 낮아진다. 로킹 단위가 크면 lock 개수가 적어 관리하기 쉽지만 병행성 수준이 낮아진다. 로킹 단위가 작으면 lock 개수가 많아 관리하기는 복잡하지만 병행성 수준이 높아진다. 데이터를 갱신할 때 잠금(Lock) → 실행(Execute) → 해제(Unlock) 교착상태(Deadlock) : Lock상태가 오래 유지되어 다른 Transaction들이 더이상 진행하지 못하고 무한정 대기상태를 뜻한다 공유 잠금(Shared-Lock) : 한 트랜잭션이 데이터 x에 lock-S 를 걸면 다른 트랜잭션은 데이터 x에 대해 read 가능 / write 불가능 배타 잠금(Exclusive-Lock) : 한 트랜잭션이 데이터 x에 lock-X 를 걸면 다른 트랜잭션은 데이터 x에 대해 read 불가능 / write 불가능   공유 잠금 배타 잠금 공유 잠금 접근 허용 대기 배타 잠금 대기 대기 &amp;lt; 2-단계 잠금 규약(Two-Phase Lock Protocol) 기법 &amp;gt; 트랜잭션 스케쥴의 직렬성을 보장하는 대표적인 기법 확장 단계(Growing Phase) Lock을 설정하는 단계, 해제 불가 새로운 lock 연산만 수행할 수 있고 unlock 연산은 수행할 수 없는 단계 축소 단계(Shirinking Phase) Lock을 해제하는 단계, 잠금 불가 unlock 연산만 실행할 수 있고 일단 unlock 연산을 실행하면 lock 연산은 실행할 수 없는 단계 장점 : 직렬성 보장 / 단점 : 교착 상태 예방 불가능 &amp;lt; 타임 스탬프(Time Stamp Ordering) 기법 &amp;gt; 시스템에 도착한 순서대로 타임 스탬프를 부여하여, 순서대로 실행하도록 한다. 교착 상태가 발생하지 않는다. &amp;lt; 로킹 규약 &amp;gt; 트랜잭션 T가 read(x)나 write(x) 연산을 하려면 반드시 먼저 lock(x) 연산을 실행해야 한다. 트랜잭션 T가 실행한 lock(x)에 대해서는 T가 모든 실행을 종료하기 전에 반드시 unlock(x)을 실행시켜야 한다. 다른 트랜잭션에 의해 이미 x에 lock이 걸려있다면 다시 lock(x)를 실행할 수 없다. 트랜잭션 T가 lock(x)를 실행하지 않았다면 T가 unlock(x)를 실행할 수 없다. 무결성 무결성 : 데이터의 정확성과 일관성을 유지하고 보증하는 것 고유 무결성 : 릴레이션의 특정 속성에 대해서 각 튜플이 갖는 값들이 서로 달라야 한다. 개체 무결성 : 릴레이션에서 기본키를 구성하는 속성은 NULL 값이나 중복값을 가질 수 없다. 참조 무결성 : 외래키 값은 NULL 이거나 참조 릴레이션의 기본키 값과 동일해야 한다. cf) 정확성 : 데이터베이스의 저장된 데이터 값과 현실 세계의 실제값이 일치하는 정도 보안 데이터베이스의 일부분 또는 전체에 대해서 권한이 없는 사용자가 엑세스하는 것을 금지하기 위한 기술 데이터베이스 사용자들은 일반적으로 서로 다른 객체에 대해 다른 접근 권리/권한을 갖게 된다. &amp;lt; 암호화 기법 &amp;gt; &amp;lt; 개인키 암호 방식 = 대칭형 암호 알고리즘 &amp;gt; 동일한 키로 데이터 암호화/복호화 진행 수신자에게 키를 전달하는 방법 Key를 비대칭형 암호 알고리즘을 이용하여 암호화 시킨 후 전송 실제 Key를 전송하지 않고도 A와 B가 동일한 Key를 생성할 수 있도록 하는 Diffie-Hellman 알고리즘 사용 &amp;lt; 공개키 암호 방식 = 비대칭형 암호 알고리즘 &amp;gt; A는 공개키(public key)와 개인키(private key) 를 생성한다. A의 공개키를 이용하여 암호화된 데이터는 A의 개인키로만 복호화가 가능하다. A의 개인키를 이용하여 암호화된 데이터는 A의 공개키로만 복호화가 가능하다. A와 B는 각자의 공개키를 서로에게 알려준다. A : 공개A키, 개인A키, 공개B키 B : 공개B키, 개인B키, 공개A키 A는 B에게 데이터를 전송하기 위해 B의 공개B키를 이용하여 데이터를 암호화한 후 전송한다 암호화된 데이터는 개인B키를 가지고 있는 B만 해독할 수 있다. &amp;lt; 권한 부여 기법 &amp;gt; GRANT : 권한 부여 명령 GRANT 사용자 등급 TO 사용자 ID 리스트 REVOKE : 권한 취소 명령 REVOKE 사용자 등급 FROM 사용자 ID 리스트 분산 데이터베이스 &amp;lt; 분산 데이터베이스 정의 &amp;gt; 논리적으로는 하나의 시스템에 속하지만 물리적으로는 네트워크를 통해 여러 개의 사이트에 분산되어 있는 데이터베이스 장점 : 자료의 공유성 향상, 시스템 성능 향상, 신뢰성 및 가용성이 높다 단점 : DBMS가 수행할 기능이 복잡, DB설계가 복잡, 소프트웨어 개발 비용이 증가</summary></entry><entry><title type="html">관계 데이터베이스 모델과 언어</title><link href="http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%96%B8%EC%96%B4/" rel="alternate" type="text/html" title="관계 데이터베이스 모델과 언어" /><published>2019-05-28T23:01:00+09:00</published><updated>2019-05-28T23:01:00+09:00</updated><id>http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EB%AA%A8%EB%8D%B8%EA%B3%BC%20%EC%96%B8%EC%96%B4</id><content type="html" xml:base="http://localhost:4000/database/2019/05/28/%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EC%96%B8%EC%96%B4/">&lt;h1 id=&quot;관계형-데이터페이스-구조&quot;&gt;관계형 데이터페이스 구조&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;릴레이션(Relation): 데이터베이스 테이블&lt;/li&gt;
   &lt;li&gt;튜플(Tuple)     : 릴레이션을 구성하는 각각의 행, 튜플의 수를 카디널리티라 부른다.&lt;/li&gt;
