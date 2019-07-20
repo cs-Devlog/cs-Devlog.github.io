@@ -1,389 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-06T14:54:03+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">월급쟁이 재테크 상식사전 2장</title><link href="http://localhost:4000/%EC%9E%AC%ED%85%8C%ED%81%AC/2019/06/28/%EC%9B%94%EA%B8%89%EC%9F%81%EC%9D%B4%EC%9E%AC%ED%85%8C%ED%81%AC_2%EC%9E%A5-%EC%9D%80%ED%96%89%EC%9D%84-%EC%B9%9C%EA%B5%AC%EB%A1%9C-%EB%A7%8C%EB%93%A4%EC%9E%90/" rel="alternate" type="text/html" title="월급쟁이 재테크 상식사전 2장" /><published>2019-06-28T19:11:00+09:00</published><updated>2019-06-28T19:11:00+09:00</updated><id>http://localhost:4000/%EC%9E%AC%ED%85%8C%ED%81%AC/2019/06/28/%EC%9B%94%EA%B8%89%EC%9F%81%EC%9D%B4%EC%9E%AC%ED%85%8C%ED%81%AC_2%EC%9E%A5%20%EC%9D%80%ED%96%89%EC%9D%84%20%EC%B9%9C%EA%B5%AC%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EC%9E%90</id><content type="html" xml:base="http://localhost:4000/%EC%9E%AC%ED%85%8C%ED%81%AC/2019/06/28/%EC%9B%94%EA%B8%89%EC%9F%81%EC%9D%B4%EC%9E%AC%ED%85%8C%ED%81%AC_2%EC%9E%A5-%EC%9D%80%ED%96%89%EC%9D%84-%EC%B9%9C%EA%B5%AC%EB%A1%9C-%EB%A7%8C%EB%93%A4%EC%9E%90/">&lt;h1 id=&quot;2-은행을-친구로-만들자&quot;&gt;2. 은행을 친구로 만들자&lt;/h1&gt;
-&lt;h2 id=&quot;은행-이자도-적은데-왜-가야할까&quot;&gt;은행, 이자도 적은데 왜 가야할까?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;은행은 재테크에 있어 준비운동과 같다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;돈을 보관하는 금고의 역할&lt;/li&gt;
-  &lt;li&gt;강제로 돈을 모으게 해주는 동기부여&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;단리 : 원금에 이자를 한 번만 계산하는 방법&lt;/li&gt;
-  &lt;li&gt;복리 : 원금에 이자가 붙은 금액을 다시 원금으로 계산하는 방법&lt;/li&gt;
-  &lt;li&gt;명목금리 : 돈의 가치변동을 고려하지 않은 금리&lt;/li&gt;
-  &lt;li&gt;실질금리 : 실제로 받는 이자로 명목금리에서 물가상승률을 뺀 값&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;이자가-사라지는-원인&quot;&gt;이자가 사라지는 원인&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1천만원 예금에 연 3% 이자를 붙여준다고 해도 실제는 1025만원만 찍히는데 이는 &lt;strong&gt;소득세&lt;/strong&gt; 때문이다.&lt;/li&gt;
-  &lt;li&gt;월 100만원씩 연 4% 적금을 넣어도 실제 이자는 26만원이고, 여기에 15.4% 소득세가 부과된다.
-    &lt;ul&gt;
-      &lt;li&gt;적금 시에는 첫 달에 넣은 100만원은 4%의 이자가 붙지만, 이후 달마다 &lt;strong&gt;4% * (x개월 / 12개월)&lt;/strong&gt; 공식에 따라 적용된다.&lt;/li&gt;
-      &lt;li&gt;이러한 공식으로 이율을 계산하면 실제 이율은 2.2%에 불과하다.&lt;/li&gt;
-      &lt;li&gt;결론적으로 적금이자는 은행에서 안내해주는 이자율의 절반 정도만 받는다고 생각해야 한다.&lt;/li&gt;
-      &lt;li&gt;여기에 기본적인 이자소득세 14% + 지방소득세 1.4%가 원청징수되어 &lt;strong&gt;이자 * 84.6%&lt;/strong&gt; 금액을 받을 수 있다.&lt;/li&gt;
-      &lt;li&gt;ISA를 통해 이자에 대한 세금을 일정 한도까지 면제받을 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;시중은행-vs-저축은행&quot;&gt;시중은행 vs 저축은행&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;시중은행 : 국민,우리,신한 등 우리가 알고 있는 은행
-    &lt;ul&gt;
-      &lt;li&gt;저축은행 대출은 연 이자만 2~24%가 되기 때문에 대출을 받을 때 연 10%를 넘지 않는 시중은행을 이용하는 것이 적절하다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;저축은행 : 서민과 소규모 기업의 금융 편의를 돕고 저축 증대를 위한 금융기관(솔로몬, 스타, 토마토 등)
-    &lt;ul&gt;
-      &lt;li&gt;저축은행은 상대적으로 낮은 인지도를 만회하기 위해 0.5~1.0% 정도 이자율이 높아 &lt;strong&gt;예금에 적합&lt;/strong&gt;하다.&lt;/li&gt;
-      &lt;li&gt;예/적금을 취급하고 예금자보호법에 의해 5천만원까지 원금과 이자를 보장받을 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;3금융권은 사채업으로 불리며 절대 활용하지 말자!&lt;/li&gt;
-  &lt;li&gt;은행금리 실시간으로 조회하는 방법
-    &lt;ul&gt;
-      &lt;li&gt;시중은행 : &lt;a href=&quot;https://portal.kfb.or.kr/compare/receiving_deposit.php&quot;&gt;전국은행연합회&lt;/a&gt;에서 은행별/상품별/기간별 금리를 실시간으로 볼 수 있다.&lt;/li&gt;
-      &lt;li&gt;저축은행 : &lt;a href=&quot;https://www.fsb.or.kr/financepro/deposit_info06.do&quot;&gt;저축은행중앙회&lt;/a&gt;에서 은행별 금리를 확인할 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;통장-관리하기통장-쪼개기&quot;&gt;통장 관리하기(통장 쪼개기)&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;통장을 나누면 진짜 내돈은 얼마가 남았는지 쉽게 파악할 수 있다.
-    &lt;ul&gt;
-      &lt;li&gt;월급통장 : 회사에서 급여가 들어오는 통장으로 생활비통장, 투자통장에 필요한만큼 나누고 남는 잔액이 실제 월급&lt;/li&gt;
-      &lt;li&gt;생활비통장 : 카드/휴대폰/보험료 등 필요한 생활에 필요한 비용을 넣어두는 통장&lt;/li&gt;
-      &lt;li&gt;투자통장 : 은행 적금/예금/펀드통장을 가리킨다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;월급을 받으면 투자통장에 돈을 넣고 생활비통장에 송금하자.&lt;/li&gt;
-  &lt;li&gt;풍차돌리기 적금을 해보자.(매달 하나의 적금을 가입해 12개를 가입하는 방식)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;isa-장단점-살펴보기&quot;&gt;ISA 장단점 살펴보기&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ISA(Individual Savings Account), 개인종합자산관리계좌&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/isa.png&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;통합성 : 계좌 하나로 예/적금과 펀드, 금융투자 상품까지 한번에 관리할 수 있다.&lt;/li&gt;
-  &lt;li&gt;손익통산 : 2개의 상품에서 하나는 이익이 나고 하나는 손실이 난 경우 이를 합산해 손실인 경우 세금을 부과하지 않는다.&lt;/li&gt;
-  &lt;li&gt;비과세 : 최소 200만원에서 400만원까지 수익에 대해 세금을 내지 않는다. 만약 500만원의 수익인 경우 차액인 100만원에 대한 세금만 내면 된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/isa2.jpg&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ISA 단점 : 펀드에 대해서 약 1%, 예금에 0.1%의 수수료가 붙는다.&lt;/li&gt;
-  &lt;li&gt;1천만원을 3%의 예금으로 1년 넣는다면 이자 30만원에 세금 4만 6천원이 나온다면, ISA는 1만원 이하다.&lt;/li&gt;
-  &lt;li&gt;결국 ISA는 적금 시작으로 가성비 좋은 상품이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;인터넷-전문은행&quot;&gt;인터넷 전문은행&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;장점 : 유지비가 적고 공인인증서와 수수로 면제를 받는다.&lt;/li&gt;
-  &lt;li&gt;단점 : 일일 200만원 한도금액이 적다.&lt;/li&gt;
-  &lt;li&gt;공동결제시스템(오픈뱅킹) : 농협 어플리케이션에서 국민은행 계좌를 관리할 수 있고 결제와 송금까지 모든 것이 가능해지는 것&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;짬밥-될-때까지는-무조건-은행이다&quot;&gt;짬밥 될 때까지는 무조건 은행이다&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;처음 재테크를 시작할 때는 안전하게 돈을 모으기 위한 수단으로 은행을 활용한다.&lt;/li&gt;
-  &lt;li&gt;어느 순간 적립식 펀드, 부동산 등에 투자한다.&lt;/li&gt;
-  &lt;li&gt;모은 재산은 다시 은행의 예/적금으로 보관된다.&lt;/li&gt;
-  &lt;li&gt;주식/펀드는 높은 수익률을 기대할 수 있지만 항상 리스크가 존재한다.&lt;/li&gt;
-  &lt;li&gt;주택청약종합저축통장 : 40% 소득공제와 이자혜택이 있는 상품&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="재테크" /><category term="은행" /><category term="ISA" /><category term="월급쟁이 재테크" /><summary type="html">2. 은행을 친구로 만들자 은행, 이자도 적은데 왜 가야할까?</summary></entry><entry><title type="html">월급쟁이 재테크 상식사전 1장</title><link href="http://localhost:4000/%EC%9E%AC%ED%85%8C%ED%81%AC/2019/06/28/%EC%9B%94%EA%B8%89%EC%9F%81%EC%9D%B4%EC%9E%AC%ED%85%8C%ED%81%AC_1%EC%9E%A5-%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9D%98-%EC%B2%AB%EA%B1%B8%EC%9D%8C,-%EC%A2%85%EC%9E%A3%EB%8F%88-%EB%A7%8C%EB%93%A4%EA%B8%B0/" rel="alternate" type="text/html" title="월급쟁이 재테크 상식사전 1장" /><published>2019-06-28T19:11:00+09:00</published><updated>2019-06-28T19:11:00+09:00</updated><id>http://localhost:4000/%EC%9E%AC%ED%85%8C%ED%81%AC/2019/06/28/%EC%9B%94%EA%B8%89%EC%9F%81%EC%9D%B4%EC%9E%AC%ED%85%8C%ED%81%AC_1%EC%9E%A5%20%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9D%98%20%EC%B2%AB%EA%B1%B8%EC%9D%8C,%20%EC%A2%85%EC%9E%A3%EB%8F%88%20%EB%A7%8C%EB%93%A4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EC%9E%AC%ED%85%8C%ED%81%AC/2019/06/28/%EC%9B%94%EA%B8%89%EC%9F%81%EC%9D%B4%EC%9E%AC%ED%85%8C%ED%81%AC_1%EC%9E%A5-%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9D%98-%EC%B2%AB%EA%B1%B8%EC%9D%8C,-%EC%A2%85%EC%9E%A3%EB%8F%88-%EB%A7%8C%EB%93%A4%EA%B8%B0/">&lt;h1 id=&quot;1-재테크의-첫걸음-종잣돈-만들기&quot;&gt;1. 재테크의 첫걸음, 종잣돈 만들기&lt;/h1&gt;
-&lt;h2 id=&quot;아무리-배가-고파도-종자는-먹지-마라&quot;&gt;아무리 배가 고파도 종자는 먹지 마라&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;종잣돈(Seed Money) = 씨앗이 되는 돈, 지금 당장이 아닌 앞으로의 필요를 채우기 위해 남겨두어야 하는 자금&lt;/li&gt;
-  &lt;li&gt;종잣돈 1단계는 연봉의 2배를 만드는 것!&lt;/li&gt;
-  &lt;li&gt;래칫 효과 : 한 번 올라간 소비 수준은 내려오지 않는다. 예를 들어 외제차를 타다가 소형 국산차로 갈아타기는 쉽지 않다. 돈을 모으는 시작부터 소비 수준을 낮춰야만 돈을 모으기 쉬워진다.&lt;/li&gt;
-  &lt;li&gt;계좌이동제 : 여러 금융회사에 등록되어 있는 본인의 자동이체 등록정보를 자동이체통합관리서비스 홈페이지에서 일괄조회할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;종잣돈-모으기-전략-연봉별로-다르다&quot;&gt;종잣돈 모으기 전략, 연봉별로 다르다&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;1800~2000만원 : 3년 내 3천만원, 매달 80만원 투자(적금 60만원, 펀드 20만원)&lt;/li&gt;
-  &lt;li&gt;2천만원대 : 4년 내 5천만원, 매달 100만원 투자(적금 80만원, 펀드 20만원)&lt;/li&gt;
-  &lt;li&gt;3천만원대 : 3년 내 7천만원, 매달 160만원 투자(적금 130만원, 펀드 30만원)&lt;/li&gt;
-  &lt;li&gt;4천만원대 : 3년 내 1억원, 매달 300만원 투자(적금 250만원, 펀드 50만원)&lt;/li&gt;
-  &lt;li&gt;5천만원 이상 : 4년대 2억원, 매달 350만원 투자(적금 250만원, 펀드 100만원)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;억대연봉 : 절세에 대한 책과 소득공제, 세액공제에 대한 내용 공부&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;즐겨찾기 해놓아야 할 재테크 사이트
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.moneta.co.kr/&quot;&gt;모네타&lt;/a&gt; : 모든 재테크 지식이 모여있는 곳&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.funddoctor.co.kr/&quot;&gt;펀드닥터&lt;/a&gt; : 펀드 가입 전에 반드시 한 번쯤 방문해야 하는 사이트&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://banksalad.com/&quot;&gt;뱅크셀러드&lt;/a&gt; : 각종 재테크 관련 정보가 정리된 사이트&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;참고지식
-    &lt;ul&gt;
-      &lt;li&gt;코스피(종합주가지수) : 우리나라에서 상장된 모든 회사의 주식 총액을 나타내는 지표&lt;/li&gt;
-      &lt;li&gt;코스닥(KOSDAQ) : 벤처기업을 위한 증권시장&lt;/li&gt;
-      &lt;li&gt;코스피200 : 시장 상황과 업종을 대표하는 200개의 회사를 선정한 것&lt;/li&gt;
-      &lt;li&gt;니케이지수 : 일본판 코스피200&lt;/li&gt;
-      &lt;li&gt;상하이종합지수 : 중국 본토를 대표하는 주가지수, (상하이A, 상하이B)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;월급의-배달-사고-원인은&quot;&gt;월급의 배달 사고, 원인은?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;계약 연봉과 실수령액은 다르다.
-    &lt;ul&gt;
-      &lt;li&gt;4대보험
-        &lt;ul&gt;
-          &lt;li&gt;국민연금 : 월급의 9%를 낸다.(회사와 반으로 나눠 4.5%)&lt;/li&gt;
-          &lt;li&gt;건강보험 : 월급의 6.46%를 낸다.(회사와 반으로 나눠 3.23%)&lt;/li&gt;
-          &lt;li&gt;장기요양보험료 : 월급의 0.27%를 낸다.(회사와 반으로 나눠 0.135%)&lt;/li&gt;
-          &lt;li&gt;고용보험 : 월급의 0.65%를 낸다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;소득세 : 공제 대상 가족 수에 따라 다르다.&lt;/li&gt;
-      &lt;li&gt;즉, 연봉의 10%~20%는 국가에서 가져간다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;월급명세서 해부
-    &lt;ul&gt;
-      &lt;li&gt;기본급, 상여금, 연장근무수당, 복리후생비(식대, 교통비), 특별상여금, 소득세, 지방소득세, 국민연금, 건강보험, 고용보험, 장기요양보험료, 결근공제, 조합비, 실지급액&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;연령대별-포트폴리오-구성&quot;&gt;연령대별 포트폴리오 구성&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;20~30대 : 종잣돈 만드는 시기
-    &lt;ul&gt;
-      &lt;li&gt;소득의 대부분을 적립슥으로 투자함으로써 자산을 형성한다.&lt;/li&gt;
-      &lt;li&gt;주식, 펀드는 장기투자하면 반드시 효도하는 상품이므로 첫 월급부터 시작&lt;/li&gt;
-      &lt;li&gt;부동산 30%, 금융 70%(펀드60%, CMA 10%)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;30대 중반~40대 중반 : 종잣돈 굴리는 시기
-    &lt;ul&gt;
-      &lt;li&gt;만들어진 종잣돈을 굴리는 시기&lt;/li&gt;
-      &lt;li&gt;원금을 잃지 않으면서 수익이 나는 투자 상품을 찾는다.&lt;/li&gt;
-      &lt;li&gt;부동산 40%(내집마련을 목표), 금융60%(펀드 50%, CMA 10%)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;40대 후반~50대 후반 : 자산을 지키는 시기
-    &lt;ul&gt;
-      &lt;li&gt;은퇴 이후 삶을 미리 준비하는 방식&lt;/li&gt;
-      &lt;li&gt;부동산 50%(안전 자산), 금융 50%(펀드 30%, CMA 20%)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;60대 이후 : 자산을 처분하는 시기
-    &lt;ul&gt;
-      &lt;li&gt;무리하게 자산을 늘리기 보다 안정적으로 자산을 보유하는 방식&lt;/li&gt;
-      &lt;li&gt;부동산 40%(연금 형태로 돌린다), 금융 60%(현금자산 20%, 연금 자산 40%)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;사회초년생-포트폴리오-예시&quot;&gt;사회초년생 포트폴리오 예시&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;청약저축 - 20만원 : 소득공제, 내집마련 준비용&lt;/li&gt;
-  &lt;li&gt;적금 - 50만원 : 재테크의 시작, ISA로 관리&lt;/li&gt;
-  &lt;li&gt;적립식 펀드 - 60만원 : 직장인은 재테크 친구&lt;/li&gt;
-  &lt;li&gt;연금저축 - 30만원 : 소액으로 시작&lt;/li&gt;
-  &lt;li&gt;정기보험 - 15만원 : 되도록이면 보험이 필요&lt;/li&gt;
-  &lt;li&gt;실손보험 - 2만원 : 혹시 모를 병원 신세 대비&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;절약-앞에-장사-없다&quot;&gt;절약 앞에 장사 없다&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;가랑비에 옷 젖는다는 말이 있듯 조금씩 빠져나가는 돈을 잘 모아서 제대로 굴리자&lt;/li&gt;
-  &lt;li&gt;금연통장, 커피통장, 금주통장, 택시비통장 등을 만들자&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;신용카드-독일까-약일까&quot;&gt;신용카드, 독일까 약일까&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;독이 되는 경우 : 금전 감각 마비, 현금서비스 사용, 할부결제&lt;/li&gt;
-  &lt;li&gt;약이 되는 경우 : 각종 할인 혜택, 교통카드 연말정산 혜택&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;자동차는-돈이아닌-용기로-사는-것&quot;&gt;자동차는 돈이아닌 용기로 사는 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;국산차 가격만 해도 2500~3000만원&lt;/li&gt;
-  &lt;li&gt;차 가격을 은행에 넣어두면 연간 20~60만원을 포기하는 것이며 보험료, 기름값 등을 포함하면 평균 한달 40만원을 포기한 결과물이다.&lt;/li&gt;
-  &lt;li&gt;차가 필요하다면 쏘카 같은 랜트가 훨씬 경제적이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;건강도-재테크다&quot;&gt;건강도 재테크다.&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;병원 진료비가 자동차 한 대값이므로 건강관리가 필요&lt;/li&gt;
-  &lt;li&gt;건강해야 회사도 오래 다닐 수 있다.&lt;/li&gt;
-  &lt;li&gt;은퇴 이후에도 가장 큰 변수는 병원비와 간병비며 이를 위해 건강이 필수다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;골목식당과-재무설계의-공통점&quot;&gt;골목식당과 재무설계의 공통점&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;회사가 전쟁터면 밖은 지옥이다.&lt;/li&gt;
-  &lt;li&gt;월급쟁이와는 달리 다른 자영업자는 재테크 설계가 어렵다.&lt;/li&gt;
-  &lt;li&gt;실패하면 환경과 외부요인을 탓하게 되는데 이보다는 솔루션을 따르는 것이 좋다.&lt;/li&gt;
-  &lt;li&gt;세무상담을 원하는 고객들을 위해 국세청 홈택스에서 무료로 상담을 진행한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="재테크" /><category term="종잣돈" /><category term="월급쟁이 재테크" /><summary type="html">1. 재테크의 첫걸음, 종잣돈 만들기 아무리 배가 고파도 종자는 먹지 마라 종잣돈(Seed Money) = 씨앗이 되는 돈, 지금 당장이 아닌 앞으로의 필요를 채우기 위해 남겨두어야 하는 자금 종잣돈 1단계는 연봉의 2배를 만드는 것! 래칫 효과 : 한 번 올라간 소비 수준은 내려오지 않는다. 예를 들어 외제차를 타다가 소형 국산차로 갈아타기는 쉽지 않다. 돈을 모으는 시작부터 소비 수준을 낮춰야만 돈을 모으기 쉬워진다. 계좌이동제 : 여러 금융회사에 등록되어 있는 본인의 자동이체 등록정보를 자동이체통합관리서비스 홈페이지에서 일괄조회할 수 있다.</summary></entry><entry><title type="html">EBS 다큐프라임 - 자본주의 2부, 소비는 감정이다</title><link href="http://localhost:4000/%EA%B2%BD%EC%A0%9C/2019/06/26/%EC%9E%90%EB%B3%B8%EC%A3%BC%EC%9D%982%EB%B6%80_%EC%86%8C%EB%B9%84%EB%8A%94%EA%B0%90%EC%A0%95%EC%9D%B4%EB%8B%A4/" rel="alternate" type="text/html" title="EBS 다큐프라임 - 자본주의 2부, 소비는 감정이다" /><published>2019-06-26T14:11:00+09:00</published><updated>2019-06-26T14:11:00+09:00</updated><id>http://localhost:4000/%EA%B2%BD%EC%A0%9C/2019/06/26/%EC%9E%90%EB%B3%B8%EC%A3%BC%EC%9D%982%EB%B6%80_%EC%86%8C%EB%B9%84%EB%8A%94%EA%B0%90%EC%A0%95%EC%9D%B4%EB%8B%A4</id><content type="html" xml:base="http://localhost:4000/%EA%B2%BD%EC%A0%9C/2019/06/26/%EC%9E%90%EB%B3%B8%EC%A3%BC%EC%9D%982%EB%B6%80_%EC%86%8C%EB%B9%84%EB%8A%94%EA%B0%90%EC%A0%95%EC%9D%B4%EB%8B%A4/">&lt;h1 id=&quot;ebs-다큐프라임---자본주의-2부&quot;&gt;EBS 다큐프라임 - 자본주의 2부&lt;/h1&gt;
-
-&lt;h2 id=&quot;소비는-감정이다&quot;&gt;소비는 감정이다&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;마케터들이 아이들에게 접근하는 이유는 아이들이 부모의 구매 행동에도 영향을 주기 때문이다.&lt;/li&gt;
-  &lt;li&gt;마케팅의 꽃은 여성 마케팅이다.
-    &lt;ul&gt;
-      &lt;li&gt;여성은 감정적으로 훨씬 더 약하기 때문에 소비에 더 약하다.&lt;/li&gt;
-      &lt;li&gt;판매자와의 교류로 동조해주기를 원한다.&lt;/li&gt;
-      &lt;li&gt;여성은 음식과 옷만 사는 것이 아닌 현장에 있지 않은 사람의 물건까지도 사는 &lt;strong&gt;부재자 쇼핑&lt;/strong&gt;을 통해 모든 범위의 상품 구매에 관여한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;쇼핑을 할 때는 의식적으로 하기보다 무의식적으로 결정하게 된다.
-    &lt;ul&gt;
-      &lt;li&gt;새로운 것보다는 익숙한 상품을 구매한다.&lt;/li&gt;
-      &lt;li&gt;마트에 가면 좌회전을 많이하게 된다.&lt;/li&gt;
-      &lt;li&gt;무의식이 하고자 하는 소비를 점차 합리화한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;마케팅은 자기 스스로를 알리는 것이다.&lt;/li&gt;
-  &lt;li&gt;PR은 다른 사람을 통해 듣는 이야기이다.&lt;/li&gt;
-  &lt;li&gt;광고는 지속적으로 자신을 알리는 것이다.&lt;/li&gt;
-  &lt;li&gt;브랜드는 다른 사람이 말하기전에 알아보는 것이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;과소비&quot;&gt;과소비&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;과소비 지수 = (월평균 수입 - 월평균 저축) / 월평균 수입
-    &lt;ul&gt;
-      &lt;li&gt;0.5 : 근검절약형, 0.6 : 적정소비&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;물건 구매 유형
-    &lt;ul&gt;
-      &lt;li&gt;Need(필요에 의한 구매)&lt;/li&gt;
-      &lt;li&gt;Broken(망가져서 구매)&lt;/li&gt;
-      &lt;li&gt;Better(가지고 있지만 더 좋아보여서 구매)&lt;/li&gt;
-      &lt;li&gt;No reason(이유없이 구매)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;소비는 감정을 자극하는 마케팅이다.&lt;/li&gt;
-  &lt;li&gt;사람들은 사회로 배척당하는 것을 두려워하고 이를 보완하기 위해 과소비를 하게된다.&lt;/li&gt;
-  &lt;li&gt;청소년기에 외로움을 해소할 수 있는 곳은 또래집단이다. 또래가 가지고 있는 물건을 나도 가짐으로 인해서 같은 소속감을 가지고자 한다. 이는 나의 선택에 또래의 선택이 영향을 준다는 것이다.&lt;/li&gt;
-  &lt;li&gt;신용카드를 사용할 때 죄책감을 덜 느끼게 되어 과소비하게된다.&lt;/li&gt;
-  &lt;li&gt;슬픈 감정을 느낄 때면 평소보다 더 간절히 물건이 가지고 싶어져 더 많은 돈을 내려고 한다.&lt;/li&gt;
-  &lt;li&gt;자존감이 낮을수록 현실과 이상 자아 간의 차이가 크다. 그 간극을 메우기 위해 더 많이 소비한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="경제" /><category term="소비" /><summary type="html">EBS 다큐프라임 - 자본주의 2부</summary></entry><entry><title type="html">EBS 다큐프라임 - 자본주의 1부, 돈은 빚이다</title><link href="http://localhost:4000/%EA%B2%BD%EC%A0%9C/2019/06/26/%EC%9E%90%EB%B3%B8%EC%A3%BC%EC%9D%981%EB%B6%80_%EB%8F%88%EC%9D%80%EB%B9%9A%EC%9D%B4%EB%8B%A4/" rel="alternate" type="text/html" title="EBS 다큐프라임 - 자본주의 1부, 돈은 빚이다" /><published>2019-06-26T11:11:00+09:00</published><updated>2019-06-26T11:11:00+09:00</updated><id>http://localhost:4000/%EA%B2%BD%EC%A0%9C/2019/06/26/%EC%9E%90%EB%B3%B8%EC%A3%BC%EC%9D%981%EB%B6%80_%EB%8F%88%EC%9D%80%EB%B9%9A%EC%9D%B4%EB%8B%A4</id><content type="html" xml:base="http://localhost:4000/%EA%B2%BD%EC%A0%9C/2019/06/26/%EC%9E%90%EB%B3%B8%EC%A3%BC%EC%9D%981%EB%B6%80_%EB%8F%88%EC%9D%80%EB%B9%9A%EC%9D%B4%EB%8B%A4/">&lt;h1 id=&quot;ebs-다큐프라임---자본주의-1부&quot;&gt;EBS 다큐프라임 - 자본주의 1부&lt;/h1&gt;
-
-&lt;h2 id=&quot;가격이-계속-오르는-이유&quot;&gt;가격이 계속 오르는 이유&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;수요/공급의 법칙
-    &lt;ul&gt;
-      &lt;li&gt;수요가 증가해서 가격이 오른다.&lt;/li&gt;
-      &lt;li&gt;공급이 감소해서 가격이 오른다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;시중에 돌아다니는 돈의 양이 늘어났기 때문
-    &lt;ul&gt;
-      &lt;li&gt;양적완화, 통화팽창, 경기부양 단어를 이해하자!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;금융-자본주의에서-돈이-어떻게-돌고-도는지&quot;&gt;금융 자본주의에서 돈이 어떻게 돌고 도는지?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;조폐공사에서 찍어내는 돈보다 훨씬 더 많은 돈이 시중에 돌아다닌다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/capitalism1_1.png&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;왜 100원을 넣었는데 은행은 190원을 사용할 수 있을까?
-    &lt;ul&gt;
-      &lt;li&gt;100원이 들어오면 은행은 10원을 남기고 90원은 대출해도 된다고 정부가 허락했기 때문!&lt;/li&gt;
-      &lt;li&gt;여기서 100원(&lt;strong&gt;지급준비금&lt;/strong&gt;)으로 90원을 대출해준 이유는 10원이 법으로 정한 최소한의 지급준비금인 &lt;strong&gt;법정지급준비금&lt;/strong&gt;이고, 10%는 은행이 예금 고객에게 줄 돈으로 쌓아 둬야 하는 비율인 &lt;strong&gt;부분지급준비율&lt;/strong&gt;이다.&lt;/li&gt;
-      &lt;li&gt;은행은 지급준비금의 10%만 보유하고 나머지는 대출로 이자를 받는다. 만약 금융위기 시대에 은행에 돈을 맡긴 사람들이 동시에 돈을 찾는 &lt;strong&gt;뱅크런&lt;/strong&gt;현상이 일어난다면 은행은 망하게 된다.&lt;/li&gt;
-      &lt;li&gt;10원은 지급준비금, 90원은 신용통화라고 말하며 90원의 10%를 제외하고 81원, 72원, 65원 등 계속 돈을 대출해주는데 이를 신용창조라고 한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/capitalism1_2.png&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;5000억이 6조60억으로 불어난다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;중앙은행이-하는-일&quot;&gt;중앙은행이 하는 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;중앙은행은 통화량을 조절한다.
-    &lt;ol&gt;
-      &lt;li&gt;이자율 통제&lt;/li&gt;
-      &lt;li&gt;화폐 발행&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;양적완화 : 중앙은행이 화폐를 찍어 통화량을 늘림으로써 경기방어와 신용경색을 해소하는 정책&lt;/li&gt;
-  &lt;li&gt;중앙은행이 왜 돈을 계속 찍어야하는가?
-    &lt;ul&gt;
-      &lt;li&gt;내부 통화량이 있어야 이자를 받을 수 있기 때문&lt;/li&gt;
-      &lt;li&gt;한 섬에 10000원밖에 없다면 이자를 받을 수 없기 때문에 화폐를 만들어야하고, 빌려가는 돈에 이자를 받기 위해 또다시 돈을 찍어야 하는데 여기서 인플레이션이 발생한다.
-        &lt;ul&gt;
-          &lt;li&gt;인플레이션(통화팽창) : 통화량의 증가로 화폐가치가 하락하고, 물가가 오르는 경제현상&lt;/li&gt;
-          &lt;li&gt;하이퍼인플레이션 : 급격하게 발생한 인플레이션으로 물가 상승 현상이 통제를 벗어난 초인플레이션 상태(2008년 짐바브웨 달러)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;이자를 갚으려면 누군가의 대출금을 가져와야 한다.&lt;/li&gt;
-  &lt;li&gt;돈이 적게 돌면 누군가는 이자를 벌 수 없어서 갚을 수 없게 되고 그 사람은 파산하게 된다.&lt;/li&gt;
-  &lt;li&gt;이렇게 되면 시중에 돈의 양(통화량)이 줄어들고 돈을 못갚는 사람과 기업이 많아지며 파산하는 사람이 많아진다.
-    &lt;ul&gt;
-      &lt;li&gt;디플레이션(통화축소) : 통화량의 축소로 물가가 하락하고 경제활동이 침체되는 현상&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;금융위기가 발생되고 실업자가 늘어나며 기업은 더이상 생산에 투자하지 않는다.&lt;/li&gt;
-  &lt;li&gt;자본주의 경제환경에서는 물결처럼 상승과 하강을 반복하는 콘드라티예프 파동 장기 순환주기가 존재한다.(48년~60년)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;기축통화달러&quot;&gt;기축통화(달러)&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;브레튼우즈 협정에서 &lt;strong&gt;Gold Standard System&lt;/strong&gt;(35달러에 금 1온스에 고정)을 마련하면서 달러가 기축통화가 되었다.&lt;/li&gt;
-  &lt;li&gt;베트남 전쟁으로 달러 가치가 떨어지자 1971년 닉슨 대통령은 금 태환제를 폐지했다.&lt;/li&gt;
-  &lt;li&gt;FRB에서 달러를 찍어내는데 이는 정부기관이 아닌 몇몇 민간은행의 법인이다. 또한, 정부도 FRB에서 돈을 빌려야 한다.&lt;/li&gt;
-  &lt;li&gt;돈의 큰 그림을 보려면 미국 금융정책을 알아야 한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ChanSu Kim</name></author><category term="경제" /><category term="자본주의" /><category term="순환" /><summary type="html">EBS 다큐프라임 - 자본주의 1부</summary></entry><entry><title type="html">동원엔터프라이즈 면접 후기</title><link href="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/06/13/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EB%A9%B4%EC%A0%91-%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="동원엔터프라이즈 면접 후기" /><published>2019-06-13T15:11:00+09:00</published><updated>2019-06-13T15:11:00+09:00</updated><id>http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/06/13/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88%20%EB%A9%B4%EC%A0%91%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/06/13/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EB%A9%B4%EC%A0%91-%ED%9B%84%EA%B8%B0/">&lt;h1 id=&quot;-동원엔터프라이즈-1차-면접-후기-&quot;&gt;&amp;lt; 동원엔터프라이즈 1차 면접 후기 &amp;gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-20T23:53:36+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Devlog</title><author><name>ChanSu Kim</name></author><entry><title type="html">동원엔터프라이즈 면접 후기</title><link href="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/06/13/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EB%A9%B4%EC%A0%91-%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="동원엔터프라이즈 면접 후기" /><published>2019-06-13T15:11:00+09:00</published><updated>2019-06-13T15:11:00+09:00</updated><id>http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/06/13/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88%20%EB%A9%B4%EC%A0%91%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EB%A9%B4%EC%A0%91/2019/06/13/%EB%8F%99%EC%9B%90%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EB%A9%B4%EC%A0%91-%ED%9B%84%EA%B8%B0/">&lt;h1 id=&quot;-동원엔터프라이즈-1차-면접-후기-&quot;&gt;&amp;lt; 동원엔터프라이즈 1차 면접 후기 &amp;gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/dongwon_result1.png&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -735,4 +350,412 @@
 &lt;hr /&gt;
 
 &lt;h1 id=&quot;-결과-&quot;&gt;&amp;lt; 결과 &amp;gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/nhit_3.png&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="인적성" /><category term="농협정보시스템" /><summary type="html">&amp;lt; 농협정보시스템 인적성 후기 &amp;gt; 6월 2일 건국대학교에서 농협정보시스템 인적성을 보고 왔다. 다른 기업과 달리 4시간 30분을 시험을 봐서 시험보고나면 진이 다빠진다. 시험 끝나고 나면 빵과 우유를 준다. &amp;lt; 적성 고사 후기 &amp;gt; NCS형 기반으로 의사소통능력, 수리능력, 문제해결능력, 정보능력, 조직이해능력 총 5가지 영역으로 나누어져 있다. 공지때 찍어도 감점이 없다고 알려주고 시험지마다 오답시 감점이 없다고 나와있다. 정말 숨돌릴 시간이 없다. 하나 끝나면 시험지바꾸고 이름, 수험번호 적고 넘어가는데 보통 10초가 안걸린다. 중간에 화장실을 갈 수가 없으니 미리 다녀오자. 의사소통능력 한자, 사자성어, 같은 뜻찾기 등을 비롯한 문제부터 독해문제까지 있다. 한자나 사자성어 등에서 시간을 줄여서 그런가 오히려 시간이 조금 남았다. 수리능력 20문제/20분이지만 시간이 부족하다. 딱보고 어려워보이는 문제는 바로바로 넘어갔다. 계산부터 자료해석까지 고루 나왔던것 같다. 문제해결능력 난이도가 꽤 어려웠던 것으로 기억한다. 정보능력 지역농협 6급 책과 달리 새로운 유형이였는데 컴퓨터구조 관련 문제부터 다양한 상식 문제가 나왔다. 조직이해능력 단순 문제와 지문을 읽고 그 안에 해당하는 답을 찾는 문제로 나누어져 있다. 예를 들면 지문에서 각 나라별 예의를 설명하고 알맞은 답을 찾는 문제나 사내 커뮤니케이션 방침을 주고 알맞은 방법을 선택하는 등의 문제가 있다. &amp;lt; 인성 검사&amp;gt; 다른 인성검사와 달리 Yes/No 만 선택하면 되는 210문제 25분을 주는데 시간이 부족하지 않다. &amp;lt; 전산능력평가 &amp;gt; 과목은 전산일반, 프로그래밍, 데이터베이스, 네트워크 각 20문제로 총 80문항 100분을 준다. 대충 기억나는 문제만 복원해보자면.. 전산일반 : 부동소수점, MPEG-2, 인터럽트, 주소공간, 메모리 접근 방식, 명령어 처리 단계, 세마포어, cache miss rate 줄이는 방법, 프로그래밍 : 자바 최상위 계층 클래스(Object), 기본으로 주어지는 클래스(lang), C언어 코드 분석, 실행 횟수, 포인터 배열 참조 방법, gc() 역할, Thread 실행 함수 이름, 데이터베이스 : SQL 주고 채워넣기/선택하기, DB 정의, 논리적데이터(?) 네트워크 : 맨채스터(nrz), SYN Flooding, 데이터링크, 라우팅 알고리즘 종류, RIP, UDP 특징, IP 프로토콜 특징, HTTP 프로토콜 특징, 사설 IP가 아닌 것, 시분할 다중화, PCM 특징, 서브넷마스크(A,B,C클래스), 변조 속도(baud), IPv6 특징 &amp;lt; 결과 &amp;gt;</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/nhit_3.png&quot; alt=&quot;Imeage&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;</content><author><name>ChanSu Kim</name></author><category term="인적성" /><category term="농협정보시스템" /><summary type="html">&amp;lt; 농협정보시스템 인적성 후기 &amp;gt; 6월 2일 건국대학교에서 농협정보시스템 인적성을 보고 왔다. 다른 기업과 달리 4시간 30분을 시험을 봐서 시험보고나면 진이 다빠진다. 시험 끝나고 나면 빵과 우유를 준다. &amp;lt; 적성 고사 후기 &amp;gt; NCS형 기반으로 의사소통능력, 수리능력, 문제해결능력, 정보능력, 조직이해능력 총 5가지 영역으로 나누어져 있다. 공지때 찍어도 감점이 없다고 알려주고 시험지마다 오답시 감점이 없다고 나와있다. 정말 숨돌릴 시간이 없다. 하나 끝나면 시험지바꾸고 이름, 수험번호 적고 넘어가는데 보통 10초가 안걸린다. 중간에 화장실을 갈 수가 없으니 미리 다녀오자. 의사소통능력 한자, 사자성어, 같은 뜻찾기 등을 비롯한 문제부터 독해문제까지 있다. 한자나 사자성어 등에서 시간을 줄여서 그런가 오히려 시간이 조금 남았다. 수리능력 20문제/20분이지만 시간이 부족하다. 딱보고 어려워보이는 문제는 바로바로 넘어갔다. 계산부터 자료해석까지 고루 나왔던것 같다. 문제해결능력 난이도가 꽤 어려웠던 것으로 기억한다. 정보능력 지역농협 6급 책과 달리 새로운 유형이였는데 컴퓨터구조 관련 문제부터 다양한 상식 문제가 나왔다. 조직이해능력 단순 문제와 지문을 읽고 그 안에 해당하는 답을 찾는 문제로 나누어져 있다. 예를 들면 지문에서 각 나라별 예의를 설명하고 알맞은 답을 찾는 문제나 사내 커뮤니케이션 방침을 주고 알맞은 방법을 선택하는 등의 문제가 있다. &amp;lt; 인성 검사&amp;gt; 다른 인성검사와 달리 Yes/No 만 선택하면 되는 210문제 25분을 주는데 시간이 부족하지 않다. &amp;lt; 전산능력평가 &amp;gt; 과목은 전산일반, 프로그래밍, 데이터베이스, 네트워크 각 20문제로 총 80문항 100분을 준다. 대충 기억나는 문제만 복원해보자면.. 전산일반 : 부동소수점, MPEG-2, 인터럽트, 주소공간, 메모리 접근 방식, 명령어 처리 단계, 세마포어, cache miss rate 줄이는 방법, 프로그래밍 : 자바 최상위 계층 클래스(Object), 기본으로 주어지는 클래스(lang), C언어 코드 분석, 실행 횟수, 포인터 배열 참조 방법, gc() 역할, Thread 실행 함수 이름, 데이터베이스 : SQL 주고 채워넣기/선택하기, DB 정의, 논리적데이터(?) 네트워크 : 맨채스터(nrz), SYN Flooding, 데이터링크, 라우팅 알고리즘 종류, RIP, UDP 특징, IP 프로토콜 특징, HTTP 프로토콜 특징, 사설 IP가 아닌 것, 시분할 다중화, PCM 특징, 서브넷마스크(A,B,C클래스), 변조 속도(baud), IPv6 특징 &amp;lt; 결과 &amp;gt;</summary></entry><entry><title type="html">백준/2138 전구와 스위치</title><link href="http://localhost:4000/ps/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/" rel="alternate" type="text/html" title="백준/2138 전구와 스위치" /><published>2019-05-30T11:11:00+09:00</published><updated>2019-05-30T11:11:00+09:00</updated><id>http://localhost:4000/ps/2019/05/30/%EB%B0%B1%EC%A4%80%202138%20%EC%A0%84%EA%B5%AC%EC%99%80%20%EC%8A%A4%EC%9C%84%EC%B9%98</id><content type="html" xml:base="http://localhost:4000/ps/2019/05/30/%EB%B0%B1%EC%A4%80-2138-%EC%A0%84%EA%B5%AC%EC%99%80-%EC%8A%A4%EC%9C%84%EC%B9%98/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2138&quot;&gt;Backjoon :: 전구와 스위치&lt;/a&gt; 문제는 비트마스크 연산으로 구현한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Backtracking으로 앞에서부터 비교하며 모든 경우를 확인한다.&lt;/li&gt;
+  &lt;li&gt;스위치를 누르는 과정을 XOR 연산을 활용하면 스위치를 켜고 끄는 구현을 편하게 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;첫 번째 스위치를 누르고 시작하는 경우 / 누르지 않고 시작하는 경우 로 나눠 시작한다.&lt;/li&gt;
+  &lt;li&gt;두 번째 스위치부터 n-1 번째 스위치 값과 비교한다.
+    &lt;ol&gt;
+      &lt;li&gt;input[n-1] == target[n-1] 이라면 스위치를 누르지 않는다.&lt;/li&gt;
+      &lt;li&gt;input[n-1] != target[n-1] 이라면 스위치를 누른다.&lt;/li&gt;
+      &lt;li&gt;(총 길이 - 1) 번째 까지 반복한다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(총 길이 - 1) 에 접근 시 스위치를 누를 때 / 누르지 않을 때를 비교한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MAX_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toCharArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toCharArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Backtracking&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Backtracking&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MAX_VALUE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Backtracking&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// n-1번째 스위치를 누르지 않아도 같은 경우&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// n-1번째 스위치를 누르면 같아지는 경우&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//idx-1번째 스위치가 같으면 스위치를 누를 필요 없다.&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Backtracking&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//idx번째 스위치 누른 경우&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Backtracking&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 2138" /><category term="백준 전구와 스위치" /><category term="비트마스크" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: 전구와 스위치 문제는 비트마스크 연산으로 구현한다. Backtracking으로 앞에서부터 비교하며 모든 경우를 확인한다. 스위치를 누르는 과정을 XOR 연산을 활용하면 스위치를 켜고 끄는 구현을 편하게 할 수 있다. 첫 번째 스위치를 누르고 시작하는 경우 / 누르지 않고 시작하는 경우 로 나눠 시작한다. 두 번째 스위치부터 n-1 번째 스위치 값과 비교한다. input[n-1] == target[n-1] 이라면 스위치를 누르지 않는다. input[n-1] != target[n-1] 이라면 스위치를 누른다. (총 길이 - 1) 번째 까지 반복한다. (총 길이 - 1) 에 접근 시 스위치를 누를 때 / 누르지 않을 때를 비교한다. &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static StringTokenizer stk; public static StringBuilder sb = new StringBuilder(); public static char[] input, target; public static int ans = Integer.MAX_VALUE; public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); int n = Integer.parseInt(br.readLine()); input = br.readLine().toCharArray(); target = br.readLine().toCharArray(); Backtracking(1, 0); input[0] ^= 1; input[1] ^= 1; Backtracking(1, 1); System.out.println(ans == Integer.MAX_VALUE ? -1 : ans); } public static void Backtracking(int idx, int cnt) { if (idx == input.length - 1) { // n-1번째 스위치를 누르지 않아도 같은 경우 if (input[idx] == target[idx] &amp;amp;&amp;amp; input[idx - 1] == target[idx - 1]) { ans = Math.min(ans, cnt); return; } // n-1번째 스위치를 누르면 같아지는 경우 if ((input[idx] ^ 1) == target[idx] &amp;amp;&amp;amp; (input[idx - 1] ^ 1) == target[idx - 1]) { ans = Math.min(ans, cnt + 1); return; } else return; } if (input[idx - 1] == target[idx - 1]) //idx-1번째 스위치가 같으면 스위치를 누를 필요 없다. Backtracking(idx + 1, cnt); else { //idx번째 스위치 누른 경우 input[idx] ^= 1; input[idx - 1] ^= 1; input[idx + 1] ^= 1; Backtracking(idx + 1, cnt + 1); input[idx] ^= 1; input[idx - 1] ^= 1; input[idx + 1] ^= 1; } return; } }</summary></entry><entry><title type="html">TCP/IP</title><link href="http://localhost:4000/network/2019/05/29/TCP%EC%99%80-IP/" rel="alternate" type="text/html" title="TCP/IP" /><published>2019-05-29T13:01:00+09:00</published><updated>2019-05-29T13:01:00+09:00</updated><id>http://localhost:4000/network/2019/05/29/TCP%EC%99%80%20IP</id><content type="html" xml:base="http://localhost:4000/network/2019/05/29/TCP%EC%99%80-IP/">&lt;h1 id=&quot;네트워크-용어&quot;&gt;네트워크 용어&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;네트워크 : 컴퓨터끼리 정보를 주고 받을 수 있는 상태를 말한다.&lt;/li&gt;
+  &lt;li&gt;프로토콜 : 국가끼리 문제없이 교류할 수 있도록 정해진 규칙&lt;/li&gt;
+  &lt;li&gt;TCP/IP : 네트워크 상 송수신을 원할하게 수행하기 위한 규칙으로 데이터 송수신에 관한 일련의 작업을 하나로 모은 것&lt;/li&gt;
+  &lt;li&gt;패킷    : 데이터 전송시 데이터를 일정 크기로 잘라서 보내는 방식으로, 보통 1 패킷 = 1024 비트이다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/22/OSI-7-Layer/&quot;&gt;&lt;strong&gt;cf) OSI 7 계층&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;tcpip-작동-방식&quot;&gt;TCP/IP 작동 방식&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 애플리케이션 층 (HTTP, SMTP, POP3, FTP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;애플리케이션간 데이터를 주고받기 위해 필요한 정보를 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 트랜스포트 층 (TCP / UDP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;데이터를 패킷으로 나누고 애플리케이션을 나타내는 번호와 데이터 조합하기 위한 정보를 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 네트워크 층 ( IP )&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;송수신할 컴퓨터 주소와 불명인 경우 데이터를 파기하는 표시 등을 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 데이터링크 층 (Ethernet)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;네트워크 종류에 맞춘 형식으로 수신지 정보 등을 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[송신자 A] 물리 층&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;비트열을 신호로 변환해 전송한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 물리 층&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;신호를 비트열로 변환한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 데이터링크 층 (Ethernet)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;헤더에 적힌 정보를 확인하고 지정된 프로토콜에게 전달한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 네트워크 층 ( IP )&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;헤더에 적힌 수신처가 맞는지 확인하고 지정된 프로토콜에게 전달한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 트랜스포트 층 (TCP / UDP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;헤더를 확인하고 데이터를 순서대로 나열해 조합한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[수신자 B] 애플리케이션 층 (HTTP, SMTP, POP3, FTP)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;조합된 데이터를 확인한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;tcpip-4-계층---인터넷-모델&quot;&gt;TCP/IP 4 계층 - 인터넷 모델&lt;/h1&gt;
+&lt;h2 id=&quot;-응용-계층-&quot;&gt;&amp;lt; 응용 계층 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;컴퓨터끼리의 주고받기를 사용자가 이용할 수 있는 ‘통신 서비스’ 형태로 만드는 것(서버/클라이언트)&lt;/li&gt;
+  &lt;li&gt;애플리케이션 헤더 : 요청과 응답에 관한 정보가 들어있는 헤더&lt;/li&gt;
+  &lt;li&gt;HTTP 프로토콜 : 하나의 요청에 하나의 응답을 반환하고 연결을 해제하는 방법&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/21/HTTP와-REST-API/&quot;&gt;&lt;strong&gt;cf) HTTP 프로토콜과 Cookie/Session&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-전송-계층-&quot;&gt;&amp;lt; 전송 계층 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;애플리케이션 층과 네트워크 층의 중개 역할을 수행&lt;/li&gt;
+  &lt;li&gt;TCP 프로토콜과 UDP 프로토콜이 존재한다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs-devlog.github.io/network/2019/05/22/TCP와-UDP/&quot;&gt;&lt;strong&gt;cf) TCP/UDP 프로토콜 차이점&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-인터넷-계층-&quot;&gt;&amp;lt; 인터넷 계층 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;누가 누구에게 전달할 지를 결정하는 주요 역할, 적절한 루트를 사용해 전달하는 역할(Router)&lt;/li&gt;
+  &lt;li&gt;IP 주소 : 인터넷 상의 컴퓨터들을 식별하기 위해 인터넷에 연결된 컴퓨터에 주어지는 숫자&lt;/li&gt;
+  &lt;li&gt;IP 프로토콜 : 비커넥션형 프로토콜로 UDP와 동일하다. 신뢰성 있는 IP를 지원하기 위해 ICMP 프로토콜이 있다.&lt;/li&gt;
+  &lt;li&gt;ICMP 프로토콜 : 수신인에게 전달되지 않는 등 문제 발생 시 송신자에게 그 사실을 알려주는 메세지를 전송한다.&lt;/li&gt;
+  &lt;li&gt;IP 데이터그램 : 트랜스포트 층으로부터 데이터를 받아 IP 헤더를 붙인 것&lt;/li&gt;
+  &lt;li&gt;Best Effort 방식 -&amp;gt; 노력은 하지만 결과는 보장하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-네트워크-인터페이스-계층-&quot;&gt;&amp;lt; 네트워크 인터페이스 계층 &amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터 링크 안에서 데이터를 어떻게 주고받을지 결정하는 역할&lt;/li&gt;
+  &lt;li&gt;NIC(Network Interface Card)을 통해 비트열 &amp;lt;-&amp;gt; 신호 변환&lt;/li&gt;
+  &lt;li&gt;NIC에는 MAC 주소라는 고유 번호가 할당되어 있어 MAC 주소가 일치하는 경우에만 수신자 NIC에서 데이터를 받는다.&lt;/li&gt;
+  &lt;li&gt;수신인의 IP 주소만 알고 MAC 주소를 모르는 경우 ARP(Address Resolution Protocol) 프로토콜을 활용한다.
+    &lt;ol&gt;
+      &lt;li&gt;MAC 주소를 알고싶은 컴퓨터의 IP 주소를 ARP 패킷에 적고 브로드캐스트 MAC 주소 앞으로 보낸다.&lt;/li&gt;
+      &lt;li&gt;자신의 IP 주소가 아니라면 파기하고, 자신의 IP 주소라면 MAC 주소를 적은 ARP 패킷을 송신자에게 보낸다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;-csma-프로토콜-&quot;&gt;&amp;lt; CSMA 프로토콜 &amp;gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜&lt;/li&gt;
+  &lt;li&gt;노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;-csmacd-&quot;&gt;&amp;lt; CSMA/CD &amp;gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;송신 전에 전송매체가 비어 있는지 확인하고(Carrier Sense), 비어 있으면 신호를 전송하고(Multiple Access), 전송 후에 충돌이 있는지 확인(Collision Detection) 하는 방식&lt;/li&gt;
+  &lt;li&gt;데이터 프레임 간의 충돌이 발생하는 것을 보완하기 위해 CSMA 방식에 충돌 검증 + 재전송 기능 추가&lt;/li&gt;
+  &lt;li&gt;모든 노드가 순서와 규칙 없이 경쟁하여 선로를 점유하는 방식으로 토큰 버스, 토큰 링은 각 노드에 차례로 점유할 기회를 주는 순차적 할당 방식&lt;/li&gt;
+  &lt;li&gt;전송량이 적을 때 효율적이고 버스형 LAN에 가장 일반적으로 이용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;송신하기 전에 송신중인 다른 노드가 없는지 조사한다.&lt;/li&gt;
+  &lt;li&gt;MAC 주소 b 앞으로 데이터를 전송한다.&lt;/li&gt;
+  &lt;li&gt;자기 앞으로 온 데이터일 경우 회수, 아닐 경우 파기한다.&lt;/li&gt;
+  &lt;li&gt;충돌을 감지했을 때는 잠시 후 다시 전송한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;csmaca-&quot;&gt;&amp;lt;CSMA/CA &amp;gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;CSMA 방식 기반에 RTS와 CTS를 사전에 주고 받음으로써 전송할 시간을 미리 예약하여 충돌을 미연에 방지하는 방식&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>ChanSu Kim</name></author><category term="Network" /><category term="TCP" /><category term="IP" /><category term="프로토콜" /><summary type="html">네트워크 용어 네트워크 : 컴퓨터끼리 정보를 주고 받을 수 있는 상태를 말한다. 프로토콜 : 국가끼리 문제없이 교류할 수 있도록 정해진 규칙 TCP/IP : 네트워크 상 송수신을 원할하게 수행하기 위한 규칙으로 데이터 송수신에 관한 일련의 작업을 하나로 모은 것 패킷 : 데이터 전송시 데이터를 일정 크기로 잘라서 보내는 방식으로, 보통 1 패킷 = 1024 비트이다. cf) OSI 7 계층 TCP/IP 작동 방식 [송신자 A] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 애플리케이션간 데이터를 주고받기 위해 필요한 정보를 작성한다. [송신자 A] 트랜스포트 층 (TCP / UDP) 데이터를 패킷으로 나누고 애플리케이션을 나타내는 번호와 데이터 조합하기 위한 정보를 작성한다. [송신자 A] 네트워크 층 ( IP ) 송수신할 컴퓨터 주소와 불명인 경우 데이터를 파기하는 표시 등을 작성한다. [송신자 A] 데이터링크 층 (Ethernet) 네트워크 종류에 맞춘 형식으로 수신지 정보 등을 작성한다. [송신자 A] 물리 층 비트열을 신호로 변환해 전송한다. [수신자 B] 물리 층 신호를 비트열로 변환한다. [수신자 B] 데이터링크 층 (Ethernet) 헤더에 적힌 정보를 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 네트워크 층 ( IP ) 헤더에 적힌 수신처가 맞는지 확인하고 지정된 프로토콜에게 전달한다. [수신자 B] 트랜스포트 층 (TCP / UDP) 헤더를 확인하고 데이터를 순서대로 나열해 조합한다. [수신자 B] 애플리케이션 층 (HTTP, SMTP, POP3, FTP) 조합된 데이터를 확인한다. TCP/IP 4 계층 - 인터넷 모델 &amp;lt; 응용 계층 &amp;gt; 컴퓨터끼리의 주고받기를 사용자가 이용할 수 있는 ‘통신 서비스’ 형태로 만드는 것(서버/클라이언트) 애플리케이션 헤더 : 요청과 응답에 관한 정보가 들어있는 헤더 HTTP 프로토콜 : 하나의 요청에 하나의 응답을 반환하고 연결을 해제하는 방법 cf) HTTP 프로토콜과 Cookie/Session &amp;lt; 전송 계층 &amp;gt; 애플리케이션 층과 네트워크 층의 중개 역할을 수행 TCP 프로토콜과 UDP 프로토콜이 존재한다. cf) TCP/UDP 프로토콜 차이점 &amp;lt; 인터넷 계층 &amp;gt; 누가 누구에게 전달할 지를 결정하는 주요 역할, 적절한 루트를 사용해 전달하는 역할(Router) IP 주소 : 인터넷 상의 컴퓨터들을 식별하기 위해 인터넷에 연결된 컴퓨터에 주어지는 숫자 IP 프로토콜 : 비커넥션형 프로토콜로 UDP와 동일하다. 신뢰성 있는 IP를 지원하기 위해 ICMP 프로토콜이 있다. ICMP 프로토콜 : 수신인에게 전달되지 않는 등 문제 발생 시 송신자에게 그 사실을 알려주는 메세지를 전송한다. IP 데이터그램 : 트랜스포트 층으로부터 데이터를 받아 IP 헤더를 붙인 것 Best Effort 방식 -&amp;gt; 노력은 하지만 결과는 보장하지 않는다. &amp;lt; 네트워크 인터페이스 계층 &amp;gt; 데이터 링크 안에서 데이터를 어떻게 주고받을지 결정하는 역할 NIC(Network Interface Card)을 통해 비트열 &amp;lt;-&amp;gt; 신호 변환 NIC에는 MAC 주소라는 고유 번호가 할당되어 있어 MAC 주소가 일치하는 경우에만 수신자 NIC에서 데이터를 받는다. 수신인의 IP 주소만 알고 MAC 주소를 모르는 경우 ARP(Address Resolution Protocol) 프로토콜을 활용한다. MAC 주소를 알고싶은 컴퓨터의 IP 주소를 ARP 패킷에 적고 브로드캐스트 MAC 주소 앞으로 보낸다. 자신의 IP 주소가 아니라면 파기하고, 자신의 IP 주소라면 MAC 주소를 적은 ARP 패킷을 송신자에게 보낸다. &amp;lt; CSMA 프로토콜 &amp;gt; 동시에 네트워크를 사용하고자 할 때 상호충돌을 방지하고자 전송 Bus에 흐르는 신호를 감지하는 프로토콜 노드 A에서 네트워크를 전송하기 전에 현재 채널을 사용 여부를 확인해 다중 접근을 방지하는 방법 &amp;lt; CSMA/CD &amp;gt; 송신 전에 전송매체가 비어 있는지 확인하고(Carrier Sense), 비어 있으면 신호를 전송하고(Multiple Access), 전송 후에 충돌이 있는지 확인(Collision Detection) 하는 방식 데이터 프레임 간의 충돌이 발생하는 것을 보완하기 위해 CSMA 방식에 충돌 검증 + 재전송 기능 추가 모든 노드가 순서와 규칙 없이 경쟁하여 선로를 점유하는 방식으로 토큰 버스, 토큰 링은 각 노드에 차례로 점유할 기회를 주는 순차적 할당 방식 전송량이 적을 때 효율적이고 버스형 LAN에 가장 일반적으로 이용 송신하기 전에 송신중인 다른 노드가 없는지 조사한다. MAC 주소 b 앞으로 데이터를 전송한다. 자기 앞으로 온 데이터일 경우 회수, 아닐 경우 파기한다. 충돌을 감지했을 때는 잠시 후 다시 전송한다. &amp;lt;CSMA/CA &amp;gt; CSMA 방식 기반에 RTS와 CTS를 사전에 주고 받음으로써 전송할 시간을 미리 예약하여 충돌을 미연에 방지하는 방식</summary></entry><entry><title type="html">백준/10779 쇠막대기</title><link href="http://localhost:4000/ps/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/" rel="alternate" type="text/html" title="백준/10779 쇠막대기" /><published>2019-05-29T11:11:00+09:00</published><updated>2019-05-29T11:11:00+09:00</updated><id>http://localhost:4000/ps/2019/05/29/%EB%B0%B1%EC%A4%80%2010779%20%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/ps/2019/05/29/%EB%B0%B1%EC%A4%80-10779-%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/">&lt;h2 id=&quot;-문제-분석-및-풀이-방법-&quot;&gt;&amp;lt; 문제 분석 및 풀이 방법 &amp;gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/10799&quot;&gt;Backjoon :: 쇠막대기&lt;/a&gt; 문제는 Stack 자료구조를 활용해 풀 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;입력 받은 문자열을 하나씩 탐색하면서 ‘(‘ 일때와 ‘)’로 나누어 생각한다.&lt;/li&gt;
+  &lt;li&gt;’(‘ 문자라면 Stack에 추가한다.&lt;/li&gt;
+  &lt;li&gt;’)’ 문자라면 바로 앞에 ‘(‘ 문자가 오는지 확인한다. (레이저인지 여부를 확인하기 위해)
+    &lt;ul&gt;
+      &lt;li&gt;만약 레이저라면 Stack 크기만큼 더해준다. (레이저로 나누면 Stack 크기만큼 레이저 왼쪽에 막대기가 생기기 때문!)&lt;/li&gt;
+      &lt;li&gt;만약 막대기 끝이라면 막대기 갯수인 1개를 더해준다.    (끝부분 막대기를 더해준다)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toCharArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'('&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;                &lt;span class=&quot;c1&quot;&gt;//')' 문자 제거&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'('&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//만약 레이저라면&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//레이저 왼쪽 막대 갯수를 더한다&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                    &lt;span class=&quot;c1&quot;&gt;//막대의 끝이라면&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;//자기 자신 막대를 더한다&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="백준" /><category term="백준 10779" /><category term="백준 쇠막대기" /><category term="Stack" /><category term="스텍" /><summary type="html">&amp;lt; 문제 분석 및 풀이 방법 &amp;gt; Backjoon :: 쇠막대기 문제는 Stack 자료구조를 활용해 풀 수 있다. 입력 받은 문자열을 하나씩 탐색하면서 ‘(‘ 일때와 ‘)’로 나누어 생각한다. ’(‘ 문자라면 Stack에 추가한다. ’)’ 문자라면 바로 앞에 ‘(‘ 문자가 오는지 확인한다. (레이저인지 여부를 확인하기 위해) 만약 레이저라면 Stack 크기만큼 더해준다. (레이저로 나누면 Stack 크기만큼 레이저 왼쪽에 막대기가 생기기 때문!) 만약 막대기 끝이라면 막대기 갯수인 1개를 더해준다. (끝부분 막대기를 더해준다) &amp;lt; 소스 코드 &amp;gt; import java.io.*; import java.util.*; public class Main { public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); char[] target = br.readLine().toCharArray(); Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); int ans = 0; for (int i = 0; i &amp;lt; target.length; i++) { char ch = target[i]; if (ch == '(') { stack.push(target[i]); continue; } stack.pop(); //')' 문자 제거 if (target[i - 1] == '(') { //만약 레이저라면 ans += stack.size(); //레이저 왼쪽 막대 갯수를 더한다 } else { //막대의 끝이라면 ans += 1; //자기 자신 막대를 더한다 } } System.out.println(ans); } }</summary></entry><entry><title type="html">정렬 알고리즘</title><link href="http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" rel="alternate" type="text/html" title="정렬 알고리즘" /><published>2019-05-29T00:01:11+09:00</published><updated>2019-05-29T00:01:11+09:00</updated><id>http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98</id><content type="html" xml:base="http://localhost:4000/algorithm/2019/05/29/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">&lt;h1 id=&quot;버블-정렬bubble-sort&quot;&gt;버블 정렬(Bubble Sort)&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/BubbleSort.png&quot; alt=&quot;BubbleSort&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;인접한 두 숫자를 비교해서 변경하는 방법&lt;/li&gt;
+  &lt;li&gt;오른쪽부터 최대값/최소값을 정렬해 나가는 방식&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;BubbleSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;선택-정렬selection-sort&quot;&gt;선택 정렬(Selection Sort)&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/SelectionSort.png&quot; alt=&quot;SelectionSort&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;자신보다 뒤에있는 숫자들 중 가장 작은 숫자를 발견해서 맨 앞에서부터 채우는 정렬&lt;/li&gt;
+  &lt;li&gt;왼쪽부터 최대값/최소값을 정렬해 나가는 방식&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SelectionSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;삽입-정렬insertion-sort&quot;&gt;삽입 정렬(Insertion Sort)&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/InsertionSort.png&quot; alt=&quot;InsertionSort&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;i번째 배열 값부터 앞으로 탐색하며 자신보다 작다면 swap하는 정렬&lt;/li&gt;
+  &lt;li&gt;n번째 수행시 n번째 까지 정렬되는 방법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;InsertioinSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;퀵-정렬quick-sort&quot;&gt;퀵 정렬(Quick Sort)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;pivot을 정하고 pivot 좌/우를 정렬하면서 전체 배열을 정렬&lt;/li&gt;
+  &lt;li&gt;자바에서 Arrays.sort를 사용하변 내부는 Quick Sort로 구현되어있다.&lt;/li&gt;
+  &lt;li&gt;평균 O(nlogn) 이지만 최악에 O(n^2) 이므로 데이터가 많은 경우 조심해야 한다.&lt;/li&gt;
+  &lt;li&gt;최악의 경우란 아이러니하게도 정렬된 경우를 의미한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-작동-방식-&quot;&gt;&amp;lt; 작동 방식 &amp;gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/QuickSort_1.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;pivot을 가운데 값으로 설정하고 Left, Right 를 각 끝의 idx를 지정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/QuickSort_2.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;num[left] &amp;gt; pivot, num[right] &amp;lt; pivot 조건을 만족할 때까지 left, right를 움직인다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/QuickSort_3.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;둘의 위치를 바꾼다. 이렇게 되면 pivot 왼쪽에는 pivot보다 작은 값, 오른쪽에는 큰값이 정렬된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-소스-코드-&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;QuickSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuickSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuickSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;합병-정렬merge-sort&quot;&gt;합병 정렬(Merge Sort)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;합병 정렬은 O(nlogn) 의 시간복잡도를 보장한다.&lt;/li&gt;
+  &lt;li&gt;단점은 임시 배열 공간이 추가로 필요하다는 점이다.&lt;/li&gt;
+  &lt;li&gt;분할 정복으로 구현하는데 배열을 최대한 나누고, 합병하면서 값을 비교해 정렬하는 방식이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-작동-방식--1&quot;&gt;&amp;lt; 작동 방식 &amp;gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/MergeSort_1.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;left = start, right = mid+1로 설정하고 서로 비교해 작은 값을 data에 덮어씌운다.
+&lt;img src=&quot;/assets/images/MergeSort_2.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;left를 한칸 이동하고 작은 값을 data에 덮어씌운다.
+&lt;img src=&quot;/assets/images/MergeSort_3.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;right를 한칸 이동하고 작은 값을 data에 덮어씌운다.
+&lt;img src=&quot;/assets/images/MergeSort_4.png&quot; alt=&quot;web_process&quot; width=&quot;300&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;right가 배열의 끝에 도달했기 때문에 남은 left를 data에 덮어씌운다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;-소스-코드--1&quot;&gt;&amp;lt; 소스 코드 &amp;gt;&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mergeSort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//tmp 배열에 값을 옮긴다.&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//num 배열에 비교하면서 저장&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//어느 한쪽에 남은 tmp 배열을 num 배열에 저장&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++];&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>ChanSu Kim</name></author><category term="Algorithm" /><category term="Sort" /><category term="Bubble Sort" /><category term="Selection Sort" /><category term="Insertion Sort" /><category term="Quick Sort" /><category term="Merge Sort" /><summary type="html">버블 정렬(Bubble Sort) 인접한 두 숫자를 비교해서 변경하는 방법 오른쪽부터 최대값/최소값을 정렬해 나가는 방식 public void BubbleSort(int[] num) { for (int i = 0; i &amp;lt; num.length; i++) { for (int j = 1; j &amp;lt; num.length - i; j++) { if (num[j] &amp;lt; num[j - 1]) swap(j - 1, j, num); } } } 선택 정렬(Selection Sort) 자신보다 뒤에있는 숫자들 중 가장 작은 숫자를 발견해서 맨 앞에서부터 채우는 정렬 왼쪽부터 최대값/최소값을 정렬해 나가는 방식 public void SelectionSort(int[] num) { for (int i = 0; i &amp;lt; num.length; i++) { int min = i; for (int j = i + 1; j &amp;lt; num.length; j++) { if (num[min] &amp;gt; num[j]) min = j; } if (num[min] &amp;lt; num[i]) swap(min, i, num); } } 삽입 정렬(Insertion Sort) i번째 배열 값부터 앞으로 탐색하며 자신보다 작다면 swap하는 정렬 n번째 수행시 n번째 까지 정렬되는 방법 public void InsertioinSort(int[] num) { for (int i = 1; i &amp;lt; num.length; i++) { int tmp = num[i]; for (int j = i - 1; j &amp;gt;= 0; j--) { if (tmp &amp;lt; num[j]) { num[j + 1] = num[j]; num[j] = tmp; } } } } 퀵 정렬(Quick Sort) pivot을 정하고 pivot 좌/우를 정렬하면서 전체 배열을 정렬 자바에서 Arrays.sort를 사용하변 내부는 Quick Sort로 구현되어있다. 평균 O(nlogn) 이지만 최악에 O(n^2) 이므로 데이터가 많은 경우 조심해야 한다. 최악의 경우란 아이러니하게도 정렬된 경우를 의미한다. &amp;lt; 작동 방식 &amp;gt; pivot을 가운데 값으로 설정하고 Left, Right 를 각 끝의 idx를 지정한다. num[left] &amp;gt; pivot, num[right] &amp;lt; pivot 조건을 만족할 때까지 left, right를 움직인다. 둘의 위치를 바꾼다. 이렇게 되면 pivot 왼쪽에는 pivot보다 작은 값, 오른쪽에는 큰값이 정렬된다. &amp;lt; 소스 코드 &amp;gt; public int partition(int left, int right, int[] num) { int pivot = num[(left + right) / 2]; while (left &amp;lt;= right) { while (num[left] &amp;lt; pivot) left++; while (num[right] &amp;gt; pivot) right--; if (left &amp;lt;= right) { swap(left, right, num); left++; right--; } } return left; } public void QuickSort(int left, int right, int[] num) { if (left &amp;lt; right) { int pivot = partition(left, right, num); if (left &amp;lt; pivot - 1) QuickSort(left, pivot - 1, num); if (right &amp;gt; pivot) QuickSort(pivot, right, num); } } 합병 정렬(Merge Sort) 합병 정렬은 O(nlogn) 의 시간복잡도를 보장한다. 단점은 임시 배열 공간이 추가로 필요하다는 점이다. 분할 정복으로 구현하는데 배열을 최대한 나누고, 합병하면서 값을 비교해 정렬하는 방식이다. &amp;lt; 작동 방식 &amp;gt; left = start, right = mid+1로 설정하고 서로 비교해 작은 값을 data에 덮어씌운다. left를 한칸 이동하고 작은 값을 data에 덮어씌운다. right를 한칸 이동하고 작은 값을 data에 덮어씌운다. right가 배열의 끝에 도달했기 때문에 남은 left를 data에 덮어씌운다. &amp;lt; 소스 코드 &amp;gt; public void mergeSort(int start, int end) { if (start &amp;lt; end) { int mid = (start + end) / 2; mergeSort(start, mid); mergeSort(mid + 1, end); merge(start, mid, end); } } public void merge(int start, int mid, int end) { for (int i = start; i &amp;lt;= end; i++) { tmp[i] = num[i]; //tmp 배열에 값을 옮긴다. } int left = start; int right = mid + 1; int idx = start; while (left &amp;lt;= mid &amp;amp;&amp;amp; right &amp;lt;= end) { //num 배열에 비교하면서 저장 if (tmp[left] &amp;gt;= tmp[right]) { num[idx++] = tmp[right++]; } else { num[idx++] = tmp[left++]; } } //어느 한쪽에 남은 tmp 배열을 num 배열에 저장 while (left &amp;lt;= mid) num[idx++] = tmp[left++]; while (right &amp;lt;= end) num[idx++] = tmp[right++]; }</summary></entry></feed>
